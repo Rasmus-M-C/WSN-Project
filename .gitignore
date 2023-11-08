@@ -15,6 +15,7 @@ tags
 *.map
 *.sky
 *.native
+*.csc
 
 symbols.[ch]
 #examples/*/symbols.c
