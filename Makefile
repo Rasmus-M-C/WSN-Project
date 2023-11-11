@@ -1,4 +1,4 @@
-CONTIKI_PROJECT = udp-client udp-server udp-client-reciver
+CONTIKI_PROJECT = client server relay
 all: $(CONTIKI_PROJECT)
 CUSTOM_CFLAGS := -WALL CUSTOM_CFLAGS += -Wformat
 WERROR := 0
