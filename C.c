@@ -5,8 +5,6 @@
 #include "net/ipv6/simple-udp.h"
 #include <stdint.h>
 #include <inttypes.h>
-#include "net/ipv6/uip.h"
-#include "net/ipv6/uip-ds6.h"
 
 #include "sys/log.h"
 #define LOG_MODULE "App"
@@ -70,13 +68,8 @@ PROCESS_THREAD(udp_client_process, ev, data)
   static char str[32];
   uip_ipaddr_t dest_ipaddr;
   clock_time_t current_time;
-  uip_ipaddr_t ipaddr;
 
   PROCESS_BEGIN();
-  uip_ip6addr(&ipaddr, 0xfd00, 0, 0, 0, 0x0212, 0x7403, 0x0003, 0x0303);
-  uip_ds6_set_addr_iid(&ipaddr, &uip_lladdr);
-  uip_ds6_addr_add(&ipaddr, 0, ADDR_AUTOCONF);
-
 
   /* Initialize UDP connection */
   simple_udp_register(&udp_conn, UDP_CLIENT_PORT, NULL,
@@ -89,8 +82,6 @@ PROCESS_THREAD(udp_client_process, ev, data)
   while (1)
   {
     PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&periodic_timer));
-    LOG_INFO(NETSTACK_ROUTING.node_is_reachable() ? "Routing is ready\n" : "Routing is not ready\n");
-    LOG_INFO(NETSTACK_ROUTING.get_root_ipaddr(&dest_ipaddr) ? "Root is ready\n" : "Root is not ready\n");
 
     if (NETSTACK_ROUTING.node_is_reachable() &&
         NETSTACK_ROUTING.get_root_ipaddr(&dest_ipaddr))
