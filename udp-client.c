@@ -42,6 +42,16 @@ static void udp_rx_callback(struct simple_udp_connection *c,
                             const uint8_t *data,
                             uint16_t datalen)
 {
+  int result = strncmp((char *)data, "test", 4);
+  LOG_INFO("result: %d\n", result);
+  LOG_INFO("Received data: '%.*s', length: %d\n", datalen, (char *)data, datalen);
+  if (strncmp((char *)data, "test", 4) == 0) {
+    // Send an acknowledgment back to A
+    char ack[] = "ACK from C";
+    
+    simple_udp_sendto(&udp_conn, ack, strlen(ack), sender_addr);
+    LOG_INFO("Sending ACK to A\n");
+  }
   LOG_INFO("Received response '%.*s' from ", datalen, (char *)data);
   LOG_INFO_6ADDR(sender_addr);
 #if LLSEC802154_CONF_ENABLED
