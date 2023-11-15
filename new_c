@@ -1,8 +1,9 @@
 #include "contiki.h"
 #include "net/ipv6/simple-udp.h"
+
 #include <stdio.h>
-#include "simple-udp.h"
-#include "net/ipv6/simple-udp.h"
+#include <string.h>
+
 #define UDP_CLIENT_PORT 8765
 #define UDP_SERVER_PORT 5678
 
@@ -20,9 +21,12 @@ static void udp_rx_callback(struct simple_udp_connection *c,
                             uint16_t datalen) {
     printf("Received message from Mote A: '%.*s'\n", datalen, (char *)data);
 
-    const char *response = "ACK from C";
-    simple_udp_sendto(&udp_conn, response, strlen(response), sender_addr);
-    printf("Sent ACK to Mote A\n");
+    // Respond based on the message content
+    if (strncmp((char *)data, "Hello from A", 12) == 0) {
+        const char *response = "ACK from C";
+        simple_udp_sendto(&udp_conn, response, strlen(response), sender_addr);
+        printf("Sent ACK to Mote A\n");
+    }
 }
 
 PROCESS_THREAD(udp_server_process, ev, data) {
