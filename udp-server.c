@@ -45,7 +45,7 @@ static bool direct_connection_to_C = false;
 static void testCconnection()
 {
   uip_ipaddr_t dest_ipaddr_C;
-  uip_ip6addr(&dest_ipaddr_C, 0xfd00, 0, 0, 0, 0x0212, 0x7402, 0x0002, 0x0202);
+  uip_ip6addr(&dest_ipaddr_C, 0xfd00, 0, 0, 0, 0x0212, 0x7403, 0x0003, 0x0303);
   static char str[32];
   //NETSTACK_ROUTING.get_root_ipaddr(&dest_ipaddr_C);
   printf("dest_ipaddr: ");
