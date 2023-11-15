@@ -7,6 +7,7 @@
 #include <inttypes.h>
 #include "net/ipv6/uip.h"
 #include "net/ipv6/uip-ds6.h"
+#include <stdlib.h>
 
 #include "sys/log.h"
 #define LOG_MODULE "App"
@@ -19,10 +20,15 @@
 #define SEND_INTERVAL (10 * CLOCK_SECOND)
 #define MAX_RETRIES 1 // Maximum number of retransmission attempts
 
+// Bad state
+#define BAD_SUCCES 95
+static int counter = 0;
+
 static struct simple_udp_connection udp_conn;
 static uint32_t rx_count = 0;
 static uint32_t tx_count = 0;
 static uint32_t missed_tx_count = 0;
+
 
 /*---------------------------------------------------------------------------*/
 PROCESS(udp_client_process, "UDP client");
@@ -36,6 +42,17 @@ static struct {
   clock_time_t last_sent_time;
 } message_buffer;
 
+bool badStateEnabled = true; // You can set this to false to disable the "bad state"
+
+// udp_rx_callback is called when a UDP packet is received.
+// Parameters:
+// - c: A pointer to the simple_udp_connection structure, which represents the UDP connection.
+// - sender_addr: The IP address of the sender.
+// - sender_port: The port number used by the sender.
+// - receiver_addr: The IP address of the receiver.
+// - receiver_port: The port number used by the receiver.
+// - data: A pointer to the received data.
+// - datalen: The length of the received data.
 static void udp_rx_callback(struct simple_udp_connection *c,
                             const uip_ipaddr_t *sender_addr,
                             uint16_t sender_port,
@@ -46,13 +63,23 @@ static void udp_rx_callback(struct simple_udp_connection *c,
 {
   
   LOG_INFO("Received data: '%.*s', length: %d\n", datalen, (char *)data, datalen);
-  if (strncmp((char *)data, "HealthCheck", 10) == 0) {
-    // Send an acknowledgment back to A
-    char ack[] = "ACK from C";
-    
-    simple_udp_sendto(&udp_conn, ack, strlen(ack), sender_addr);
-    LOG_INFO("Sending ACK to A\n");
+  if (badStateEnabled && clock_time() - t1 > 2*CLOCK_SECOND) {
+    LOG_INFO("Bad state\n");
+    t1 = clock_time();
   }
+  else if ( rand() % 100 < BAD_SUCCES) {
+    LOG_INFO("Lost: ", (char *)data,"\n");
+  }
+  else {
+    LOG_INFO("Good state\n");
+      if (strncmp((char *)data, "HealthCheck", 11) == 0) {
+      // Send an acknowledgment back to A
+      char ack[] = "ACK from C";
+      
+      simple_udp_sendto(&udp_conn, ack, strlen(ack), sender_addr);
+      LOG_INFO("Sending ACK to A\n");
+      }
+    }
   LOG_INFO("Received response '%.*s' from ", datalen, (char *)data);
   LOG_INFO_6ADDR(sender_addr);
   LOG_INFO_("\n");
@@ -67,6 +94,7 @@ static void udp_rx_callback(struct simple_udp_connection *c,
 /*---------------------------------------------------------------------------*/
 PROCESS_THREAD(udp_client_process, ev, data)
 {
+
   static struct etimer periodic_timer;
   static char str[32];
   uip_ipaddr_t dest_ipaddr;
