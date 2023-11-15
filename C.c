@@ -5,9 +5,6 @@
 #include "net/ipv6/simple-udp.h"
 #include <stdint.h>
 #include <inttypes.h>
-#include "net/ipv6/uip.h"
-#include "net/ipv6/uip-ds6.h"
-#include <stdlib.h>
 
 #include "sys/log.h"
 #define LOG_MODULE "App"
@@ -20,15 +17,10 @@
 #define SEND_INTERVAL (10 * CLOCK_SECOND)
 #define MAX_RETRIES 1 // Maximum number of retransmission attempts
 
-// Bad state
-#define BAD_SUCCES 95
-static int counter = 0;
-
 static struct simple_udp_connection udp_conn;
 static uint32_t rx_count = 0;
 static uint32_t tx_count = 0;
 static uint32_t missed_tx_count = 0;
-
 
 /*---------------------------------------------------------------------------*/
 PROCESS(udp_client_process, "UDP client");
@@ -42,17 +34,6 @@ static struct {
   clock_time_t last_sent_time;
 } message_buffer;
 
-bool badStateEnabled = true; // You can set this to false to disable the "bad state"
-
-// udp_rx_callback is called when a UDP packet is received.
-// Parameters:
-// - c: A pointer to the simple_udp_connection structure, which represents the UDP connection.
-// - sender_addr: The IP address of the sender.
-// - sender_port: The port number used by the sender.
-// - receiver_addr: The IP address of the receiver.
-// - receiver_port: The port number used by the receiver.
-// - data: A pointer to the received data.
-// - datalen: The length of the received data.
 static void udp_rx_callback(struct simple_udp_connection *c,
                             const uip_ipaddr_t *sender_addr,
                             uint16_t sender_port,
@@ -61,48 +42,35 @@ static void udp_rx_callback(struct simple_udp_connection *c,
                             const uint8_t *data,
                             uint16_t datalen)
 {
-  
+  int result = strncmp((char *)data, "test", 4);
+  LOG_INFO("result: %d\n", result);
   LOG_INFO("Received data: '%.*s', length: %d\n", datalen, (char *)data, datalen);
-  if (badStateEnabled && clock_time() - t1 > 2*CLOCK_SECOND) {
-    LOG_INFO("Bad state\n");
-    t1 = clock_time();
+  if (strncmp((char *)data, "test", 4) == 0) {
+    // Send an acknowledgment back to A
+    char ack[] = "ACK from C";
+    
+    simple_udp_sendto(&udp_conn, ack, strlen(ack), sender_addr);
+    LOG_INFO("Sending ACK to A\n");
   }
-  else if ( rand() % 100 < BAD_SUCCES) {
-    LOG_INFO("Lost: ", (char *)data,"\n");
-  }
-  else {
-    LOG_INFO("Good state\n");
-      if (strncmp((char *)data, "HealthCheck", 11) == 0) {
-      // Send an acknowledgment back to A
-      char ack[] = "ACK from C";
-      
-      simple_udp_sendto(&udp_conn, ack, strlen(ack), sender_addr);
-      LOG_INFO("Sending ACK to A\n");
-      }
-    }
   LOG_INFO("Received response '%.*s' from ", datalen, (char *)data);
   LOG_INFO_6ADDR(sender_addr);
+#if LLSEC802154_CONF_ENABLED
+  LOG_INFO_(" LLSEC LV:%d", uipbuf_get_attr(UIPBUF_ATTR_LLSEC_LEVEL));
+#endif
   LOG_INFO_("\n");
-  
-  char dataExample[] = "dataExample";
-  simple_udp_sendto(&udp_conn, dataExample, strlen(dataExample), sender_addr);
-  LOG_INFO_("Sent data to requester: ");
-  LOG_INFO_6ADDR(sender_addr);
-  
+  rx_count++;
 }
 
 /*---------------------------------------------------------------------------*/
 PROCESS_THREAD(udp_client_process, ev, data)
 {
-
   static struct etimer periodic_timer;
   static char str[32];
   uip_ipaddr_t dest_ipaddr;
   clock_time_t current_time;
-  uip_ipaddr_t ipaddr;
+
   PROCESS_BEGIN();
-  uip_ip6addr(&ipaddr, 0xfd00, 0, 0, 0, 0x0212, 0x7403, 0x0003, 0x0303);
-  uip_ds6_addr_add(&ipaddr, 0, ADDR_MANUAL);
+
   /* Initialize UDP connection */
   simple_udp_register(&udp_conn, UDP_CLIENT_PORT, NULL,
                       UDP_SERVER_PORT, udp_rx_callback);
@@ -114,8 +82,6 @@ PROCESS_THREAD(udp_client_process, ev, data)
   while (1)
   {
     PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&periodic_timer));
-    LOG_INFO(NETSTACK_ROUTING.node_is_reachable() ? "Routing node" : "Not routing node");
-    LOG_INFO(NETSTACK_ROUTING.get_root_ipaddr(&dest_ipaddr) ? "Root reachable" : "Root not reachable");
     if (NETSTACK_ROUTING.node_is_reachable() &&
         NETSTACK_ROUTING.get_root_ipaddr(&dest_ipaddr))
     {
