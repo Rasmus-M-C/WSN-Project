@@ -24,6 +24,7 @@ static bool badStateEnabled = true; // You can set this to false to disable the 
 #define BAD_SUCCES 95
 static int counter = 0;
 static clock_time_t t1 = 0;
+static int state = 100;
 
 static struct simple_udp_connection udp_conn;
 static uint32_t rx_count = 0;
@@ -32,7 +33,8 @@ static uint32_t missed_tx_count = 0;
 
 /*---------------------------------------------------------------------------*/
 PROCESS(udp_client_process, "UDP client");
-AUTOSTART_PROCESSES(&udp_client_process);
+PROCESS(updateState, "state");
+AUTOSTART_PROCESSES(&udp_client_process, &updateState);
 /*---------------------------------------------------------------------------*/
 
 static struct {
@@ -51,6 +53,46 @@ static struct {
 // - receiver_port: The port number used by the receiver.
 // - data: A pointer to the received data.
 // - datalen: The length of the received data.
+/*---------------------------------------------------------------------------*/
+static int getState(int currentState){
+  int good = 100;
+  int mix = 50;
+  int bad = 0;
+  int newState = currentState;
+
+  if (currentState != good)
+  {
+    if(clock_time() - t1 > 2 * CLOCK_SECOND)
+    {
+      newState = good;
+    }
+  } else 
+  {
+    switch (rand() % 100)
+    {
+      case < 80:
+        newState = bad;
+        LOG_INFO("Bad state\n");
+        break;
+      
+      case < 90:
+        newState = mix;
+        LOG_INFO("Mix state\n");
+        break;
+      
+      default:
+        //newState = good;
+        LOG_INFO("Good state\n");
+        break;
+    }
+  }
+
+  return newState;
+
+}
+
+
+/*---------------------------------------------------------------------------*/
 static void udp_rx_callback(struct simple_udp_connection *c,
                             const uip_ipaddr_t *sender_addr,
                             uint16_t sender_port,
@@ -67,7 +109,7 @@ static void udp_rx_callback(struct simple_udp_connection *c,
     LOG_INFO("Bad state\n");
     t1 = clock_time();
   }
-  else if ( rand() % 100 < BAD_SUCCES) {
+  else if ( rand() % 100 > state) {
     LOG_INFO("Lost: %s\n", (char *)data);
   }
   else {
@@ -184,4 +226,23 @@ PROCESS_THREAD(udp_client_process, ev, data)
 
   PROCESS_END();
 }
+
 /*---------------------------------------------------------------------------*/
+
+PROCESS_THREAD(updateState, ev, data)
+{
+  static struct etimer stateTimer;
+
+  PROCESS_BEGIN();
+  etimer_set(&stateTimer, CLOCK_SECOND);
+
+  while(1)
+  {
+    state = getState(state);
+
+    PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&stateTimer));
+    etimer_reset(&stateTimer);
+  }
+
+  PROCESS_END();
+}
