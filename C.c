@@ -6,6 +6,8 @@
 #include <stdint.h>
 #include <inttypes.h>
 
+#include <stdlib.h>
+
 #include "sys/log.h"
 #define LOG_MODULE "App"
 #define LOG_LEVEL LOG_LEVEL_INFO
@@ -21,6 +23,7 @@ static bool badStateEnabled = true; // You can set this to false to disable the 
 // Bad state
 #define BAD_SUCCES 95
 static int counter = 0;
+static clock_time_t t1 = 0;
 
 static struct simple_udp_connection udp_conn;
 static uint32_t rx_count = 0;
@@ -60,13 +63,12 @@ static void udp_rx_callback(struct simple_udp_connection *c,
   LOG_INFO("result: %d\n", result);
   LOG_INFO("Received data: '%.*s', length: %d\n", datalen, (char *)data, datalen);
   
-
   if (badStateEnabled && clock_time() - t1 > 2*CLOCK_SECOND) {
     LOG_INFO("Bad state\n");
     t1 = clock_time();
   }
   else if ( rand() % 100 < BAD_SUCCES) {
-    LOG_INFO("Lost: ", (char *)data,"\n");
+    LOG_INFO("Lost: %s\n", (char *)data);
   }
   else {
     LOG_INFO("Good state\n");
@@ -96,11 +98,10 @@ PROCESS_THREAD(udp_client_process, ev, data)
   clock_time_t current_time;
 
   PROCESS_BEGIN();
-
+  t1 = clock_time();
   /* Initialize UDP connection */
   simple_udp_register(&udp_conn, UDP_CLIENT_PORT, NULL,
                       UDP_SERVER_PORT, udp_rx_callback);
-
   etimer_set(&periodic_timer, random_rand() % SEND_INTERVAL);
   message_buffer.sequence_number = 0;
   message_buffer.retries = 0;
