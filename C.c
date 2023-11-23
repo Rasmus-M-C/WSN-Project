@@ -1,17 +1,11 @@
 #include "contiki.h"
-#include "net/routing/routing.h"
-#include "random.h"
-#include "net/netstack.h"
-#include "net/ipv6/simple-udp.h"
-#include <stdint.h>
-#include <inttypes.h>
-
-#include "sys/log.h"
-#include "contiki.h"
 #include "net/ipv6/simple-udp.h"
 #include <stdio.h>
 #include <string.h>
 
+#include "sys/log.h"
+#define LOG_MODULE "App"
+#define LOG_LEVEL LOG_LEVEL_INFO
 #define UDP_CLIENT_PORT 8765
 #define UDP_SERVER_PORT 5678
 
@@ -28,17 +22,42 @@ static void udp_rx_callback(struct simple_udp_connection *c,
                             const uint8_t *data,
                             uint16_t datalen)
 {
-  // Check if the received message is "test" from mote A
-  if (strncmp((char *)data, "test", 4) == 0) {
-    // Send an acknowledgment back to mote A
-    char ack[] = "ACK from C";
-    simple_udp_sendto(&udp_conn, ack, strlen(ack), sender_addr);
-    printf("Sending ACK to A\n");
-  }
+  // Check the received message type
+  //if (strncmp((char *)data, "dataReq", 7) == 0) {
+  //  // Respond with "exampleData" for a dataReq message
+  //  char response[] = "exampleData";
+  //  simple_udp_sendto(&udp_conn, response, strlen(response), sender_addr);
+  //  printf("Responding to dataReq with 'exampleData'\n");
+  //} else if (strncmp((char *)data, "health", 6) == 0) {
+    // Respond with "ACK" for a health message
+    if(strncmp((char *)data, "healthcheck", 11) == 0){
+      LOG_INFO("Responding with 'ACK'\n");
+      char ack[] = "ACK";
+      simple_udp_sendto(&udp_conn, ack, strlen(ack), sender_addr);
+    }
+    else{
+      LOG_INFO("Recieved a data request, sending data\n");
+      char response[] = "exampleData";
+      simple_udp_sendto(&udp_conn, response, strlen(response), sender_addr);
+      // Print addr which is the IPv6 address of the sender
+      LOG_INFO("Sender IPv6 address: ");
+      for (int i = 0; i < 16; i++) {
+        LOG_INFO_("%02X", sender_addr->u8[i]);
+        if (i < 15) {
+            LOG_INFO_(":");
+    }
+}
+LOG_INFO_("\n");
+
+    }
+    
+    
+  //}
 }
 
 PROCESS_THREAD(udp_client_process, ev, data)
 {
+  static int counter = 0;
   PROCESS_BEGIN();
 
   // Initialize UDP connection
@@ -47,8 +66,8 @@ PROCESS_THREAD(udp_client_process, ev, data)
 
   while (1) {
     PROCESS_WAIT_EVENT();
+    
   }
 
   PROCESS_END();
 }
-

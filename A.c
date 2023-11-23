@@ -2,38 +2,26 @@
 #include "net/routing/routing.h"
 #include "net/netstack.h"
 #include "net/ipv6/simple-udp.h"
+#include <stdio.h>
+#include <string.h>
 
 #include "sys/log.h"
 #define LOG_MODULE "App"
 #define LOG_LEVEL LOG_LEVEL_INFO
 
 #define WITH_SERVER_REPLY  1
-#define UDP_CLIENT_PORT	8765
-#define UDP_SERVER_PORT	5678
+#define UDP_CLIENT_PORT    8765
+#define UDP_SERVER_PORT    5678
 
 static struct simple_udp_connection udp_conn;
-static bool direct_connection_to_C = false;
-static void testCconnection()
-{
-  uip_ipaddr_t dest_ipaddr_C;
-  uip_ip6addr(&dest_ipaddr_C, 0xfd00, 0, 0, 0, 0x0212, 0x7403, 0x0003, 0x0303);
-  static char str[32];
-  
-  printf("dest_ipaddr: ");
-  for (int i = 0; i < 16; i++)
-  {
-    printf("%d ", dest_ipaddr_C.u8[i]);
-  }
-  snprintf(str, sizeof(str), "test");
-  simple_udp_sendto(&udp_conn, str, strlen(str), &dest_ipaddr_C);
-  LOG_INFO("Test connection\n");
-}
 
+// Define the IPv6 address of mote C
+uip_ipaddr_t dest_ipaddr_C;
+uip_ipaddr_t dest_ipaddr_B;
 PROCESS(udp_server_process, "UDP server");
 AUTOSTART_PROCESSES(&udp_server_process);
-/*---------------------------------------------------------------------------*/
-static void
-udp_rx_callback(struct simple_udp_connection *c,
+
+static void udp_rx_callback(struct simple_udp_connection *c,
          const uip_ipaddr_t *sender_addr,
          uint16_t sender_port,
          const uip_ipaddr_t *receiver_addr,
@@ -41,21 +29,24 @@ udp_rx_callback(struct simple_udp_connection *c,
          const uint8_t *data,
          uint16_t datalen)
 {
-  LOG_INFO("Received message tester '%.*s'\n", datalen, (char *) data);
   
-  LOG_INFO_6ADDR(sender_addr);
-  LOG_INFO_("\n");
-if (strcmp((char *)data, "ACK from C") == 0) {
-    direct_connection_to_C = true;
-    LOG_INFO("Direct connection to C established\n");
+  // Check the received response from mote C
+  if (strncmp((char *)data, "ACK", 3) == 0) {
+    // Received an acknowledgment for healthcheck
+    LOG_INFO("Received acknowledgment for healthcheck\n");
+  } 
+  else if (strncmp((char *)data, "exampleData", 11) == 0) {
+    // Received data response
+    LOG_INFO("Received data response: '%.*s'\n", datalen, (char *) data);
   }
-char data2[] = "Response";
+
+  // You can add more checks for different response types as needed.
 }
-/*---------------------------------------------------------------------------*/
+
 PROCESS_THREAD(udp_server_process, ev, data)
 {
   static struct etimer periodic_timer;
-  
+  static int counter = 0;
   PROCESS_BEGIN();
   etimer_set(&periodic_timer, CLOCK_SECOND * 10);
 
@@ -66,12 +57,40 @@ PROCESS_THREAD(udp_server_process, ev, data)
   simple_udp_register(&udp_conn, UDP_SERVER_PORT, NULL,
                       UDP_CLIENT_PORT, udp_rx_callback);
 
-  while(1) {
-    PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&periodic_timer));
-    etimer_reset(&periodic_timer);
-    testCconnection();
+  // Set the IPv6 address of mote C
+  uip_ip6addr(&dest_ipaddr_C, 0xfd00, 0, 0, 0, 0x0212, 0x7403, 0x0003, 0x0303);
+  // Set the IPv6 address of mote B
+  uip_ip6addr(&dest_ipaddr_B, 0xfd00, 0, 0, 0, 0x0212, 0x7402, 0x0002, 0x0202);
+while (1) {
+  PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&periodic_timer));
+  etimer_reset(&periodic_timer);
+  LOG_INFO("Sending message %d\n", counter);
+// Every 15th message, send to B
+if (counter % 15 == 0) {
+  LOG_INFO("Sending message to B\n");
+  static char dataReq_msg[] = "dataReq";
+  simple_udp_sendto(&udp_conn, dataReq_msg, strlen(dataReq_msg), &dest_ipaddr_B);
+  LOG_INFO("Sent message to B\n");
+}
+// Every 10th message, send healthcheck
+else if (counter % 10 == 0) {
+  LOG_INFO("Sending healthcheck message\n");
+  // Send a healthcheck message
+  static char health_msg[] = "healthcheck";
+  simple_udp_sendto(&udp_conn, health_msg, strlen(health_msg), &dest_ipaddr_C);
+} else {
+  LOG_INFO("Sending dataReq message\n");
+  // Send a dataReq message to Mote C
+  static char dataReq_msg[] = "dataReq";
+  simple_udp_sendto(&udp_conn, dataReq_msg, strlen(dataReq_msg), &dest_ipaddr_C);
+}
+counter++;
+
+  // Reset counter when it reaches 10 to start over
+  if (counter == 15) {
+    counter = 0;
   }
+}
 
   PROCESS_END();
 }
-/*---------------------------------------------------------------------------*/
