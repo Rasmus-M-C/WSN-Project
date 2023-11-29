@@ -10,10 +10,12 @@
 #define LOG_LEVEL LOG_LEVEL_INFO
 
 #define WITH_SERVER_REPLY  1
-#define UDP_CLIENT_PORT    8765
-#define UDP_SERVER_PORT    5678
+#define UDP_PORT_A 8765
+#define UDP_PORT_C 5678
+#define UDP_PORT_B 5679
 
 static struct simple_udp_connection udp_conn;
+static struct simple_udp_connection udp_connB;
 
 // Define the IPv6 address of mote C
 uip_ipaddr_t dest_ipaddr_C;
@@ -35,10 +37,15 @@ static void udp_rx_callback(struct simple_udp_connection *c,
     // Received an acknowledgment for healthcheck
     LOG_INFO("Received acknowledgment for healthcheck\n");
   } 
-  else if (strncmp((char *)data, "exampleData", 11) == 0) {
+  else if (strncmp((char *)data, "dataExampleB", 12) == 0) {
     // Received data response
+    LOG_INFO("Received data from IPADDR:");
+    log_6addr(sender_addr);
     LOG_INFO("Received data response: '%.*s'\n", datalen, (char *) data);
-  }
+  } else {
+  LOG_INFO("Received unknown message\n");
+  // Handle unknown messages as needed
+ }
 
   // You can add more checks for different response types as needed.
 }
@@ -54,8 +61,10 @@ PROCESS_THREAD(udp_server_process, ev, data)
   NETSTACK_ROUTING.root_start();
 
   /* Initialize UDP connection */
-  simple_udp_register(&udp_conn, UDP_SERVER_PORT, NULL,
-                      UDP_CLIENT_PORT, udp_rx_callback);
+  simple_udp_register(&udp_conn, UDP_PORT_A, NULL,
+                      UDP_PORT_C, udp_rx_callback);
+  simple_udp_register(&udp_connB, UDP_PORT_A, NULL,
+                      UDP_PORT_B, udp_rx_callback);              
 
   // Set the IPv6 address of mote C
   uip_ip6addr(&dest_ipaddr_C, 0xfd00, 0, 0, 0, 0x0212, 0x7403, 0x0003, 0x0303);
@@ -69,7 +78,7 @@ while (1) {
 if (counter % 15 == 0) {
   LOG_INFO("Sending message to B\n");
   static char dataReq_msg[] = "dataReq";
-  simple_udp_sendto(&udp_conn, dataReq_msg, strlen(dataReq_msg), &dest_ipaddr_B);
+  simple_udp_sendto(&udp_connB, dataReq_msg, strlen(dataReq_msg), &dest_ipaddr_B);
   LOG_INFO("Sent message to B\n");
 }
 // Every 10th message, send healthcheck

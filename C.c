@@ -6,10 +6,11 @@
 #include "sys/log.h"
 #define LOG_MODULE "App"
 #define LOG_LEVEL LOG_LEVEL_INFO
-#define UDP_CLIENT_PORT 8765
-#define UDP_SERVER_PORT 5678
-
+#define UDP_PORT_A 8765
+#define UDP_PORT_C 5678
+#define UDP_PORT_B 5679
 static struct simple_udp_connection udp_conn;
+static struct simple_udp_connection udp_connB;
 
 PROCESS(udp_client_process, "UDP client");
 AUTOSTART_PROCESSES(&udp_client_process);
@@ -35,25 +36,32 @@ static void udp_rx_callback(struct simple_udp_connection *c,
       char ack[] = "ACK";
       simple_udp_sendto(&udp_conn, ack, strlen(ack), sender_addr);
     }
-    else{
+    else {
+      
+      if (sender_addr->u8[15] == 0x01){ // Sender address must be A.
       LOG_INFO("Recieved a data request, sending data\n");
-      char response[] = "exampleData";
+      char response[] = "dataExample";
       simple_udp_sendto(&udp_conn, response, strlen(response), sender_addr);
+      LOG_INFO("Sent data to A\n");}
+      else {
+      LOG_INFO("Recieved a data request from B, sending data\n");
+      char response[] = "dataExample";
+      simple_udp_sendto(&udp_conn, response, strlen(response), sender_addr);
+      LOG_INFO("Sent data to B\n");
+      }
       // Print addr which is the IPv6 address of the sender
-      LOG_INFO("Sender IPv6 address: ");
-      for (int i = 0; i < 16; i++) {
-        LOG_INFO_("%02X", sender_addr->u8[i]);
-        if (i < 15) {
-            LOG_INFO_(":");
-    }
+      //LOG_INFO("A IPv6 address: ");
+    //   for (int i = 0; i < 16; i++) {
+    //     LOG_INFO_("%02X", dest_ipaddr_A->u8[i]);
+    //     if (i < 15) {
+    //         LOG_INFO_(":");
+    // }
 }
 LOG_INFO_("\n");
 
-    }
-    
-    
-  //}
 }
+    
+    
 
 PROCESS_THREAD(udp_client_process, ev, data)
 {
@@ -61,8 +69,10 @@ PROCESS_THREAD(udp_client_process, ev, data)
   PROCESS_BEGIN();
 
   // Initialize UDP connection
-  simple_udp_register(&udp_conn, UDP_CLIENT_PORT, NULL,
-                      UDP_SERVER_PORT, udp_rx_callback);
+  simple_udp_register(&udp_conn, UDP_PORT_C, NULL,
+                      UDP_PORT_A, udp_rx_callback);
+  simple_udp_register(&udp_connB, UDP_PORT_C, NULL,
+                      UDP_PORT_B, udp_rx_callback);
 
   while (1) {
     PROCESS_WAIT_EVENT();
