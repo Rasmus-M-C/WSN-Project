@@ -3,6 +3,8 @@
 #include <stdio.h>
 #include <string.h>
 
+#include <stdlib.h>
+
 #include "sys/log.h"
 #define LOG_MODULE "App"
 #define LOG_LEVEL LOG_LEVEL_INFO
@@ -12,8 +14,52 @@
 static struct simple_udp_connection udp_conn;
 static struct simple_udp_connection udp_connB;
 
+// State
+#define BAD_SUCCES 95
+static clock_time_t t1 = 0;
+static int state = 100;
+
 PROCESS(udp_client_process, "UDP client");
-AUTOSTART_PROCESSES(&udp_client_process);
+PROCESS(updateState, "state");
+AUTOSTART_PROCESSES(&udp_client_process, &updateState);
+
+/*---------------------------------------------------------------------------*/
+static int getState(int currentState){
+  int good = 100;
+  int mix = 50;
+  int bad = 0;
+  int newState = currentState;
+
+  if (currentState != good)
+  {
+    if((unsigned) rand() % 100 > 70) //if(clock_time() - t1 > 2 * CLOCK_SECOND)
+    {
+      LOG_INFO("Good state\n");
+      newState = good;
+    }
+  } else 
+  {
+    int r = (unsigned) rand() % 100;
+    LOG_INFO("r = %d\n", r);
+    if (r < 10) 
+    {
+      newState = bad;
+      LOG_INFO("Bad state\n");
+      t1 = clock_time();
+    } else if (r < 20) 
+    {
+      newState = mix;
+      LOG_INFO("Mix state\n");
+      t1 = clock_time();
+    } 
+  }
+
+  return newState;
+
+}
+
+/*---------------------------------------------------------------------------*/
+
 
 static void udp_rx_callback(struct simple_udp_connection *c,
                             const uip_ipaddr_t *sender_addr,
@@ -39,15 +85,21 @@ static void udp_rx_callback(struct simple_udp_connection *c,
     else {
       
       if (sender_addr->u8[15] == 0x01){ // Sender address must be A.
-      LOG_INFO("Recieved a data request, sending data\n");
-      char response[] = "dataExample";
-      simple_udp_sendto(&udp_conn, response, strlen(response), sender_addr);
-      LOG_INFO("Sent data to A\n");}
+        if ((unsigned) rand() % 100 >= state){
+          //lost packet
+          LOG_INFO("Lost packet from A\n");
+        } else {
+          LOG_INFO("Recieved a data request, sending data\n");
+          char response[] = "dataExample";
+          simple_udp_sendto(&udp_conn, response, strlen(response), sender_addr);
+          LOG_INFO("Sent data to A\n");
+        }
+      }
       else {
-      LOG_INFO("Recieved a data request from B, sending data\n");
-      char response[] = "dataExample";
-      simple_udp_sendto(&udp_connB, response, strlen(response), sender_addr);
-      LOG_INFO("Sent data to B\n");
+        LOG_INFO("Recieved a data request from B, sending data\n");
+        char response[] = "dataExample";
+        simple_udp_sendto(&udp_connB, response, strlen(response), sender_addr);
+        LOG_INFO("Sent data to B\n");
       }
       // Print addr which is the IPv6 address of the sender
       //LOG_INFO("A IPv6 address: ");
@@ -66,6 +118,7 @@ LOG_INFO_("\n");
 PROCESS_THREAD(udp_client_process, ev, data)
 {
   static int counter = 0;
+  srand(10);
   PROCESS_BEGIN();
 
   // Initialize UDP connection
@@ -77,6 +130,24 @@ PROCESS_THREAD(udp_client_process, ev, data)
   while (1) {
     PROCESS_WAIT_EVENT();
     
+  }
+
+  PROCESS_END();
+}
+
+PROCESS_THREAD(updateState, ev, data)
+{
+  static struct etimer stateTimer;
+
+  PROCESS_BEGIN();
+  etimer_set(&stateTimer, CLOCK_SECOND);
+
+  while(1)
+  {
+    state = getState(state);
+
+    PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&stateTimer));
+    etimer_reset(&stateTimer);
   }
 
   PROCESS_END();
