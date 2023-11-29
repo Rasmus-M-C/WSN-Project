@@ -25,23 +25,10 @@ static void udp_rx_callback(struct simple_udp_connection *c,
               uint16_t datalen)
 {
  // Check the received message type
- if (strncmp((char *)data, "healthcheck", 11) == 0) {
-  LOG_INFO("Responding with 'ACK'\n");
-  char ack[] = "ACK";
-  
-  simple_udp_sendto(&udp_conn, ack, strlen(ack), sender_addr);
- } 
- else if (strncmp((char *)data, "dataExample", 11) == 0) {
-  LOG_INFO("Sending 'dataExample' to Mote A\n");
-  // Set the IPv6 address of Mote A
-  uip_ipaddr_t dest_ipaddr_A;
-  uip_ip6addr(&dest_ipaddr_A, 0xfd00, 0, 0, 0, 0x0212, 0x7401, 0x0001, 0x0101);
-
-  static char data[] = "dataExample";
-  simple_udp_sendto(&udp_conn, data, datalen, &dest_ipaddr_A);
- } 
- else if (strncmp((char *)data, "dataReq", 7) == 0) {
-  LOG_INFO("Sending 'dataReq' to Mote C\n");
+ 
+ 
+ if (strncmp((char *)data, "dataReq", 7) == 0) {
+  LOG_INFO("Sending 'dataReq' to Mote C \n");
   // Set the IPv6 address of Mote C
   uip_ipaddr_t dest_ipaddr_C;
   uip_ip6addr(&dest_ipaddr_C, 0xfd00, 0, 0, 0, 0x0212, 0x7403, 0x0003, 0x0303);
@@ -49,10 +36,16 @@ static void udp_rx_callback(struct simple_udp_connection *c,
   static char datat[] = "dataReq";
   LOG_INFO((char *)data);
   simple_udp_sendto(&udp_connC, datat, datalen, &dest_ipaddr_C);
-  LOG_INFO("Efter sendto");
+  LOG_INFO("Efter sendto \n");
  } else {
-  LOG_INFO("Received unknown message\n");
-  // Handle unknown messages as needed
+  LOG_INFO("Sending 'dataExample' to Mote A \n");
+  // Set the IPv6 address of Mote A
+  uip_ipaddr_t dest_ipaddr_A;
+  uip_ip6addr(&dest_ipaddr_A, 0xfd00, 0, 0, 0, 0x0212, 0x7401, 0x0001, 0x0101);
+
+  static char data[] = "dataExample";
+  simple_udp_sendto(&udp_conn, data, datalen, &dest_ipaddr_A);
+ 
  }
 }
 

@@ -21,7 +21,8 @@ static struct simple_udp_connection udp_connB;
 uip_ipaddr_t dest_ipaddr_C;
 uip_ipaddr_t dest_ipaddr_B;
 PROCESS(udp_server_process, "UDP server");
-AUTOSTART_PROCESSES(&udp_server_process);
+PROCESS(udp_network_process, "UDP network start");
+AUTOSTART_PROCESSES(&udp_server_process, &udp_network_process);
 
 static void udp_rx_callback(struct simple_udp_connection *c,
          const uip_ipaddr_t *sender_addr,
@@ -37,7 +38,7 @@ static void udp_rx_callback(struct simple_udp_connection *c,
     // Received an acknowledgment for healthcheck
     LOG_INFO("Received acknowledgment for healthcheck\n");
   } 
-  else if (strncmp((char *)data, "dataExampleB", 12) == 0) {
+  else if (strncmp((char *)data, "dataExample", 11) == 0) {
     // Received data response
     LOG_INFO("Received data from IPADDR:");
     log_6addr(sender_addr);
@@ -50,13 +51,10 @@ static void udp_rx_callback(struct simple_udp_connection *c,
   // You can add more checks for different response types as needed.
 }
 
-PROCESS_THREAD(udp_server_process, ev, data)
+PROCESS_THREAD(udp_network_process, ev, data)
 {
-  static struct etimer periodic_timer;
-  static int counter = 0;
   PROCESS_BEGIN();
-  etimer_set(&periodic_timer, CLOCK_SECOND * 10);
-
+  // Start the network
   /* Initialize DAG root */
   NETSTACK_ROUTING.root_start();
 
@@ -64,7 +62,17 @@ PROCESS_THREAD(udp_server_process, ev, data)
   simple_udp_register(&udp_conn, UDP_PORT_A, NULL,
                       UDP_PORT_C, udp_rx_callback);
   simple_udp_register(&udp_connB, UDP_PORT_A, NULL,
-                      UDP_PORT_B, udp_rx_callback);              
+                      UDP_PORT_B, udp_rx_callback);  
+  LOG_INFO("Network started\n");
+  PROCESS_END();
+}
+
+PROCESS_THREAD(udp_server_process, ev, data)
+{
+  static struct etimer periodic_timer;
+  static int counter = 0;
+  PROCESS_BEGIN();
+  etimer_set(&periodic_timer, CLOCK_SECOND * 10);
 
   // Set the IPv6 address of mote C
   uip_ip6addr(&dest_ipaddr_C, 0xfd00, 0, 0, 0, 0x0212, 0x7403, 0x0003, 0x0303);

@@ -46,7 +46,7 @@ static void udp_rx_callback(struct simple_udp_connection *c,
       else {
       LOG_INFO("Recieved a data request from B, sending data\n");
       char response[] = "dataExample";
-      simple_udp_sendto(&udp_conn, response, strlen(response), sender_addr);
+      simple_udp_sendto(&udp_connB, response, strlen(response), sender_addr);
       LOG_INFO("Sent data to B\n");
       }
       // Print addr which is the IPv6 address of the sender
