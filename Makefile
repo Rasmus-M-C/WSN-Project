@@ -2,6 +2,7 @@ CONTIKI_PROJECT = A B C
 all: $(CONTIKI_PROJECT)
 CUSTOM_CFLAGS := -WALL CUSTOM_CFLAGS += -Wformat
 WERROR := 0
-
+CFLAGS += -DENERGEST_CONF_ON=1
+PROJECT_SOURCEFILES += PowerConsumption.c
 CONTIKI=../..
 include $(CONTIKI)/Makefile.include
