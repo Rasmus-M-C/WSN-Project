@@ -16,6 +16,9 @@ tags
 *.sky
 *.native
 *.csc
+*.sky
+*.robot
+*.resc
 
 symbols.[ch]
 #examples/*/symbols.c
