@@ -4,6 +4,7 @@
 #include "net/ipv6/simple-udp.h"
 #include <stdio.h>
 #include <string.h>
+#include "sys/energest.h"
 
 //#include "PowerConsumption.h"
 #include "sys/energest.h"
@@ -174,8 +175,6 @@ PROCESS_THREAD(checkTimeout, ev, data)
       timeout = clock_time();
     }
     logging(states_power);
-    //int_dec = Get_Float_Parts(states_power);
-    //LOG_INFO("Test total = %10lu.%07lumAh |\n", int_dec.integer, int_dec.decimal);
     PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&timeoutTimer));
     etimer_reset(&timeoutTimer);
   }
