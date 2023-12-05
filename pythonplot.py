@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 from datetime import datetime, timedelta
 
-file_path = 'loglistener16.txt'  # Replace with the path to your text file
+file_path = 'loglistener17.txt'  # Replace with the path to your text file
 def parse_timestamp(timestamp):
     # Check if the timestamp includes hours
     if len(timestamp.split(':')) == 3:
@@ -52,8 +52,8 @@ fig, axs = plt.subplots(2, figsize=(10, 8), sharex=True)
 
 # Plot TX/RX Ratio
 axs[0].plot(tx_rx_times, tx_rx_data, marker='o', color='blue')
-axs[0].set_ylabel('TX/RX Ratio')
-axs[0].set_title('TX/RX Ratio and State Over Time')
+axs[0].set_ylabel('RX/TX Ratio')
+axs[0].set_title('RX/TX Ratio and State Over Time')
 axs[0].set_xlim(min_time, max_time)  # Synchronize x-axis
 
 # Plot State

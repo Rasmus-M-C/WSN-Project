@@ -82,9 +82,13 @@ static void udp_rx_callback(struct simple_udp_connection *c,
   //} else if (strncmp((char *)data, "health", 6) == 0) {
     // Respond with "ACK" for a health message
     if(strncmp((char *)data, "healthcheck", 11) == 0){
+      if ((unsigned) rand() % 100 >= state){
+          //lost packet
+          LOG_INFO("Lost packet from A\n");
+        } else {
       LOG_INFO("Responding with 'ACK'\n");
       char ack[] = "ACK";
-      simple_udp_sendto(&udp_conn, ack, strlen(ack), sender_addr);
+      simple_udp_sendto(&udp_conn, ack, strlen(ack), sender_addr);}
     }
     else {
       LOG_INFO("state: %d\n", state);

@@ -72,9 +72,6 @@ static void udp_rx_callback(struct simple_udp_connection *c,
 {
   //(uip_ipaddr_cmp(sender_addr, &dest_ipaddr_C))
     //uip_ip6addr(&dest_ipaddr_C, 0xfd00, 0, 0, 0, 0x0212, 0x7403, 0x0003, 0x0303); 
-    bool testresult = false;
-    testresult = (sender_port == UDP_PORT_C);
-    LOG_INFO("Testresult: %d\n", testresult);
 
     if (sender_port == UDP_PORT_C) {
     RX_count++;
@@ -136,8 +133,8 @@ while (1) {
 // Every 15th message, send to B
 LOG_INFO("Ratio: %d\n", ratio);
 
-if (ratio < 90) {
-  //LOG_INFO("Sending message to B\n");
+if (ratio < 38) {
+  LOG_INFO("Sending message B\n");
   static char dataReq_msg[] = "dataReq";
   simple_udp_sendto(&udp_connB, dataReq_msg, strlen(dataReq_msg), &dest_ipaddr_B);
   
