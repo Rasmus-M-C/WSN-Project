@@ -34,22 +34,23 @@ static int getState(int currentState){
   {
     if((unsigned) rand() % 100 > 90) //if(clock_time() - t1 > 2 * CLOCK_SECOND)
     {
-      LOG_INFO("Good state\n");
+      
+      //LOG_INFO("%d\n", newState);
       newState = good;
     }
   } else 
   {
     int r = (unsigned) rand() % 100;
-    LOG_INFO("r = %d\n", r);
     if (r < 10) 
     {
       newState = bad;
-      LOG_INFO("Bad state\n");
+      
+      //LOG_INFO("%d\n", newState);
       t1 = clock_time();
     } else if (r < 20) 
     {
       newState = mix;
-      LOG_INFO("Mix state\n");
+      //LOG_INFO("%d\n", newState);
       t1 = clock_time();
     } 
   }
@@ -69,6 +70,9 @@ static void udp_rx_callback(struct simple_udp_connection *c,
                             const uint8_t *data,
                             uint16_t datalen)
 {
+
+  uip_ipaddr_t dest_ipaddr_A;
+  uip_ip6addr(&dest_ipaddr_A, 0xfd00, 0, 0, 0, 0x0212, 0x7401, 0x0001, 0x0101);
   // Check the received message type
   //if (strncmp((char *)data, "dataReq", 7) == 0) {
   //  // Respond with "exampleData" for a dataReq message
@@ -84,7 +88,9 @@ static void udp_rx_callback(struct simple_udp_connection *c,
     }
     else {
       
-      if (sender_addr->u8[15] == 0x01){ // Sender address must be A.
+      if (uip_ipaddr_cmp(sender_addr, &dest_ipaddr_A)){ // Sender address must be A.
+      LOG_INFO("state: %d\n", state);
+
         if ((unsigned) rand() % 100 >= state){
           //lost packet
           LOG_INFO("Lost packet from A\n");
@@ -119,6 +125,8 @@ PROCESS_THREAD(udp_client_process, ev, data)
 {
   static int counter = 0;
   srand(10);
+
+  
   PROCESS_BEGIN();
 
   // Initialize UDP connection

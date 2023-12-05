@@ -51,6 +51,8 @@ float TotalPowerConsumption() {
   power += ((to_seconds(energest_type_time(ENERGEST_TYPE_CPU))))*CPU_NORMAL+((to_seconds(energest_type_time(ENERGEST_TYPE_LPM))))*CPU_SLEEP+((to_seconds(energest_type_time(ENERGEST_TYPE_TRANSMIT))))*TX+((to_seconds(energest_type_time(ENERGEST_TYPE_LISTEN))))*RX;
   return power;
 }
+static int TX_count = 0;
+static int RX_count = 0;
 
 // Define the IPv6 address of mote C
 uip_ipaddr_t dest_ipaddr_C;
@@ -68,7 +70,12 @@ static void udp_rx_callback(struct simple_udp_connection *c,
          const uint8_t *data,
          uint16_t datalen)
 {
-  
+  //(uip_ipaddr_cmp(sender_addr, &dest_ipaddr_C))
+    uip_ip6addr(&dest_ipaddr_C, 0xfd00, 0, 0, 0, 0x0212, 0x7403, 0x0003, 0x0303);  
+    if ((uip_ipaddr_cmp(sender_addr, &dest_ipaddr_C))) {
+    RX_count++;
+    timeout = 0;
+  }
   // Check the received response from mote C
   if (strncmp((char *)data, "ACK", 3) == 0) {
     // Received an acknowledgment for healthcheck
@@ -80,7 +87,7 @@ static void udp_rx_callback(struct simple_udp_connection *c,
     log_6addr(sender_addr);
     LOG_INFO("Received data response: '%.*s'\n", datalen, (char *) data);
     //stop timeout ------------------------------------------------------------
-    timeout = 0;
+    
   } else {
   LOG_INFO("Received unknown message\n");
   // Handle unknown messages as needed
@@ -120,29 +127,32 @@ while (1) {
   etimer_reset(&periodic_timer);
   LOG_INFO("Sending message %d\n", counter);
 // Every 15th message, send to B
-if (counter % 15 == 0) {
+if (counter % 10 == 0) {
   LOG_INFO("Sending message to B\n");
   static char dataReq_msg[] = "dataReq";
   simple_udp_sendto(&udp_connB, dataReq_msg, strlen(dataReq_msg), &dest_ipaddr_B);
   LOG_INFO("Sent message to B\n");
 }
 // Every 10th message, send healthcheck
-else if (counter % 10 == 0) {
+else if (counter % 10 == 11) { 
   LOG_INFO("Sending healthcheck message\n");
   // Send a healthcheck message
   static char health_msg[] = "healthcheck";
   simple_udp_sendto(&udp_conn, health_msg, strlen(health_msg), &dest_ipaddr_C);
+  TX_count++;
 } else {
   LOG_INFO("Sending dataReq message\n");
   // Send a dataReq message to Mote C
   static char dataReq_msg[] = "dataReq";
   simple_udp_sendto(&udp_conn, dataReq_msg, strlen(dataReq_msg), &dest_ipaddr_C);
   timeout = clock_time();
+  TX_count++;
 }
 counter++;
+LOG_INFO("TX: %d, RX: %d\n", TX_count, RX_count);
 
   // Reset counter when it reaches 10 to start over
-  if (counter == 15) {
+  if (counter == 10) {
     counter = 0;
   }
 }
@@ -173,6 +183,7 @@ PROCESS_THREAD(checkTimeout, ev, data)
       LOG_INFO("Resending package %d\n", counter);
       simple_udp_sendto(&udp_conn, dataReq_msg, strlen(dataReq_msg), &dest_ipaddr_C);
       timeout = clock_time();
+      TX_count++;
     }
     logging(states_power);
     PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&timeoutTimer));
