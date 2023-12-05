@@ -4,8 +4,9 @@
 #include "net/ipv6/simple-udp.h"
 #include <stdio.h>
 #include <string.h>
+#include "sys/energest.h"
 
-//#include "PowerConsumption.h"
+#include "PowerConsumption.h"
 
 #include "sys/log.h"
 #define LOG_MODULE "App"
@@ -131,12 +132,14 @@ PROCESS_THREAD(checkTimeout, ev, data)
   etimer_set(&timeoutTimer, CLOCK_SECOND);
   // Power Consumption
   static struct etimer periodic_timer;
-  //struct IntDec int_dec;
-  //float states_power;
+  struct IntDec int_dec;
+
+  energest_flush(); // Update all energest times. Should always be called before energest times are read.
 
   while(1)
   {
-    //states_power = TotalPowerConsumption();
+    float power1= TotalPowerConsumption();
+
     if (clock_time() > timeout + CLOCK_SECOND && timeout != 0)
     {
       static char dataReq_msg[] = "dataReq"; //temp
@@ -144,7 +147,8 @@ PROCESS_THREAD(checkTimeout, ev, data)
       simple_udp_sendto(&udp_conn, dataReq_msg, strlen(dataReq_msg), &dest_ipaddr_C);
       timeout = clock_time();
     }
-    //int_dec = Get_Float_Parts(states_power);
+    float power2= TotalPowerConsumption();
+    //int_dec = Get_Float_Parts(power2-power1);
     //LOG_INFO("Test total = %10lu.%07lumAh |\n", int_dec.integer, int_dec.decimal);
     PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&timeoutTimer));
     etimer_reset(&timeoutTimer);
