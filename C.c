@@ -32,7 +32,7 @@ static int getState(int currentState){
 
   if (currentState != good)
   {
-    if((unsigned) rand() % 100 > 70) //if(clock_time() - t1 > 2 * CLOCK_SECOND)
+    if((unsigned) rand() % 100 > 90) //if(clock_time() - t1 > 2 * CLOCK_SECOND)
     {
       LOG_INFO("Good state\n");
       newState = good;

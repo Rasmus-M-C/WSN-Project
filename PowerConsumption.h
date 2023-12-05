@@ -16,25 +16,25 @@ struct IntDec {
 };
 
 struct PowerConsumptionStates {
-  float CPU_NORMAL_usage;
-  float CPU_SLEEP_usage;
-  float CPU_DEEP_SLEEP_usage;
-  float TX_usage;
-  float RX_usage;
-  float Radiooff_usage;
-  float Total_usage;
-  unsigned long CPU_NORMAL_time;
-  unsigned long CPU_SLEEP_time;
-  unsigned long CPU_DEEP_SLEEP_time;
-  unsigned long TX_time;
-  unsigned long RX_time;
-  unsigned long Radiooff_time;
+  // float CPU_NORMAL_usage;
+  // float CPU_SLEEP_usage;
+  // float CPU_DEEP_SLEEP_usage;
+  // float TX_usage;
+  // float RX_usage;
+  // float Radiooff_usage;
+  // float Total_usage;
+  // unsigned long CPU_NORMAL_time;
+  // unsigned long CPU_SLEEP_time;
+  // unsigned long CPU_DEEP_SLEEP_time;
+  // unsigned long TX_time;
+  // unsigned long RX_time;
+  // unsigned long Radiooff_time;
   unsigned long Total_time;
 };
 
 struct IntDec Get_Float_Parts(float value);
 
-struct PowerConsumptionStates TotalPowerConsumption();
+float TotalPowerConsumption();
 
 unsigned long to_seconds(uint64_t time);
 

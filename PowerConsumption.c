@@ -32,41 +32,58 @@ struct IntDec Get_Float_Parts(float value) {
     return int_dec;
 }
 
-struct PowerConsumptionStates TotalPowerConsumption() {
-  struct PowerConsumptionStates states;
+float TotalPowerConsumption() {
+  //struct PowerConsumptionStates states;
   float hours = 0;
+  unsigned long time;
+  float power = 0;
   energest_flush(); // Update all energest times. Should always be called before energest times are read.
-  states.CPU_NORMAL_time = to_seconds(energest_type_time(ENERGEST_TYPE_CPU));
-  hours = states.CPU_NORMAL_time/3600.000;
-  states.CPU_NORMAL_usage = hours*CPU_NORMAL;
-  states.Total_usage += states.CPU_NORMAL_usage;
+  time = to_seconds(energest_type_time(ENERGEST_TYPE_CPU));
+  hours = time/3600.000;
+  //states.CPU_NORMAL_time = to_seconds(energest_type_time(ENERGEST_TYPE_CPU));
+  //hours = states.CPU_NORMAL_time/3600.000;
+  //states.CPU_NORMAL_usage = hours*CPU_NORMAL;
+  power += hours*CPU_NORMAL;
+  //states.Total_usage += states.CPU_NORMAL_usage;
 
-  states.CPU_SLEEP_time = to_seconds(energest_type_time(ENERGEST_TYPE_LPM));
-  hours = states.CPU_SLEEP_time/3600.000;
-  states.CPU_SLEEP_usage = hours*CPU_SLEEP;
-  states.Total_usage += states.CPU_SLEEP_usage;
+  time = to_seconds(energest_type_time(ENERGEST_TYPE_LPM));
+  hours = time/3600.000;
+  //states.CPU_SLEEP_time = to_seconds(energest_type_time(ENERGEST_TYPE_LPM));
+  //hours = states.CPU_SLEEP_time/3600.000;
+  //states.CPU_SLEEP_usage = hours*CPU_SLEEP;
+  power += hours*CPU_SLEEP;
 
-  states.CPU_DEEP_SLEEP_time = to_seconds(energest_type_time(ENERGEST_TYPE_DEEP_LPM));
-  hours = states.CPU_DEEP_SLEEP_time/3600.000;
-  states.CPU_DEEP_SLEEP_usage = hours*CPU_DEEP_SLEEP;
-  states.Total_usage += states.CPU_DEEP_SLEEP_usage;
+  time = to_seconds(energest_type_time(ENERGEST_TYPE_DEEP_LPM));
+  hours = time/3600.000;
+  //states.CPU_DEEP_SLEEP_time = to_seconds(energest_type_time(ENERGEST_TYPE_DEEP_LPM));
+  //hours = states.CPU_DEEP_SLEEP_time/3600.000;
+  //states.CPU_DEEP_SLEEP_usage = hours*CPU_DEEP_SLEEP;
+  power += hours*CPU_DEEP_SLEEP;
 
-  states.TX_time = to_seconds(energest_type_time(ENERGEST_TYPE_TRANSMIT));
-  hours = states.TX_time/3600.000;
-  states.TX_usage = hours*TX;
-  states.Total_usage += states.TX_usage;
+  time = to_seconds(energest_type_time(ENERGEST_TYPE_TRANSMIT));
+  hours = time/3600.000;
+  //states.TX_time = to_seconds(energest_type_time(ENERGEST_TYPE_TRANSMIT));
+  //hours = states.TX_time/3600.000;
+  //states.TX_usage = hours*TX;
+  power += hours*TX;
 
-  states.RX_time = to_seconds(energest_type_time(ENERGEST_TYPE_LISTEN));
-  hours = states.RX_time/3600.000;
-  states.RX_usage = hours*RX;
-  states.Total_usage += states.RX_usage;
+  time = to_seconds(energest_type_time(ENERGEST_TYPE_LISTEN));
+  hours = time/3600.000;
+  //states.RX_time = to_seconds(energest_type_time(ENERGEST_TYPE_LISTEN));
+  //hours = states.RX_time/3600.000;
+  //states.RX_usage = hours*RX;
+  power += hours*RX;
 
-  states.Radiooff_time = to_seconds(ENERGEST_GET_TOTAL_TIME() - energest_type_time(ENERGEST_TYPE_TRANSMIT) - energest_type_time(ENERGEST_TYPE_LISTEN));
-  hours = states.Radiooff_time/3600.000;
-  states.Radiooff_usage = hours*Radiooff;
-  states.Total_usage += states.Radiooff_usage;
+  time = to_seconds(ENERGEST_GET_TOTAL_TIME() - energest_type_time(ENERGEST_TYPE_TRANSMIT) - energest_type_time(ENERGEST_TYPE_LISTEN));
+  hours = time/3600.000;
+  //states.Radiooff_time = to_seconds(ENERGEST_GET_TOTAL_TIME() - energest_type_time(ENERGEST_TYPE_TRANSMIT) - energest_type_time(ENERGEST_TYPE_LISTEN));
+  //hours = states.Radiooff_time/3600.000;
+  //states.Radiooff_usage = hours*Radiooff;
+  power += hours*Radiooff;
 
-  states.Total_time = to_seconds(ENERGEST_GET_TOTAL_TIME());
+  //states.Total_time = to_seconds(ENERGEST_GET_TOTAL_TIME());
 
-  return states;
+
+
+  return power;
 }

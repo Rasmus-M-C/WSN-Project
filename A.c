@@ -5,6 +5,8 @@
 #include <stdio.h>
 #include <string.h>
 
+//#include "PowerConsumption.h"
+
 #include "sys/log.h"
 #define LOG_MODULE "App"
 #define LOG_LEVEL LOG_LEVEL_INFO
@@ -19,6 +21,8 @@ static struct simple_udp_connection udp_connB;
 
 static clock_time_t timeout = 0;
 static int counter = 0;
+
+//static struct PowerConsumptionStates states_power;
 
 // Define the IPv6 address of mote C
 uip_ipaddr_t dest_ipaddr_C;
@@ -78,7 +82,7 @@ PROCESS_THREAD(udp_server_process, ev, data)
   static struct etimer periodic_timer;
   PROCESS_BEGIN();
   etimer_set(&periodic_timer, CLOCK_SECOND * 10);
-
+  
   // Set the IPv6 address of mote C
   uip_ip6addr(&dest_ipaddr_C, 0xfd00, 0, 0, 0, 0x0212, 0x7403, 0x0003, 0x0303);
   // Set the IPv6 address of mote B
@@ -110,7 +114,7 @@ else if (counter % 10 == 0) {
 counter++;
 
   // Reset counter when it reaches 10 to start over
-  if (counter == 9) {
+  if (counter == 15) {
     counter = 0;
   }
 }
@@ -125,9 +129,14 @@ PROCESS_THREAD(checkTimeout, ev, data)
 
   PROCESS_BEGIN();
   etimer_set(&timeoutTimer, CLOCK_SECOND);
+  // Power Consumption
+  static struct etimer periodic_timer;
+  //struct IntDec int_dec;
+  //float states_power;
 
   while(1)
   {
+    //states_power = TotalPowerConsumption();
     if (clock_time() > timeout + CLOCK_SECOND && timeout != 0)
     {
       static char dataReq_msg[] = "dataReq"; //temp
@@ -135,7 +144,8 @@ PROCESS_THREAD(checkTimeout, ev, data)
       simple_udp_sendto(&udp_conn, dataReq_msg, strlen(dataReq_msg), &dest_ipaddr_C);
       timeout = clock_time();
     }
-
+    //int_dec = Get_Float_Parts(states_power);
+    //LOG_INFO("Test total = %10lu.%07lumAh |\n", int_dec.integer, int_dec.decimal);
     PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&timeoutTimer));
     etimer_reset(&timeoutTimer);
   }
