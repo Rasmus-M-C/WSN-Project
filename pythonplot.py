@@ -2,8 +2,14 @@ import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 from datetime import datetime, timedelta
 
-file_path = 'loglistener11.txt'  # Replace with the path to your text file
-
+file_path = 'loglistener16.txt'  # Replace with the path to your text file
+def parse_timestamp(timestamp):
+    # Check if the timestamp includes hours
+    if len(timestamp.split(':')) == 3:
+        return datetime.strptime(timestamp, '%H:%M:%S.%f')
+    else:
+        # Add a dummy hour for timestamps without hours and convert to datetime
+        return datetime.strptime('00:' + timestamp, '%H:%M:%S.%f')
 def extract_tx_rx_state_data(line):
     timestamp = line.split("\t")[0]
     if "TX:" in line and "RX:" in line:
@@ -23,7 +29,7 @@ with open(file_path, 'r') as file:
         timestamp, tx_value, rx_value, state_value = extract_tx_rx_state_data(line.strip())
         if timestamp is not None:
             # Convert timestamp to a datetime object
-            timestamp = datetime.strptime(timestamp, '%H:%M:%S.%f')
+            timestamp = parse_timestamp(timestamp)
             timestamps.append(timestamp)
             if tx_value is not None and rx_value is not None:
                 tx_rx_ratio = rx_value / tx_value if tx_value != 0 else 0
@@ -37,6 +43,9 @@ state_times, state_data = zip(*state_values) if state_values else ([], [])
 
 all_times = tx_rx_times + state_times
 min_time, max_time = min(all_times), max(all_times)
+#average of state_values
+state_average = sum(state_data)/len(state_data)
+print("Average of state values: ", state_average)  
 
 # Plotting the data
 fig, axs = plt.subplots(2, figsize=(10, 8), sharex=True)

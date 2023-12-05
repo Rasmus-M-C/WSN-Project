@@ -71,25 +71,29 @@ static void udp_rx_callback(struct simple_udp_connection *c,
          uint16_t datalen)
 {
   //(uip_ipaddr_cmp(sender_addr, &dest_ipaddr_C))
-    uip_ip6addr(&dest_ipaddr_C, 0xfd00, 0, 0, 0, 0x0212, 0x7403, 0x0003, 0x0303);  
-    if ((uip_ipaddr_cmp(sender_addr, &dest_ipaddr_C))) {
+    //uip_ip6addr(&dest_ipaddr_C, 0xfd00, 0, 0, 0, 0x0212, 0x7403, 0x0003, 0x0303); 
+    bool testresult = false;
+    testresult = (sender_port == UDP_PORT_C);
+    LOG_INFO("Testresult: %d\n", testresult);
+
+    if (sender_port == UDP_PORT_C) {
     RX_count++;
     timeout = 0;
   }
   // Check the received response from mote C
   if (strncmp((char *)data, "ACK", 3) == 0) {
     // Received an acknowledgment for healthcheck
-    LOG_INFO("Received acknowledgment for healthcheck\n");
+    //LOG_INFO("Received acknowledgment for healthcheck\n");
   } 
   else if (strncmp((char *)data, "dataExample", 11) == 0) {
     // Received data response
-    LOG_INFO("Received data from IPADDR:");
+    //LOG_INFO("Received data from IPADDR:");
     log_6addr(sender_addr);
-    LOG_INFO("Received data response: '%.*s'\n", datalen, (char *) data);
+    //LOG_INFO("Received data response: '%.*s'\n", datalen, (char *) data);
     //stop timeout ------------------------------------------------------------
     
   } else {
-  LOG_INFO("Received unknown message\n");
+  //LOG_INFO("Received unknown message\n");
   // Handle unknown messages as needed
  }
 
@@ -108,16 +112,16 @@ PROCESS_THREAD(udp_network_process, ev, data)
                       UDP_PORT_C, udp_rx_callback);
   simple_udp_register(&udp_connB, UDP_PORT_A, NULL,
                       UDP_PORT_B, udp_rx_callback);  
-  LOG_INFO("Network started\n");
+  //LOG_INFO("Network started\n");
   PROCESS_END();
 }
 
 PROCESS_THREAD(udp_server_process, ev, data)
 {
   static struct etimer periodic_timer;
-  static int ratio = 0;
+  static int8_t ratio = 100;
   PROCESS_BEGIN();
-  ratio = RX*1e6/(TX);
+  
   etimer_set(&periodic_timer, CLOCK_SECOND * 10);
   
   // Set the IPv6 address of mote C
@@ -125,38 +129,39 @@ PROCESS_THREAD(udp_server_process, ev, data)
   // Set the IPv6 address of mote B
   uip_ip6addr(&dest_ipaddr_B, 0xfd00, 0, 0, 0, 0x0212, 0x7402, 0x0002, 0x0202);
 while (1) {
+  ratio = (RX_count*1e2)/(TX_count);
   PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&periodic_timer));
   etimer_reset(&periodic_timer);
-  LOG_INFO("Sending message %d\n", counter);
+  //LOG_INFO("Sending message %d\n", counter);
 // Every 15th message, send to B
-if (ratio < 80000) {
-  LOG_INFO("Sending message to B\n");
+LOG_INFO("Ratio: %d\n", ratio);
+
+if (ratio < 90) {
+  //LOG_INFO("Sending message to B\n");
   static char dataReq_msg[] = "dataReq";
   simple_udp_sendto(&udp_connB, dataReq_msg, strlen(dataReq_msg), &dest_ipaddr_B);
-  LOG_INFO("Sent message to B\n");
   
   if (counter % 10 == 0) { // Every 10th message, send healthcheck
-    LOG_INFO("Sending healthcheck message\n");
+    //LOG_INFO("Sending healthcheck message\n");
     // Send a healthcheck message
+    TX_count++;
     static char health_msg[] = "healthcheck";
     simple_udp_sendto(&udp_conn, health_msg, strlen(health_msg), &dest_ipaddr_C);
-    TX_count++;
   }
 }
-
 else {
-  LOG_INFO("Sending dataReq message\n");
+  //LOG_INFO("Sending dataReq message\n");
   // Send a dataReq message to Mote C
+  TX_count++;
   static char dataReq_msg[] = "dataReq";
   simple_udp_sendto(&udp_conn, dataReq_msg, strlen(dataReq_msg), &dest_ipaddr_C);
   timeout = clock_time();
-  TX_count++;
 }
 counter++;
 LOG_INFO("TX: %d, RX: %d\n", TX_count, RX_count);
 
   // Reset counter when it reaches 10 to start over
-  if (counter == 10) {
+  if (counter == 11) {
     counter = 0;
   }
 }
@@ -184,7 +189,7 @@ PROCESS_THREAD(checkTimeout, ev, data)
     if (clock_time() > timeout + CLOCK_SECOND && timeout != 0)
     {
       static char dataReq_msg[] = "dataReq"; //temp
-      LOG_INFO("Resending package %d\n", counter);
+      //LOG_INFO("Resending package %d\n", counter);
       simple_udp_sendto(&udp_conn, dataReq_msg, strlen(dataReq_msg), &dest_ipaddr_C);
       timeout = clock_time();
       TX_count++;

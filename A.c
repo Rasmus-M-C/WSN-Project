@@ -71,7 +71,7 @@ static void udp_rx_callback(struct simple_udp_connection *c,
 {
   //(uip_ipaddr_cmp(sender_addr, &dest_ipaddr_C))
     uip_ip6addr(&dest_ipaddr_C, 0xfd00, 0, 0, 0, 0x0212, 0x7403, 0x0003, 0x0303);  
-    if ((uip_ipaddr_cmp(sender_addr, &dest_ipaddr_C))) {
+    if (uip_ipaddr_cmp(sender_addr, &dest_ipaddr_C)) {
     RX_count++;
     timeout = 0;
   }

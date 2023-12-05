@@ -87,9 +87,9 @@ static void udp_rx_callback(struct simple_udp_connection *c,
       simple_udp_sendto(&udp_conn, ack, strlen(ack), sender_addr);
     }
     else {
-      
-      if (uip_ipaddr_cmp(sender_addr, &dest_ipaddr_A)){ // Sender address must be A.
       LOG_INFO("state: %d\n", state);
+      if (uip_ipaddr_cmp(sender_addr, &dest_ipaddr_A)){ // Sender address must be A.
+      //LOG_INFO("state: %d\n", state);
 
         if ((unsigned) rand() % 100 >= state){
           //lost packet
@@ -103,6 +103,7 @@ static void udp_rx_callback(struct simple_udp_connection *c,
       }
       else {
         LOG_INFO("Recieved a data request from B, sending data\n");
+        
         char response[] = "dataExample";
         simple_udp_sendto(&udp_connB, response, strlen(response), sender_addr);
         LOG_INFO("Sent data to B\n");
