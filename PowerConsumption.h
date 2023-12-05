@@ -2,12 +2,12 @@
 #ifndef POWERCONSUMPTION_H
 #define POWERCONSUMPTION_H
 
-extern const float RX; // mA
-extern const float TX ; // mA
-extern const float Radiooff; // mA Not sure if this is correct
-extern const float CPU_NORMAL; // mA
-extern const float CPU_SLEEP; // mA
-extern const float CPU_DEEP_SLEEP; // mA Not sure if this is correct
+extern #define RX; // mA
+extern #define float TX ; // mA
+extern #define float Radiooff; // mA Not sure if this is correct
+extern #define float CPU_NORMAL; // mA
+extern #define float CPU_SLEEP; // mA
+extern #define float CPU_DEEP_SLEEP; // mA Not sure if this is correct
 
 /*---------------------------------------------------------------------------*/
 struct IntDec {

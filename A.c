@@ -6,6 +6,8 @@
 #include <string.h>
 
 //#include "PowerConsumption.h"
+#include "sys/energest.h"
+
 
 #include "sys/log.h"
 #define LOG_MODULE "App"
@@ -23,6 +25,31 @@ static clock_time_t timeout = 0;
 static int counter = 0;
 
 //static struct PowerConsumptionStates states_power;
+#define RX 23.0 // mA
+#define TX 21.0 // mA
+#define Radiooff 0.0051 // mA Not sure if this is correct
+#define CPU_NORMAL 1.8 // mA
+#define CPU_SLEEP 0.0051 // mA
+#define CPU_DEEP_SLEEP 0.0051 // mA Not sure if this is correct
+
+unsigned int to_seconds(uint32_t time)
+{
+  return (unsigned int)(time/ ENERGEST_SECOND);
+}
+
+void logging(float value) {
+    int A;
+    A = value;
+    float frac = (value-A)*1e4;
+    LOG_INFO("Test total = %d.%04umAh |\n", A, frac);
+}
+
+float TotalPowerConsumption() {
+  float power = 0;
+  energest_flush(); // Update all energest times. Should always be called before energest times are read.
+  power += ((to_seconds(energest_type_time(ENERGEST_TYPE_CPU))))*CPU_NORMAL+((to_seconds(energest_type_time(ENERGEST_TYPE_LPM))))*CPU_SLEEP+((to_seconds(energest_type_time(ENERGEST_TYPE_TRANSMIT))))*TX+((to_seconds(energest_type_time(ENERGEST_TYPE_LISTEN))))*RX;
+  return power;
+}
 
 // Define the IPv6 address of mote C
 uip_ipaddr_t dest_ipaddr_C;
@@ -132,11 +159,13 @@ PROCESS_THREAD(checkTimeout, ev, data)
   // Power Consumption
   static struct etimer periodic_timer;
   //struct IntDec int_dec;
-  //float states_power;
+  float states_power  = 0.0;
 
   while(1)
   {
-    //states_power = TotalPowerConsumption();
+   
+    
+    states_power = TotalPowerConsumption();
     if (clock_time() > timeout + CLOCK_SECOND && timeout != 0)
     {
       static char dataReq_msg[] = "dataReq"; //temp
@@ -144,6 +173,7 @@ PROCESS_THREAD(checkTimeout, ev, data)
       simple_udp_sendto(&udp_conn, dataReq_msg, strlen(dataReq_msg), &dest_ipaddr_C);
       timeout = clock_time();
     }
+    logging(states_power);
     //int_dec = Get_Float_Parts(states_power);
     //LOG_INFO("Test total = %10lu.%07lumAh |\n", int_dec.integer, int_dec.decimal);
     PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&timeoutTimer));

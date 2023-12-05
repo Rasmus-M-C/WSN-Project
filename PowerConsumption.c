@@ -5,12 +5,19 @@
 #include "sys/log.h"
 #include "PowerConsumption.h"
 
-const float RX = 23.0; // mA
-const float TX = 21.0; // mA
-const float Radiooff = 0.0051; // mA Not sure if this is correct
-const float CPU_NORMAL = 1.8; // mA
-const float CPU_SLEEP = 0.0051; // mA
-const float CPU_DEEP_SLEEP = 0.0051; // mA Not sure if this is correct
+// const float RX = 23.0; // mA
+// const float TX = 21.0; // mA
+// const float Radiooff = 0.0051; // mA Not sure if this is correct
+// const float CPU_NORMAL = 1.8; // mA
+// const float CPU_SLEEP = 0.0051; // mA
+// const float CPU_DEEP_SLEEP = 0.0051; // mA Not sure if this is correct
+
+#define RX = 23.0 // mA
+#define TX = 21.0 // mA
+#define Radiooff = 0.0051 // mA Not sure if this is correct
+#define CPU_NORMAL = 1.8 // mA
+#define CPU_SLEEP = 0.0051 // mA
+#define CPU_DEEP_SLEEP = 0.0051 // mA Not sure if this is correct
 
 unsigned long to_seconds(uint64_t time)
 {
