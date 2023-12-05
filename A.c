@@ -5,12 +5,10 @@
 #include <stdio.h>
 #include <string.h>
 #include "sys/energest.h"
-
-//#include "PowerConsumption.h"
-#include "sys/energest.h"
-
-
 #include "sys/log.h"
+//#include "PowerConsumption.h"
+
+
 #define LOG_MODULE "App"
 #define LOG_LEVEL LOG_LEVEL_INFO
 
@@ -28,28 +26,29 @@ static int counter = 0;
 //static struct PowerConsumptionStates states_power;
 #define RX 23.0 // mA
 #define TX 21.0 // mA
-#define Radiooff 0.0051 // mA Not sure if this is correct
+//#define Radiooff 0.0051 // mA Not sure if this is correct
 #define CPU_NORMAL 1.8 // mA
 #define CPU_SLEEP 0.0051 // mA
-#define CPU_DEEP_SLEEP 0.0051 // mA Not sure if this is correct
+//#define CPU_DEEP_SLEEP 0.0051 // mA Not sure if this is correct
 
-unsigned int to_seconds(uint32_t time)
+uint32_t to_seconds(uint32_t time)
 {
-  return (unsigned int)(time/ ENERGEST_SECOND);
+  return (uint32_t)(time/ ENERGEST_SECOND);
 }
 
 void logging(float value) {
-    int A;
-    A = value;
-    float frac = (value-A)*1e4;
-    LOG_INFO("Test total = %d.%04umAh |\n", A, frac);
+    int A = (uint32_t)value; // Get the integer part of the float value
+    LOG_INFO("Total power usage = %u.%04umAh |\n", A, (unsigned int)((value-A)*1e4)); // Print it
 }
 
 float TotalPowerConsumption() {
   float power = 0;
   energest_flush(); // Update all energest times. Should always be called before energest times are read.
-  power += ((to_seconds(energest_type_time(ENERGEST_TYPE_CPU))))*CPU_NORMAL+((to_seconds(energest_type_time(ENERGEST_TYPE_LPM))))*CPU_SLEEP+((to_seconds(energest_type_time(ENERGEST_TYPE_TRANSMIT))))*TX+((to_seconds(energest_type_time(ENERGEST_TYPE_LISTEN))))*RX;
-  return power;
+  power += (to_seconds(energest_type_time(ENERGEST_TYPE_CPU)))*CPU_NORMAL;
+  power += (to_seconds(energest_type_time(ENERGEST_TYPE_LPM)))*CPU_SLEEP;
+  power += (to_seconds(energest_type_time(ENERGEST_TYPE_TRANSMIT)))*TX;
+  power += (to_seconds(energest_type_time(ENERGEST_TYPE_LISTEN)))*RX;
+  return (power);
 }
 static int TX_count = 0;
 static int RX_count = 0;
@@ -79,7 +78,7 @@ static void udp_rx_callback(struct simple_udp_connection *c,
   // Check the received response from mote C
   if (strncmp((char *)data, "ACK", 3) == 0) {
     // Received an acknowledgment for healthcheck
-    LOG_INFO("Received acknowledgment for healthcheck\n");
+    //LOG_INFO("Received acknowledgment for healthcheck\n");
   } 
   else if (strncmp((char *)data, "dataExample", 11) == 0) {
     // Received data response
@@ -89,7 +88,7 @@ static void udp_rx_callback(struct simple_udp_connection *c,
     //stop timeout ------------------------------------------------------------
     
   } else {
-  LOG_INFO("Received unknown message\n");
+  //LOG_INFO("Received unknown message\n");
   // Handle unknown messages as needed
  }
 
@@ -108,7 +107,7 @@ PROCESS_THREAD(udp_network_process, ev, data)
                       UDP_PORT_C, udp_rx_callback);
   simple_udp_register(&udp_connB, UDP_PORT_A, NULL,
                       UDP_PORT_B, udp_rx_callback);  
-  LOG_INFO("Network started\n");
+  //LOG_INFO("Network started\n");
   PROCESS_END();
 }
 
@@ -128,20 +127,20 @@ while (1) {
   LOG_INFO("Sending message %d\n", counter);
 // Every 15th message, send to B
 if (counter % 10 == 0) {
-  LOG_INFO("Sending message to B\n");
+  //LOG_INFO("Sending message to B\n");
   static char dataReq_msg[] = "dataReq";
   simple_udp_sendto(&udp_connB, dataReq_msg, strlen(dataReq_msg), &dest_ipaddr_B);
-  LOG_INFO("Sent message to B\n");
+  //LOG_INFO("Sent message to B\n");
 }
 // Every 10th message, send healthcheck
 else if (counter % 10 == 11) { 
-  LOG_INFO("Sending healthcheck message\n");
+  //LOG_INFO("Sending healthcheck message\n");
   // Send a healthcheck message
   static char health_msg[] = "healthcheck";
   simple_udp_sendto(&udp_conn, health_msg, strlen(health_msg), &dest_ipaddr_C);
   TX_count++;
 } else {
-  LOG_INFO("Sending dataReq message\n");
+  //LOG_INFO("Sending dataReq message\n");
   // Send a dataReq message to Mote C
   static char dataReq_msg[] = "dataReq";
   simple_udp_sendto(&udp_conn, dataReq_msg, strlen(dataReq_msg), &dest_ipaddr_C);
@@ -156,7 +155,6 @@ LOG_INFO("TX: %d, RX: %d\n", TX_count, RX_count);
     counter = 0;
   }
 }
-
   PROCESS_END();
 }
 
@@ -164,19 +162,14 @@ LOG_INFO("TX: %d, RX: %d\n", TX_count, RX_count);
 PROCESS_THREAD(checkTimeout, ev, data)
 {
   static struct etimer timeoutTimer;
-
   PROCESS_BEGIN();
-  etimer_set(&timeoutTimer, CLOCK_SECOND);
-  // Power Consumption
-  static struct etimer periodic_timer;
-  //struct IntDec int_dec;
-  float states_power  = 0.0;
+  etimer_set(&timeoutTimer, CLOCK_SECOND); // Power Consumption
 
   while(1)
   {
    
     
-    states_power = TotalPowerConsumption();
+    
     if (clock_time() > timeout + CLOCK_SECOND && timeout != 0)
     {
       static char dataReq_msg[] = "dataReq"; //temp
@@ -185,9 +178,11 @@ PROCESS_THREAD(checkTimeout, ev, data)
       timeout = clock_time();
       TX_count++;
     }
-    logging(states_power);
+    logging(TotalPowerConsumption());
+ 
     PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&timeoutTimer));
     etimer_reset(&timeoutTimer);
+    counter ++;
   }
 
   PROCESS_END();
