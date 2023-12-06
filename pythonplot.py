@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 from datetime import datetime, timedelta
 
-file_path = 'loglistener18.txt'  # Replace with the path to your text file
+file_path = 'loglistener21.txt'  # Replace with the path to your text file
 def extract_tx_rx_state_power_data(line):
     timestamp = line.split("\t")[0]
     if "TX:" in line and "RX:" in line:
@@ -71,7 +71,7 @@ axs[1].set_ylabel('State')
 
 # Plot Power Consumption
 axs[2].plot(power_times, power_data, marker='o', color='green')
-axs[2].set_xlabel('Time')
+axs[2].set_xlabel('Time') 
 axs[2].set_ylabel('Power Consumption (mAs)')
 
 # Format the x-axis

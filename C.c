@@ -1,8 +1,8 @@
 #include "contiki.h"
-#include "net/ipv6/simple-udp.h"
 #include <stdio.h>
 #include <string.h>
-
+#include "net/nullnet/nullnet.h"
+#include "net/netstack.h"
 #include <stdlib.h>
 #include "sys/energest.h"
 #include "sys/log.h"
@@ -39,9 +39,8 @@ float TotalPowerConsumption() {
   return (power);
 }
 
-
-static struct simple_udp_connection udp_conn;
-static struct simple_udp_connection udp_connB;
+static linkaddr_t A_addr = {{ 0x01, 0x01, 0x01, 0x00, 0x01, 0x74, 0x12, 0x00 }};
+static linkaddr_t B_addr = {{ 0x02, 0x02, 0x02, 0x00, 0x02, 0x74, 0x12, 0x00 }};
 
 // State
 #define BAD_SUCCES 95
@@ -92,37 +91,29 @@ static int getState(int currentState){
 /*---------------------------------------------------------------------------*/
 
 
-static void udp_rx_callback(struct simple_udp_connection *c,
-                            const uip_ipaddr_t *sender_addr,
-                            uint16_t sender_port,
-                            const uip_ipaddr_t *receiver_addr,
-                            uint16_t receiver_port,
-                            const uint8_t *data,
-                            uint16_t datalen)
+void input_callback(const void *data, uint16_t len,
+  const linkaddr_t *src, const linkaddr_t *dest)
 {
 
-  uip_ipaddr_t dest_ipaddr_A;
-  uip_ip6addr(&dest_ipaddr_A, 0xfd00, 0, 0, 0, 0x0212, 0x7401, 0x0001, 0x0101);
-  // Check the received message type
-  //if (strncmp((char *)data, "dataReq", 7) == 0) {
-  //  // Respond with "exampleData" for a dataReq message
-  //  char response[] = "exampleData";
-  //  simple_udp_sendto(&udp_conn, response, strlen(response), sender_addr);
-  //  printf("Responding to dataReq with 'exampleData'\n");
-  //} else if (strncmp((char *)data, "health", 6) == 0) {
-    // Respond with "ACK" for a health message
-    if(strncmp((char *)data, "healthcheck", 11) == 0){
+
+    const char *received_message = (const char *)data;
+    if(strncmp(received_message, "healthcheck", len) == 0){
       if ((unsigned) rand() % 100 >= state){
           //lost packet
           LOG_INFO("Lost packet from A\n");
         } else {
       LOG_INFO("Responding with 'ACK'\n");
+  
+      // Set the message in NullNet buffer
       char ack[] = "ACK";
-      simple_udp_sendto(&udp_conn, ack, strlen(ack), sender_addr);}
+      nullnet_buf = (uint8_t *)ack;
+      nullnet_len = strlen(ack);
+      LOG_INFO_LLADDR(src);
+      NETSTACK_NETWORK.output(src);}
     }
     else {
       LOG_INFO("state: %d\n", state);
-      if (uip_ipaddr_cmp(sender_addr, &dest_ipaddr_A)){ // Sender address must be A.
+      if (linkaddr_cmp(src, &A_addr)){ // Sender address must be A.
       //LOG_INFO("state: %d\n", state);
 
         if ((unsigned) rand() % 100 >= state){
@@ -131,7 +122,9 @@ static void udp_rx_callback(struct simple_udp_connection *c,
         } else {
           LOG_INFO("Recieved a data request, sending data\n");
           char response[] = "dataExample";
-          simple_udp_sendto(&udp_conn, response, strlen(response), sender_addr);
+          nullnet_buf = (uint8_t *)response;
+          nullnet_len = strlen(response);
+          NETSTACK_NETWORK.output(&A_addr);
           LOG_INFO("Sent data to A\n");
         }
       }
@@ -139,7 +132,9 @@ static void udp_rx_callback(struct simple_udp_connection *c,
         //LOG_INFO("Recieved a data request from B, sending data\n");
         
         char response[] = "dataExample";
-        simple_udp_sendto(&udp_connB, response, strlen(response), sender_addr);
+        nullnet_buf = (uint8_t *)response;
+        nullnet_len = strlen(response);
+        NETSTACK_NETWORK.output(&B_addr);
         LOG_INFO("Sent data to B\n");
       }
       // Print addr which is the IPv6 address of the sender
@@ -164,11 +159,9 @@ PROCESS_THREAD(udp_client_process, ev, data)
   
   PROCESS_BEGIN();
 
-  // Initialize UDP connection
-  simple_udp_register(&udp_conn, UDP_PORT_C, NULL,
-                      UDP_PORT_A, udp_rx_callback);
-  simple_udp_register(&udp_connB, UDP_PORT_C, NULL,
-                      UDP_PORT_B, udp_rx_callback);
+  // Initialize nullnet callback
+  nullnet_set_input_callback(input_callback);
+ 
 
   while (1) {
     PROCESS_WAIT_EVENT();
@@ -207,7 +200,7 @@ PROCESS_THREAD(udp_log_process, ev, data)
 
  while (1) {
 
-  logging(TotalPowerConsumption());
+  //logging(TotalPowerConsumption());
   PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&timeoutTimer));
   etimer_reset(&timeoutTimer);
 

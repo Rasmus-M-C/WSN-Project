@@ -1,9 +1,10 @@
 #include "contiki.h"
-#include "net/ipv6/simple-udp.h"
 #include <stdio.h>
 #include <string.h>
 #include "sys/energest.h"
 #include "sys/log.h"
+#include "net/netstack.h"
+#include "net/nullnet/nullnet.h"
 #define LOG_MODULE "App"
 #define LOG_LEVEL LOG_LEVEL_INFO
 #define UDP_PORT_A 8765
@@ -44,35 +45,33 @@ PROCESS(udp_log_process, "UDP log");
 PROCESS(udp_relay_process, "UDP relay");
 AUTOSTART_PROCESSES(&udp_relay_process, &udp_log_process);
 
-static void udp_rx_callback(struct simple_udp_connection *c,
-              const uip_ipaddr_t *sender_addr,
-              uint16_t sender_port,
-              const uip_ipaddr_t *receiver_addr,
-              uint16_t receiver_port,
-              const uint8_t *data,
-              uint16_t datalen)
+void input_callback(const void *data, uint16_t len,
+  const linkaddr_t *src, const linkaddr_t *dest)
 {
+    const char *received_message = (const char *)data;
  // Check the received message type
  
  
- if (strncmp((char *)data, "dataReq", 7) == 0) {
+ if (strncmp(received_message, "dataReq", len) == 0) {
   LOG_INFO("Sending 'dataReq' to Mote C \n");
-  // Set the IPv6 address of Mote C
-  uip_ipaddr_t dest_ipaddr_C;
-  uip_ip6addr(&dest_ipaddr_C, 0xfd00, 0, 0, 0, 0x0212, 0x7403, 0x0003, 0x0303);
+  // Set the linklayer address of Mote C
+  static linkaddr_t C_addr = {{ 0x03, 0x03, 0x03, 0x00, 0x03, 0x74, 0x12, 0x00 }};
 
-  static char datat[] = "dataReq";
-  LOG_INFO((char *)data);
-  simple_udp_sendto(&udp_connC, datat, datalen, &dest_ipaddr_C);
+  static char msg[] = "dataReq";
+  nullnet_buf = (uint8_t *)msg;
+  nullnet_len = strlen(msg);
+  LOG_INFO((char *)msg);
+  NETSTACK_NETWORK.output(&C_addr);
   LOG_INFO("Efter sendto \n");
  } else {
   LOG_INFO("Sending 'dataExample' to Mote A \n");
-  // Set the IPv6 address of Mote A
-  uip_ipaddr_t dest_ipaddr_A;
-  uip_ip6addr(&dest_ipaddr_A, 0xfd00, 0, 0, 0, 0x0212, 0x7401, 0x0001, 0x0101);
+  // Set the linklayer address of Mote A
+  static linkaddr_t A_addr = {{ 0x01, 0x01, 0x01, 0x00, 0x01, 0x74, 0x12, 0x00 }};
 
-  static char data[] = "dataExample";
-  simple_udp_sendto(&udp_conn, data, datalen, &dest_ipaddr_A);
+  static char datamsg[] = "dataExample";
+  nullnet_buf = (uint8_t *)datamsg;
+  nullnet_len = strlen(datamsg);
+  NETSTACK_NETWORK.output(&A_addr);
  
  }
 }
@@ -82,11 +81,8 @@ PROCESS_THREAD(udp_relay_process, ev, data)
  static int counter = 0;
  PROCESS_BEGIN();
  float states_power  = 0.0;
- // Initialize UDP connection
- simple_udp_register(&udp_conn, UDP_PORT_B, NULL,
-           UDP_PORT_A, udp_rx_callback);
- simple_udp_register(&udp_connC, UDP_PORT_B, NULL,
-           UDP_PORT_C, udp_rx_callback);     
+ // Initialize nullnet connection
+ nullnet_set_input_callback(input_callback);   
 
  while (1) {
 
@@ -108,7 +104,7 @@ PROCESS_THREAD(udp_log_process, ev, data)
 
  while (1) {
 
-  logging(TotalPowerConsumption());
+  //logging(TotalPowerConsumption());
   PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&timeoutTimer));
   etimer_reset(&timeoutTimer);
 

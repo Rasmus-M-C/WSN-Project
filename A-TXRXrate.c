@@ -7,7 +7,8 @@
 #include "sys/energest.h"
 
 //#include "PowerConsumption.h"
-#include "sys/energest.h"
+#include "net/netstack.h"
+#include "net/nullnet/nullnet.h"
 
 
 #include "sys/log.h"
@@ -19,8 +20,9 @@
 #define UDP_PORT_C 5678
 #define UDP_PORT_B 5679
 
-static struct simple_udp_connection udp_conn;
-static struct simple_udp_connection udp_connB;
+
+static linkaddr_t C_addr = {{ 0x03, 0x03, 0x03, 0x00, 0x03, 0x74, 0x12, 0x00 }};
+static linkaddr_t B_addr = {{ 0x02, 0x02, 0x02, 0x00, 0x02, 0x74, 0x12, 0x00 }};
 
 static clock_time_t timeout = 0;
 static int counter = 0;
@@ -56,34 +58,28 @@ static int TX_count = 0;
 static int RX_count = 0;
 
 // Define the IPv6 address of mote C
-uip_ipaddr_t dest_ipaddr_C;
-uip_ipaddr_t dest_ipaddr_B;
 PROCESS(udp_server_process, "UDP server");
 PROCESS(udp_network_process, "UDP network start");
 PROCESS(checkTimeout, "TimeoutChecker");
 AUTOSTART_PROCESSES(&udp_server_process, &udp_network_process, &checkTimeout);
 
-static void udp_rx_callback(struct simple_udp_connection *c,
-         const uip_ipaddr_t *sender_addr,
-         uint16_t sender_port,
-         const uip_ipaddr_t *receiver_addr,
-         uint16_t receiver_port,
-         const uint8_t *data,
-         uint16_t datalen)
+void input_callback(const void *data, uint16_t len,
+  const linkaddr_t *src, const linkaddr_t *dest)
 {
   //(uip_ipaddr_cmp(sender_addr, &dest_ipaddr_C))
     //uip_ip6addr(&dest_ipaddr_C, 0xfd00, 0, 0, 0, 0x0212, 0x7403, 0x0003, 0x0303); 
+    const char *received_message = (const char *)data;
 
-    if (sender_port == UDP_PORT_C) {
+    if (linkaddr_cmp(src, &C_addr)) {
     RX_count++;
-    timeout = 0;
+    timeout = 0; 
   }
   // Check the received response from mote C
-  if (strncmp((char *)data, "ACK", 3) == 0) {
+  if (strncmp(received_message, "ACK", len) == 0) {
     // Received an acknowledgment for healthcheck
     //LOG_INFO("Received acknowledgment for healthcheck\n");
   } 
-  else if (strncmp((char *)data, "dataExample", 11) == 0) {
+  else if (strncmp(received_message, "dataExample", len) == 0) {
     // Received data response
     //LOG_INFO("Received data from IPADDR:");
     //log_6addr(sender_addr);
@@ -105,11 +101,8 @@ PROCESS_THREAD(udp_network_process, ev, data)
   /* Initialize DAG root */
   NETSTACK_ROUTING.root_start();
 
-  /* Initialize UDP connection */
-  simple_udp_register(&udp_conn, UDP_PORT_A, NULL,
-                      UDP_PORT_C, udp_rx_callback);
-  simple_udp_register(&udp_connB, UDP_PORT_A, NULL,
-                      UDP_PORT_B, udp_rx_callback);  
+  /* Initialize Nullnet connection */ 
+  nullnet_set_input_callback(input_callback);
   //LOG_INFO("Network started\n");
   PROCESS_END();
 }
@@ -122,10 +115,6 @@ PROCESS_THREAD(udp_server_process, ev, data)
   
   etimer_set(&periodic_timer, CLOCK_SECOND * 10);
   
-  // Set the IPv6 address of mote C
-  uip_ip6addr(&dest_ipaddr_C, 0xfd00, 0, 0, 0, 0x0212, 0x7403, 0x0003, 0x0303);
-  // Set the IPv6 address of mote B
-  uip_ip6addr(&dest_ipaddr_B, 0xfd00, 0, 0, 0, 0x0212, 0x7402, 0x0002, 0x0202);
 while (1) {
   ratio = (RX_count*1e2)/(TX_count);
   PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&periodic_timer));
@@ -136,20 +125,32 @@ while (1) {
 
 if (ratio < 38) {
   //LOG_INFO("Sending message B\n");
-  simple_udp_sendto(&udp_connB, "dataReq", strlen("dataReq"), &dest_ipaddr_B);
+  static char msg[] = "dataReq";
+  nullnet_buf = (uint8_t *)msg;
+  nullnet_len = strlen(msg);
+  LOG_INFO((char *)msg);
+  NETSTACK_NETWORK.output(&B_addr);
   
   if (counter % 10 == 0) { // Every 10th message, send healthcheck
     //LOG_INFO("Sending healthcheck message\n");
     // Send a healthcheck message
     TX_count++;
-    simple_udp_sendto(&udp_conn, "healthcheck", strlen("healthcheck"), &dest_ipaddr_C);
+    static char msg[] = "healthcheck";
+    nullnet_buf = (uint8_t *)msg;
+    nullnet_len = strlen(msg);
+    LOG_INFO((char *)msg);
+    NETSTACK_NETWORK.output(&C_addr);
   }
 }
 else {
   //LOG_INFO("Sending dataReq message\n");
   // Send a dataReq message to Mote C
   TX_count++;
-  simple_udp_sendto(&udp_conn, "dataReq", strlen("dataReq"), &dest_ipaddr_C);
+  static char msg[] = "dataReq";
+  nullnet_buf = (uint8_t *)msg;
+  nullnet_len = strlen(msg);
+  LOG_INFO((char *)msg);
+  NETSTACK_NETWORK.output(&C_addr);
   timeout = clock_time();
 }
 counter++;
@@ -183,11 +184,15 @@ PROCESS_THREAD(checkTimeout, ev, data)
     if (clock_time() > timeout + CLOCK_SECOND && timeout != 0)
     {
       //LOG_INFO("Resending package %d\n", counter);
-      simple_udp_sendto(&udp_conn, "dataReq", strlen("dataReq"), &dest_ipaddr_C);
+      static char msg[] = "dataReq";
+      nullnet_buf = (uint8_t *)msg;
+      nullnet_len = strlen(msg);
+      LOG_INFO((char *)msg);
+      NETSTACK_NETWORK.output(&C_addr);
       timeout = clock_time();
       TX_count++;
     }
-    logging(TotalPowerConsumption());
+    //logging(TotalPowerConsumption());
     PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&timeoutTimer));
     etimer_reset(&timeoutTimer);
   }
