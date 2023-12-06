@@ -33,23 +33,24 @@ static int counter = 0;
 #define CPU_SLEEP 0.0051 // mA
 #define CPU_DEEP_SLEEP 0.0051 // mA Not sure if this is correct
 
-unsigned int to_seconds(uint32_t time)
+uint32_t to_seconds(uint32_t time)
 {
-  return (unsigned int)(time/ ENERGEST_SECOND);
+  return (uint32_t)(time/ ENERGEST_SECOND);
 }
 
 void logging(float value) {
-    int A;
-    A = value;
-    float frac = (value-A)*1e4;
-    LOG_INFO("Test total = %d.%04umAh |\n", A, frac);
+    int A = (uint32_t)value; // Get the integer part of the float value
+    LOG_INFO("Total power usage = %u.%04umAh |\n", A, (unsigned int)((value-A)*1e4)); // Print it
 }
 
 float TotalPowerConsumption() {
   float power = 0;
   energest_flush(); // Update all energest times. Should always be called before energest times are read.
-  power += ((to_seconds(energest_type_time(ENERGEST_TYPE_CPU))))*CPU_NORMAL+((to_seconds(energest_type_time(ENERGEST_TYPE_LPM))))*CPU_SLEEP+((to_seconds(energest_type_time(ENERGEST_TYPE_TRANSMIT))))*TX+((to_seconds(energest_type_time(ENERGEST_TYPE_LISTEN))))*RX;
-  return power;
+  power += (to_seconds(energest_type_time(ENERGEST_TYPE_CPU)))*CPU_NORMAL;
+  power += (to_seconds(energest_type_time(ENERGEST_TYPE_LPM)))*CPU_SLEEP;
+  power += (to_seconds(energest_type_time(ENERGEST_TYPE_TRANSMIT)))*TX;
+  power += (to_seconds(energest_type_time(ENERGEST_TYPE_LISTEN)))*RX;
+  return (power);
 }
 static int TX_count = 0;
 static int RX_count = 0;
@@ -85,7 +86,7 @@ static void udp_rx_callback(struct simple_udp_connection *c,
   else if (strncmp((char *)data, "dataExample", 11) == 0) {
     // Received data response
     //LOG_INFO("Received data from IPADDR:");
-    log_6addr(sender_addr);
+    //log_6addr(sender_addr);
     //LOG_INFO("Received data response: '%.*s'\n", datalen, (char *) data);
     //stop timeout ------------------------------------------------------------
     
@@ -131,27 +132,24 @@ while (1) {
   etimer_reset(&periodic_timer);
   //LOG_INFO("Sending message %d\n", counter);
 // Every 15th message, send to B
-LOG_INFO("Ratio: %d\n", ratio);
+//LOG_INFO("Ratio: %d\n", ratio);
 
 if (ratio < 38) {
-  LOG_INFO("Sending message B\n");
-  static char dataReq_msg[] = "dataReq";
-  simple_udp_sendto(&udp_connB, dataReq_msg, strlen(dataReq_msg), &dest_ipaddr_B);
+  //LOG_INFO("Sending message B\n");
+  simple_udp_sendto(&udp_connB, "dataReq", strlen("dataReq"), &dest_ipaddr_B);
   
   if (counter % 10 == 0) { // Every 10th message, send healthcheck
     //LOG_INFO("Sending healthcheck message\n");
     // Send a healthcheck message
     TX_count++;
-    static char health_msg[] = "healthcheck";
-    simple_udp_sendto(&udp_conn, health_msg, strlen(health_msg), &dest_ipaddr_C);
+    simple_udp_sendto(&udp_conn, "healthcheck", strlen("healthcheck"), &dest_ipaddr_C);
   }
 }
 else {
   //LOG_INFO("Sending dataReq message\n");
   // Send a dataReq message to Mote C
   TX_count++;
-  static char dataReq_msg[] = "dataReq";
-  simple_udp_sendto(&udp_conn, dataReq_msg, strlen(dataReq_msg), &dest_ipaddr_C);
+  simple_udp_sendto(&udp_conn, "dataReq", strlen("dataReq"), &dest_ipaddr_C);
   timeout = clock_time();
 }
 counter++;
@@ -182,16 +180,14 @@ PROCESS_THREAD(checkTimeout, ev, data)
   {
    
     
-    states_power = TotalPowerConsumption();
     if (clock_time() > timeout + CLOCK_SECOND && timeout != 0)
     {
-      static char dataReq_msg[] = "dataReq"; //temp
       //LOG_INFO("Resending package %d\n", counter);
-      simple_udp_sendto(&udp_conn, dataReq_msg, strlen(dataReq_msg), &dest_ipaddr_C);
+      simple_udp_sendto(&udp_conn, "dataReq", strlen("dataReq"), &dest_ipaddr_C);
       timeout = clock_time();
       TX_count++;
     }
-    logging(states_power);
+    logging(TotalPowerConsumption());
     PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&timeoutTimer));
     etimer_reset(&timeoutTimer);
   }
