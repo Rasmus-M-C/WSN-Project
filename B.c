@@ -18,14 +18,37 @@
 #define CPU_SLEEP 0.0051 // mA
 #define CPU_DEEP_SLEEP 0.0051 // mA Not sure if this is correct
 
-uint32_t to_seconds(uint32_t time)
+struct IntDec {
+    unsigned long integer;
+    unsigned long decimal;
+};
+
+struct IntDec Get_Float_Parts(float value) {
+    struct IntDec int_dec;
+
+    // Extract the integer part
+    int_dec.integer = (unsigned long)value;
+
+    // Extract the fractional part using a different approach
+    float fractional = value - int_dec.integer;
+
+    // Convert the fractional part to an integer with desired precision
+    int_dec.decimal = (unsigned long)(fractional * 1e7);
+
+    return int_dec;
+}
+
+unsigned long to_seconds(uint64_t time)
 {
-  return (uint32_t)(time/ ENERGEST_SECOND);
+  return (unsigned long)(time/ ENERGEST_SECOND);
 }
 
 void logging(float value) {
-    int A = (uint32_t)value; // Get the integer part of the float value
-    LOG_INFO("Total power usage B = %u.%04umAh |\n", A, (unsigned int)((value-A)*1e4)); // Print it
+    struct IntDec int_dec;
+    int_dec = Get_Float_Parts(value);
+    LOG_INFO("Test total = %10lu.%07lumAh |\n", int_dec.integer, int_dec.decimal);
+    //int A = (uint64_t)value; // Get the integer part of the float value
+    //LOG_INFO("Total power usage = %u.%04umAh |\n", A, (unsigned int)((value-A)*1e4)); // Print it
 }
 
 float TotalPowerConsumption() {
@@ -104,7 +127,7 @@ PROCESS_THREAD(udp_log_process, ev, data)
 
  while (1) {
 
-  //logging(TotalPowerConsumption());
+  logging(TotalPowerConsumption());
   PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&timeoutTimer));
   etimer_reset(&timeoutTimer);
 

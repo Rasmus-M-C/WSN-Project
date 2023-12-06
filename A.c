@@ -31,24 +31,47 @@ static int counter = 0;
 #define CPU_SLEEP 0.0051 // mA
 //#define CPU_DEEP_SLEEP 0.0051 // mA Not sure if this is correct
 
-uint32_t to_seconds(uint32_t time)
+struct IntDec {
+    unsigned long integer;
+    unsigned long decimal;
+};
+
+struct IntDec Get_Float_Parts(float value) {
+    struct IntDec int_dec;
+
+    // Extract the integer part
+    int_dec.integer = (unsigned long)value;
+
+    // Extract the fractional part using a different approach
+    float fractional = value - int_dec.integer;
+
+    // Convert the fractional part to an integer with desired precision
+    int_dec.decimal = (unsigned long)(fractional * 1e7);
+
+    return int_dec;
+}
+
+unsigned long to_seconds(uint64_t time)
 {
-  return (uint32_t)(time/ ENERGEST_SECOND);
+  return (unsigned long)(time/ ENERGEST_SECOND);
 }
 
 void logging(float value) {
-    int A = (uint32_t)value; // Get the integer part of the float value
-    LOG_INFO("Total power usage = %u.%04umAh |\n", A, (unsigned int)((value-A)*1e4)); // Print it
+    struct IntDec int_dec;
+    int_dec = Get_Float_Parts(value);
+    LOG_INFO("Test total = %10lu.%07lumAh |\n", int_dec.integer, int_dec.decimal);
+    //int A = (uint64_t)value; // Get the integer part of the float value
+    //LOG_INFO("Total power usage = %u.%04umAh |\n", A, (unsigned int)((value-A)*1e4)); // Print it
 }
 
 float TotalPowerConsumption() {
   float power = 0;
   energest_flush(); // Update all energest times. Should always be called before energest times are read.
-  power += (to_seconds(energest_type_time(ENERGEST_TYPE_CPU)))*CPU_NORMAL;
-  power += (to_seconds(energest_type_time(ENERGEST_TYPE_LPM)))*CPU_SLEEP;
-  power += (to_seconds(energest_type_time(ENERGEST_TYPE_TRANSMIT)))*TX;
-  power += (to_seconds(energest_type_time(ENERGEST_TYPE_LISTEN)))*RX;
-  return (power);
+  power += (to_seconds(energest_type_time(ENERGEST_TYPE_CPU))/3600.000)*CPU_NORMAL;
+  power += (to_seconds(energest_type_time(ENERGEST_TYPE_LPM))/3600.000)*CPU_SLEEP;
+  power += (to_seconds(energest_type_time(ENERGEST_TYPE_TRANSMIT))/3600.000)*TX;
+  power += (to_seconds(energest_type_time(ENERGEST_TYPE_LISTEN))/3600.000)*RX;
+  return power;
 }
 static int TX_count = 0;
 static int RX_count = 0;
@@ -179,7 +202,6 @@ PROCESS_THREAD(checkTimeout, ev, data)
       TX_count++;
     }
     logging(TotalPowerConsumption());
- 
     PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&timeoutTimer));
     etimer_reset(&timeoutTimer);
     counter ++;
