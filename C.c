@@ -47,7 +47,7 @@ unsigned long to_seconds(uint64_t time)
 void logging(float value) {
     struct IntDec int_dec;
     int_dec = Get_Float_Parts(value);
-    LOG_INFO("Test total = %10lu.%07lumAh |\n", int_dec.integer, int_dec.decimal);
+    LOG_INFO("Total power usage C = %10lu.%07lumAh |\n", int_dec.integer, int_dec.decimal);
     //int A = (uint64_t)value; // Get the integer part of the float value
     //LOG_INFO("Total power usage = %u.%04umAh |\n", A, (unsigned int)((value-A)*1e4)); // Print it
 }
@@ -58,7 +58,7 @@ float TotalPowerConsumption() {
   power += (to_seconds(energest_type_time(ENERGEST_TYPE_CPU)))*CPU_NORMAL;
   power += (to_seconds(energest_type_time(ENERGEST_TYPE_LPM)))*CPU_SLEEP;
   power += (to_seconds(energest_type_time(ENERGEST_TYPE_TRANSMIT)))*TX;
-  power += (to_seconds(energest_type_time(ENERGEST_TYPE_LISTEN)))*RX;
+  //power += (to_seconds(energest_type_time(ENERGEST_TYPE_LISTEN)))*RX;
   return (power);
 }
 

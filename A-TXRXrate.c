@@ -68,7 +68,7 @@ unsigned long to_seconds(uint64_t time)
 void logging(float value) {
     struct IntDec int_dec;
     int_dec = Get_Float_Parts(value);
-    LOG_INFO("Total power usage = %10lu.%07lumAh |\n", int_dec.integer, int_dec.decimal);
+    LOG_INFO("Total power usage A = %10lu.%07lumAh |\n", int_dec.integer, int_dec.decimal);
     //int A = (uint64_t)value; // Get the integer part of the float value
     //LOG_INFO("Total power usage = %u.%04umAh |\n", A, (unsigned int)((value-A)*1e4)); // Print it
 }
@@ -79,7 +79,7 @@ float TotalPowerConsumption() {
   power += (to_seconds(energest_type_time(ENERGEST_TYPE_CPU)))*CPU_NORMAL;
   power += (to_seconds(energest_type_time(ENERGEST_TYPE_LPM)))*CPU_SLEEP;
   power += (to_seconds(energest_type_time(ENERGEST_TYPE_TRANSMIT)))*TX;
-  power += (to_seconds(energest_type_time(ENERGEST_TYPE_LISTEN)))*RX;
+  //power += (to_seconds(energest_type_time(ENERGEST_TYPE_LISTEN)))*RX;
   return (power);
 }
 
@@ -164,14 +164,16 @@ while (1) {
 // Every 15th message, send to B
 LOG_INFO("Ratio: %d\n", ratio);
 
-if (ratio < (1024 * 0.35)) {
+if (ratio < (1024 * 0.5)) {
   //LOG_INFO("Sending message B\n");
   static char msg[] = "dataReq";
   nullnet_buf = (uint8_t *)msg;
   nullnet_len = strlen(msg);
   //LOG_INFO((char *)msg);
   LOG_INFO("%c\n", msg);
+  LOG_INFO("Sending B\n");
   NETSTACK_NETWORK.output(&B_addr);
+  timeout = 0;
   
   if (counter % 10 == 0) { // Every 10th message, send healthcheck
     //LOG_INFO("Sending healthcheck message\n");
@@ -183,6 +185,7 @@ if (ratio < (1024 * 0.35)) {
     nullnet_buf = (uint8_t *)msg;
     nullnet_len = strlen(msg);
     LOG_INFO((char *)msg);
+    LOG_INFO("Sending C\n");
     NETSTACK_NETWORK.output(&C_addr);
   }
 }
@@ -196,6 +199,7 @@ else {
   nullnet_buf = (uint8_t *)msg;
   nullnet_len = strlen(msg);
   LOG_INFO("%c\n", msg);
+  LOG_INFO("Sending C\n");
   NETSTACK_NETWORK.output(&C_addr);
   timeout = clock_time();
 }
@@ -235,6 +239,7 @@ PROCESS_THREAD(checkTimeout, ev, data)
       nullnet_buf = (uint8_t *)msg;
       nullnet_len = strlen(msg);
       LOG_INFO((char *)msg);
+      LOG_INFO("Sending C\n");
       NETSTACK_NETWORK.output(&C_addr);
       timeout = clock_time();
       TX_count++;
