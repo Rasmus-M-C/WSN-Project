@@ -1,7 +1,5 @@
 #include "contiki.h"
 #include "net/routing/routing.h"
-#include "net/netstack.h"
-#include "net/ipv6/simple-udp.h"
 #include <stdio.h>
 #include <string.h>
 #include "sys/energest.h"
@@ -15,11 +13,18 @@
 #define LOG_MODULE "App"
 #define LOG_LEVEL LOG_LEVEL_INFO
 
-#define WITH_SERVER_REPLY  1
-#define UDP_PORT_A 8765
-#define UDP_PORT_C 5678
-#define UDP_PORT_B 5679
+//get a bit from a variable
+#define GETBIT(var, bit)	(((var) >> (bit)) & 1)
 
+//set a bit to 1
+#define SETBIT(var, bit)	var |= (1 << (bit))
+
+//set a bit to 0
+#define CLRBIT(var, bit)	var &= (~(1 << (bit)))
+
+static u_int16_t list = 0b0000000011111111;
+static u_int8_t TX_count = 0;
+static u_int8_t RX_count = 0;
 
 static linkaddr_t C_addr = {{ 0x03, 0x03, 0x03, 0x00, 0x03, 0x74, 0x12, 0x00 }};
 static linkaddr_t B_addr = {{ 0x02, 0x02, 0x02, 0x00, 0x02, 0x74, 0x12, 0x00 }};
@@ -63,7 +68,7 @@ unsigned long to_seconds(uint64_t time)
 void logging(float value) {
     struct IntDec int_dec;
     int_dec = Get_Float_Parts(value);
-    LOG_INFO("Test total = %10lu.%07lumAh |\n", int_dec.integer, int_dec.decimal);
+    LOG_INFO("Total power usage = %10lu.%07lumAh |\n", int_dec.integer, int_dec.decimal);
     //int A = (uint64_t)value; // Get the integer part of the float value
     //LOG_INFO("Total power usage = %u.%04umAh |\n", A, (unsigned int)((value-A)*1e4)); // Print it
 }
@@ -77,8 +82,6 @@ float TotalPowerConsumption() {
   power += (to_seconds(energest_type_time(ENERGEST_TYPE_LISTEN)))*RX;
   return (power);
 }
-static int TX_count = 0;
-static int RX_count = 0;
 
 // Define the IPv6 address of mote C
 PROCESS(udp_server_process, "UDP server");
@@ -94,8 +97,9 @@ void input_callback(const void *data, uint16_t len,
     const char *received_message = (const char *)data;
 
     if (linkaddr_cmp(src, &C_addr)) {
-    RX_count++;
-    timeout = 0; 
+      //Add 0 to list
+      list = list << 1;
+      timeout = 0; 
   }
   // Check the received response from mote C
   if (strncmp(received_message, "ACK", len) == 0) {
@@ -133,31 +137,48 @@ PROCESS_THREAD(udp_network_process, ev, data)
 PROCESS_THREAD(udp_server_process, ev, data)
 {
   static struct etimer periodic_timer;
-  static int8_t ratio = 100;
+  static u_int32_t ratio = 1024;
   PROCESS_BEGIN();
   
-  etimer_set(&periodic_timer, CLOCK_SECOND * 10);
+  etimer_set(&periodic_timer, CLOCK_SECOND * 1);
   
 while (1) {
-  ratio = (RX_count*1e2)/(TX_count);
+  //Read list
+  u_int8_t tx_counter = 0;
+  u_int8_t rx_counter = 0;
+  for(int i = 15; i >= 0; i--){
+      tx_counter += GETBIT(list, i) == 1;
+  }
+  rx_counter = 16 - tx_counter;
+  LOG_INFO("TX: %d, RX: %d\n", tx_counter, rx_counter);
+
+  if(tx_counter != 0){
+      ratio = (rx_counter << 10) / tx_counter;
+  }
+
+  //ratio = (RX_count*1e2)/(TX_count);
+
   PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&periodic_timer));
   etimer_reset(&periodic_timer);
   //LOG_INFO("Sending message %d\n", counter);
 // Every 15th message, send to B
-//LOG_INFO("Ratio: %d\n", ratio);
+LOG_INFO("Ratio: %d\n", ratio);
 
-if (ratio < 38) {
+if (ratio < (1024 * 0.35)) {
   //LOG_INFO("Sending message B\n");
   static char msg[] = "dataReq";
   nullnet_buf = (uint8_t *)msg;
   nullnet_len = strlen(msg);
-  LOG_INFO((char *)msg);
+  //LOG_INFO((char *)msg);
+  LOG_INFO("%c\n", msg);
   NETSTACK_NETWORK.output(&B_addr);
   
   if (counter % 10 == 0) { // Every 10th message, send healthcheck
     //LOG_INFO("Sending healthcheck message\n");
     // Send a healthcheck message
-    TX_count++;
+    //Add 1 to list
+    list = list << 1;
+    SETBIT(list, 0);
     static char msg[] = "healthcheck";
     nullnet_buf = (uint8_t *)msg;
     nullnet_len = strlen(msg);
@@ -168,16 +189,19 @@ if (ratio < 38) {
 else {
   //LOG_INFO("Sending dataReq message\n");
   // Send a dataReq message to Mote C
-  TX_count++;
+  //Add 1 to list
+  list = list << 1;
+  SETBIT(list, 0);
   static char msg[] = "dataReq";
   nullnet_buf = (uint8_t *)msg;
   nullnet_len = strlen(msg);
-  LOG_INFO((char *)msg);
+  LOG_INFO("%c\n", msg);
   NETSTACK_NETWORK.output(&C_addr);
   timeout = clock_time();
 }
 counter++;
-LOG_INFO("TX: %d, RX: %d\n", TX_count, RX_count);
+//LOG_INFO("TX: %d, RX: %d\n", TX_count, RX_count);
+  LOG_INFO("%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d\n", GETBIT(list, 15), GETBIT(list, 14), GETBIT(list, 13), GETBIT(list, 12), GETBIT(list, 11), GETBIT(list, 10), GETBIT(list, 9), GETBIT(list, 8), GETBIT(list, 7), GETBIT(list, 6), GETBIT(list, 5), GETBIT(list, 4), GETBIT(list, 3), GETBIT(list, 2), GETBIT(list, 1), GETBIT(list, 0));
 
   // Reset counter when it reaches 10 to start over
   if (counter == 11) {

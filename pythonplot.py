@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 from datetime import datetime, timedelta
 
-file_path = 'loglistener21.txt'  # Replace with the path to your text file
+file_path = 'loglistener22.txt'  # Replace with the path to your text file
 def extract_tx_rx_state_power_data(line):
     timestamp = line.split("\t")[0]
     if "TX:" in line and "RX:" in line:
@@ -36,6 +36,7 @@ timestamps = []
 tx_rx_ratios = []
 state_values = []
 power_values = []
+power_diff = []
 
 with open(file_path, 'r') as file:
     for line in file:
@@ -44,12 +45,13 @@ with open(file_path, 'r') as file:
             timestamp = parse_timestamp(timestamp)
             timestamps.append(timestamp)
             if tx_value is not None and rx_value is not None:
-                tx_rx_ratio = rx_value / tx_value if rx_value != 0 else 0
-                tx_rx_ratios.append((timestamp, tx_rx_ratio))
+                tx_rx_ratio = (rx_value * 1024) / tx_value if rx_value != 0 else 0
+                tx_rx_ratios.append((timestamp, min(tx_rx_ratio, 1024)))
             if state_value is not None:
                 state_values.append((timestamp, state_value))
             if power_value is not None:
                 power_values.append((timestamp, power_value))
+                power_diff.append((timestamp, power_value - power_values[-1][1]))
 power_values = parse_power_data(power_values)
 # Preparing data for plotting
 tx_rx_times, tx_rx_data = zip(*tx_rx_ratios) if tx_rx_ratios else ([], [])
@@ -70,7 +72,7 @@ axs[1].scatter(state_times, state_data, marker='o', color='red')
 axs[1].set_ylabel('State')
 
 # Plot Power Consumption
-axs[2].plot(power_times, power_data, marker='o', color='green')
+axs[2].scatter(power_times, power_diff, color='green')
 axs[2].set_xlabel('Time') 
 axs[2].set_ylabel('Power Consumption (mAs)')
 
