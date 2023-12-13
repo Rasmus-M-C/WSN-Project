@@ -22,7 +22,7 @@
 //set a bit to 0
 #define CLRBIT(var, bit)	var &= (~(1 << (bit)))
 
-static u_int16_t list = 0b0101010101010101//0b0000000011111111;
+static u_int16_t list = 0b0101010101010101;//0b0000000011111111;
 static u_int8_t TX_count = 0;
 static u_int8_t RX_count = 0;
 
@@ -242,7 +242,7 @@ PROCESS_THREAD(checkTimeout, ev, data)
       LOG_INFO("Sending C\n");
       NETSTACK_NETWORK.output(&C_addr);
       timeout = clock_time();
-      TX_count++;
+      //TX_count++;
     }
     logging(TotalPowerConsumption());
     PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&timeoutTimer));

@@ -101,7 +101,7 @@ static int getState(int currentState){
       t1 = clock_time();
     } else if (r < 20) 
     {
-      newState = mix;
+      newState = bad;//mix;
       //LOG_INFO("%d\n", newState);
       t1 = clock_time();
     } 
