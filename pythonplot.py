@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 from datetime import datetime, timedelta
 
-file_path = 'loglistener27.txt'  # Replace with the path to your text file
+file_path = 'loglisteners/kvs14.txt'  # Replace with the path to your text file
 def extract_tx_rx_state_power_data(line):
     timestamp = line.split("\t")[0]
     if "TX:" in line and "RX:" in line:
@@ -49,7 +49,9 @@ state_values = []
 power_values_A = []
 power_values_B = []
 power_values_C = []
-power_diff = []
+power_diff_A = []
+power_diff_B = []
+power_diff_C = []
 sendingB = []
 sendingC = []
 
@@ -65,13 +67,20 @@ with open(file_path, 'r') as file:
             if state_value is not None:
                 state_values.append((timestamp, state_value))
             if power_value_A is not None:
+                power_value_A = power_value_A / 32767
+                if power_values_A != []:
+                    power_diff_A.append((timestamp, (power_value_A - power_values_A[-1][1]) / (timestamp.timestamp() - power_values_A[-1][0].timestamp())))
                 power_values_A.append((timestamp, power_value_A))
                 #power_diff.append((timestamp, power_value_A - power_values_A[-1][1]))
             if power_value_B is not None:
+                power_value_B = power_value_B / 32767
                 if power_values_B != []:
-                    power_diff.append((timestamp, power_value_B - power_values_B[-1][1]))
+                    power_diff_B.append((timestamp, (power_value_B - power_values_B[-1][1]) / (timestamp.timestamp() - power_values_B[-1][0].timestamp())))
                 power_values_B.append((timestamp, power_value_B))
             if power_value_C is not None:
+                power_value_C = power_value_C / 32767
+                if power_values_C != []:
+                    power_diff_C.append((timestamp, (power_value_C - power_values_C[-1][1]) / (timestamp.timestamp() - power_values_C[-1][0].timestamp())))
                 power_values_C.append((timestamp, power_value_C))
                 #power_diff.append((timestamp, power_value_C - power_values_C[-2][1]))
             if sending_B is not None:
@@ -80,7 +89,8 @@ with open(file_path, 'r') as file:
                 sendingC.append((timestamp, sending_C))
 
                 
-power_values = parse_power_data(power_values_A)
+power_values = parse_power_data(power_values_C)
+power_diff = power_diff_B
 # Preparing data for plotting
 tx_rx_times, tx_rx_data = zip(*tx_rx_ratios) if tx_rx_ratios else ([], [])
 state_times, state_data = zip(*state_values) if state_values else ([], [])
@@ -91,7 +101,7 @@ sendingC_times, sendingC_data = zip(*sendingC) if sendingC else ([], [])
 
 
 # Plotting the data
-fig, axs = plt.subplots(3, figsize=(10, 12), sharex=True)
+fig, axs = plt.subplots(3, figsize=(8, 8), sharex=True)
 
 # Plot TX/RX Ratio
 axs[0].plot(tx_rx_times, tx_rx_data, marker='o', color='blue')
@@ -105,7 +115,7 @@ axs[1].scatter(state_times, state_data, marker='o', color='red')
 axs[1].set_ylabel('State')
 
 # Plot Power Consumption
-axs[2].plot(power_times, power_diff_data, color='green')
+axs[2].step(power_times, power_diff_data, color='green')
 axs[2].set_xlabel('Time') 
 axs[2].set_ylabel('Power Consumption (mAs)')
 

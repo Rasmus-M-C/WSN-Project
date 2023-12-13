@@ -5,11 +5,8 @@
 #include "sys/log.h"
 #include "net/netstack.h"
 #include "net/nullnet/nullnet.h"
-#define LOG_MODULE "App"
+#define LOG_MODULE "B"
 #define LOG_LEVEL LOG_LEVEL_INFO
-#define UDP_PORT_A 8765
-#define UDP_PORT_C 5678
-#define UDP_PORT_B 5679
 //static struct PowerConsumptionStates states_power;
 #define RX 23.0 // mA
 #define TX 21.0 // mA
@@ -38,10 +35,12 @@ struct IntDec Get_Float_Parts(float value) {
     return int_dec;
 }
 
-unsigned long to_seconds(uint64_t time)
-{
-  return (unsigned long)(time/ ENERGEST_SECOND);
-}
+// unsigned long to_seconds(uint64_t time)
+// {
+//   LOG_INFO("sec %u", ENERGEST_SECOND);
+//   return (unsigned long)(time/ ENERGEST_SECOND);
+// }
+
 
 void logging(float value) {
     struct IntDec int_dec;
@@ -54,10 +53,10 @@ void logging(float value) {
 float TotalPowerConsumption() {
   float power = 0;
   energest_flush(); // Update all energest times. Should always be called before energest times are read.
-  power += (to_seconds(energest_type_time(ENERGEST_TYPE_CPU)))*CPU_NORMAL;
-  power += (to_seconds(energest_type_time(ENERGEST_TYPE_LPM)))*CPU_SLEEP;
-  power += (to_seconds(energest_type_time(ENERGEST_TYPE_TRANSMIT)))*TX;
-  //power += (to_seconds(energest_type_time(ENERGEST_TYPE_LISTEN)))*RX;
+  power += (energest_type_time(ENERGEST_TYPE_CPU))*CPU_NORMAL;
+  power += (energest_type_time(ENERGEST_TYPE_LPM))*CPU_SLEEP;
+  power += (energest_type_time(ENERGEST_TYPE_TRANSMIT)) * TX;
+  //power += (energest_type_time(ENERGEST_TYPE_LISTEN)) * RX;
   return (power);
 }
 

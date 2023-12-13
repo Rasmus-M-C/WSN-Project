@@ -6,11 +6,8 @@
 #include <stdlib.h>
 #include "sys/energest.h"
 #include "sys/log.h"
-#define LOG_MODULE "App"
+#define LOG_MODULE "C"
 #define LOG_LEVEL LOG_LEVEL_INFO
-#define UDP_PORT_A 8765
-#define UDP_PORT_C 5678
-#define UDP_PORT_B 5679
 
 #define RX 23.0 // mA
 #define TX 21.0 // mA
@@ -39,11 +36,6 @@ struct IntDec Get_Float_Parts(float value) {
     return int_dec;
 }
 
-unsigned long to_seconds(uint64_t time)
-{
-  return (unsigned long)(time/ ENERGEST_SECOND);
-}
-
 void logging(float value) {
     struct IntDec int_dec;
     int_dec = Get_Float_Parts(value);
@@ -55,19 +47,17 @@ void logging(float value) {
 float TotalPowerConsumption() {
   float power = 0;
   energest_flush(); // Update all energest times. Should always be called before energest times are read.
-  power += (to_seconds(energest_type_time(ENERGEST_TYPE_CPU)))*CPU_NORMAL;
-  power += (to_seconds(energest_type_time(ENERGEST_TYPE_LPM)))*CPU_SLEEP;
-  power += (to_seconds(energest_type_time(ENERGEST_TYPE_TRANSMIT)))*TX;
-  //power += (to_seconds(energest_type_time(ENERGEST_TYPE_LISTEN)))*RX;
+  //power += (to_seconds(energest_type_time(ENERGEST_TYPE_CPU)))*CPU_NORMAL;
+  //power += (to_seconds(energest_type_time(ENERGEST_TYPE_LPM)))*CPU_SLEEP;
+  power += (energest_type_time(ENERGEST_TYPE_TRANSMIT)) * TX;
+  power += (energest_type_time(ENERGEST_TYPE_LISTEN)) * RX;
   return (power);
 }
 
 static linkaddr_t A_addr = {{ 0x01, 0x01, 0x01, 0x00, 0x01, 0x74, 0x12, 0x00 }};
 static linkaddr_t B_addr = {{ 0x02, 0x02, 0x02, 0x00, 0x02, 0x74, 0x12, 0x00 }};
 
-// State
-#define BAD_SUCCES 95
-static clock_time_t t1 = 0;
+//static clock_time_t t1 = 0;
 static int state = 100;
 
 PROCESS(udp_log_process, "UDP log");
@@ -82,29 +72,21 @@ static int getState(int currentState){
   int bad = 0;
   int newState = currentState;
 
-  if (currentState != good)
+  int r = (unsigned) rand() % 100;
+  if (r > 90)
   {
-    if((unsigned) rand() % 100 > 90) //if(clock_time() - t1 > 2 * CLOCK_SECOND)
-    {
-      
       //LOG_INFO("%d\n", newState);
       newState = good;
-    }
+      //t1 = clock_time();
   } else 
   {
     int r = (unsigned) rand() % 100;
     if (r < 10) 
     {
       newState = bad;
-      
       //LOG_INFO("%d\n", newState);
-      t1 = clock_time();
-    } else if (r < 20) 
-    {
-      newState = mix;
-      //LOG_INFO("%d\n", newState);
-      t1 = clock_time();
-    } 
+      //t1 = clock_time();
+    }
   }
 
   return newState;
@@ -204,6 +186,7 @@ PROCESS_THREAD(updateState, ev, data)
   while(1)
   {
     state = getState(state);
+    //state = 100; //remove
 
     PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&stateTimer));
     etimer_reset(&stateTimer);
