@@ -22,7 +22,7 @@
 //set a bit to 0
 #define CLRBIT(var, bit)	var &= (~(1 << (bit)))
 
-static u_int16_t list = 0b0000000011111111;
+static u_int16_t list = 0b0101010101010101//0b0000000011111111;
 static u_int8_t TX_count = 0;
 static u_int8_t RX_count = 0;
 
