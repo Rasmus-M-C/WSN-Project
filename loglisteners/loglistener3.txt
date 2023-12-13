@@ -1,0 +1,936 @@
+00:00.522	ID:2	[INFO: Main      ] Starting Contiki-NG-release/v4.9-dirty
+00:00.525	ID:2	[INFO: Main      ] - Routing: nullrouting
+00:00.527	ID:2	[INFO: Main      ] - Net: nullnet
+00:00.529	ID:2	[INFO: Main      ] - MAC: CSMA
+00:00.532	ID:2	[INFO: Main      ] - 802.15.4 PANID: 0xabcd
+00:00.536	ID:2	[INFO: Main      ] - 802.15.4 Default channel: 26
+00:00.538	ID:2	[INFO: Main      ] Node ID: 2
+00:00.544	ID:2	[INFO: Main      ] Link-layer address: 0202.0200.0274.1200
+00:00.547	ID:2	[INFO: Sky       ] CC2420 CCA threshold -45
+00:00.553	ID:2	[INFO: App       ] Test total =          0.0000000mAh |
+00:00.668	ID:1	[INFO: Main      ] Starting Contiki-NG-release/v4.9-dirty
+00:00.671	ID:1	[INFO: Main      ] - Routing: nullrouting
+00:00.673	ID:1	[INFO: Main      ] - Net: nullnet
+00:00.675	ID:1	[INFO: Main      ] - MAC: CSMA
+00:00.679	ID:1	[INFO: Main      ] - 802.15.4 PANID: 0xabcd
+00:00.682	ID:1	[INFO: Main      ] - 802.15.4 Default channel: 26
+00:00.684	ID:1	[INFO: Main      ] Node ID: 1
+00:00.690	ID:1	[INFO: Main      ] Link-layer address: 0101.0100.0174.1200
+00:00.693	ID:1	[INFO: Sky       ] CC2420 CCA threshold -45
+00:00.696	ID:1	[INFO: App       ] TX: 1, RX: 15
+00:00.703	ID:1	[INFO: App       ] Total power usage =          0.0000000mAh |
+00:01.185	ID:3	[INFO: Main      ] Starting Contiki-NG-release/v4.9-dirty
+00:01.188	ID:3	[INFO: Main      ] - Routing: nullrouting
+00:01.190	ID:3	[INFO: Main      ] - Net: nullnet
+00:01.192	ID:3	[INFO: Main      ] - MAC: CSMA
+00:01.196	ID:3	[INFO: Main      ] - 802.15.4 PANID: 0xabcd
+00:01.199	ID:3	[INFO: Main      ] - 802.15.4 Default channel: 26
+00:01.201	ID:3	[INFO: Main      ] Node ID: 3
+00:01.207	ID:3	[INFO: Main      ] Link-layer address: 0303.0300.0374.1200
+00:01.210	ID:3	[INFO: Sky       ] CC2420 CCA threshold -45
+00:01.217	ID:3	[INFO: App       ] Test total =          0.0000000mAh |
+00:01.551	ID:2	[INFO: App       ] Test total =         23.0000000mAh |
+00:01.698	ID:1	[INFO: App       ] Total power usage =         23.0000000mAh |
+00:02.214	ID:3	[INFO: App       ] Test total =         23.0000000mAh |
+00:02.553	ID:2	[INFO: App       ] Test total =         46.0051002mAh |
+00:02.700	ID:1	[INFO: App       ] Total power usage =         46.0051002mAh |
+00:03.217	ID:3	[INFO: App       ] Test total =         46.0051002mAh |
+00:03.553	ID:2	[INFO: App       ] Test total =         69.0102005mAh |
+00:03.700	ID:1	[INFO: App       ] Total power usage =         69.0102005mAh |
+00:04.217	ID:3	[INFO: App       ] Test total =         69.0102005mAh |
+00:04.553	ID:2	[INFO: App       ] Test total =         92.0152969mAh |
+00:04.700	ID:1	[INFO: App       ] Total power usage =         92.0152969mAh |
+00:05.217	ID:3	[INFO: App       ] Test total =         92.0152969mAh |
+00:05.554	ID:2	[INFO: App       ] Test total =        115.0204010mAh |
+00:05.700	ID:1	[INFO: App       ] Total power usage =        115.0204010mAh |
+00:06.217	ID:3	[INFO: App       ] Test total =        115.0204010mAh |
+00:06.554	ID:2	[INFO: App       ] Test total =        138.0254974mAh |
+00:06.700	ID:1	[INFO: App       ] Total power usage =        138.0254974mAh |
+00:07.217	ID:3	[INFO: App       ] Test total =        138.0254974mAh |
+00:07.554	ID:2	[INFO: App       ] Test total =        161.0305938mAh |
+00:07.700	ID:1	[INFO: App       ] Total power usage =        161.0305938mAh |
+00:08.217	ID:3	[INFO: App       ] Test total =        161.0305938mAh |
+00:08.554	ID:2	[INFO: App       ] Test total =        184.0357055mAh |
+00:08.700	ID:1	[INFO: App       ] Total power usage =        184.0357055mAh |
+00:09.217	ID:3	[INFO: App       ] Test total =        184.0357055mAh |
+00:09.554	ID:2	[INFO: App       ] Test total =        207.0408020mAh |
+00:09.700	ID:1	[INFO: App       ] Total power usage =        207.0408020mAh |
+00:10.217	ID:3	[INFO: App       ] Test total =        207.0408020mAh |
+00:10.554	ID:2	[INFO: App       ] Test total =        230.0458984mAh |
+00:10.700	ID:1	[INFO: App       ] Total power usage =        230.0458984mAh |
+00:10.703	ID:1	[INFO: App       ] Ratio: 15360
+00:10.711	ID:1	[INFO: App       ] dataReq[INFO: App       ] 0000000000000011
+00:10.714	ID:1	[INFO: App       ] TX: 2, RX: 14
+00:10.744	ID:3	[INFO: App       ] state: 50
+00:10.748	ID:3	[INFO: App       ] Recieved a data request, sending data
+00:10.752	ID:3	[INFO: App       ] Sent data to A
+00:11.217	ID:3	[INFO: App       ] Test total =        230.0458984mAh |
+00:11.554	ID:2	[INFO: App       ] Test total =        253.0509948mAh |
+00:11.700	ID:1	[INFO: App       ] Total power usage =        253.0509948mAh |
+00:12.217	ID:3	[INFO: App       ] Test total =        253.0509948mAh |
+00:12.554	ID:2	[INFO: App       ] Test total =        276.0560913mAh |
+00:12.700	ID:1	[INFO: App       ] Total power usage =        276.0560913mAh |
+00:13.217	ID:3	[INFO: App       ] Test total =        276.0560913mAh |
+00:13.554	ID:2	[INFO: App       ] Test total =        299.0611877mAh |
+00:13.700	ID:1	[INFO: App       ] Total power usage =        299.0611877mAh |
+00:14.217	ID:3	[INFO: App       ] Test total =        299.0611877mAh |
+00:14.554	ID:2	[INFO: App       ] Test total =        322.0663147mAh |
+00:14.700	ID:1	[INFO: App       ] Total power usage =        322.0663147mAh |
+00:15.217	ID:3	[INFO: App       ] Test total =        322.0663147mAh |
+00:15.554	ID:2	[INFO: App       ] Test total =        345.0714111mAh |
+00:15.700	ID:1	[INFO: App       ] Total power usage =        345.0714111mAh |
+00:16.217	ID:3	[INFO: App       ] Test total =        345.0714111mAh |
+00:16.554	ID:2	[INFO: App       ] Test total =        368.0765075mAh |
+00:16.700	ID:1	[INFO: App       ] Total power usage =        368.0765075mAh |
+00:17.217	ID:3	[INFO: App       ] Test total =        368.0765075mAh |
+00:17.554	ID:2	[INFO: App       ] Test total =        391.0816040mAh |
+00:17.700	ID:1	[INFO: App       ] Total power usage =        391.0816040mAh |
+00:18.217	ID:3	[INFO: App       ] Test total =        391.0816040mAh |
+00:18.554	ID:2	[INFO: App       ] Test total =        414.0867004mAh |
+00:18.701	ID:1	[INFO: App       ] Total power usage =        415.8866882mAh |
+00:19.218	ID:3	[INFO: App       ] Test total =        415.8866882mAh |
+00:19.554	ID:2	[INFO: App       ] Test total =        437.0917968mAh |
+00:19.701	ID:1	[INFO: App       ] Total power usage =        438.8866882mAh |
+00:20.218	ID:3	[INFO: App       ] Test total =        438.8866882mAh |
+00:20.554	ID:2	[INFO: App       ] Test total =        461.8969116mAh |
+00:20.701	ID:1	[INFO: App       ] Total power usage =        461.8917847mAh |
+00:20.704	ID:1	[INFO: App       ] Ratio: 7168
+00:20.712	ID:1	[INFO: App       ] dataReq[INFO: App       ] 0000000000001101
+00:20.715	ID:1	[INFO: App       ] TX: 3, RX: 13
+00:20.721	ID:3	[INFO: App       ] state: 0
+00:20.724	ID:3	[INFO: App       ] Lost packet from A
+00:21.218	ID:3	[INFO: App       ] Test total =        461.8917847mAh |
+00:21.554	ID:2	[INFO: App       ] Test total =        484.8969116mAh |
+00:21.701	ID:1	[INFO: App       ] Total power usage =        484.8969116mAh |
+00:22.218	ID:3	[INFO: App       ] Test total =        484.8969116mAh |
+00:22.554	ID:2	[INFO: App       ] Test total =        507.9020081mAh |
+00:22.704	ID:1	[INFO: App       ] dataReq[INFO: App       ] Total power usage =        507.9020081mAh |
+00:22.712	ID:3	[INFO: App       ] state: 0
+00:22.714	ID:3	[INFO: App       ] Lost packet from A
+00:23.218	ID:3	[INFO: App       ] Test total =        507.9020081mAh |
+00:23.554	ID:2	[INFO: App       ] Test total =        530.9071045mAh |
+00:23.701	ID:1	[INFO: App       ] Total power usage =        530.9071045mAh |
+00:24.218	ID:3	[INFO: App       ] Test total =        530.9071045mAh |
+00:24.554	ID:2	[INFO: App       ] Test total =        553.9121704mAh |
+00:24.704	ID:1	[INFO: App       ] dataReq[INFO: App       ] Total power usage =        553.9121704mAh |
+00:24.735	ID:3	[INFO: App       ] state: 100
+00:24.739	ID:3	[INFO: App       ] Recieved a data request, sending data
+00:24.743	ID:3	[INFO: App       ] Sent data to A
+00:25.218	ID:3	[INFO: App       ] Test total =        553.9121704mAh |
+00:25.554	ID:2	[INFO: App       ] Test total =        576.9172974mAh |
+00:25.701	ID:1	[INFO: App       ] Total power usage =        576.9172974mAh |
+00:26.218	ID:3	[INFO: App       ] Test total =        576.9172974mAh |
+00:26.554	ID:2	[INFO: App       ] Test total =        599.9224243mAh |
+00:26.701	ID:1	[INFO: App       ] Total power usage =        599.9224243mAh |
+00:27.218	ID:3	[INFO: App       ] Test total =        599.9224243mAh |
+00:27.554	ID:2	[INFO: App       ] Test total =        622.9274902mAh |
+00:27.701	ID:1	[INFO: App       ] Total power usage =        622.9274902mAh |
+00:28.218	ID:3	[INFO: App       ] Test total =        622.9274902mAh |
+00:28.554	ID:2	[INFO: App       ] Test total =        645.9326172mAh |
+00:28.701	ID:1	[INFO: App       ] Total power usage =        645.9326172mAh |
+00:29.218	ID:3	[INFO: App       ] Test total =        645.9326172mAh |
+00:29.554	ID:2	[INFO: App       ] Test total =        668.9376831mAh |
+00:29.701	ID:1	[INFO: App       ] Total power usage =        668.9376831mAh |
+00:30.218	ID:3	[INFO: App       ] Test total =        668.9376831mAh |
+00:30.554	ID:2	[INFO: App       ] Test total =        691.9428101mAh |
+00:30.701	ID:1	[INFO: App       ] Total power usage =        691.9428101mAh |
+00:30.704	ID:1	[INFO: App       ] Ratio: 4437
+00:30.712	ID:1	[INFO: App       ] dataReq[INFO: App       ] 0000000000110101
+00:30.715	ID:1	[INFO: App       ] TX: 4, RX: 12
+00:30.751	ID:3	[INFO: App       ] state: 0
+00:30.753	ID:3	[INFO: App       ] Lost packet from A
+00:31.218	ID:3	[INFO: App       ] Test total =        691.9428101mAh |
+00:31.554	ID:2	[INFO: App       ] Test total =        714.9478760mAh |
+00:31.701	ID:1	[INFO: App       ] Total power usage =        714.9478760mAh |
+00:32.218	ID:3	[INFO: App       ] Test total =        714.9478760mAh |
+00:32.554	ID:2	[INFO: App       ] Test total =        737.9530029mAh |
+00:32.704	ID:1	[INFO: App       ] dataReq[INFO: App       ] Total power usage =        737.9530029mAh |
+00:32.743	ID:3	[INFO: App       ] state: 0
+00:32.746	ID:3	[INFO: App       ] Lost packet from A
+00:33.218	ID:3	[INFO: App       ] Test total =        737.9530029mAh |
+00:33.554	ID:2	[INFO: App       ] Test total =        760.9581299mAh |
+00:33.701	ID:1	[INFO: App       ] Total power usage =        760.9581299mAh |
+00:34.218	ID:3	[INFO: App       ] Test total =        760.9581299mAh |
+00:34.554	ID:2	[INFO: App       ] Test total =        783.9631958mAh |
+00:34.704	ID:1	[INFO: App       ] dataReq[INFO: App       ] Total power usage =        783.9631958mAh |
+00:34.735	ID:3	[INFO: App       ] state: 0
+00:34.738	ID:3	[INFO: App       ] Lost packet from A
+00:35.218	ID:3	[INFO: App       ] Test total =        783.9631958mAh |
+00:35.554	ID:2	[INFO: App       ] Test total =        806.9683228mAh |
+00:35.701	ID:1	[INFO: App       ] Total power usage =        808.7683105mAh |
+00:36.218	ID:3	[INFO: App       ] Test total =        808.7683105mAh |
+00:36.554	ID:2	[INFO: App       ] Test total =        829.9733887mAh |
+00:36.704	ID:1	[INFO: App       ] dataReq[INFO: App       ] Total power usage =        831.7683105mAh |
+00:36.710	ID:3	[INFO: App       ] state: 0
+00:36.713	ID:3	[INFO: App       ] Lost packet from A
+00:37.218	ID:3	[INFO: App       ] Test total =        831.7733764mAh |
+00:37.554	ID:2	[INFO: App       ] Test total =        852.9785156mAh |
+00:37.701	ID:1	[INFO: App       ] Total power usage =        854.7733764mAh |
+00:38.218	ID:3	[INFO: App       ] Test total =        854.7733764mAh |
+00:38.554	ID:2	[INFO: App       ] Test total =        875.9835815mAh |
+00:38.704	ID:1	[INFO: App       ] dataReq[INFO: App       ] Total power usage =        877.7785034mAh |
+00:38.712	ID:3	[INFO: App       ] state: 0
+00:38.714	ID:3	[INFO: App       ] Lost packet from A
+00:39.218	ID:3	[INFO: App       ] Test total =        877.7785034mAh |
+00:39.554	ID:2	[INFO: App       ] Test total =        898.9887085mAh |
+00:39.701	ID:1	[INFO: App       ] Total power usage =        900.7835693mAh |
+00:40.218	ID:3	[INFO: App       ] Test total =        900.7835693mAh |
+00:40.554	ID:2	[INFO: App       ] Test total =        923.7938232mAh |
+00:40.704	ID:1	[INFO: App       ] dataReq[INFO: App       ] Total power usage =        923.7886963mAh |
+00:40.707	ID:1	[INFO: App       ] Ratio: 3072
+00:40.714	ID:1	[INFO: App       ] dataReq[INFO: App       ] 0000000001101011
+00:40.717	ID:1	[INFO: App       ] TX: 5, RX: 11
+00:40.743	ID:3	[INFO: App       ] state: 0
+00:40.746	ID:3	[INFO: App       ] Lost packet from A
+00:40.749	ID:3	[INFO: App       ] state: 0
+00:40.752	ID:3	[INFO: App       ] Lost packet from A
+00:41.218	ID:3	[INFO: App       ] Test total =        923.7886963mAh |
+00:41.554	ID:2	[INFO: App       ] Test total =        946.7938232mAh |
+00:41.701	ID:1	[INFO: App       ] Total power usage =        946.7938232mAh |
+00:42.218	ID:3	[INFO: App       ] Test total =        946.7938232mAh |
+00:42.554	ID:2	[INFO: App       ] Test total =        969.7988891mAh |
+00:42.704	ID:1	[INFO: App       ] dataReq[INFO: App       ] Total power usage =        969.7988891mAh |
+00:42.735	ID:3	[INFO: App       ] state: 0
+00:42.738	ID:3	[INFO: App       ] Lost packet from A
+00:43.218	ID:3	[INFO: App       ] Test total =        969.7988891mAh |
+00:43.554	ID:2	[INFO: App       ] Test total =        992.8040161mAh |
+00:43.701	ID:1	[INFO: App       ] Total power usage =        992.8040161mAh |
+00:44.218	ID:3	[INFO: App       ] Test total =        992.8040161mAh |
+00:44.555	ID:2	[INFO: App       ] Test total =       1015.8090820mAh |
+00:44.704	ID:1	[INFO: App       ] dataReq[INFO: App       ] Total power usage =       1015.8090820mAh |
+00:44.711	ID:3	[INFO: App       ] state: 100
+00:44.715	ID:3	[INFO: App       ] Recieved a data request, sending data
+00:44.718	ID:3	[INFO: App       ] Sent data to A
+00:45.218	ID:3	[INFO: App       ] Test total =       1015.8090820mAh |
+00:45.555	ID:2	[INFO: App       ] Test total =       1038.8142090mAh |
+00:45.702	ID:1	[INFO: App       ] Total power usage =       1038.8142090mAh |
+00:46.218	ID:3	[INFO: App       ] Test total =       1038.8142090mAh |
+00:46.555	ID:2	[INFO: App       ] Test total =       1061.8193359mAh |
+00:46.702	ID:1	[INFO: App       ] Total power usage =       1061.8193359mAh |
+00:47.218	ID:3	[INFO: App       ] Test total =       1061.8193359mAh |
+00:47.555	ID:2	[INFO: App       ] Test total =       1084.8243408mAh |
+00:47.702	ID:1	[INFO: App       ] Total power usage =       1084.8243408mAh |
+00:48.218	ID:3	[INFO: App       ] Test total =       1084.8243408mAh |
+00:48.555	ID:2	[INFO: App       ] Test total =       1107.8294677mAh |
+00:48.702	ID:1	[INFO: App       ] Total power usage =       1107.8294677mAh |
+00:49.218	ID:3	[INFO: App       ] Test total =       1107.8294677mAh |
+00:49.555	ID:2	[INFO: App       ] Test total =       1130.8345947mAh |
+00:49.702	ID:1	[INFO: App       ] Total power usage =       1130.8345947mAh |
+00:50.218	ID:3	[INFO: App       ] Test total =       1130.8345947mAh |
+00:50.555	ID:2	[INFO: App       ] Test total =       1153.8397217mAh |
+00:50.702	ID:1	[INFO: App       ] Total power usage =       1153.8397217mAh |
+00:50.704	ID:1	[INFO: App       ] Ratio: 2252
+00:50.712	ID:1	[INFO: App       ] dataReq[INFO: App       ] 0000000110101101
+00:50.715	ID:1	[INFO: App       ] TX: 6, RX: 10
+00:50.728	ID:3	[INFO: App       ] state: 100
+00:50.732	ID:3	[INFO: App       ] Recieved a data request, sending data
+00:50.735	ID:3	[INFO: App       ] Sent data to A
+00:51.219	ID:3	[INFO: App       ] Test total =       1153.8397217mAh |
+00:51.555	ID:2	[INFO: App       ] Test total =       1176.8448486mAh |
+00:51.702	ID:1	[INFO: App       ] Total power usage =       1176.8448486mAh |
+00:52.218	ID:3	[INFO: App       ] Test total =       1176.8448486mAh |
+00:52.555	ID:2	[INFO: App       ] Test total =       1199.8498535mAh |
+00:52.702	ID:1	[INFO: App       ] Total power usage =       1201.6499023mAh |
+00:53.219	ID:3	[INFO: App       ] Test total =       1201.6499023mAh |
+00:53.555	ID:2	[INFO: App       ] Test total =       1222.8549805mAh |
+00:53.702	ID:1	[INFO: App       ] Total power usage =       1224.6499023mAh |
+00:54.218	ID:3	[INFO: App       ] Test total =       1224.6550293mAh |
+00:54.555	ID:2	[INFO: App       ] Test total =       1245.8601074mAh |
+00:54.702	ID:1	[INFO: App       ] Total power usage =       1247.6550293mAh |
+00:55.219	ID:3	[INFO: App       ] Test total =       1247.6550293mAh |
+00:55.555	ID:2	[INFO: App       ] Test total =       1268.8652344mAh |
+00:55.702	ID:1	[INFO: App       ] Total power usage =       1270.6601562mAh |
+00:56.218	ID:3	[INFO: App       ] Test total =       1270.6601562mAh |
+00:56.555	ID:2	[INFO: App       ] Test total =       1291.8702393mAh |
+00:56.702	ID:1	[INFO: App       ] Total power usage =       1293.6651611mAh |
+00:57.218	ID:3	[INFO: App       ] Test total =       1293.6651611mAh |
+00:57.555	ID:2	[INFO: App       ] Test total =       1314.8753662mAh |
+00:57.702	ID:1	[INFO: App       ] Total power usage =       1316.6702881mAh |
+00:58.218	ID:3	[INFO: App       ] Test total =       1316.6702881mAh |
+00:58.555	ID:2	[INFO: App       ] Test total =       1337.8804932mAh |
+00:58.702	ID:1	[INFO: App       ] Total power usage =       1339.6754150mAh |
+00:59.219	ID:3	[INFO: App       ] Test total =       1339.6754150mAh |
+00:59.555	ID:2	[INFO: App       ] Test total =       1360.8856201mAh |
+00:59.702	ID:1	[INFO: App       ] Total power usage =       1362.6805420mAh |
+01:00.218	ID:3	[INFO: App       ] Test total =       1362.6805420mAh |
+01:00.555	ID:2	[INFO: App       ] Test total =       1385.6906738mAh |
+01:00.702	ID:1	[INFO: App       ] Total power usage =       1385.6855469mAh |
+01:00.704	ID:1	[INFO: App       ] Ratio: 1706
+01:00.712	ID:1	[INFO: App       ] dataReq[INFO: App       ] 0000011010110101
+01:00.715	ID:1	[INFO: App       ] TX: 7, RX: 9
+01:00.759	ID:3	[INFO: App       ] state: 0
+01:00.762	ID:3	[INFO: App       ] Lost packet from A
+01:01.219	ID:3	[INFO: App       ] Test total =       1385.6855469mAh |
+01:01.555	ID:2	[INFO: App       ] Test total =       1408.6906738mAh |
+01:01.702	ID:1	[INFO: App       ] Total power usage =       1408.6906738mAh |
+01:02.218	ID:3	[INFO: App       ] Test total =       1408.6906738mAh |
+01:02.555	ID:2	[INFO: App       ] Test total =       1431.6958008mAh |
+01:02.704	ID:1	[INFO: App       ] dataReq[INFO: App       ] Total power usage =       1431.6958008mAh |
+01:02.727	ID:3	[INFO: App       ] state: 0
+01:02.730	ID:3	[INFO: App       ] Lost packet from A
+01:03.219	ID:3	[INFO: App       ] Test total =       1431.6958008mAh |
+01:03.555	ID:2	[INFO: App       ] Test total =       1454.7009277mAh |
+01:03.702	ID:1	[INFO: App       ] Total power usage =       1454.7009277mAh |
+01:04.218	ID:3	[INFO: App       ] Test total =       1454.7009277mAh |
+01:04.555	ID:2	[INFO: App       ] Test total =       1477.7060547mAh |
+01:04.704	ID:1	[INFO: App       ] dataReq[INFO: App       ] Total power usage =       1477.7060547mAh |
+01:04.711	ID:3	[INFO: App       ] state: 0
+01:04.713	ID:3	[INFO: App       ] Lost packet from A
+01:05.218	ID:3	[INFO: App       ] Test total =       1477.7060547mAh |
+01:05.555	ID:2	[INFO: App       ] Test total =       1500.7110595mAh |
+01:05.702	ID:1	[INFO: App       ] Total power usage =       1500.7110595mAh |
+01:06.218	ID:3	[INFO: App       ] Test total =       1500.7110595mAh |
+01:06.555	ID:2	[INFO: App       ] Test total =       1523.7161865mAh |
+01:06.704	ID:1	[INFO: App       ] dataReq[INFO: App       ] Total power usage =       1523.7161865mAh |
+01:06.735	ID:3	[INFO: App       ] state: 0
+01:06.738	ID:3	[INFO: App       ] Lost packet from A
+01:07.219	ID:3	[INFO: App       ] Test total =       1523.7161865mAh |
+01:07.555	ID:2	[INFO: App       ] Test total =       1546.7213135mAh |
+01:07.702	ID:1	[INFO: App       ] Total power usage =       1546.7213135mAh |
+01:08.218	ID:3	[INFO: App       ] Test total =       1546.7213135mAh |
+01:08.555	ID:2	[INFO: App       ] Test total =       1569.7264404mAh |
+01:08.704	ID:1	[INFO: App       ] dataReq[INFO: App       ] Total power usage =       1569.7264404mAh |
+01:08.735	ID:3	[INFO: App       ] state: 0
+01:08.738	ID:3	[INFO: App       ] Lost packet from A
+01:09.218	ID:3	[INFO: App       ] Test total =       1569.7264404mAh |
+01:09.555	ID:2	[INFO: App       ] Test total =       1592.7314453mAh |
+01:09.702	ID:1	[INFO: App       ] Total power usage =       1592.7314453mAh |
+01:10.218	ID:3	[INFO: App       ] Test total =       1592.7314453mAh |
+01:10.555	ID:2	[INFO: App       ] Test total =       1615.7365722mAh |
+01:10.704	ID:1	[INFO: App       ] dataReq[INFO: App       ] Total power usage =       1617.5366211mAh |
+01:10.707	ID:1	[INFO: App       ] Ratio: 1316
+01:10.715	ID:1	[INFO: App       ] dataReq[INFO: App       ] 0000110101101011
+01:10.717	ID:1	[INFO: App       ] TX: 8, RX: 8
+01:10.735	ID:3	[INFO: App       ] state: 100
+01:10.739	ID:3	[INFO: App       ] Recieved a data request, sending data
+01:10.743	ID:3	[INFO: App       ] Sent data to A
+01:10.775	ID:3	[INFO: App       ] state: 100
+01:10.779	ID:3	[INFO: App       ] Recieved a data request, sending data
+01:10.782	ID:3	[INFO: App       ] Sent data to A
+01:11.218	ID:3	[INFO: App       ] Test total =       1617.5366211mAh |
+01:11.555	ID:2	[INFO: App       ] Test total =       1638.7416992mAh |
+01:11.702	ID:1	[INFO: App       ] Total power usage =       1640.5366211mAh |
+01:12.218	ID:3	[INFO: App       ] Test total =       1640.5366211mAh |
+01:12.555	ID:2	[INFO: App       ] Test total =       1661.7468261mAh |
+01:12.701	ID:1	[INFO: App       ] Total power usage =       1663.5417480mAh |
+01:13.218	ID:3	[INFO: App       ] Test total =       1663.5417480mAh |
+01:13.555	ID:2	[INFO: App       ] Test total =       1684.7519531mAh |
+01:13.702	ID:1	[INFO: App       ] Total power usage =       1686.5467529mAh |
+01:14.218	ID:3	[INFO: App       ] Test total =       1686.5467529mAh |
+01:14.555	ID:2	[INFO: App       ] Test total =       1707.7569580mAh |
+01:14.702	ID:1	[INFO: App       ] Total power usage =       1709.5518799mAh |
+01:15.218	ID:3	[INFO: App       ] Test total =       1709.5518799mAh |
+01:15.555	ID:2	[INFO: App       ] Test total =       1730.7620849mAh |
+01:15.702	ID:1	[INFO: App       ] Total power usage =       1732.5570068mAh |
+01:16.218	ID:3	[INFO: App       ] Test total =       1732.5570068mAh |
+01:16.555	ID:2	[INFO: App       ] Test total =       1753.7672119mAh |
+01:16.702	ID:1	[INFO: App       ] Total power usage =       1755.5621338mAh |
+01:17.218	ID:3	[INFO: App       ] Test total =       1755.5621338mAh |
+01:17.555	ID:2	[INFO: App       ] Test total =       1776.7723388mAh |
+01:17.702	ID:1	[INFO: App       ] Total power usage =       1778.5671386mAh |
+01:18.218	ID:3	[INFO: App       ] Test total =       1778.5671386mAh |
+01:18.555	ID:2	[INFO: App       ] Test total =       1799.7773437mAh |
+01:18.702	ID:1	[INFO: App       ] Total power usage =       1801.5722656mAh |
+01:19.218	ID:3	[INFO: App       ] Test total =       1801.5722656mAh |
+01:19.555	ID:2	[INFO: App       ] Test total =       1822.7824707mAh |
+01:19.702	ID:1	[INFO: App       ] Total power usage =       1824.5773926mAh |
+01:20.218	ID:3	[INFO: App       ] Test total =       1824.5773926mAh |
+01:20.555	ID:2	[INFO: App       ] Test total =       1847.5876465mAh |
+01:20.702	ID:1	[INFO: App       ] Total power usage =       1847.5825195mAh |
+01:20.704	ID:1	[INFO: App       ] Ratio: 1024
+01:20.712	ID:1	[INFO: App       ] dataReq[INFO: App       ] 0110101101011001
+01:20.715	ID:1	[INFO: App       ] TX: 9, RX: 7
+01:20.743	ID:3	[INFO: App       ] state: 100
+01:20.747	ID:3	[INFO: App       ] Recieved a data request, sending data
+01:20.751	ID:3	[INFO: App       ] Sent data to A
+01:21.218	ID:3	[INFO: App       ] Test total =       1847.5825195mAh |
+01:21.555	ID:2	[INFO: App       ] Test total =       1870.5876465mAh |
+01:21.702	ID:1	[INFO: App       ] Total power usage =       1870.5876465mAh |
+01:22.218	ID:3	[INFO: App       ] Test total =       1870.5876465mAh |
+01:22.555	ID:2	[INFO: App       ] Test total =       1893.5926513mAh |
+01:22.702	ID:1	[INFO: App       ] Total power usage =       1893.5926513mAh |
+01:23.218	ID:3	[INFO: App       ] Test total =       1893.5926513mAh |
+01:23.555	ID:2	[INFO: App       ] Test total =       1916.5977783mAh |
+01:23.702	ID:1	[INFO: App       ] Total power usage =       1916.5977783mAh |
+01:24.218	ID:3	[INFO: App       ] Test total =       1916.5977783mAh |
+01:24.555	ID:2	[INFO: App       ] Test total =       1939.6029052mAh |
+01:24.702	ID:1	[INFO: App       ] Total power usage =       1939.6029052mAh |
+01:25.218	ID:3	[INFO: App       ] Test total =       1939.6029052mAh |
+01:25.555	ID:2	[INFO: App       ] Test total =       1962.6080322mAh |
+01:25.702	ID:1	[INFO: App       ] Total power usage =       1962.6080322mAh |
+01:26.218	ID:3	[INFO: App       ] Test total =       1962.6080322mAh |
+01:26.555	ID:2	[INFO: App       ] Test total =       1985.6131592mAh |
+01:26.702	ID:1	[INFO: App       ] Total power usage =       1985.6131592mAh |
+01:27.219	ID:3	[INFO: App       ] Test total =       1985.6131592mAh |
+01:27.555	ID:2	[INFO: App       ] Test total =       2008.6181640mAh |
+01:27.702	ID:1	[INFO: App       ] Total power usage =       2010.4182129mAh |
+01:28.218	ID:3	[INFO: App       ] Test total =       2008.6181640mAh |
+01:28.555	ID:2	[INFO: App       ] Test total =       2031.6232910mAh |
+01:28.702	ID:1	[INFO: App       ] Total power usage =       2033.4182129mAh |
+01:29.218	ID:3	[INFO: App       ] Test total =       2033.4233398mAh |
+01:29.555	ID:2	[INFO: App       ] Test total =       2054.6284179mAh |
+01:29.702	ID:1	[INFO: App       ] Total power usage =       2056.4233398mAh |
+01:30.218	ID:3	[INFO: App       ] Test total =       2056.4233398mAh |
+01:30.555	ID:2	[INFO: App       ] Test total =       2077.6335449mAh |
+01:30.702	ID:1	[INFO: App       ] Total power usage =       2079.4284668mAh |
+01:30.704	ID:1	[INFO: App       ] Ratio: 796
+01:30.712	ID:1	[INFO: App       ] dataReq[INFO: App       ] 1010110101100101
+01:30.715	ID:1	[INFO: App       ] TX: 9, RX: 7
+01:30.743	ID:3	[INFO: App       ] state: 100
+01:30.747	ID:3	[INFO: App       ] Recieved a data request, sending data
+01:30.751	ID:3	[INFO: App       ] Sent data to A
+01:31.219	ID:3	[INFO: App       ] Test total =       2079.4284668mAh |
+01:31.555	ID:2	[INFO: App       ] Test total =       2100.6386719mAh |
+01:31.702	ID:1	[INFO: App       ] Total power usage =       2102.4335937mAh |
+01:32.218	ID:3	[INFO: App       ] Test total =       2102.4335937mAh |
+01:32.555	ID:2	[INFO: App       ] Test total =       2123.6437988mAh |
+01:32.702	ID:1	[INFO: App       ] Total power usage =       2125.4387207mAh |
+01:33.218	ID:3	[INFO: App       ] Test total =       2125.4387207mAh |
+01:33.555	ID:2	[INFO: App       ] Test total =       2146.6486816mAh |
+01:33.702	ID:1	[INFO: App       ] Total power usage =       2148.4436035mAh |
+01:34.218	ID:3	[INFO: App       ] Test total =       2148.4436035mAh |
+01:34.555	ID:2	[INFO: App       ] Test total =       2169.6538086mAh |
+01:34.702	ID:1	[INFO: App       ] Total power usage =       2171.4487304mAh |
+01:35.218	ID:3	[INFO: App       ] Test total =       2171.4487304mAh |
+01:35.555	ID:2	[INFO: App       ] Test total =       2192.6589355mAh |
+01:35.702	ID:1	[INFO: App       ] Total power usage =       2194.4538574mAh |
+01:36.218	ID:3	[INFO: App       ] Test total =       2194.4538574mAh |
+01:36.555	ID:2	[INFO: App       ] Test total =       2215.6640625mAh |
+01:36.702	ID:1	[INFO: App       ] Total power usage =       2217.4589844mAh |
+01:37.218	ID:3	[INFO: App       ] Test total =       2217.4589844mAh |
+01:37.555	ID:2	[INFO: App       ] Test total =       2238.6691894mAh |
+01:37.702	ID:1	[INFO: App       ] Total power usage =       2240.4641113mAh |
+01:38.218	ID:3	[INFO: App       ] Test total =       2240.4641113mAh |
+01:38.555	ID:2	[INFO: App       ] Test total =       2261.6743164mAh |
+01:38.702	ID:1	[INFO: App       ] Total power usage =       2263.4692383mAh |
+01:39.218	ID:3	[INFO: App       ] Test total =       2263.4692383mAh |
+01:39.555	ID:2	[INFO: App       ] Test total =       2286.4794922mAh |
+01:39.702	ID:1	[INFO: App       ] Total power usage =       2286.4743652mAh |
+01:40.218	ID:3	[INFO: App       ] Test total =       2286.4743652mAh |
+01:40.555	ID:2	[INFO: App       ] Test total =       2309.4794922mAh |
+01:40.702	ID:1	[INFO: App       ] Total power usage =       2309.4794922mAh |
+01:40.704	ID:1	[INFO: App       ] Ratio: 796
+01:40.712	ID:1	[INFO: App       ] dataReq[INFO: App       ] 1011010110010101
+01:40.715	ID:1	[INFO: App       ] TX: 9, RX: 7
+01:40.727	ID:3	[INFO: App       ] state: 0
+01:40.730	ID:3	[INFO: App       ] Lost packet from A
+01:41.219	ID:3	[INFO: App       ] Test total =       2309.4794922mAh |
+01:41.555	ID:2	[INFO: App       ] Test total =       2332.4846191mAh |
+01:41.702	ID:1	[INFO: App       ] Total power usage =       2332.4846191mAh |
+01:42.218	ID:3	[INFO: App       ] Test total =       2332.4846191mAh |
+01:42.555	ID:2	[INFO: App       ] Test total =       2355.4895019mAh |
+01:42.704	ID:1	[INFO: App       ] dataReq[INFO: App       ] Total power usage =       2355.4895019mAh |
+01:42.743	ID:3	[INFO: App       ] state: 0
+01:42.746	ID:3	[INFO: App       ] Lost packet from A
+01:43.218	ID:3	[INFO: App       ] Test total =       2355.4895019mAh |
+01:43.555	ID:2	[INFO: App       ] Test total =       2378.4946289mAh |
+01:43.702	ID:1	[INFO: App       ] Total power usage =       2378.4946289mAh |
+01:44.218	ID:3	[INFO: App       ] Test total =       2378.4946289mAh |
+01:44.555	ID:2	[INFO: App       ] Test total =       2401.4997558mAh |
+01:44.704	ID:1	[INFO: App       ] dataReq[INFO: App       ] Total power usage =       2403.2998047mAh |
+01:44.711	ID:3	[INFO: App       ] state: 100
+01:44.715	ID:3	[INFO: App       ] Recieved a data request, sending data
+01:44.718	ID:3	[INFO: App       ] Sent data to A
+01:45.218	ID:3	[INFO: App       ] Test total =       2401.4997558mAh |
+01:45.555	ID:2	[INFO: App       ] Test total =       2424.5048828mAh |
+01:45.702	ID:1	[INFO: App       ] Total power usage =       2426.3049316mAh |
+01:46.218	ID:3	[INFO: App       ] Test total =       2426.3049316mAh |
+01:46.555	ID:2	[INFO: App       ] Test total =       2447.5100097mAh |
+01:46.702	ID:1	[INFO: App       ] Total power usage =       2449.3049316mAh |
+01:47.218	ID:3	[INFO: App       ] Test total =       2449.3100586mAh |
+01:47.555	ID:2	[INFO: App       ] Test total =       2470.5151367mAh |
+01:47.702	ID:1	[INFO: App       ] Total power usage =       2472.3100586mAh |
+01:48.218	ID:3	[INFO: App       ] Test total =       2472.3100586mAh |
+01:48.555	ID:2	[INFO: App       ] Test total =       2493.5202636mAh |
+01:48.702	ID:1	[INFO: App       ] Total power usage =       2495.3151855mAh |
+01:49.218	ID:3	[INFO: App       ] Test total =       2495.3151855mAh |
+01:49.555	ID:2	[INFO: App       ] Test total =       2516.5253906mAh |
+01:49.702	ID:1	[INFO: App       ] Total power usage =       2518.3203125mAh |
+01:50.218	ID:3	[INFO: App       ] Test total =       2518.3203125mAh |
+01:50.555	ID:2	[INFO: App       ] Test total =       2539.5305176mAh |
+01:50.702	ID:1	[INFO: App       ] Total power usage =       2541.3251953mAh |
+01:50.704	ID:1	[INFO: App       ] Ratio: 796
+01:50.712	ID:1	[INFO: App       ] dataReq[INFO: App       ] 1101011001010101
+01:50.715	ID:1	[INFO: App       ] TX: 9, RX: 7
+01:50.727	ID:3	[INFO: App       ] state: 0
+01:50.730	ID:3	[INFO: App       ] Lost packet from A
+01:51.219	ID:3	[INFO: App       ] Test total =       2541.3251953mAh |
+01:51.555	ID:2	[INFO: App       ] Test total =       2562.5354004mAh |
+01:51.702	ID:1	[INFO: App       ] Total power usage =       2541.3303222mAh |
+01:52.218	ID:3	[INFO: App       ] Test total =       2564.3303222mAh |
+01:52.555	ID:2	[INFO: App       ] Test total =       2585.5405273mAh |
+01:52.704	ID:1	[INFO: App       ] dataReq[INFO: App       ] Total power usage =       2587.3354492mAh |
+01:52.711	ID:3	[INFO: App       ] state: 0
+01:52.713	ID:3	[INFO: App       ] Lost packet from A
+01:53.218	ID:3	[INFO: App       ] Test total =       2587.3354492mAh |
+01:53.555	ID:2	[INFO: App       ] Test total =       2608.5456543mAh |
+01:53.702	ID:1	[INFO: App       ] Total power usage =       2587.3405761mAh |
+01:54.218	ID:3	[INFO: App       ] Test total =       2610.3405761mAh |
+01:54.555	ID:2	[INFO: App       ] Test total =       2631.5507812mAh |
+01:54.704	ID:1	[INFO: App       ] dataReq[INFO: App       ] Total power usage =       2633.3457031mAh |
+01:54.735	ID:3	[INFO: App       ] state: 100
+01:54.739	ID:3	[INFO: App       ] Recieved a data request, sending data
+01:54.743	ID:3	[INFO: App       ] Sent data to A
+01:55.218	ID:3	[INFO: App       ] Test total =       2633.3457031mAh |
+01:55.555	ID:2	[INFO: App       ] Test total =       2654.5559082mAh |
+01:55.702	ID:1	[INFO: App       ] Total power usage =       2633.3508300mAh |
+01:56.218	ID:3	[INFO: App       ] Test total =       2656.3508300mAh |
+01:56.555	ID:2	[INFO: App       ] Test total =       2677.5610351mAh |
+01:56.702	ID:1	[INFO: App       ] Total power usage =       2656.3559570mAh |
+01:57.218	ID:3	[INFO: App       ] Test total =       2679.3559570mAh |
+01:57.555	ID:2	[INFO: App       ] Test total =       2700.5661621mAh |
+01:57.702	ID:1	[INFO: App       ] Total power usage =       2679.3610839mAh |
+01:58.218	ID:3	[INFO: App       ] Test total =       2702.3610839mAh |
+01:58.555	ID:2	[INFO: App       ] Test total =       2723.5712890mAh |
+01:58.702	ID:1	[INFO: App       ] Total power usage =       2702.3662109mAh |
+01:59.218	ID:3	[INFO: App       ] Test total =       2725.3662109mAh |
+01:59.555	ID:2	[INFO: App       ] Test total =       2748.3762207mAh |
+01:59.702	ID:1	[INFO: App       ] Total power usage =       2725.3710937mAh |
+02:00.218	ID:3	[INFO: App       ] Test total =       2748.3710937mAh |
+02:00.555	ID:2	[INFO: App       ] Test total =       2771.3762207mAh |
+02:00.702	ID:1	[INFO: App       ] Total power usage =       2748.3762207mAh |
+02:00.704	ID:1	[INFO: App       ] Ratio: 796
+02:00.712	ID:1	[INFO: App       ] dataReq[INFO: App       ] 0101100101010101
+02:00.715	ID:1	[INFO: App       ] TX: 8, RX: 8
+02:00.751	ID:3	[INFO: App       ] state: 0
+02:00.753	ID:3	[INFO: App       ] Lost packet from A
+02:01.219	ID:3	[INFO: App       ] Test total =       2771.3762207mAh |
+02:01.555	ID:2	[INFO: App       ] Test total =       2794.3813476mAh |
+02:01.702	ID:1	[INFO: App       ] Total power usage =       2771.3813476mAh |
+02:02.218	ID:3	[INFO: App       ] Test total =       2794.3813476mAh |
+02:02.555	ID:2	[INFO: App       ] Test total =       2817.3864746mAh |
+02:02.704	ID:1	[INFO: App       ] dataReq[INFO: App       ] Total power usage =       2796.1865234mAh |
+02:02.735	ID:3	[INFO: App       ] state: 50
+02:02.738	ID:3	[INFO: App       ] Lost packet from A
+02:03.218	ID:3	[INFO: App       ] Test total =       2817.3864746mAh |
+02:03.555	ID:2	[INFO: App       ] Test total =       2840.3916015mAh |
+02:03.702	ID:1	[INFO: App       ] Total power usage =       2819.1865234mAh |
+02:04.218	ID:3	[INFO: App       ] Test total =       2842.1916503mAh |
+02:04.555	ID:2	[INFO: App       ] Test total =       2863.3967285mAh |
+02:04.704	ID:1	[INFO: App       ] dataReq[INFO: App       ] Total power usage =       2842.1916503mAh |
+02:04.728	ID:3	[INFO: App       ] state: 50
+02:04.732	ID:3	[INFO: App       ] Recieved a data request, sending data
+02:04.735	ID:3	[INFO: App       ] Sent data to A
+02:05.218	ID:3	[INFO: App       ] Test total =       2865.1916503mAh |
+02:05.555	ID:2	[INFO: App       ] Test total =       2886.4018554mAh |
+02:05.702	ID:1	[INFO: App       ] Total power usage =       2865.1967773mAh |
+02:06.218	ID:3	[INFO: App       ] Test total =       2888.1967773mAh |
+02:06.555	ID:2	[INFO: App       ] Test total =       2909.4069824mAh |
+02:06.702	ID:1	[INFO: App       ] Total power usage =       2888.2019043mAh |
+02:07.219	ID:3	[INFO: App       ] Test total =       2911.2019043mAh |
+02:07.555	ID:2	[INFO: App       ] Test total =       2932.4121093mAh |
+02:07.702	ID:1	[INFO: App       ] Total power usage =       2911.2067871mAh |
+02:08.218	ID:3	[INFO: App       ] Test total =       2934.2067871mAh |
+02:08.555	ID:2	[INFO: App       ] Test total =       2955.4169922mAh |
+02:08.702	ID:1	[INFO: App       ] Total power usage =       2934.2119140mAh |
+02:09.218	ID:3	[INFO: App       ] Test total =       2957.2119140mAh |
+02:09.555	ID:2	[INFO: App       ] Test total =       2978.4221191mAh |
+02:09.702	ID:1	[INFO: App       ] Total power usage =       2957.2170410mAh |
+02:10.218	ID:3	[INFO: App       ] Test total =       2980.2170410mAh |
+02:10.555	ID:2	[INFO: App       ] Test total =       3001.4272461mAh |
+02:10.702	ID:1	[INFO: App       ] Total power usage =       2980.2221679mAh |
+02:10.704	ID:1	[INFO: App       ] Ratio: 1024
+02:10.712	ID:1	[INFO: App       ] dataReq[INFO: App       ] 0110010101010101
+02:10.715	ID:1	[INFO: App       ] TX: 8, RX: 8
+02:10.735	ID:3	[INFO: App       ] state: 50
+02:10.739	ID:3	[INFO: App       ] Recieved a data request, sending data
+02:10.743	ID:3	[INFO: App       ] Sent data to A
+02:11.219	ID:3	[INFO: App       ] Test total =       3003.2221679mAh |
+02:11.555	ID:2	[INFO: App       ] Test total =       3024.4323730mAh |
+02:11.702	ID:1	[INFO: App       ] Total power usage =       3003.2272949mAh |
+02:12.218	ID:3	[INFO: App       ] Test total =       3026.2272949mAh |
+02:12.555	ID:2	[INFO: App       ] Test total =       3047.4375000mAh |
+02:12.702	ID:1	[INFO: App       ] Total power usage =       3026.2324218mAh |
+02:13.218	ID:3	[INFO: App       ] Test total =       3049.2324218mAh |
+02:13.555	ID:2	[INFO: App       ] Test total =       3070.4426269mAh |
+02:13.702	ID:1	[INFO: App       ] Total power usage =       3049.2375488mAh |
+02:14.218	ID:3	[INFO: App       ] Test total =       3072.2375488mAh |
+02:14.555	ID:2	[INFO: App       ] Test total =       3093.4477539mAh |
+02:14.702	ID:1	[INFO: App       ] Total power usage =       3072.2426757mAh |
+02:15.218	ID:3	[INFO: App       ] Test total =       3095.2426757mAh |
+02:15.555	ID:2	[INFO: App       ] Test total =       3116.4528808mAh |
+02:15.702	ID:1	[INFO: App       ] Total power usage =       3095.2478027mAh |
+02:16.218	ID:3	[INFO: App       ] Test total =       3118.2478027mAh |
+02:16.555	ID:2	[INFO: App       ] Test total =       3139.4580078mAh |
+02:16.702	ID:1	[INFO: App       ] Total power usage =       3118.2526855mAh |
+02:17.218	ID:3	[INFO: App       ] Test total =       3141.2526855mAh |
+02:17.555	ID:2	[INFO: App       ] Test total =       3162.4628906mAh |
+02:17.701	ID:1	[INFO: App       ] Total power usage =       3141.2578125mAh |
+02:18.218	ID:3	[INFO: App       ] Test total =       3164.2578125mAh |
+02:18.555	ID:2	[INFO: App       ] Test total =       3185.4680176mAh |
+02:18.701	ID:1	[INFO: App       ] Total power usage =       3164.2629394mAh |
+02:19.218	ID:3	[INFO: App       ] Test total =       3187.2629394mAh |
+02:19.555	ID:2	[INFO: App       ] Test total =       3210.2731933mAh |
+02:19.701	ID:1	[INFO: App       ] Total power usage =       3187.2680664mAh |
+02:20.218	ID:3	[INFO: App       ] Test total =       3210.2680664mAh |
+02:20.555	ID:2	[INFO: App       ] Test total =       3233.2731933mAh |
+02:20.701	ID:1	[INFO: App       ] Total power usage =       3212.0732421mAh |
+02:20.704	ID:1	[INFO: App       ] Ratio: 1024
+02:20.712	ID:1	[INFO: App       ] dataReq[INFO: App       ] 1001010101010101
+02:20.714	ID:1	[INFO: App       ] TX: 8, RX: 8
+02:20.759	ID:3	[INFO: App       ] state: 100
+02:20.763	ID:3	[INFO: App       ] Recieved a data request, sending data
+02:20.766	ID:3	[INFO: App       ] Sent data to A
+02:21.218	ID:3	[INFO: App       ] Test total =       3235.0732421mAh |
+02:21.555	ID:2	[INFO: App       ] Test total =       3256.2783203mAh |
+02:21.701	ID:1	[INFO: App       ] Total power usage =       3235.0732421mAh |
+02:22.218	ID:3	[INFO: App       ] Test total =       3258.0783691mAh |
+02:22.555	ID:2	[INFO: App       ] Test total =       3279.2834472mAh |
+02:22.701	ID:1	[INFO: App       ] Total power usage =       3258.0783691mAh |
+02:23.218	ID:3	[INFO: App       ] Test total =       3281.0783691mAh |
+02:23.555	ID:2	[INFO: App       ] Test total =       3302.2885742mAh |
+02:23.701	ID:1	[INFO: App       ] Total power usage =       3281.0834960mAh |
+02:24.218	ID:3	[INFO: App       ] Test total =       3304.0834960mAh |
+02:24.555	ID:2	[INFO: App       ] Test total =       3325.2937011mAh |
+02:24.701	ID:1	[INFO: App       ] Total power usage =       3304.0883789mAh |
+02:25.218	ID:3	[INFO: App       ] Test total =       3327.0883789mAh |
+02:25.555	ID:2	[INFO: App       ] Test total =       3348.2985839mAh |
+02:25.701	ID:1	[INFO: App       ] Total power usage =       3327.0935058mAh |
+02:26.218	ID:3	[INFO: App       ] Test total =       3350.0935058mAh |
+02:26.555	ID:2	[INFO: App       ] Test total =       3371.3037109mAh |
+02:26.701	ID:1	[INFO: App       ] Total power usage =       3350.0986328mAh |
+02:27.218	ID:3	[INFO: App       ] Test total =       3373.0986328mAh |
+02:27.555	ID:2	[INFO: App       ] Test total =       3394.3088379mAh |
+02:27.702	ID:1	[INFO: App       ] Total power usage =       3373.1037597mAh |
+02:28.218	ID:3	[INFO: App       ] Test total =       3396.1037597mAh |
+02:28.555	ID:2	[INFO: App       ] Test total =       3417.3139648mAh |
+02:28.702	ID:1	[INFO: App       ] Total power usage =       3396.1088867mAh |
+02:29.218	ID:3	[INFO: App       ] Test total =       3419.1088867mAh |
+02:29.555	ID:2	[INFO: App       ] Test total =       3440.3190918mAh |
+02:29.701	ID:1	[INFO: App       ] Total power usage =       3419.1140136mAh |
+02:30.218	ID:3	[INFO: App       ] Test total =       3442.1140136mAh |
+02:30.555	ID:2	[INFO: App       ] Test total =       3463.3242187mAh |
+02:30.702	ID:1	[INFO: App       ] Total power usage =       3442.1191406mAh |
+02:30.704	ID:1	[INFO: App       ] Ratio: 1024
+02:30.712	ID:1	[INFO: App       ] dataReq[INFO: App       ] 0101010101010101
+02:30.715	ID:1	[INFO: App       ] TX: 8, RX: 8
+02:30.728	ID:3	[INFO: App       ] state: 100
+02:30.732	ID:3	[INFO: App       ] Recieved a data request, sending data
+02:30.735	ID:3	[INFO: App       ] Sent data to A
+02:31.219	ID:3	[INFO: App       ] Test total =       3465.1191406mAh |
+02:31.555	ID:2	[INFO: App       ] Test total =       3486.3293457mAh |
+02:31.702	ID:1	[INFO: App       ] Total power usage =       3465.1242675mAh |
+02:32.218	ID:3	[INFO: App       ] Test total =       3488.1242675mAh |
+02:32.555	ID:2	[INFO: App       ] Test total =       3509.3344726mAh |
+02:32.702	ID:1	[INFO: App       ] Total power usage =       3488.1293945mAh |
+02:33.218	ID:3	[INFO: App       ] Test total =       3511.1293945mAh |
+02:33.555	ID:2	[INFO: App       ] Test total =       3532.3395996mAh |
+02:33.701	ID:1	[INFO: App       ] Total power usage =       3511.1342773mAh |
+02:34.218	ID:3	[INFO: App       ] Test total =       3534.1342773mAh |
+02:34.555	ID:2	[INFO: App       ] Test total =       3555.3444824mAh |
+02:34.701	ID:1	[INFO: App       ] Total power usage =       3534.1394043mAh |
+02:35.218	ID:3	[INFO: App       ] Test total =       3557.1394043mAh |
+02:35.555	ID:2	[INFO: App       ] Test total =       3578.3496093mAh |
+02:35.701	ID:1	[INFO: App       ] Total power usage =       3557.1445312mAh |
+02:36.218	ID:3	[INFO: App       ] Test total =       3580.1445312mAh |
+02:36.555	ID:2	[INFO: App       ] Test total =       3601.3547363mAh |
+02:36.702	ID:1	[INFO: App       ] Total power usage =       3580.1496582mAh |
+02:37.218	ID:3	[INFO: App       ] Test total =       3603.1496582mAh |
+02:37.555	ID:2	[INFO: App       ] Test total =       3624.3598632mAh |
+02:37.702	ID:1	[INFO: App       ] Total power usage =       3604.9548340mAh |
+02:38.218	ID:3	[INFO: App       ] Test total =       3626.1547851mAh |
+02:38.555	ID:2	[INFO: App       ] Test total =       3647.3649902mAh |
+02:38.702	ID:1	[INFO: App       ] Total power usage =       3627.9599609mAh |
+02:39.218	ID:3	[INFO: App       ] Test total =       3649.1599121mAh |
+02:39.555	ID:2	[INFO: App       ] Test total =       3672.1701660mAh |
+02:39.702	ID:1	[INFO: App       ] Total power usage =       3650.9599609mAh |
+02:40.218	ID:3	[INFO: App       ] Test total =       3673.9650879mAh |
+02:40.555	ID:2	[INFO: App       ] Test total =       3695.1701660mAh |
+02:40.702	ID:1	[INFO: App       ] Total power usage =       3673.9650879mAh |
+02:40.704	ID:1	[INFO: App       ] Ratio: 1024
+02:40.712	ID:1	[INFO: App       ] dataReq[INFO: App       ] 0101010101010101
+02:40.715	ID:1	[INFO: App       ] TX: 8, RX: 8
+02:40.751	ID:3	[INFO: App       ] state: 100
+02:40.755	ID:3	[INFO: App       ] Recieved a data request, sending data
+02:40.758	ID:3	[INFO: App       ] Sent data to A
+02:41.219	ID:3	[INFO: App       ] Test total =       3696.9650879mAh |
+02:41.555	ID:2	[INFO: App       ] Test total =       3718.1752929mAh |
+02:41.702	ID:1	[INFO: App       ] Total power usage =       3696.9702148mAh |
+02:42.218	ID:3	[INFO: App       ] Test total =       3719.9702148mAh |
+02:42.555	ID:2	[INFO: App       ] Test total =       3741.1804199mAh |
+02:42.702	ID:1	[INFO: App       ] Total power usage =       3719.9750977mAh |
+02:43.218	ID:3	[INFO: App       ] Test total =       3742.9750977mAh |
+02:43.555	ID:2	[INFO: App       ] Test total =       3764.1853027mAh |
+02:43.702	ID:1	[INFO: App       ] Total power usage =       3742.9802246mAh |
+02:44.218	ID:3	[INFO: App       ] Test total =       3765.9802246mAh |
+02:44.555	ID:2	[INFO: App       ] Test total =       3787.1904296mAh |
+02:44.702	ID:1	[INFO: App       ] Total power usage =       3765.9853516mAh |
+02:45.218	ID:3	[INFO: App       ] Test total =       3788.9853516mAh |
+02:45.555	ID:2	[INFO: App       ] Test total =       3810.1955566mAh |
+02:45.702	ID:1	[INFO: App       ] Total power usage =       3788.9904785mAh |
+02:46.218	ID:3	[INFO: App       ] Test total =       3811.9904785mAh |
+02:46.555	ID:2	[INFO: App       ] Test total =       3833.2006836mAh |
+02:46.702	ID:1	[INFO: App       ] Total power usage =       3811.9956055mAh |
+02:47.218	ID:3	[INFO: App       ] Test total =       3834.9956055mAh |
+02:47.555	ID:2	[INFO: App       ] Test total =       3856.2058105mAh |
+02:47.701	ID:1	[INFO: App       ] Total power usage =       3835.0007324mAh |
+02:48.217	ID:3	[INFO: App       ] Test total =       3858.0007324mAh |
+02:48.555	ID:2	[INFO: App       ] Test total =       3879.2109375mAh |
+02:48.701	ID:1	[INFO: App       ] Total power usage =       3858.0058593mAh |
+02:49.218	ID:3	[INFO: App       ] Test total =       3881.0058593mAh |
+02:49.555	ID:2	[INFO: App       ] Test total =       3902.2160644mAh |
+02:49.701	ID:1	[INFO: App       ] Total power usage =       3881.0109863mAh |
+02:50.218	ID:3	[INFO: App       ] Test total =       3904.0109863mAh |
+02:50.555	ID:2	[INFO: App       ] Test total =       3925.2211914mAh |
+02:50.701	ID:1	[INFO: App       ] Total power usage =       3904.0161132mAh |
+02:50.704	ID:1	[INFO: App       ] Ratio: 1024
+02:50.712	ID:1	[INFO: App       ] dataReq[INFO: App       ] 0101010101010101
+02:50.714	ID:1	[INFO: App       ] TX: 8, RX: 8
+02:50.759	ID:3	[INFO: App       ] state: 0
+02:50.762	ID:3	[INFO: App       ] Lost packet from A
+02:51.218	ID:3	[INFO: App       ] Test total =       3927.0161132mAh |
+02:51.555	ID:2	[INFO: App       ] Test total =       3948.2263183mAh |
+02:51.701	ID:1	[INFO: App       ] Total power usage =       3927.0209960mAh |
+02:52.218	ID:3	[INFO: App       ] Test total =       3950.0209960mAh |
+02:52.555	ID:2	[INFO: App       ] Test total =       3971.2312011mAh |
+02:52.704	ID:1	[INFO: App       ] dataReq[INFO: App       ] Total power usage =       3950.0261230mAh |
+02:52.710	ID:3	[INFO: App       ] state: 0
+02:52.713	ID:3	[INFO: App       ] Lost packet from A
+02:53.218	ID:3	[INFO: App       ] Test total =       3973.0261230mAh |
+02:53.555	ID:2	[INFO: App       ] Test total =       3994.2363281mAh |
+02:53.701	ID:1	[INFO: App       ] Total power usage =       3973.0312500mAh |
+02:54.218	ID:3	[INFO: App       ] Test total =       3996.0312500mAh |
+02:54.555	ID:2	[INFO: App       ] Test total =       4017.2414550mAh |
+02:54.704	ID:1	[INFO: App       ] dataReq[INFO: App       ] Total power usage =       3996.0363769mAh |
+02:54.743	ID:3	[INFO: App       ] state: 0
+02:54.746	ID:3	[INFO: App       ] Lost packet from A
+02:55.218	ID:3	[INFO: App       ] Test total =       4019.0363769mAh |
+02:55.555	ID:2	[INFO: App       ] Test total =       4040.2465820mAh |
+02:55.702	ID:1	[INFO: App       ] Total power usage =       4020.8415527mAh |
+02:56.218	ID:3	[INFO: App       ] Test total =       4042.0415039mAh |
+02:56.555	ID:2	[INFO: App       ] Test total =       4063.2517089mAh |
+02:56.704	ID:1	[INFO: App       ] dataReq[INFO: App       ] Total power usage =       4043.8415527mAh |
+02:56.735	ID:3	[INFO: App       ] state: 0
+02:56.738	ID:3	[INFO: App       ] Lost packet from A
+02:57.218	ID:3	[INFO: App       ] Test total =       4066.8466797mAh |
+02:57.555	ID:2	[INFO: App       ] Test total =       4086.2568359mAh |
+02:57.701	ID:1	[INFO: App       ] Total power usage =       4066.8466797mAh |
+02:58.218	ID:3	[INFO: App       ] Test total =       4089.8466797mAh |
+02:58.555	ID:2	[INFO: App       ] Test total =       4109.2617187mAh |
+02:58.704	ID:1	[INFO: App       ] dataReq[INFO: App       ] Total power usage =       4089.8518066mAh |
+02:58.712	ID:3	[INFO: App       ] state: 0
+02:58.714	ID:3	[INFO: App       ] Lost packet from A
+02:59.218	ID:3	[INFO: App       ] Test total =       4112.8515625mAh |
+02:59.554	ID:2	[INFO: App       ] Test total =       4134.0668945mAh |
+02:59.702	ID:1	[INFO: App       ] Total power usage =       4112.8569336mAh |
+03:00.218	ID:3	[INFO: App       ] Test total =       4135.8569336mAh |
+03:00.554	ID:2	[INFO: App       ] Test total =       4157.0668945mAh |
+03:00.704	ID:1	[INFO: App       ] dataReq[INFO: App       ] Total power usage =       4135.8618164mAh |
+03:00.707	ID:1	[INFO: App       ] Ratio: 1024
+03:00.715	ID:1	[INFO: App       ] dataReq[INFO: App       ] 1010101010101011
+03:00.717	ID:1	[INFO: App       ] TX: 9, RX: 7
+03:00.724	ID:3	[INFO: App       ] state: 100
+03:00.728	ID:3	[INFO: App       ] Recieved a data request, sending data
+03:00.731	ID:3	[INFO: App       ] Sent data to A
+03:00.737	ID:3	[INFO: App       ] state: 100
+03:00.741	ID:3	[INFO: App       ] Recieved a data request, sending data
+03:00.744	ID:3	[INFO: App       ] Sent data to A
+03:01.219	ID:3	[INFO: App       ] Test total =       4158.8618164mAh |
+03:01.554	ID:2	[INFO: App       ] Test total =       4180.0722656mAh |
+03:01.702	ID:1	[INFO: App       ] Total power usage =       4158.8671875mAh |
+03:02.218	ID:3	[INFO: App       ] Test total =       4181.8671875mAh |
+03:02.554	ID:2	[INFO: App       ] Test total =       4203.0771484mAh |
+03:02.702	ID:1	[INFO: App       ] Total power usage =       4181.8720703mAh |
+03:03.218	ID:3	[INFO: App       ] Test total =       4204.8720703mAh |
+03:03.554	ID:2	[INFO: App       ] Test total =       4226.0825195mAh |
+03:03.701	ID:1	[INFO: App       ] Total power usage =       4204.8774414mAh |
+03:04.218	ID:3	[INFO: App       ] Test total =       4227.8774414mAh |
+03:04.554	ID:2	[INFO: App       ] Test total =       4249.0874023mAh |
+03:04.702	ID:1	[INFO: App       ] Total power usage =       4227.8823242mAh |
+03:05.218	ID:3	[INFO: App       ] Test total =       4250.8823242mAh |
+03:05.554	ID:2	[INFO: App       ] Test total =       4272.0922851mAh |
+03:05.702	ID:1	[INFO: App       ] Total power usage =       4250.8872070mAh |
+03:06.218	ID:3	[INFO: App       ] Test total =       4273.8872070mAh |
+03:06.554	ID:2	[INFO: App       ] Test total =       4295.0976562mAh |
+03:06.702	ID:1	[INFO: App       ] Total power usage =       4273.8925781mAh |
+03:07.218	ID:3	[INFO: App       ] Test total =       4296.8925781mAh |
+03:07.555	ID:2	[INFO: App       ] Test total =       4318.1025390mAh |
+03:07.702	ID:1	[INFO: App       ] Total power usage =       4296.8974609mAh |
+03:08.218	ID:3	[INFO: App       ] Test total =       4319.8974609mAh |
+03:08.555	ID:2	[INFO: App       ] Test total =       4341.1079101mAh |
+03:08.702	ID:1	[INFO: App       ] Total power usage =       4319.9028320mAh |
+03:09.218	ID:3	[INFO: App       ] Test total =       4342.9028320mAh |
+03:09.555	ID:2	[INFO: App       ] Test total =       4364.1127929mAh |
+03:09.702	ID:1	[INFO: App       ] Total power usage =       4342.9077148mAh |
+03:10.218	ID:3	[INFO: App       ] Test total =       4365.9077148mAh |
+03:10.555	ID:2	[INFO: App       ] Test total =       4387.1181640mAh |
+03:10.702	ID:1	[INFO: App       ] Total power usage =       4365.9130859mAh |
+03:10.704	ID:1	[INFO: App       ] Ratio: 796
+03:10.712	ID:1	[INFO: App       ] dataReq[INFO: App       ] 0101010101011001
+03:10.715	ID:1	[INFO: App       ] TX: 8, RX: 8
+03:10.759	ID:3	[INFO: App       ] state: 50
+03:10.762	ID:3	[INFO: App       ] Lost packet from A
+03:11.219	ID:3	[INFO: App       ] Test total =       4388.9130859mAh |
+03:11.555	ID:2	[INFO: App       ] Test total =       4410.1230468mAh |
+03:11.702	ID:1	[INFO: App       ] Total power usage =       4388.9179688mAh |
+03:12.218	ID:3	[INFO: App       ] Test total =       4411.9179688mAh |
+03:12.555	ID:2	[INFO: App       ] Test total =       4433.1284179mAh |
+03:12.704	ID:1	[INFO: App       ] dataReq[INFO: App       ] Total power usage =       4413.7231445mAh |
+03:12.735	ID:3	[INFO: App       ] state: 50
+03:12.738	ID:3	[INFO: App       ] Lost packet from A
+03:13.218	ID:3	[INFO: App       ] Test total =       4434.9233398mAh |
+03:13.555	ID:2	[INFO: App       ] Test total =       4456.1333007mAh |
+03:13.702	ID:1	[INFO: App       ] Total power usage =       4436.7231445mAh |
+03:14.218	ID:3	[INFO: App       ] Test total =       4459.7280273mAh |
+03:14.555	ID:2	[INFO: App       ] Test total =       4479.1381836mAh |
+03:14.704	ID:1	[INFO: App       ] dataReq[INFO: App       ] Total power usage =       4459.7280273mAh |
+03:14.728	ID:3	[INFO: App       ] state: 50
+03:14.730	ID:3	[INFO: App       ] Lost packet from A
+03:15.218	ID:3	[INFO: App       ] Test total =       4482.7333984mAh |
+03:15.555	ID:2	[INFO: App       ] Test total =       4502.1435546mAh |
+03:15.702	ID:1	[INFO: App       ] Total power usage =       4482.7333984mAh |
+03:16.218	ID:3	[INFO: App       ] Test total =       4505.7333984mAh |
+03:16.555	ID:2	[INFO: App       ] Test total =       4525.1484375mAh |
+03:16.704	ID:1	[INFO: App       ] dataReq[INFO: App       ] Total power usage =       4505.7382812mAh |
+03:16.728	ID:3	[INFO: App       ] state: 50
+03:16.732	ID:3	[INFO: App       ] Recieved a data request, sending data
+03:16.735	ID:3	[INFO: App       ] Sent data to A
+03:17.218	ID:3	[INFO: App       ] Test total =       4528.7382812mAh |
+03:17.555	ID:2	[INFO: App       ] Test total =       4548.1538086mAh |
+03:17.702	ID:1	[INFO: App       ] Total power usage =       4528.7436523mAh |
+03:18.218	ID:3	[INFO: App       ] Test total =       4551.7436523mAh |
+03:18.555	ID:2	[INFO: App       ] Test total =       4571.1586914mAh |
+03:18.702	ID:1	[INFO: App       ] Total power usage =       4551.7485351mAh |
+03:19.218	ID:3	[INFO: App       ] Test total =       4574.7485351mAh |
+03:19.555	ID:2	[INFO: App       ] Test total =       4595.9638672mAh |
+03:19.702	ID:1	[INFO: App       ] Total power usage =       4574.7539062mAh |
+03:20.218	ID:3	[INFO: App       ] Test total =       4597.7539062mAh |
+03:20.555	ID:2	[INFO: App       ] Test total =       4618.9638672mAh |
+03:20.702	ID:1	[INFO: App       ] Total power usage =       4597.7587890mAh |
+03:20.704	ID:1	[INFO: App       ] Ratio: 1024
+03:20.712	ID:1	[INFO: App       ] dataReq[INFO: App       ] 0101010101100101
+03:20.715	ID:1	[INFO: App       ] TX: 8, RX: 8
+03:20.759	ID:3	[INFO: App       ] state: 50
+03:20.762	ID:3	[INFO: App       ] Lost packet from A
+03:21.219	ID:3	[INFO: App       ] Test total =       4620.7587890mAh |
+03:21.555	ID:2	[INFO: App       ] Test total =       4641.9692383mAh |
+03:21.702	ID:1	[INFO: App       ] Total power usage =       4620.7636719mAh |
+03:22.218	ID:3	[INFO: App       ] Test total =       4643.7636719mAh |
+03:22.555	ID:2	[INFO: App       ] Test total =       4664.9741211mAh |
+03:22.704	ID:1	[INFO: App       ] dataReq[INFO: App       ] Total power usage =       4643.7690429mAh |
+03:22.728	ID:3	[INFO: App       ] state: 50
+03:22.732	ID:3	[INFO: App       ] Recieved a data request, sending data
+03:22.735	ID:3	[INFO: App       ] Sent data to A
+03:23.218	ID:3	[INFO: App       ] Test total =       4666.7690429mAh |
+03:23.555	ID:2	[INFO: App       ] Test total =       4687.9790039mAh |
+03:23.702	ID:1	[INFO: App       ] Total power usage =       4666.7739258mAh |
+03:24.218	ID:3	[INFO: App       ] Test total =       4689.7739258mAh |
+03:24.555	ID:2	[INFO: App       ] Test total =       4710.9843750mAh |
+03:24.702	ID:1	[INFO: App       ] Total power usage =       4689.7792969mAh |
+03:25.218	ID:3	[INFO: App       ] Test total =       4712.7792969mAh |
+03:25.555	ID:2	[INFO: App       ] Test total =       4733.9892578mAh |
+03:25.702	ID:1	[INFO: App       ] Total power usage =       4712.7841797mAh |
+03:26.218	ID:3	[INFO: App       ] Test total =       4735.7841797mAh |
+03:26.555	ID:2	[INFO: App       ] Test total =       4756.9946289mAh |
+03:26.702	ID:1	[INFO: App       ] Total power usage =       4735.7895508mAh |
+03:27.218	ID:3	[INFO: App       ] Test total =       4758.7895508mAh |
+03:27.555	ID:2	[INFO: App       ] Test total =       4779.9995117mAh |
+03:27.702	ID:1	[INFO: App       ] Total power usage =       4758.7944336mAh |
+03:28.218	ID:3	[INFO: App       ] Test total =       4781.7944336mAh |
+03:28.554	ID:2	[INFO: App       ] Test total =       4803.0048828mAh |
+03:28.702	ID:1	[INFO: App       ] Total power usage =       4781.7998047mAh |
+03:29.218	ID:3	[INFO: App       ] Test total =       4804.7998047mAh |
+03:29.554	ID:2	[INFO: App       ] Test total =       4826.0097656mAh |
+03:29.701	ID:1	[INFO: App       ] Total power usage =       4806.6044922mAh |
+03:30.218	ID:3	[INFO: App       ] Test total =       4827.8046875mAh |
+03:30.554	ID:2	[INFO: App       ] Test total =       4849.0151367mAh |
+03:30.702	ID:1	[INFO: App       ] Total power usage =       4829.6044922mAh |
+03:30.704	ID:1	[INFO: App       ] Ratio: 1024
+03:30.712	ID:1	[INFO: App       ] dataReq[INFO: App       ] 0101010110010101
+03:30.715	ID:1	[INFO: App       ] TX: 8, RX: 8
+03:30.735	ID:3	[INFO: App       ] state: 100
+03:30.739	ID:3	[INFO: App       ] Recieved a data request, sending data
+03:30.743	ID:3	[INFO: App       ] Sent data to A
+03:31.219	ID:3	[INFO: App       ] Test total =       4852.6098633mAh |
+03:31.554	ID:2	[INFO: App       ] Test total =       4872.0200195mAh |
+03:31.702	ID:1	[INFO: App       ] Total power usage =       4852.6098633mAh |
+03:32.218	ID:3	[INFO: App       ] Test total =       4875.6147461mAh |
+03:32.554	ID:2	[INFO: App       ] Test total =       4895.0249023mAh |
+03:32.702	ID:1	[INFO: App       ] Total power usage =       4875.6147461mAh |
+03:33.218	ID:3	[INFO: App       ] Test total =       4898.6147461mAh |
+03:33.554	ID:2	[INFO: App       ] Test total =       4918.0302734mAh |
+03:33.702	ID:1	[INFO: App       ] Total power usage =       4898.6201172mAh |
+03:34.218	ID:3	[INFO: App       ] Test total =       4921.6201172mAh |
+03:34.554	ID:2	[INFO: App       ] Test total =       4941.0351562mAh |
+03:34.701	ID:1	[INFO: App       ] Total power usage =       4921.6250000mAh |
+03:35.218	ID:3	[INFO: App       ] Test total =       4944.6250000mAh |
+03:35.554	ID:2	[INFO: App       ] Test total =       4964.0405273mAh |
+03:35.702	ID:1	[INFO: App       ] Total power usage =       4944.6303711mAh |
+03:36.218	ID:3	[INFO: App       ] Test total =       4967.6303711mAh |
+03:36.554	ID:2	[INFO: App       ] Test total =       4987.0454101mAh |
+03:36.702	ID:1	[INFO: App       ] Total power usage =       4967.6352539mAh |
+03:37.218	ID:3	[INFO: App       ] Test total =       4990.6352539mAh |
+03:37.554	ID:2	[INFO: App       ] Test total =       5010.0507812mAh |
+03:37.701	ID:1	[INFO: App       ] Total power usage =       4990.6406250mAh |
+03:38.218	ID:3	[INFO: App       ] Test total =       5013.6406250mAh |
+03:38.554	ID:2	[INFO: App       ] Test total =       5033.0556640mAh |
+03:38.702	ID:1	[INFO: App       ] Total power usage =       5013.6455078mAh |
+03:39.218	ID:3	[INFO: App       ] Test total =       5036.6455078mAh |
+03:39.555	ID:2	[INFO: App       ] Test total =       5057.8608398mAh |
+03:39.702	ID:1	[INFO: App       ] Total power usage =       5036.6503906mAh |
+03:40.218	ID:3	[INFO: App       ] Test total =       5059.6503906mAh |
+03:40.555	ID:2	[INFO: App       ] Test total =       5080.8608398mAh |
+03:40.702	ID:1	[INFO: App       ] Total power usage =       5059.6557617mAh |
+03:40.704	ID:1	[INFO: App       ] Ratio: 1024
+03:40.712	ID:1	[INFO: App       ] dataReq[INFO: App       ] 0101011001010101
+03:40.715	ID:1	[INFO: App       ] TX: 8, RX: 8
+03:40.759	ID:3	[INFO: App       ] state: 50
+03:40.762	ID:3	[INFO: App       ] Lost packet from A
+03:41.219	ID:3	[INFO: App       ] Test total =       5082.6557617mAh |
+03:41.555	ID:2	[INFO: App       ] Test total =       5103.8657227mAh |
+03:41.702	ID:1	[INFO: App       ] Total power usage =       5082.6606445mAh |
+03:42.218	ID:3	[INFO: App       ] Test total =       5105.6606445mAh |
+03:42.555	ID:2	[INFO: App       ] Test total =       5126.8710938mAh |
+03:42.704	ID:1	[INFO: App       ] dataReq[INFO: App       ] Total power usage =       5105.6660156mAh |
+03:42.711	ID:3	[INFO: App       ] state: 100
+03:42.715	ID:3	[INFO: App       ] Recieved a data request, sending data
+03:42.718	ID:3	[INFO: App       ] Sent data to A
+03:43.218	ID:3	[INFO: App       ] Test total =       5128.6660156mAh |
+03:43.555	ID:2	[INFO: App       ] Test total =       5149.8759766mAh |
+03:43.702	ID:1	[INFO: App       ] Total power usage =       5128.6708984mAh |
+03:44.218	ID:3	[INFO: App       ] Test total =       5151.6708984mAh |
+03:44.555	ID:2	[INFO: App       ] Test total =       5172.8813477mAh |
+03:44.702	ID:1	[INFO: App       ] Total power usage =       5151.6762695mAh |
+03:45.218	ID:3	[INFO: App       ] Test total =       5174.6762695mAh |
+03:45.555	ID:2	[INFO: App       ] Test total =       5195.8862305mAh |
+03:45.702	ID:1	[INFO: App       ] Total power usage =       5174.6811523mAh |
+03:46.218	ID:3	[INFO: App       ] Test total =       5197.6811523mAh |
+03:46.555	ID:2	[INFO: App       ] Test total =       5218.8916016mAh |
+03:46.702	ID:1	[INFO: App       ] Total power usage =       5197.6865234mAh |
+03:47.218	ID:3	[INFO: App       ] Test total =       5220.6865234mAh |
+03:47.555	ID:2	[INFO: App       ] Test total =       5241.8964844mAh |
+03:47.702	ID:1	[INFO: App       ] Total power usage =       5222.4912109mAh |
+03:48.218	ID:3	[INFO: App       ] Test total =       5243.6914062mAh |
+03:48.555	ID:2	[INFO: App       ] Test total =       5264.9013672mAh |
+03:48.702	ID:1	[INFO: App       ] Total power usage =       5245.4912109mAh |
+03:49.218	ID:3	[INFO: App       ] Test total =       5266.6962890mAh |
+03:49.555	ID:2	[INFO: App       ] Test total =       5287.9067383mAh |
+03:49.702	ID:1	[INFO: App       ] Total power usage =       5268.4965820mAh |
+03:50.218	ID:3	[INFO: App       ] Test total =       5291.5014648mAh |
+03:50.555	ID:2	[INFO: App       ] Test total =       5310.9116211mAh |
+03:50.702	ID:1	[INFO: App       ] Total power usage =       5291.5014648mAh |
+03:50.704	ID:1	[INFO: App       ] Ratio: 1024
+03:50.712	ID:1	[INFO: App       ] dataReq[INFO: App       ] 0101100101010101
+03:50.715	ID:1	[INFO: App       ] TX: 8, RX: 8
+03:50.735	ID:3	[INFO: App       ] state: 100
+03:50.739	ID:3	[INFO: App       ] Recieved a data request, sending data
+03:50.743	ID:3	[INFO: App       ] Sent data to A
+03:51.219	ID:3	[INFO: App       ] Test total =       5314.5014648mAh |
+03:51.555	ID:2	[INFO: App       ] Test total =       5333.9169922mAh |
+03:51.702	ID:1	[INFO: App       ] Total power usage =       5314.5068359mAh |
+03:52.218	ID:3	[INFO: App       ] Test total =       5337.5068359mAh |
+03:52.555	ID:2	[INFO: App       ] Test total =       5356.9218750mAh |
+03:52.702	ID:1	[INFO: App       ] Total power usage =       5337.5117187mAh |
+03:53.218	ID:3	[INFO: App       ] Test total =       5360.5117187mAh |
+03:53.555	ID:2	[INFO: App       ] Test total =       5379.9272461mAh |
+03:53.701	ID:1	[INFO: App       ] Total power usage =       5360.5170898mAh |
+03:54.218	ID:3	[INFO: App       ] Test total =       5383.5170898mAh |
+03:54.555	ID:2	[INFO: App       ] Test total =       5402.9321289mAh |
+03:54.702	ID:1	[INFO: App       ] Total power usage =       5383.5219726mAh |
+03:55.218	ID:3	[INFO: App       ] Test total =       5406.5219726mAh |
+03:55.555	ID:2	[INFO: App       ] Test total =       5425.9375000mAh |
+03:55.702	ID:1	[INFO: App       ] Total power usage =       5406.5273437mAh |
+03:56.218	ID:3	[INFO: App       ] Test total =       5429.5273437mAh |
+03:56.555	ID:2	[INFO: App       ] Test total =       5448.9423828mAh |
+03:56.702	ID:1	[INFO: App       ] Total power usage =       5429.5322265mAh |
+03:57.218	ID:3	[INFO: App       ] Test total =       5452.5322265mAh |
