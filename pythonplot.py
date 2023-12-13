@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 from datetime import datetime, timedelta
 
-file_path = 'loglisteners/kvs14.txt'  # Replace with the path to your text file
+file_path = 'loglisteners/kvs29.txt'  # Replace with the path to your text file
 def extract_tx_rx_state_power_data(line):
     timestamp = line.split("\t")[0]
     if "TX:" in line and "RX:" in line:
@@ -89,7 +89,7 @@ with open(file_path, 'r') as file:
                 sendingC.append((timestamp, sending_C))
 
                 
-power_values = parse_power_data(power_values_C)
+power_values = parse_power_data(power_values_A)
 power_diff = power_diff_B
 # Preparing data for plotting
 tx_rx_times, tx_rx_data = zip(*tx_rx_ratios) if tx_rx_ratios else ([], [])
@@ -105,6 +105,7 @@ fig, axs = plt.subplots(3, figsize=(8, 8), sharex=True)
 
 # Plot TX/RX Ratio
 axs[0].plot(tx_rx_times, tx_rx_data, marker='o', color='blue')
+axs[0].plot([tx_rx_times[0], tx_rx_times[-1]], [0.9 * 1024, 0.9 * 1024])
 axs[0].scatter(sendingB_times, sendingB_data, marker='o', color='green')
 axs[0].scatter(sendingC_times, sendingC_data, marker='o', color='purple')
 axs[0].set_ylabel('RX/TX Ratio')

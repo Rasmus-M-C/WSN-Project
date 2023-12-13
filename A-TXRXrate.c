@@ -21,7 +21,7 @@
 // set a bit to 0
 #define CLRBIT(var, bit) var &= (~(1 << (bit)))
 
-static u_int16_t list = 0b0101010101010101;
+static u_int16_t list = 0b1010101010101010;
 static u_int8_t TX_count = 0;
 static u_int8_t RX_count = 0;
 
@@ -38,6 +38,8 @@ static int counter = 0;
 #define CPU_NORMAL 1.8        // mA
 #define CPU_SLEEP 0.0051      // mA
 #define CPU_DEEP_SLEEP 0.0051 // mA Not sure if this is correct
+
+static char msg[128] = "dataReq";
 
 struct IntDec
 {
@@ -97,7 +99,7 @@ void input_callback(const void *data, uint16_t len,
   if (linkaddr_cmp(src, &C_addr))
   {
     // Add 0 to list
-    list = list << 1;
+    SETBIT(list, 0);
     timeout = 0;
   }
   // Check the received response from mote C
@@ -149,17 +151,18 @@ PROCESS_THREAD(udp_server_process, ev, data)
     // Read list
     u_int8_t tx_counter = 0;
     u_int8_t rx_counter = 0;
-    for (int i = 15; i >= 0; i--)
+    for (int i = 7; i >= 0; i -= 2)
     {
       tx_counter += GETBIT(list, i) == 1;
+      rx_counter += GETBIT(list, i - 1) == 1;
     }
-    rx_counter = 16 - tx_counter;
     LOG_INFO("TX: %d, RX: %d\n", tx_counter, rx_counter);
 
     if (tx_counter != 0)
     {
       ratio = (rx_counter << 10) / tx_counter;
     }
+    LOG_INFO("Ratio: %d\n", ratio);
 
     // ratio = (RX_count*1e2)/(TX_count);
 
@@ -167,12 +170,11 @@ PROCESS_THREAD(udp_server_process, ev, data)
     etimer_reset(&periodic_timer);
     // LOG_INFO("Sending message %d\n", counter);
     // Every 15th message, send to B
-    LOG_INFO("Ratio: %d\n", ratio);
+    
 
-    if (ratio < (1024 * 0.5))
+    if (ratio < (1024 * 0.9))
     {
       // LOG_INFO("Sending message B\n");
-      static char msg[128] = "dataReq";
       nullnet_buf = (uint8_t *)msg;
       nullnet_len = strlen(msg);
       // LOG_INFO((char *)msg);
@@ -186,8 +188,9 @@ PROCESS_THREAD(udp_server_process, ev, data)
         // LOG_INFO("Sending healthcheck message\n");
         //  Send a healthcheck message
         // Add 1 to list
-        list = list << 1;
-        SETBIT(list, 0);
+        list = list << 2;
+        SETBIT(list, 1);
+        CLRBIT(list, 0);
         static char msg[] = "healthcheck";
         nullnet_buf = (uint8_t *)msg;
         nullnet_len = strlen(msg);
@@ -202,9 +205,9 @@ PROCESS_THREAD(udp_server_process, ev, data)
       // LOG_INFO("Sending dataReq message\n");
       //  Send a dataReq message to Mote C
       // Add 1 to list
-      list = list << 1;
-      SETBIT(list, 0);
-      static char msg[] = "dataReq";
+      list = list << 2;
+      SETBIT(list, 1);
+      CLRBIT(list, 0);
       nullnet_buf = (uint8_t *)msg;
       nullnet_len = strlen(msg);
       LOG_INFO("%c\n", msg);
@@ -234,10 +237,9 @@ PROCESS_THREAD(checkTimeout, ev, data)
   while (1)
   {
 
-    if (clock_time() > timeout + CLOCK_SECOND && timeout != 0)
+    if (clock_time() > timeout + 5*CLOCK_SECOND && timeout != 0)
     {
       // LOG_INFO("Resending package %d\n", counter);
-      static char msg[] = "dataReq";
       nullnet_buf = (uint8_t *)msg;
       nullnet_len = strlen(msg);
       LOG_INFO((char *)msg);

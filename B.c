@@ -15,6 +15,8 @@
 #define CPU_SLEEP 0.0051 // mA
 #define CPU_DEEP_SLEEP 0.0051 // mA Not sure if this is correct
 
+static char msg[128] = "dataReq";
+
 struct IntDec {
     unsigned long integer;
     unsigned long decimal;
@@ -79,7 +81,6 @@ void input_callback(const void *data, uint16_t len,
   // Set the linklayer address of Mote C
   static linkaddr_t C_addr = {{ 0x03, 0x03, 0x03, 0x00, 0x03, 0x74, 0x12, 0x00 }};
 
-  static char msg[] = "dataReq";
   nullnet_buf = (uint8_t *)msg;
   nullnet_len = strlen(msg);
   LOG_INFO((char *)msg);
