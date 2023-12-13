@@ -8,9 +8,6 @@
 #include "sys/log.h"
 #define LOG_MODULE "App"
 #define LOG_LEVEL LOG_LEVEL_INFO
-#define UDP_PORT_A 8765
-#define UDP_PORT_C 5678
-#define UDP_PORT_B 5679
 
 #define RX 23.0 // mA
 #define TX 21.0 // mA
@@ -70,10 +67,10 @@ static linkaddr_t B_addr = {{ 0x02, 0x02, 0x02, 0x00, 0x02, 0x74, 0x12, 0x00 }};
 static clock_time_t t1 = 0;
 static int state = 100;
 
-PROCESS(udp_log_process, "UDP log");
-PROCESS(udp_client_process, "UDP client");
+PROCESS(power_log_process, "power log");
+PROCESS(null_net_client, "null_net client");
 PROCESS(updateState, "state");
-AUTOSTART_PROCESSES(&udp_client_process, &updateState, &udp_log_process);
+AUTOSTART_PROCESSES(&null_net_client, &updateState, &power_log_process);
 
 /*---------------------------------------------------------------------------*/
 static int getState(int currentState){
@@ -174,7 +171,7 @@ void input_callback(const void *data, uint16_t len,
     
     
 
-PROCESS_THREAD(udp_client_process, ev, data)
+PROCESS_THREAD(null_net_client, ev, data)
 {
   static int counter = 0;
   srand(10);
@@ -203,7 +200,8 @@ PROCESS_THREAD(updateState, ev, data)
 
   while(1)
   {
-    state = getState(state);
+    //state = getState(state);
+    state = 100;
 
     PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&stateTimer));
     etimer_reset(&stateTimer);
@@ -212,7 +210,7 @@ PROCESS_THREAD(updateState, ev, data)
   PROCESS_END();
 }
 
-PROCESS_THREAD(udp_log_process, ev, data)
+PROCESS_THREAD(power_log_process, ev, data)
 {
   static struct etimer timeoutTimer;
  static int counter = 0;

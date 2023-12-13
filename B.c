@@ -7,9 +7,6 @@
 #include "net/nullnet/nullnet.h"
 #define LOG_MODULE "App"
 #define LOG_LEVEL LOG_LEVEL_INFO
-#define UDP_PORT_A 8765
-#define UDP_PORT_C 5678
-#define UDP_PORT_B 5679
 //static struct PowerConsumptionStates states_power;
 #define RX 23.0 // mA
 #define TX 21.0 // mA
@@ -62,11 +59,9 @@ float TotalPowerConsumption() {
 }
 
 
-static struct simple_udp_connection udp_conn;
-static struct simple_udp_connection udp_connC;
-PROCESS(udp_log_process, "UDP log");
-PROCESS(udp_relay_process, "UDP relay");
-AUTOSTART_PROCESSES(&udp_relay_process, &udp_log_process);
+PROCESS(power_log_process, "power log");
+PROCESS(null_net_relay, "null_net relay");
+AUTOSTART_PROCESSES(&null_net_relay, &power_log_process);
 
 void input_callback(const void *data, uint16_t len,
   const linkaddr_t *src, const linkaddr_t *dest)
@@ -99,7 +94,7 @@ void input_callback(const void *data, uint16_t len,
  }
 }
 
-PROCESS_THREAD(udp_relay_process, ev, data)
+PROCESS_THREAD(null_net_relay, ev, data)
 {
  static int counter = 0;
  PROCESS_BEGIN();
@@ -116,7 +111,7 @@ PROCESS_THREAD(udp_relay_process, ev, data)
  PROCESS_END();
 }
 
-PROCESS_THREAD(udp_log_process, ev, data)
+PROCESS_THREAD(power_log_process, ev, data)
 {
     static struct etimer timeoutTimer;
  static int counter = 0;

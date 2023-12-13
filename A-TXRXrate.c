@@ -84,10 +84,10 @@ float TotalPowerConsumption() {
 }
 
 // Define the IPv6 address of mote C
-PROCESS(udp_server_process, "UDP server");
-PROCESS(udp_network_process, "UDP network start");
+PROCESS(null_net_server, "null_net server");
+PROCESS(null_net_network, "null_net network start");
 PROCESS(checkTimeout, "TimeoutChecker");
-AUTOSTART_PROCESSES(&udp_server_process, &udp_network_process, &checkTimeout);
+AUTOSTART_PROCESSES(&null_net_server, &null_net_network, &checkTimeout);
 
 void input_callback(const void *data, uint16_t len,
   const linkaddr_t *src, const linkaddr_t *dest)
@@ -121,7 +121,7 @@ void input_callback(const void *data, uint16_t len,
   // You can add more checks for different response types as needed.
 }
 
-PROCESS_THREAD(udp_network_process, ev, data)
+PROCESS_THREAD(null_net_network, ev, data)
 {
   PROCESS_BEGIN();
   // Start the network
@@ -134,7 +134,7 @@ PROCESS_THREAD(udp_network_process, ev, data)
   PROCESS_END();
 }
 
-PROCESS_THREAD(udp_server_process, ev, data)
+PROCESS_THREAD(null_net_server, ev, data)
 {
   static struct etimer periodic_timer;
   static u_int32_t ratio = 1024;
