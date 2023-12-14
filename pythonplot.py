@@ -55,6 +55,7 @@ power_diff_C = []
 sendingB = []
 sendingC = []
 
+ENERGEST_SECOND = 32767
 with open(file_path, 'r') as file:
     for line in file:
         timestamp, tx_value, rx_value, state_value, power_value_A, power_value_B, power_value_C, sending_B, sending_C = extract_tx_rx_state_power_data(line.strip())
@@ -67,18 +68,18 @@ with open(file_path, 'r') as file:
             if state_value is not None:
                 state_values.append((timestamp, state_value))
             if power_value_A is not None:
-                power_value_A = power_value_A / 32767
+                power_value_A = power_value_A / ENERGEST_SECOND
                 if power_values_A != []:
                     power_diff_A.append((timestamp, (power_value_A - power_values_A[-1][1]) / (timestamp.timestamp() - power_values_A[-1][0].timestamp())))
                 power_values_A.append((timestamp, power_value_A))
                 #power_diff.append((timestamp, power_value_A - power_values_A[-1][1]))
             if power_value_B is not None:
-                power_value_B = power_value_B / 32767
+                power_value_B = power_value_B / ENERGEST_SECOND
                 if power_values_B != []:
                     power_diff_B.append((timestamp, (power_value_B - power_values_B[-1][1]) / (timestamp.timestamp() - power_values_B[-1][0].timestamp())))
                 power_values_B.append((timestamp, power_value_B))
             if power_value_C is not None:
-                power_value_C = power_value_C / 32767
+                power_value_C = power_value_C / ENERGEST_SECOND
                 if power_values_C != []:
                     power_diff_C.append((timestamp, (power_value_C - power_values_C[-1][1]) / (timestamp.timestamp() - power_values_C[-1][0].timestamp())))
                 power_values_C.append((timestamp, power_value_C))
