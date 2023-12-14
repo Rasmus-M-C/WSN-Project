@@ -79,7 +79,7 @@ float TotalPowerConsumption()
   power += (energest_type_time(ENERGEST_TYPE_CPU)) * CPU_NORMAL;
   power += (energest_type_time(ENERGEST_TYPE_LPM)) * CPU_SLEEP;
   power += (energest_type_time(ENERGEST_TYPE_TRANSMIT)) * TX;
-  //power += (energest_type_time(ENERGEST_TYPE_LISTEN)) * RX;
+  // power += (energest_type_time(ENERGEST_TYPE_LISTEN)) * RX;
   return (power);
 }
 
@@ -120,6 +120,7 @@ void input_callback(const void *data, uint16_t len,
     //  Handle unknown messages as needed
   }
 
+  
 }
 
 PROCESS_THREAD(null_net_network, ev, data)
@@ -145,10 +146,11 @@ PROCESS_THREAD(null_net_server, ev, data)
 
   while (1)
   {
+
     // Read list
     u_int8_t tx_counter = 0;
     u_int8_t rx_counter = 0;
-    for (int i = 7; i >= 0; i -= 2)
+    for (int i = 15; i >= 0; i -= 2)
     {
       tx_counter += GETBIT(list, i) == 1;
       rx_counter += GETBIT(list, i - 1) == 1;
@@ -161,15 +163,10 @@ PROCESS_THREAD(null_net_server, ev, data)
     }
     LOG_INFO("Ratio: %d\n", ratio);
 
-    // ratio = (RX_count*1e2)/(TX_count);
-
-    PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&periodic_timer));
-    etimer_reset(&periodic_timer);
     // LOG_INFO("Sending message %d\n", counter);
     // Every 15th message, send to B
-    
 
-    if (ratio < (1024 * 0.9))
+    if (ratio < (1024 * 0.6))
     {
       // LOG_INFO("Sending message B\n");
       nullnet_buf = (uint8_t *)msg;
@@ -215,6 +212,8 @@ PROCESS_THREAD(null_net_server, ev, data)
     counter++;
     // LOG_INFO("TX: %d, RX: %d\n", TX_count, RX_count);
     LOG_INFO("%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d\n", GETBIT(list, 15), GETBIT(list, 14), GETBIT(list, 13), GETBIT(list, 12), GETBIT(list, 11), GETBIT(list, 10), GETBIT(list, 9), GETBIT(list, 8), GETBIT(list, 7), GETBIT(list, 6), GETBIT(list, 5), GETBIT(list, 4), GETBIT(list, 3), GETBIT(list, 2), GETBIT(list, 1), GETBIT(list, 0));
+    PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&periodic_timer));
+    etimer_reset(&periodic_timer);
   }
 
   PROCESS_END();
@@ -234,7 +233,7 @@ PROCESS_THREAD(checkTimeout, ev, data)
   while (1)
   {
 
-    if (clock_time() > timeout + 5*CLOCK_SECOND && timeout != 0)
+    if (clock_time() > timeout + 5 * CLOCK_SECOND && timeout != 0)
     {
       // LOG_INFO("Resending package %d\n", counter);
       nullnet_buf = (uint8_t *)msg;

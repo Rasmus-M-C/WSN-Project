@@ -184,7 +184,7 @@ PROCESS_THREAD(updateState, ev, data)
   while (1)
   {
     state = getState(state);
-    // state = 100; //remove
+    //state = 100; //remove
 
     PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&stateTimer));
     etimer_reset(&stateTimer);

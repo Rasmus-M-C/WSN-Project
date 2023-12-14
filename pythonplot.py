@@ -2,7 +2,8 @@ import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 from datetime import datetime, timedelta
 
-file_path = 'loglisteners/kvs29.txt'  # Replace with the path to your text file
+#file_path = 'loglisteners/kvs29.txt'  # Replace with the path to your text file
+file_path = 'scenarios/random3_60.txt'
 def extract_tx_rx_state_power_data(line):
     timestamp = line.split("\t")[0]
     if "TX:" in line and "RX:" in line:
@@ -63,10 +64,10 @@ with open(file_path, 'r') as file:
             timestamp = parse_timestamp(timestamp)
             timestamps.append(timestamp)
             if tx_value is not None and rx_value is not None:
-                tx_rx_ratio = (rx_value * 1024) / tx_value if rx_value != 0 else 0
+                tx_rx_ratio = rx_value / tx_value if rx_value != 0 else 0
                 tx_rx_ratios.append((timestamp, min(tx_rx_ratio, 1024)))
             if state_value is not None:
-                state_values.append((timestamp, state_value))
+                state_values.append((timestamp, state_value/100))
             if power_value_A is not None:
                 power_value_A = power_value_A / ENERGEST_SECOND
                 if power_values_A != []:
@@ -102,13 +103,27 @@ sendingC_times, sendingC_data = zip(*sendingC) if sendingC else ([], [])
 
 
 # Plotting the data
-fig, axs = plt.subplots(3, figsize=(8, 8), sharex=True)
+fig, axs = plt.subplots(3, figsize=(14, 8), gridspec_kw={'height_ratios': [2, 1, 2]}, sharex=True)
 
 # Plot TX/RX Ratio
-axs[0].plot(tx_rx_times, tx_rx_data, marker='o', color='blue')
-axs[0].plot([tx_rx_times[0], tx_rx_times[-1]], [0.9 * 1024, 0.9 * 1024])
-axs[0].scatter(sendingB_times, sendingB_data, marker='o', color='green')
-axs[0].scatter(sendingC_times, sendingC_data, marker='o', color='purple')
+list1_dates = sendingB_times
+list2_dates = sendingC_times
+
+all_dates = sorted(list1_dates + list2_dates)
+
+for i in range(len(all_dates) - 1):
+    start_date = all_dates[i]
+    end_date = all_dates[i + 1]
+
+    if start_date in list1_dates:
+        axs[0].axvspan(start_date, end_date, facecolor='blue', alpha=0.2)
+    elif start_date in list2_dates:
+        axs[0].axvspan(start_date, end_date, facecolor='red', alpha=0.5)
+
+#axs[0].plot(tx_rx_times, tx_rx_data, color='blue', linewidth=2)
+axs[0].step(tx_rx_times, tx_rx_data, color='blue', linewidth=1, where='mid')
+#axs[0].plot([tx_rx_times[0], tx_rx_times[-1]], [0.9, 0.9])
+axs[0].set_ylim(0, 1)
 axs[0].set_ylabel('RX/TX Ratio')
 axs[0].set_title('RX/RX Ratio, State, and Power Consumption Over Time')
 
