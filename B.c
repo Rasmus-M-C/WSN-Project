@@ -5,7 +5,7 @@
 #include "sys/log.h"
 #include "net/netstack.h"
 #include "net/nullnet/nullnet.h"
-#define LOG_MODULE "App"
+#define LOG_MODULE "B"
 #define LOG_LEVEL LOG_LEVEL_INFO
 //static struct PowerConsumptionStates states_power;
 #define RX 23.0 // mA
@@ -14,6 +14,8 @@
 #define CPU_NORMAL 1.8 // mA
 #define CPU_SLEEP 0.0051 // mA
 #define CPU_DEEP_SLEEP 0.0051 // mA Not sure if this is correct
+
+static char msg[128] = "dataReq";
 
 struct IntDec {
     unsigned long integer;
@@ -35,10 +37,12 @@ struct IntDec Get_Float_Parts(float value) {
     return int_dec;
 }
 
-unsigned long to_seconds(uint64_t time)
-{
-  return (unsigned long)(time/ ENERGEST_SECOND);
-}
+// unsigned long to_seconds(uint64_t time)
+// {
+//   LOG_INFO("sec %u", ENERGEST_SECOND);
+//   return (unsigned long)(time/ ENERGEST_SECOND);
+// }
+
 
 void logging(float value) {
     struct IntDec int_dec;
@@ -51,10 +55,10 @@ void logging(float value) {
 float TotalPowerConsumption() {
   float power = 0;
   energest_flush(); // Update all energest times. Should always be called before energest times are read.
-  power += (to_seconds(energest_type_time(ENERGEST_TYPE_CPU)))*CPU_NORMAL;
-  power += (to_seconds(energest_type_time(ENERGEST_TYPE_LPM)))*CPU_SLEEP;
-  power += (to_seconds(energest_type_time(ENERGEST_TYPE_TRANSMIT)))*TX;
-  //power += (to_seconds(energest_type_time(ENERGEST_TYPE_LISTEN)))*RX;
+  power += (energest_type_time(ENERGEST_TYPE_CPU))*CPU_NORMAL;
+  power += (energest_type_time(ENERGEST_TYPE_LPM))*CPU_SLEEP;
+  power += (energest_type_time(ENERGEST_TYPE_TRANSMIT)) * TX;
+  //power += (energest_type_time(ENERGEST_TYPE_LISTEN)) * RX;
   return (power);
 }
 
@@ -75,7 +79,6 @@ void input_callback(const void *data, uint16_t len,
   // Set the linklayer address of Mote C
   static linkaddr_t C_addr = {{ 0x03, 0x03, 0x03, 0x00, 0x03, 0x74, 0x12, 0x00 }};
 
-  static char msg[] = "dataReq";
   nullnet_buf = (uint8_t *)msg;
   nullnet_len = strlen(msg);
   LOG_INFO((char *)msg);

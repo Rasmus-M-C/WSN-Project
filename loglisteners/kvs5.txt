@@ -1,0 +1,2919 @@
+00:00.522	ID:2	[INFO: Main      ] Starting Contiki-NG-release/v4.9-dirty
+00:00.525	ID:2	[INFO: Main      ] - Routing: nullrouting
+00:00.527	ID:2	[INFO: Main      ] - Net: nullnet
+00:00.529	ID:2	[INFO: Main      ] - MAC: CSMA
+00:00.532	ID:2	[INFO: Main      ] - 802.15.4 PANID: 0xabcd
+00:00.536	ID:2	[INFO: Main      ] - 802.15.4 Default channel: 26
+00:00.538	ID:2	[INFO: Main      ] Node ID: 2
+00:00.544	ID:2	[INFO: Main      ] Link-layer address: 0202.0200.0274.1200
+00:00.547	ID:2	[INFO: Sky       ] CC2420 CCA threshold -45
+00:00.553	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+00:00.668	ID:1	[INFO: Main      ] Starting Contiki-NG-release/v4.9-dirty
+00:00.671	ID:1	[INFO: Main      ] - Routing: nullrouting
+00:00.673	ID:1	[INFO: Main      ] - Net: nullnet
+00:00.675	ID:1	[INFO: Main      ] - MAC: CSMA
+00:00.679	ID:1	[INFO: Main      ] - 802.15.4 PANID: 0xabcd
+00:00.682	ID:1	[INFO: Main      ] - 802.15.4 Default channel: 26
+00:00.684	ID:1	[INFO: Main      ] Node ID: 1
+00:00.690	ID:1	[INFO: Main      ] Link-layer address: 0101.0100.0174.1200
+00:00.693	ID:1	[INFO: Sky       ] CC2420 CCA threshold -45
+00:00.696	ID:1	[INFO: A         ] TX: 8, RX: 8
+00:00.703	ID:1	[INFO: A         ] Total power usage A =          0.0000000mAh |
+00:01.185	ID:3	[INFO: Main      ] Starting Contiki-NG-release/v4.9-dirty
+00:01.188	ID:3	[INFO: Main      ] - Routing: nullrouting
+00:01.190	ID:3	[INFO: Main      ] - Net: nullnet
+00:01.192	ID:3	[INFO: Main      ] - MAC: CSMA
+00:01.196	ID:3	[INFO: Main      ] - 802.15.4 PANID: 0xabcd
+00:01.199	ID:3	[INFO: Main      ] - 802.15.4 Default channel: 26
+00:01.201	ID:3	[INFO: Main      ] Node ID: 3
+00:01.207	ID:3	[INFO: Main      ] Link-layer address: 0303.0300.0374.1200
+00:01.210	ID:3	[INFO: Sky       ] CC2420 CCA threshold -45
+00:01.217	ID:3	[INFO: C         ] Total power usage C =          0.0000000mAh |
+00:01.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+00:01.697	ID:1	[INFO: A         ] Total power usage A =          0.0000000mAh |
+00:01.699	ID:1	[INFO: A         ] Ratio: 1024
+00:01.701	ID:1	[INFO: A         ] H
+00:01.703	ID:1	[INFO: A         ] Sending C
+00:01.709	ID:1	[INFO: A         ] 1010101010101011
+00:01.711	ID:1	[INFO: A         ] TX: 9, RX: 7
+00:01.736	ID:3	[INFO: C         ] state: 100
+00:01.740	ID:3	[INFO: C         ] Recieved a data request, sending data
+00:01.744	ID:3	[INFO: C         ] Sent data to A
+00:02.214	ID:3	[INFO: C         ] Total power usage C =          0.0000000mAh |
+00:02.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+00:02.693	ID:1	[INFO: A         ] Ratio: 796
+00:02.694	ID:1	[INFO: A         ] H
+00:02.696	ID:1	[INFO: A         ] Sending C
+00:02.702	ID:1	[INFO: A         ] 1010101010101101
+00:02.705	ID:1	[INFO: A         ] TX: 9, RX: 7
+00:02.714	ID:1	[INFO: A         ] Total power usage A =          0.0051000mAh |
+00:02.720	ID:3	[INFO: C         ] state: 0
+00:02.723	ID:3	[INFO: C         ] Lost packet from A
+00:03.216	ID:3	[INFO: C         ] Total power usage C =          0.0051000mAh |
+00:03.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+00:03.699	ID:1	[INFO: A         ] Total power usage A =          0.0102000mAh |
+00:03.702	ID:1	[INFO: A         ] Ratio: 796
+00:03.703	ID:1	[INFO: A         ] H
+00:03.705	ID:1	[INFO: A         ] Sending C
+00:03.711	ID:1	[INFO: A         ] 0101010101011011
+00:03.714	ID:1	[INFO: A         ] TX: 9, RX: 7
+00:03.727	ID:3	[INFO: C         ] state: 0
+00:03.730	ID:3	[INFO: C         ] Lost packet from A
+00:04.216	ID:3	[INFO: C         ] Total power usage C =          0.0102000mAh |
+00:04.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+00:04.693	ID:1	[INFO: A         ] Ratio: 796
+00:04.694	ID:1	[INFO: A         ] H
+00:04.696	ID:1	[INFO: A         ] Sending C
+00:04.702	ID:1	[INFO: A         ] 1010101010110111
+00:04.705	ID:1	[INFO: A         ] TX: 10, RX: 6
+00:04.714	ID:1	[INFO: A         ] Total power usage A =          0.0153000mAh |
+00:04.735	ID:3	[INFO: C         ] state: 0
+00:04.738	ID:3	[INFO: C         ] Lost packet from A
+00:05.217	ID:3	[INFO: C         ] Total power usage C =          0.0153000mAh |
+00:05.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+00:05.699	ID:1	[INFO: A         ] Total power usage A =          0.0204000mAh |
+00:05.702	ID:1	[INFO: A         ] Ratio: 614
+00:05.703	ID:1	[INFO: A         ] H
+00:05.705	ID:1	[INFO: A         ] Sending C
+00:05.711	ID:1	[INFO: A         ] 0101010101101111
+00:05.714	ID:1	[INFO: A         ] TX: 10, RX: 6
+00:05.751	ID:3	[INFO: C         ] state: 0
+00:05.753	ID:3	[INFO: C         ] Lost packet from A
+00:06.216	ID:3	[INFO: C         ] Total power usage C =          0.0204000mAh |
+00:06.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+00:06.693	ID:1	[INFO: A         ] Ratio: 614
+00:06.694	ID:1	[INFO: A         ] H
+00:06.696	ID:1	[INFO: A         ] Sending C
+00:06.702	ID:1	[INFO: A         ] 1010101011011111
+00:06.705	ID:1	[INFO: A         ] TX: 11, RX: 5
+00:06.714	ID:1	[INFO: A         ] Total power usage A =          0.0255000mAh |
+00:06.743	ID:3	[INFO: C         ] state: 0
+00:06.746	ID:3	[INFO: C         ] Lost packet from A
+00:07.217	ID:3	[INFO: C         ] Total power usage C =          0.0255000mAh |
+00:07.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+00:07.699	ID:1	[INFO: A         ] Total power usage A =          0.0306000mAh |
+00:07.702	ID:1	[INFO: A         ] Ratio: 465
+00:07.703	ID:1	[INFO: A         ] $
+00:07.705	ID:1	[INFO: A         ] Sending B
+00:07.711	ID:1	[INFO: A         ] 1010101011011111
+00:07.714	ID:1	[INFO: A         ] TX: 11, RX: 5
+00:07.753	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+00:07.758	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+00:07.793	ID:3	[INFO: C         ] state: 0
+00:07.796	ID:3	[INFO: C         ] Sent data to B
+00:07.841	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+00:08.216	ID:3	[INFO: C         ] Total power usage C =          0.0306000mAh |
+00:08.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+00:08.693	ID:1	[INFO: A         ] Ratio: 465
+00:08.694	ID:1	[INFO: A         ] $
+00:08.696	ID:1	[INFO: A         ] Sending B
+00:08.702	ID:1	[INFO: A         ] 1010101011011111
+00:08.705	ID:1	[INFO: A         ] TX: 11, RX: 5
+00:08.714	ID:1	[INFO: A         ] Total power usage A =          0.0357000mAh |
+00:08.722	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+00:08.727	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+00:08.745	ID:3	[INFO: C         ] state: 0
+00:08.748	ID:3	[INFO: C         ] Sent data to B
+00:08.756	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+00:09.217	ID:3	[INFO: C         ] Total power usage C =          0.0357000mAh |
+00:09.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+00:09.699	ID:1	[INFO: A         ] Total power usage A =          0.0408000mAh |
+00:09.702	ID:1	[INFO: A         ] Ratio: 465
+00:09.703	ID:1	[INFO: A         ] $
+00:09.705	ID:1	[INFO: A         ] Sending B
+00:09.711	ID:1	[INFO: A         ] 1010101011011111
+00:09.714	ID:1	[INFO: A         ] TX: 11, RX: 5
+00:09.729	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+00:09.734	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+00:09.776	ID:3	[INFO: C         ] state: 0
+00:09.780	ID:3	[INFO: C         ] Sent data to B
+00:09.816	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+00:10.216	ID:3	[INFO: C         ] Total power usage C =          0.0408000mAh |
+00:10.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+00:10.693	ID:1	[INFO: A         ] Ratio: 465
+00:10.694	ID:1	[INFO: A         ] $
+00:10.696	ID:1	[INFO: A         ] Sending B
+00:10.702	ID:1	[INFO: A         ] 1010101011011111
+00:10.705	ID:1	[INFO: A         ] TX: 11, RX: 5
+00:10.714	ID:1	[INFO: A         ] Total power usage A =          0.0459000mAh |
+00:10.744	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+00:10.750	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+00:10.792	ID:3	[INFO: C         ] state: 0
+00:10.795	ID:3	[INFO: C         ] Sent data to B
+00:10.832	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+00:11.217	ID:3	[INFO: C         ] Total power usage C =          0.0459000mAh |
+00:11.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+00:11.699	ID:1	[INFO: A         ] Total power usage A =          0.0510000mAh |
+00:11.702	ID:1	[INFO: A         ] Ratio: 465
+00:11.703	ID:1	[INFO: A         ] $
+00:11.705	ID:1	[INFO: A         ] Sending B
+00:11.710	ID:1	[INFO: A         ] healthcheck[INFO: A         ] Sending C
+00:11.716	ID:1	[INFO: A         ] 0101010110111111
+00:11.719	ID:1	[INFO: A         ] TX: 11, RX: 5
+00:11.727	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+00:11.732	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+00:11.745	ID:3	[INFO: C         ] state: 0
+00:11.748	ID:3	[INFO: C         ] Sent data to B
+00:11.753	ID:3	[INFO: C         ] Lost packet from A
+00:11.793	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+00:12.216	ID:3	[INFO: C         ] Total power usage C =          0.0510000mAh |
+00:12.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+00:12.693	ID:1	[INFO: A         ] Ratio: 465
+00:12.694	ID:1	[INFO: A         ] $
+00:12.696	ID:1	[INFO: A         ] Sending B
+00:12.702	ID:1	[INFO: A         ] 0101010110111111
+00:12.705	ID:1	[INFO: A         ] TX: 11, RX: 5
+00:12.714	ID:1	[INFO: A         ] Total power usage A =          0.0561000mAh |
+00:12.722	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+00:12.727	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+00:12.733	ID:3	[INFO: C         ] state: 0
+00:12.736	ID:3	[INFO: C         ] Sent data to B
+00:12.754	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+00:13.217	ID:3	[INFO: C         ] Total power usage C =          0.0561000mAh |
+00:13.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+00:13.699	ID:1	[INFO: A         ] Total power usage A =          0.0612000mAh |
+00:13.702	ID:1	[INFO: A         ] Ratio: 465
+00:13.703	ID:1	[INFO: A         ] $
+00:13.705	ID:1	[INFO: A         ] Sending B
+00:13.711	ID:1	[INFO: A         ] 0101010110111111
+00:13.714	ID:1	[INFO: A         ] TX: 11, RX: 5
+00:13.729	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+00:13.734	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+00:13.740	ID:3	[INFO: C         ] state: 0
+00:13.744	ID:3	[INFO: C         ] Sent data to B
+00:13.785	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+00:14.216	ID:3	[INFO: C         ] Total power usage C =          0.0612000mAh |
+00:14.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+00:14.693	ID:1	[INFO: A         ] Ratio: 465
+00:14.694	ID:1	[INFO: A         ] $
+00:14.696	ID:1	[INFO: A         ] Sending B
+00:14.702	ID:1	[INFO: A         ] 0101010110111111
+00:14.705	ID:1	[INFO: A         ] TX: 11, RX: 5
+00:14.715	ID:1	[INFO: A         ] Total power usage A =          1.8663000mAh |
+00:14.744	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+00:14.750	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+00:14.800	ID:3	[INFO: C         ] state: 0
+00:14.803	ID:3	[INFO: C         ] Sent data to B
+00:14.832	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+00:15.217	ID:3	[INFO: C         ] Total power usage C =          0.0663000mAh |
+00:15.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+00:15.700	ID:1	[INFO: A         ] Total power usage A =          1.8663000mAh |
+00:15.703	ID:1	[INFO: A         ] Ratio: 465
+00:15.704	ID:1	[INFO: A         ] $
+00:15.706	ID:1	[INFO: A         ] Sending B
+00:15.712	ID:1	[INFO: A         ] 0101010110111111
+00:15.715	ID:1	[INFO: A         ] TX: 11, RX: 5
+00:15.744	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+00:15.750	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+00:15.756	ID:3	[INFO: C         ] state: 0
+00:15.759	ID:3	[INFO: C         ] Sent data to B
+00:15.809	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+00:16.217	ID:3	[INFO: C         ] Total power usage C =          1.8714000mAh |
+00:16.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+00:16.693	ID:1	[INFO: A         ] Ratio: 465
+00:16.694	ID:1	[INFO: A         ] $
+00:16.696	ID:1	[INFO: A         ] Sending B
+00:16.702	ID:1	[INFO: A         ] 0101010110111111
+00:16.705	ID:1	[INFO: A         ] TX: 11, RX: 5
+00:16.715	ID:1	[INFO: A         ] Total power usage A =          1.8714000mAh |
+00:16.723	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+00:16.728	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+00:16.769	ID:3	[INFO: C         ] state: 0
+00:16.772	ID:3	[INFO: C         ] Sent data to B
+00:16.809	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+00:17.218	ID:3	[INFO: C         ] Total power usage C =          1.8714000mAh |
+00:17.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+00:17.700	ID:1	[INFO: A         ] Total power usage A =          1.8765000mAh |
+00:17.703	ID:1	[INFO: A         ] Ratio: 465
+00:17.704	ID:1	[INFO: A         ] $
+00:17.706	ID:1	[INFO: A         ] Sending B
+00:17.712	ID:1	[INFO: A         ] 0101010110111111
+00:17.715	ID:1	[INFO: A         ] TX: 11, RX: 5
+00:17.752	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+00:17.757	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+00:17.800	ID:3	[INFO: C         ] state: 0
+00:17.803	ID:3	[INFO: C         ] Sent data to B
+00:17.811	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+00:18.217	ID:3	[INFO: C         ] Total power usage C =          1.8765000mAh |
+00:18.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+00:18.693	ID:1	[INFO: A         ] Ratio: 465
+00:18.694	ID:1	[INFO: A         ] $
+00:18.696	ID:1	[INFO: A         ] Sending B
+00:18.702	ID:1	[INFO: A         ] 0101010110111111
+00:18.705	ID:1	[INFO: A         ] TX: 11, RX: 5
+00:18.715	ID:1	[INFO: A         ] Total power usage A =          1.8815999mAh |
+00:18.736	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+00:18.741	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+00:18.776	ID:3	[INFO: C         ] state: 0
+00:18.780	ID:3	[INFO: C         ] Sent data to B
+00:18.788	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+00:19.217	ID:3	[INFO: C         ] Total power usage C =          1.8815999mAh |
+00:19.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+00:19.700	ID:1	[INFO: A         ] Total power usage A =          1.8866999mAh |
+00:19.703	ID:1	[INFO: A         ] Ratio: 465
+00:19.704	ID:1	[INFO: A         ] $
+00:19.706	ID:1	[INFO: A         ] Sending B
+00:19.712	ID:1	[INFO: A         ] 0101010110111111
+00:19.715	ID:1	[INFO: A         ] TX: 11, RX: 5
+00:19.752	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+00:19.757	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+00:19.808	ID:3	[INFO: C         ] state: 100
+00:19.811	ID:3	[INFO: C         ] Sent data to B
+00:19.819	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+00:20.217	ID:3	[INFO: C         ] Total power usage C =          1.8866999mAh |
+00:20.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+00:20.693	ID:1	[INFO: A         ] Ratio: 465
+00:20.694	ID:1	[INFO: A         ] $
+00:20.696	ID:1	[INFO: A         ] Sending B
+00:20.702	ID:1	[INFO: A         ] healthcheck[INFO: A         ] Sending C
+00:20.707	ID:1	[INFO: A         ] 1010101101111111
+00:20.710	ID:1	[INFO: A         ] TX: 12, RX: 4
+00:20.720	ID:1	[INFO: A         ] Total power usage A =          1.8917999mAh |
+00:20.736	ID:3	[INFO: C         ] Responding with 'ACK'
+00:20.740	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+00:20.745	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+00:20.761	ID:3	0101.0100.0174.1200[INFO: C         ] state: 100
+00:20.764	ID:3	[INFO: C         ] Sent data to B
+00:20.784	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+00:20.816	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+00:21.218	ID:3	[INFO: C         ] Total power usage C =          1.8917999mAh |
+00:21.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+00:21.700	ID:1	[INFO: A         ] Total power usage A =          1.8968999mAh |
+00:21.703	ID:1	[INFO: A         ] Ratio: 341
+00:21.704	ID:1	[INFO: A         ] $
+00:21.706	ID:1	[INFO: A         ] Sending B
+00:21.712	ID:1	[INFO: A         ] 0101011011111110
+00:21.715	ID:1	[INFO: A         ] TX: 11, RX: 5
+00:21.744	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+00:21.750	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+00:21.792	ID:3	[INFO: C         ] state: 100
+00:21.796	ID:3	[INFO: C         ] Sent data to B
+00:21.832	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+00:22.217	ID:3	[INFO: C         ] Total power usage C =          1.8968999mAh |
+00:22.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+00:22.693	ID:1	[INFO: A         ] Ratio: 465
+00:22.694	ID:1	[INFO: A         ] $
+00:22.696	ID:1	[INFO: A         ] Sending B
+00:22.702	ID:1	[INFO: A         ] 0101011011111110
+00:22.705	ID:1	[INFO: A         ] TX: 11, RX: 5
+00:22.715	ID:1	[INFO: A         ] Total power usage A =          1.9020000mAh |
+00:22.723	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+00:22.728	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+00:22.761	ID:3	[INFO: C         ] state: 100
+00:22.764	ID:3	[INFO: C         ] Sent data to B
+00:22.816	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+00:23.218	ID:3	[INFO: C         ] Total power usage C =          1.9020000mAh |
+00:23.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+00:23.700	ID:1	[INFO: A         ] Total power usage A =          1.9071000mAh |
+00:23.703	ID:1	[INFO: A         ] Ratio: 465
+00:23.704	ID:1	[INFO: A         ] $
+00:23.706	ID:1	[INFO: A         ] Sending B
+00:23.712	ID:1	[INFO: A         ] 0101011011111110
+00:23.715	ID:1	[INFO: A         ] TX: 11, RX: 5
+00:23.760	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+00:23.765	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+00:23.816	ID:3	[INFO: C         ] state: 0
+00:23.819	ID:3	[INFO: C         ] Sent data to B
+00:23.856	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+00:24.217	ID:3	[INFO: C         ] Total power usage C =          1.9071000mAh |
+00:24.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+00:24.693	ID:1	[INFO: A         ] Ratio: 465
+00:24.694	ID:1	[INFO: A         ] $
+00:24.696	ID:1	[INFO: A         ] Sending B
+00:24.702	ID:1	[INFO: A         ] 0101011011111110
+00:24.705	ID:1	[INFO: A         ] TX: 11, RX: 5
+00:24.715	ID:1	[INFO: A         ] Total power usage A =          1.9122000mAh |
+00:24.723	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+00:24.728	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+00:24.769	ID:3	[INFO: C         ] state: 0
+00:24.772	ID:3	[INFO: C         ] Sent data to B
+00:24.816	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+00:25.218	ID:3	[INFO: C         ] Total power usage C =          1.9122000mAh |
+00:25.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+00:25.700	ID:1	[INFO: A         ] Total power usage A =          1.9173000mAh |
+00:25.703	ID:1	[INFO: A         ] Ratio: 465
+00:25.704	ID:1	[INFO: A         ] $
+00:25.706	ID:1	[INFO: A         ] Sending B
+00:25.712	ID:1	[INFO: A         ] 0101011011111110
+00:25.715	ID:1	[INFO: A         ] TX: 11, RX: 5
+00:25.729	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+00:25.734	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+00:25.745	ID:3	[INFO: C         ] state: 0
+00:25.748	ID:3	[INFO: C         ] Sent data to B
+00:25.801	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+00:26.217	ID:3	[INFO: C         ] Total power usage C =          1.9173000mAh |
+00:26.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+00:26.693	ID:1	[INFO: A         ] Ratio: 465
+00:26.694	ID:1	[INFO: A         ] $
+00:26.696	ID:1	[INFO: A         ] Sending B
+00:26.702	ID:1	[INFO: A         ] 0101011011111110
+00:26.705	ID:1	[INFO: A         ] TX: 11, RX: 5
+00:26.715	ID:1	[INFO: A         ] Total power usage A =          1.9224000mAh |
+00:26.723	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+00:26.728	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+00:26.769	ID:3	[INFO: C         ] state: 0
+00:26.772	ID:3	[INFO: C         ] Sent data to B
+00:26.824	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+00:27.218	ID:3	[INFO: C         ] Total power usage C =          1.9224000mAh |
+00:27.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+00:27.700	ID:1	[INFO: A         ] Total power usage A =          3.7274999mAh |
+00:27.703	ID:1	[INFO: A         ] Ratio: 465
+00:27.704	ID:1	[INFO: A         ] $
+00:27.706	ID:1	[INFO: A         ] Sending B
+00:27.712	ID:1	[INFO: A         ] 0101011011111110
+00:27.715	ID:1	[INFO: A         ] TX: 11, RX: 5
+00:27.752	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+00:27.757	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+00:27.768	ID:3	[INFO: C         ] state: 0
+00:27.772	ID:3	[INFO: C         ] Sent data to B
+00:27.785	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+00:28.217	ID:3	[INFO: C         ] Total power usage C =          1.9275000mAh |
+00:28.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+00:28.693	ID:1	[INFO: A         ] Ratio: 465
+00:28.694	ID:1	[INFO: A         ] $
+00:28.696	ID:1	[INFO: A         ] Sending B
+00:28.702	ID:1	[INFO: A         ] 0101011011111110
+00:28.705	ID:1	[INFO: A         ] TX: 11, RX: 5
+00:28.715	ID:1	[INFO: A         ] Total power usage A =          3.7274999mAh |
+00:28.736	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+00:28.741	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+00:28.792	ID:3	[INFO: C         ] state: 0
+00:28.795	ID:3	[INFO: C         ] Sent data to B
+00:28.824	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+00:29.218	ID:3	[INFO: C         ] Total power usage C =          1.9326000mAh |
+00:29.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+00:29.700	ID:1	[INFO: A         ] Total power usage A =          3.7325999mAh |
+00:29.703	ID:1	[INFO: A         ] Ratio: 465
+00:29.704	ID:1	[INFO: A         ] $
+00:29.706	ID:1	[INFO: A         ] Sending B
+00:29.711	ID:1	[INFO: A         ] healthcheck[INFO: A         ] Sending C
+00:29.717	ID:1	[INFO: A         ] 1010110111111101
+00:29.720	ID:1	[INFO: A         ] TX: 12, RX: 4
+00:29.744	ID:3	[INFO: C         ] Lost packet from A
+00:29.752	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+00:29.757	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+00:29.792	ID:3	[INFO: C         ] state: 0
+00:29.795	ID:3	[INFO: C         ] Sent data to B
+00:29.824	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+00:30.217	ID:3	[INFO: C         ] Total power usage C =          1.9376999mAh |
+00:30.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+00:30.693	ID:1	[INFO: A         ] Ratio: 341
+00:30.694	ID:1	[INFO: A         ] $
+00:30.696	ID:1	[INFO: A         ] Sending B
+00:30.702	ID:1	[INFO: A         ] 1010110111111101
+00:30.705	ID:1	[INFO: A         ] TX: 12, RX: 4
+00:30.715	ID:1	[INFO: A         ] Total power usage A =          3.7377000mAh |
+00:30.723	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+00:30.728	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+00:30.776	ID:3	[INFO: C         ] state: 0
+00:30.780	ID:3	[INFO: C         ] Sent data to B
+00:30.788	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+00:31.218	ID:3	[INFO: C         ] Total power usage C =          3.7428000mAh |
+00:31.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+00:31.700	ID:1	[INFO: A         ] Total power usage A =          3.7428000mAh |
+00:31.703	ID:1	[INFO: A         ] Ratio: 341
+00:31.704	ID:1	[INFO: A         ] $
+00:31.706	ID:1	[INFO: A         ] Sending B
+00:31.712	ID:1	[INFO: A         ] 1010110111111101
+00:31.715	ID:1	[INFO: A         ] TX: 12, RX: 4
+00:31.760	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+00:31.765	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+00:31.792	ID:3	[INFO: C         ] state: 0
+00:31.795	ID:3	[INFO: C         ] Sent data to B
+00:31.840	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+00:32.217	ID:3	[INFO: C         ] Total power usage C =          3.7428000mAh |
+00:32.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+00:32.693	ID:1	[INFO: A         ] Ratio: 341
+00:32.694	ID:1	[INFO: A         ] $
+00:32.696	ID:1	[INFO: A         ] Sending B
+00:32.702	ID:1	[INFO: A         ] 1010110111111101
+00:32.705	ID:1	[INFO: A         ] TX: 12, RX: 4
+00:32.715	ID:1	[INFO: A         ] Total power usage A =          3.7479000mAh |
+00:32.723	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+00:32.728	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+00:32.737	ID:3	[INFO: C         ] state: 0
+00:32.741	ID:3	[INFO: C         ] Sent data to B
+00:32.785	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+00:33.218	ID:3	[INFO: C         ] Total power usage C =          3.7479000mAh |
+00:33.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+00:33.700	ID:1	[INFO: A         ] Total power usage A =          3.7530000mAh |
+00:33.703	ID:1	[INFO: A         ] Ratio: 341
+00:33.704	ID:1	[INFO: A         ] $
+00:33.706	ID:1	[INFO: A         ] Sending B
+00:33.712	ID:1	[INFO: A         ] 1010110111111101
+00:33.715	ID:1	[INFO: A         ] TX: 12, RX: 4
+00:33.752	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+00:33.757	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+00:33.800	ID:3	[INFO: C         ] state: 0
+00:33.803	ID:3	[INFO: C         ] Sent data to B
+00:33.811	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+00:34.217	ID:3	[INFO: C         ] Total power usage C =          3.7530000mAh |
+00:34.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+00:34.693	ID:1	[INFO: A         ] Ratio: 341
+00:34.694	ID:1	[INFO: A         ] $
+00:34.696	ID:1	[INFO: A         ] Sending B
+00:34.702	ID:1	[INFO: A         ] 1010110111111101
+00:34.705	ID:1	[INFO: A         ] TX: 12, RX: 4
+00:34.715	ID:1	[INFO: A         ] Total power usage A =          3.7581000mAh |
+00:34.744	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+00:34.750	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+00:34.769	ID:3	[INFO: C         ] state: 100
+00:34.772	ID:3	[INFO: C         ] Sent data to B
+00:34.809	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+00:35.218	ID:3	[INFO: C         ] Total power usage C =          3.7581000mAh |
+00:35.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+00:35.700	ID:1	[INFO: A         ] Total power usage A =          3.7631998mAh |
+00:35.703	ID:1	[INFO: A         ] Ratio: 341
+00:35.704	ID:1	[INFO: A         ] $
+00:35.706	ID:1	[INFO: A         ] Sending B
+00:35.712	ID:1	[INFO: A         ] 1010110111111101
+00:35.715	ID:1	[INFO: A         ] TX: 12, RX: 4
+00:35.723	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+00:35.728	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+00:35.737	ID:3	[INFO: C         ] state: 100
+00:35.741	ID:3	[INFO: C         ] Sent data to B
+00:35.769	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+00:36.217	ID:3	[INFO: C         ] Total power usage C =          3.7631998mAh |
+00:36.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+00:36.693	ID:1	[INFO: A         ] Ratio: 341
+00:36.694	ID:1	[INFO: A         ] $
+00:36.696	ID:1	[INFO: A         ] Sending B
+00:36.702	ID:1	[INFO: A         ] 1010110111111101
+00:36.705	ID:1	[INFO: A         ] TX: 12, RX: 4
+00:36.715	ID:1	[INFO: A         ] Total power usage A =          3.7682998mAh |
+00:36.744	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+00:36.750	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+00:36.785	ID:3	[INFO: C         ] state: 100
+00:36.788	ID:3	[INFO: C         ] Sent data to B
+00:36.801	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+00:37.218	ID:3	[INFO: C         ] Total power usage C =          3.7682998mAh |
+00:37.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+00:37.700	ID:1	[INFO: A         ] Total power usage A =          3.7733998mAh |
+00:37.703	ID:1	[INFO: A         ] Ratio: 341
+00:37.704	ID:1	[INFO: A         ] $
+00:37.706	ID:1	[INFO: A         ] Sending B
+00:37.712	ID:1	[INFO: A         ] 1010110111111101
+00:37.715	ID:1	[INFO: A         ] TX: 12, RX: 4
+00:37.752	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+00:37.757	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+00:37.792	ID:3	[INFO: C         ] state: 100
+00:37.796	ID:3	[INFO: C         ] Sent data to B
+00:37.824	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+00:38.217	ID:3	[INFO: C         ] Total power usage C =          3.7733998mAh |
+00:38.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+00:38.693	ID:1	[INFO: A         ] Ratio: 341
+00:38.694	ID:1	[INFO: A         ] $
+00:38.696	ID:1	[INFO: A         ] Sending B
+00:38.702	ID:1	[INFO: A         ] healthcheck[INFO: A         ] Sending C
+00:38.707	ID:1	[INFO: A         ] 0101101111111011
+00:38.710	ID:1	[INFO: A         ] TX: 12, RX: 4
+00:38.720	ID:1	[INFO: A         ] Total power usage A =          3.7784998mAh |
+00:38.728	ID:3	[INFO: C         ] Responding with 'ACK'
+00:38.732	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+00:38.737	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+00:38.753	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+00:38.761	ID:3	0101.0100.0174.1200[INFO: C         ] state: 100
+00:38.764	ID:3	[INFO: C         ] Sent data to B
+00:38.793	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+00:39.218	ID:3	[INFO: C         ] Total power usage C =          3.7784998mAh |
+00:39.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+00:39.700	ID:1	[INFO: A         ] Total power usage A =          3.7835998mAh |
+00:39.703	ID:1	[INFO: A         ] Ratio: 341
+00:39.704	ID:1	[INFO: A         ] $
+00:39.706	ID:1	[INFO: A         ] Sending B
+00:39.712	ID:1	[INFO: A         ] 1011011111110110
+00:39.715	ID:1	[INFO: A         ] TX: 12, RX: 4
+00:39.723	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+00:39.728	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+00:39.776	ID:3	[INFO: C         ] state: 100
+00:39.780	ID:3	[INFO: C         ] Sent data to B
+00:39.801	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+00:40.217	ID:3	[INFO: C         ] Total power usage C =          3.7835998mAh |
+00:40.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+00:40.693	ID:1	[INFO: A         ] Ratio: 341
+00:40.694	ID:1	[INFO: A         ] $
+00:40.696	ID:1	[INFO: A         ] Sending B
+00:40.702	ID:1	[INFO: A         ] 1011011111110110
+00:40.705	ID:1	[INFO: A         ] TX: 12, RX: 4
+00:40.715	ID:1	[INFO: A         ] Total power usage A =          5.5886998mAh |
+00:40.744	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+00:40.750	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+00:40.760	ID:3	[INFO: C         ] state: 0
+00:40.764	ID:3	[INFO: C         ] Sent data to B
+00:40.801	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+00:41.218	ID:3	[INFO: C         ] Total power usage C =          3.7886998mAh |
+00:41.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+00:41.700	ID:1	[INFO: A         ] Total power usage A =          5.5886998mAh |
+00:41.703	ID:1	[INFO: A         ] Ratio: 341
+00:41.704	ID:1	[INFO: A         ] $
+00:41.706	ID:1	[INFO: A         ] Sending B
+00:41.712	ID:1	[INFO: A         ] 1011011111110110
+00:41.715	ID:1	[INFO: A         ] TX: 12, RX: 4
+00:41.752	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+00:41.757	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+00:41.776	ID:3	[INFO: C         ] state: 0
+00:41.780	ID:3	[INFO: C         ] Sent data to B
+00:41.824	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+00:42.217	ID:3	[INFO: C         ] Total power usage C =          3.7937999mAh |
+00:42.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+00:42.693	ID:1	[INFO: A         ] Ratio: 341
+00:42.694	ID:1	[INFO: A         ] $
+00:42.696	ID:1	[INFO: A         ] Sending B
+00:42.702	ID:1	[INFO: A         ] 1011011111110110
+00:42.705	ID:1	[INFO: A         ] TX: 12, RX: 4
+00:42.715	ID:1	[INFO: A         ] Total power usage A =          5.5937996mAh |
+00:42.729	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+00:42.734	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+00:42.776	ID:3	[INFO: C         ] state: 0
+00:42.780	ID:3	[INFO: C         ] Sent data to B
+00:42.788	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+00:43.218	ID:3	[INFO: C         ] Total power usage C =          3.7988999mAh |
+00:43.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+00:43.700	ID:1	[INFO: A         ] Total power usage A =          5.5988998mAh |
+00:43.703	ID:1	[INFO: A         ] Ratio: 341
+00:43.704	ID:1	[INFO: A         ] $
+00:43.706	ID:1	[INFO: A         ] Sending B
+00:43.712	ID:1	[INFO: A         ] 1011011111110110
+00:43.715	ID:1	[INFO: A         ] TX: 12, RX: 4
+00:43.744	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+00:43.750	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+00:43.784	ID:3	[INFO: C         ] state: 0
+00:43.788	ID:3	[INFO: C         ] Sent data to B
+00:43.809	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+00:44.217	ID:3	[INFO: C         ] Total power usage C =          3.8039999mAh |
+00:44.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+00:44.693	ID:1	[INFO: A         ] Ratio: 341
+00:44.694	ID:1	[INFO: A         ] $
+00:44.696	ID:1	[INFO: A         ] Sending B
+00:44.702	ID:1	[INFO: A         ] 1011011111110110
+00:44.705	ID:1	[INFO: A         ] TX: 12, RX: 4
+00:44.715	ID:1	[INFO: A         ] Total power usage A =          5.6039996mAh |
+00:44.744	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+00:44.750	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+00:44.800	ID:3	[INFO: C         ] state: 0
+00:44.803	ID:3	[INFO: C         ] Sent data to B
+00:44.848	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+00:45.218	ID:3	[INFO: C         ] Total power usage C =          3.8090999mAh |
+00:45.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+00:45.700	ID:1	[INFO: A         ] Total power usage A =          5.6090994mAh |
+00:45.703	ID:1	[INFO: A         ] Ratio: 341
+00:45.704	ID:1	[INFO: A         ] $
+00:45.706	ID:1	[INFO: A         ] Sending B
+00:45.712	ID:1	[INFO: A         ] 1011011111110110
+00:45.715	ID:1	[INFO: A         ] TX: 12, RX: 4
+00:45.744	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+00:45.750	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+00:45.800	ID:3	[INFO: C         ] state: 0
+00:45.803	ID:3	[INFO: C         ] Sent data to B
+00:45.832	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+00:46.217	ID:3	[INFO: C         ] Total power usage C =          5.6141996mAh |
+00:46.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+00:46.693	ID:1	[INFO: A         ] Ratio: 341
+00:46.694	ID:1	[INFO: A         ] $
+00:46.696	ID:1	[INFO: A         ] Sending B
+00:46.702	ID:1	[INFO: A         ] 1011011111110110
+00:46.705	ID:1	[INFO: A         ] TX: 12, RX: 4
+00:46.715	ID:1	[INFO: A         ] Total power usage A =          5.6141996mAh |
+00:46.723	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+00:46.728	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+00:46.745	ID:3	[INFO: C         ] state: 0
+00:46.748	ID:3	[INFO: C         ] Sent data to B
+00:46.801	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+00:47.218	ID:3	[INFO: C         ] Total power usage C =          5.6141996mAh |
+00:47.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+00:47.700	ID:1	[INFO: A         ] Total power usage A =          5.6192994mAh |
+00:47.703	ID:1	[INFO: A         ] Ratio: 341
+00:47.704	ID:1	[INFO: A         ] $
+00:47.706	ID:1	[INFO: A         ] Sending B
+00:47.711	ID:1	[INFO: A         ] healthcheck[INFO: A         ] Sending C
+00:47.717	ID:1	[INFO: A         ] 0110111111101101
+00:47.720	ID:1	[INFO: A         ] TX: 12, RX: 4
+00:47.728	ID:3	[INFO: C         ] Lost packet from A
+00:47.760	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+00:47.765	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+00:47.784	ID:3	[INFO: C         ] state: 0
+00:47.788	ID:3	[INFO: C         ] Sent data to B
+00:47.840	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+00:48.217	ID:3	[INFO: C         ] Total power usage C =          5.6192994mAh |
+00:48.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+00:48.693	ID:1	[INFO: A         ] Ratio: 341
+00:48.694	ID:1	[INFO: A         ] $
+00:48.696	ID:1	[INFO: A         ] Sending B
+00:48.702	ID:1	[INFO: A         ] 0110111111101101
+00:48.705	ID:1	[INFO: A         ] TX: 12, RX: 4
+00:48.715	ID:1	[INFO: A         ] Total power usage A =          5.6243996mAh |
+00:48.723	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+00:48.728	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+00:48.745	ID:3	[INFO: C         ] state: 0
+00:48.748	ID:3	[INFO: C         ] Sent data to B
+00:48.762	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+00:49.217	ID:3	[INFO: C         ] Total power usage C =          5.6243996mAh |
+00:49.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+00:49.700	ID:1	[INFO: A         ] Total power usage A =          5.6294994mAh |
+00:49.703	ID:1	[INFO: A         ] Ratio: 341
+00:49.704	ID:1	[INFO: A         ] $
+00:49.706	ID:1	[INFO: A         ] Sending B
+00:49.712	ID:1	[INFO: A         ] 0110111111101101
+00:49.715	ID:1	[INFO: A         ] TX: 12, RX: 4
+00:49.752	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+00:49.757	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+00:49.800	ID:3	[INFO: C         ] state: 100
+00:49.804	ID:3	[INFO: C         ] Sent data to B
+00:49.824	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+00:50.217	ID:3	[INFO: C         ] Total power usage C =          5.6294994mAh |
+00:50.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+00:50.693	ID:1	[INFO: A         ] Ratio: 341
+00:50.694	ID:1	[INFO: A         ] $
+00:50.696	ID:1	[INFO: A         ] Sending B
+00:50.702	ID:1	[INFO: A         ] 0110111111101101
+00:50.705	ID:1	[INFO: A         ] TX: 12, RX: 4
+00:50.715	ID:1	[INFO: A         ] Total power usage A =          5.6345997mAh |
+00:50.723	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+00:50.728	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+00:50.769	ID:3	[INFO: C         ] state: 100
+00:50.772	ID:3	[INFO: C         ] Sent data to B
+00:50.809	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+00:51.218	ID:3	[INFO: C         ] Total power usage C =          5.6345997mAh |
+00:51.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+00:51.700	ID:1	[INFO: A         ] Total power usage A =          5.6396994mAh |
+00:51.703	ID:1	[INFO: A         ] Ratio: 341
+00:51.704	ID:1	[INFO: A         ] $
+00:51.706	ID:1	[INFO: A         ] Sending B
+00:51.712	ID:1	[INFO: A         ] 0110111111101101
+00:51.715	ID:1	[INFO: A         ] TX: 12, RX: 4
+00:51.729	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+00:51.734	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+00:51.745	ID:3	[INFO: C         ] state: 100
+00:51.749	ID:3	[INFO: C         ] Sent data to B
+00:51.778	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+00:52.217	ID:3	[INFO: C         ] Total power usage C =          5.6396994mAh |
+00:52.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+00:52.693	ID:1	[INFO: A         ] Ratio: 341
+00:52.694	ID:1	[INFO: A         ] $
+00:52.696	ID:1	[INFO: A         ] Sending B
+00:52.702	ID:1	[INFO: A         ] 0110111111101101
+00:52.705	ID:1	[INFO: A         ] TX: 12, RX: 4
+00:52.715	ID:1	[INFO: A         ] Total power usage A =          5.6447997mAh |
+00:52.729	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+00:52.734	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+00:52.740	ID:3	[INFO: C         ] state: 100
+00:52.744	ID:3	[INFO: C         ] Sent data to B
+00:52.752	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+00:53.218	ID:3	[INFO: C         ] Total power usage C =          5.6447997mAh |
+00:53.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+00:53.700	ID:1	[INFO: A         ] Total power usage A =          7.4498996mAh |
+00:53.703	ID:1	[INFO: A         ] Ratio: 341
+00:53.704	ID:1	[INFO: A         ] $
+00:53.706	ID:1	[INFO: A         ] Sending B
+00:53.712	ID:1	[INFO: A         ] 0110111111101101
+00:53.715	ID:1	[INFO: A         ] TX: 12, RX: 4
+00:53.723	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+00:53.728	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+00:53.734	ID:3	[INFO: C         ] state: 100
+00:53.737	ID:3	[INFO: C         ] Sent data to B
+00:53.754	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+00:54.217	ID:3	[INFO: C         ] Total power usage C =          5.6498995mAh |
+00:54.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+00:54.693	ID:1	[INFO: A         ] Ratio: 341
+00:54.694	ID:1	[INFO: A         ] $
+00:54.696	ID:1	[INFO: A         ] Sending B
+00:54.702	ID:1	[INFO: A         ] 0110111111101101
+00:54.705	ID:1	[INFO: A         ] TX: 12, RX: 4
+00:54.715	ID:1	[INFO: A         ] Total power usage A =          7.4498996mAh |
+00:54.729	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+00:54.734	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+00:54.785	ID:3	[INFO: C         ] state: 100
+00:54.788	ID:3	[INFO: C         ] Sent data to B
+00:54.832	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+00:55.218	ID:3	[INFO: C         ] Total power usage C =          5.6549997mAh |
+00:55.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+00:55.700	ID:1	[INFO: A         ] Total power usage A =          7.4549999mAh |
+00:55.703	ID:1	[INFO: A         ] Ratio: 341
+00:55.704	ID:1	[INFO: A         ] $
+00:55.706	ID:1	[INFO: A         ] Sending B
+00:55.712	ID:1	[INFO: A         ] 0110111111101101
+00:55.715	ID:1	[INFO: A         ] TX: 12, RX: 4
+00:55.744	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+00:55.750	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+00:55.776	ID:3	[INFO: C         ] state: 100
+00:55.780	ID:3	[INFO: C         ] Sent data to B
+00:55.801	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+00:56.217	ID:3	[INFO: C         ] Total power usage C =          5.6600995mAh |
+00:56.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+00:56.693	ID:1	[INFO: A         ] Ratio: 341
+00:56.694	ID:1	[INFO: A         ] $
+00:56.696	ID:1	[INFO: A         ] Sending B
+00:56.702	ID:1	[INFO: A         ] healthcheck[INFO: A         ] Sending C
+00:56.707	ID:1	[INFO: A         ] 1101111111011011
+00:56.710	ID:1	[INFO: A         ] TX: 13, RX: 3
+00:56.720	ID:1	[INFO: A         ] Total power usage A =          7.4600997mAh |
+00:56.728	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+00:56.733	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+00:56.736	ID:3	[INFO: C         ] Lost packet from A
+00:56.776	ID:3	[INFO: C         ] state: 0
+00:56.780	ID:3	[INFO: C         ] Sent data to B
+00:56.801	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+00:57.218	ID:3	[INFO: C         ] Total power usage C =          5.6651997mAh |
+00:57.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+00:57.700	ID:1	[INFO: A         ] Total power usage A =          7.4651999mAh |
+00:57.703	ID:1	[INFO: A         ] Ratio: 236
+00:57.704	ID:1	[INFO: A         ] $
+00:57.706	ID:1	[INFO: A         ] Sending B
+00:57.712	ID:1	[INFO: A         ] 1101111111011011
+00:57.715	ID:1	[INFO: A         ] TX: 13, RX: 3
+00:57.752	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+00:57.757	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+00:57.776	ID:3	[INFO: C         ] state: 0
+00:57.780	ID:3	[INFO: C         ] Sent data to B
+00:57.809	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+00:58.217	ID:3	[INFO: C         ] Total power usage C =          5.6702995mAh |
+00:58.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+00:58.693	ID:1	[INFO: A         ] Ratio: 236
+00:58.694	ID:1	[INFO: A         ] $
+00:58.696	ID:1	[INFO: A         ] Sending B
+00:58.702	ID:1	[INFO: A         ] 1101111111011011
+00:58.705	ID:1	[INFO: A         ] TX: 13, RX: 3
+00:58.715	ID:1	[INFO: A         ] Total power usage A =          7.4702997mAh |
+00:58.723	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+00:58.728	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+00:58.760	ID:3	[INFO: C         ] state: 0
+00:58.764	ID:3	[INFO: C         ] Sent data to B
+00:58.777	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+00:59.218	ID:3	[INFO: C         ] Total power usage C =          5.6753998mAh |
+00:59.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+00:59.700	ID:1	[INFO: A         ] Total power usage A =          7.4753999mAh |
+00:59.703	ID:1	[INFO: A         ] Ratio: 236
+00:59.704	ID:1	[INFO: A         ] $
+00:59.706	ID:1	[INFO: A         ] Sending B
+00:59.712	ID:1	[INFO: A         ] 1101111111011011
+00:59.715	ID:1	[INFO: A         ] TX: 13, RX: 3
+00:59.736	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+00:59.741	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+00:59.760	ID:3	[INFO: C         ] state: 0
+00:59.764	ID:3	[INFO: C         ] Sent data to B
+00:59.809	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+01:00.217	ID:3	[INFO: C         ] Total power usage C =          5.6804995mAh |
+01:00.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+01:00.693	ID:1	[INFO: A         ] Ratio: 236
+01:00.694	ID:1	[INFO: A         ] $
+01:00.696	ID:1	[INFO: A         ] Sending B
+01:00.702	ID:1	[INFO: A         ] 1101111111011011
+01:00.705	ID:1	[INFO: A         ] TX: 13, RX: 3
+01:00.715	ID:1	[INFO: A         ] Total power usage A =          7.4804997mAh |
+01:00.729	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+01:00.734	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+01:00.760	ID:3	[INFO: C         ] state: 0
+01:00.764	ID:3	[INFO: C         ] Sent data to B
+01:00.809	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+01:01.218	ID:3	[INFO: C         ] Total power usage C =          7.4856000mAh |
+01:01.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+01:01.700	ID:1	[INFO: A         ] Total power usage A =          7.4856000mAh |
+01:01.703	ID:1	[INFO: A         ] Ratio: 236
+01:01.704	ID:1	[INFO: A         ] $
+01:01.706	ID:1	[INFO: A         ] Sending B
+01:01.712	ID:1	[INFO: A         ] 1101111111011011
+01:01.715	ID:1	[INFO: A         ] TX: 13, RX: 3
+01:01.760	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+01:01.765	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+01:01.792	ID:3	[INFO: C         ] state: 0
+01:01.795	ID:3	[INFO: C         ] Sent data to B
+01:01.803	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+01:02.217	ID:3	[INFO: C         ] Total power usage C =          7.4856000mAh |
+01:02.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+01:02.693	ID:1	[INFO: A         ] Ratio: 236
+01:02.694	ID:1	[INFO: A         ] $
+01:02.696	ID:1	[INFO: A         ] Sending B
+01:02.702	ID:1	[INFO: A         ] 1101111111011011
+01:02.705	ID:1	[INFO: A         ] TX: 13, RX: 3
+01:02.715	ID:1	[INFO: A         ] Total power usage A =          7.4906997mAh |
+01:02.729	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+01:02.734	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+01:02.760	ID:3	[INFO: C         ] state: 0
+01:02.764	ID:3	[INFO: C         ] Sent data to B
+01:02.777	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+01:03.218	ID:3	[INFO: C         ] Total power usage C =          7.4906997mAh |
+01:03.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+01:03.700	ID:1	[INFO: A         ] Total power usage A =          7.4958000mAh |
+01:03.703	ID:1	[INFO: A         ] Ratio: 236
+01:03.704	ID:1	[INFO: A         ] $
+01:03.706	ID:1	[INFO: A         ] Sending B
+01:03.712	ID:1	[INFO: A         ] 1101111111011011
+01:03.715	ID:1	[INFO: A         ] TX: 13, RX: 3
+01:03.723	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+01:03.728	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+01:03.745	ID:3	[INFO: C         ] state: 0
+01:03.748	ID:3	[INFO: C         ] Sent data to B
+01:03.769	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+01:04.217	ID:3	[INFO: C         ] Total power usage C =          7.4958000mAh |
+01:04.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+01:04.693	ID:1	[INFO: A         ] Ratio: 236
+01:04.694	ID:1	[INFO: A         ] $
+01:04.696	ID:1	[INFO: A         ] Sending B
+01:04.702	ID:1	[INFO: A         ] 1101111111011011
+01:04.705	ID:1	[INFO: A         ] TX: 13, RX: 3
+01:04.715	ID:1	[INFO: A         ] Total power usage A =          7.5008998mAh |
+01:04.744	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+01:04.750	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+01:04.800	ID:3	[INFO: C         ] state: 100
+01:04.804	ID:3	[INFO: C         ] Sent data to B
+01:04.812	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+01:05.218	ID:3	[INFO: C         ] Total power usage C =          7.5008998mAh |
+01:05.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+01:05.700	ID:1	[INFO: A         ] Total power usage A =          7.5060000mAh |
+01:05.703	ID:1	[INFO: A         ] Ratio: 236
+01:05.704	ID:1	[INFO: A         ] $
+01:05.706	ID:1	[INFO: A         ] Sending B
+01:05.711	ID:1	[INFO: A         ] healthcheck[INFO: A         ] Sending C
+01:05.717	ID:1	[INFO: A         ] 1011111110110111
+01:05.720	ID:1	[INFO: A         ] TX: 13, RX: 3
+01:05.729	ID:3	[INFO: C         ] Responding with 'ACK'
+01:05.733	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+01:05.738	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+01:05.777	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+01:05.847	ID:3	0101.0100.0174.1200[INFO: C         ] state: 100
+01:05.851	ID:3	[INFO: C         ] Sent data to B
+01:05.879	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+01:06.217	ID:3	[INFO: C         ] Total power usage C =          7.5060000mAh |
+01:06.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+01:06.693	ID:1	[INFO: A         ] Ratio: 236
+01:06.694	ID:1	[INFO: A         ] $
+01:06.696	ID:1	[INFO: A         ] Sending B
+01:06.702	ID:1	[INFO: A         ] 0111111101101110
+01:06.705	ID:1	[INFO: A         ] TX: 12, RX: 4
+01:06.715	ID:1	[INFO: A         ] Total power usage A =          9.3111000mAh |
+01:06.736	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+01:06.741	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+01:06.748	ID:3	[INFO: C         ] state: 100
+01:06.751	ID:3	[INFO: C         ] Sent data to B
+01:06.801	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+01:07.218	ID:3	[INFO: C         ] Total power usage C =          7.5110998mAh |
+01:07.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+01:07.700	ID:1	[INFO: A         ] Total power usage A =          9.3162002mAh |
+01:07.703	ID:1	[INFO: A         ] Ratio: 341
+01:07.704	ID:1	[INFO: A         ] $
+01:07.706	ID:1	[INFO: A         ] Sending B
+01:07.712	ID:1	[INFO: A         ] 0111111101101110
+01:07.715	ID:1	[INFO: A         ] TX: 12, RX: 4
+01:07.723	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+01:07.728	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+01:07.753	ID:3	[INFO: C         ] state: 100
+01:07.757	ID:3	[INFO: C         ] Sent data to B
+01:07.809	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+01:08.217	ID:3	[INFO: C         ] Total power usage C =          7.5162000mAh |
+01:08.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+01:08.693	ID:1	[INFO: A         ] Ratio: 341
+01:08.694	ID:1	[INFO: A         ] $
+01:08.696	ID:1	[INFO: A         ] Sending B
+01:08.702	ID:1	[INFO: A         ] 0111111101101110
+01:08.705	ID:1	[INFO: A         ] TX: 12, RX: 4
+01:08.715	ID:1	[INFO: A         ] Total power usage A =          9.3162002mAh |
+01:08.729	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+01:08.734	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+01:08.769	ID:3	[INFO: C         ] state: 100
+01:08.772	ID:3	[INFO: C         ] Sent data to B
+01:08.809	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+01:09.218	ID:3	[INFO: C         ] Total power usage C =          7.5212998mAh |
+01:09.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+01:09.700	ID:1	[INFO: A         ] Total power usage A =          9.3212995mAh |
+01:09.703	ID:1	[INFO: A         ] Ratio: 341
+01:09.704	ID:1	[INFO: A         ] $
+01:09.706	ID:1	[INFO: A         ] Sending B
+01:09.712	ID:1	[INFO: A         ] 0111111101101110
+01:09.715	ID:1	[INFO: A         ] TX: 12, RX: 4
+01:09.760	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+01:09.765	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+01:09.808	ID:3	[INFO: C         ] state: 100
+01:09.811	ID:3	[INFO: C         ] Sent data to B
+01:09.848	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+01:10.217	ID:3	[INFO: C         ] Total power usage C =          7.5263996mAh |
+01:10.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+01:10.693	ID:1	[INFO: A         ] Ratio: 341
+01:10.694	ID:1	[INFO: A         ] $
+01:10.696	ID:1	[INFO: A         ] Sending B
+01:10.702	ID:1	[INFO: A         ] 0111111101101110
+01:10.705	ID:1	[INFO: A         ] TX: 12, RX: 4
+01:10.715	ID:1	[INFO: A         ] Total power usage A =          9.3263998mAh |
+01:10.744	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+01:10.750	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+01:10.784	ID:3	[INFO: C         ] state: 0
+01:10.788	ID:3	[INFO: C         ] Sent data to B
+01:10.840	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+01:11.218	ID:3	[INFO: C         ] Total power usage C =          7.5314998mAh |
+01:11.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+01:11.700	ID:1	[INFO: A         ] Total power usage A =          9.3315000mAh |
+01:11.703	ID:1	[INFO: A         ] Ratio: 341
+01:11.704	ID:1	[INFO: A         ] $
+01:11.706	ID:1	[INFO: A         ] Sending B
+01:11.712	ID:1	[INFO: A         ] 0111111101101110
+01:11.715	ID:1	[INFO: A         ] TX: 12, RX: 4
+01:11.729	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+01:11.734	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+01:11.740	ID:3	[INFO: C         ] state: 0
+01:11.744	ID:3	[INFO: C         ] Sent data to B
+01:11.754	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+01:12.217	ID:3	[INFO: C         ] Total power usage C =          7.5365996mAh |
+01:12.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+01:12.693	ID:1	[INFO: A         ] Ratio: 341
+01:12.694	ID:1	[INFO: A         ] $
+01:12.696	ID:1	[INFO: A         ] Sending B
+01:12.702	ID:1	[INFO: A         ] 0111111101101110
+01:12.705	ID:1	[INFO: A         ] TX: 12, RX: 4
+01:12.715	ID:1	[INFO: A         ] Total power usage A =          9.3366003mAh |
+01:12.744	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+01:12.750	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+01:12.784	ID:3	[INFO: C         ] state: 0
+01:12.788	ID:3	[INFO: C         ] Sent data to B
+01:12.824	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+01:13.218	ID:3	[INFO: C         ] Total power usage C =          7.5416999mAh |
+01:13.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+01:13.700	ID:1	[INFO: A         ] Total power usage A =          9.3416996mAh |
+01:13.703	ID:1	[INFO: A         ] Ratio: 341
+01:13.704	ID:1	[INFO: A         ] $
+01:13.706	ID:1	[INFO: A         ] Sending B
+01:13.712	ID:1	[INFO: A         ] 0111111101101110
+01:13.715	ID:1	[INFO: A         ] TX: 12, RX: 4
+01:13.729	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+01:13.734	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+01:13.769	ID:3	[INFO: C         ] state: 0
+01:13.772	ID:3	[INFO: C         ] Sent data to B
+01:13.780	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+01:14.217	ID:3	[INFO: C         ] Total power usage C =          7.5467996mAh |
+01:14.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+01:14.693	ID:1	[INFO: A         ] Ratio: 341
+01:14.694	ID:1	[INFO: A         ] $
+01:14.696	ID:1	[INFO: A         ] Sending B
+01:14.702	ID:1	[INFO: A         ] healthcheck[INFO: A         ] Sending C
+01:14.707	ID:1	[INFO: A         ] 1111111011011101
+01:14.710	ID:1	[INFO: A         ] TX: 13, RX: 3
+01:14.720	ID:1	[INFO: A         ] Total power usage A =          9.3467998mAh |
+01:14.728	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+01:14.733	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+01:14.752	ID:3	[INFO: C         ] Lost packet from A
+01:14.761	ID:3	[INFO: C         ] state: 0
+01:14.764	ID:3	[INFO: C         ] Sent data to B
+01:14.816	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+01:15.218	ID:3	[INFO: C         ] Total power usage C =          7.5518999mAh |
+01:15.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+01:15.700	ID:1	[INFO: A         ] Total power usage A =          9.3519001mAh |
+01:15.703	ID:1	[INFO: A         ] Ratio: 236
+01:15.704	ID:1	[INFO: A         ] $
+01:15.706	ID:1	[INFO: A         ] Sending B
+01:15.712	ID:1	[INFO: A         ] 1111111011011101
+01:15.715	ID:1	[INFO: A         ] TX: 13, RX: 3
+01:15.729	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+01:15.734	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+01:15.760	ID:3	[INFO: C         ] state: 0
+01:15.764	ID:3	[INFO: C         ] Sent data to B
+01:15.816	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+01:16.217	ID:3	[INFO: C         ] Total power usage C =          9.3570003mAh |
+01:16.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+01:16.693	ID:1	[INFO: A         ] Ratio: 236
+01:16.694	ID:1	[INFO: A         ] $
+01:16.696	ID:1	[INFO: A         ] Sending B
+01:16.702	ID:1	[INFO: A         ] 1111111011011101
+01:16.705	ID:1	[INFO: A         ] TX: 13, RX: 3
+01:16.715	ID:1	[INFO: A         ] Total power usage A =          9.3570003mAh |
+01:16.723	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+01:16.728	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+01:16.745	ID:3	[INFO: C         ] state: 0
+01:16.748	ID:3	[INFO: C         ] Sent data to B
+01:16.801	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+01:17.218	ID:3	[INFO: C         ] Total power usage C =          9.3570003mAh |
+01:17.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+01:17.700	ID:1	[INFO: A         ] Total power usage A =          9.3620996mAh |
+01:17.703	ID:1	[INFO: A         ] Ratio: 236
+01:17.704	ID:1	[INFO: A         ] $
+01:17.706	ID:1	[INFO: A         ] Sending B
+01:17.712	ID:1	[INFO: A         ] 1111111011011101
+01:17.715	ID:1	[INFO: A         ] TX: 13, RX: 3
+01:17.729	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+01:17.734	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+01:17.740	ID:3	[INFO: C         ] state: 0
+01:17.744	ID:3	[INFO: C         ] Sent data to B
+01:17.752	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+01:18.217	ID:3	[INFO: C         ] Total power usage C =          9.3620996mAh |
+01:18.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+01:18.693	ID:1	[INFO: A         ] Ratio: 236
+01:18.694	ID:1	[INFO: A         ] $
+01:18.696	ID:1	[INFO: A         ] Sending B
+01:18.702	ID:1	[INFO: A         ] 1111111011011101
+01:18.705	ID:1	[INFO: A         ] TX: 13, RX: 3
+01:18.715	ID:1	[INFO: A         ] Total power usage A =          9.3671999mAh |
+01:18.729	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+01:18.734	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+01:18.769	ID:3	[INFO: C         ] state: 0
+01:18.772	ID:3	[INFO: C         ] Sent data to B
+01:18.785	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+01:19.218	ID:3	[INFO: C         ] Total power usage C =          9.3671999mAh |
+01:19.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+01:19.700	ID:1	[INFO: A         ] Total power usage A =          9.3723001mAh |
+01:19.703	ID:1	[INFO: A         ] Ratio: 236
+01:19.704	ID:1	[INFO: A         ] $
+01:19.706	ID:1	[INFO: A         ] Sending B
+01:19.712	ID:1	[INFO: A         ] 1111111011011101
+01:19.715	ID:1	[INFO: A         ] TX: 13, RX: 3
+01:19.752	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+01:19.757	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+01:19.792	ID:3	[INFO: C         ] state: 0
+01:19.795	ID:3	[INFO: C         ] Sent data to B
+01:19.848	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+01:20.217	ID:3	[INFO: C         ] Total power usage C =          9.3723001mAh |
+01:20.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+01:20.693	ID:1	[INFO: A         ] Ratio: 236
+01:20.694	ID:1	[INFO: A         ] $
+01:20.696	ID:1	[INFO: A         ] Sending B
+01:20.702	ID:1	[INFO: A         ] 1111111011011101
+01:20.705	ID:1	[INFO: A         ] TX: 13, RX: 3
+01:20.715	ID:1	[INFO: A         ] Total power usage A =         11.1773996mAh |
+01:20.723	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+01:20.728	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+01:20.745	ID:3	[INFO: C         ] state: 0
+01:20.748	ID:3	[INFO: C         ] Sent data to B
+01:20.793	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+01:21.218	ID:3	[INFO: C         ] Total power usage C =          9.3774004mAh |
+01:21.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+01:21.700	ID:1	[INFO: A         ] Total power usage A =         11.1773996mAh |
+01:21.703	ID:1	[INFO: A         ] Ratio: 236
+01:21.705	ID:1	[INFO: A         ] $
+01:21.707	ID:1	[INFO: A         ] Sending B
+01:21.712	ID:1	[INFO: A         ] 1111111011011101
+01:21.715	ID:1	[INFO: A         ] TX: 13, RX: 3
+01:21.752	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+01:21.757	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+01:21.763	ID:3	[INFO: C         ] state: 0
+01:21.767	ID:3	[INFO: C         ] Sent data to B
+01:21.801	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+01:22.217	ID:3	[INFO: C         ] Total power usage C =          9.3824997mAh |
+01:22.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+01:22.693	ID:1	[INFO: A         ] Ratio: 236
+01:22.694	ID:1	[INFO: A         ] $
+01:22.696	ID:1	[INFO: A         ] Sending B
+01:22.702	ID:1	[INFO: A         ] 1111111011011101
+01:22.705	ID:1	[INFO: A         ] TX: 13, RX: 3
+01:22.715	ID:1	[INFO: A         ] Total power usage A =         11.1824989mAh |
+01:22.723	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+01:22.728	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+01:22.753	ID:3	[INFO: C         ] state: 0
+01:22.757	ID:3	[INFO: C         ] Sent data to B
+01:22.809	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+01:23.218	ID:3	[INFO: C         ] Total power usage C =          9.3875999mAh |
+01:23.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+01:23.700	ID:1	[INFO: A         ] Total power usage A =         11.1875991mAh |
+01:23.703	ID:1	[INFO: A         ] Ratio: 236
+01:23.705	ID:1	[INFO: A         ] $
+01:23.707	ID:1	[INFO: A         ] Sending B
+01:23.712	ID:1	[INFO: A         ] healthcheck[INFO: A         ] Sending C
+01:23.717	ID:1	[INFO: A         ] 1111110110111011
+01:23.720	ID:1	[INFO: A         ] TX: 13, RX: 3
+01:23.728	ID:3	[INFO: C         ] Lost packet from A
+01:23.732	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+01:23.737	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+01:23.743	ID:3	[INFO: C         ] state: 0
+01:23.747	ID:3	[INFO: C         ] Sent data to B
+01:23.778	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+01:24.217	ID:3	[INFO: C         ] Total power usage C =          9.3927002mAh |
+01:24.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+01:24.693	ID:1	[INFO: A         ] Ratio: 236
+01:24.694	ID:1	[INFO: A         ] $
+01:24.696	ID:1	[INFO: A         ] Sending B
+01:24.702	ID:1	[INFO: A         ] 1111110110111011
+01:24.705	ID:1	[INFO: A         ] TX: 13, RX: 3
+01:24.715	ID:1	[INFO: A         ] Total power usage A =         11.1926994mAh |
+01:24.723	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+01:24.728	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+01:24.769	ID:3	[INFO: C         ] state: 0
+01:24.772	ID:3	[INFO: C         ] Sent data to B
+01:24.816	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+01:25.218	ID:3	[INFO: C         ] Total power usage C =          9.3978004mAh |
+01:25.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+01:25.700	ID:1	[INFO: A         ] Total power usage A =         11.1977996mAh |
+01:25.703	ID:1	[INFO: A         ] Ratio: 236
+01:25.705	ID:1	[INFO: A         ] $
+01:25.707	ID:1	[INFO: A         ] Sending B
+01:25.712	ID:1	[INFO: A         ] 1111110110111011
+01:25.715	ID:1	[INFO: A         ] TX: 13, RX: 3
+01:25.752	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+01:25.757	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+01:25.763	ID:3	[INFO: C         ] state: 0
+01:25.767	ID:3	[INFO: C         ] Sent data to B
+01:25.793	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+01:26.217	ID:3	[INFO: C         ] Total power usage C =          9.4028997mAh |
+01:26.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+01:26.693	ID:1	[INFO: A         ] Ratio: 236
+01:26.694	ID:1	[INFO: A         ] $
+01:26.696	ID:1	[INFO: A         ] Sending B
+01:26.702	ID:1	[INFO: A         ] 1111110110111011
+01:26.705	ID:1	[INFO: A         ] TX: 13, RX: 3
+01:26.715	ID:1	[INFO: A         ] Total power usage A =         11.2028989mAh |
+01:26.723	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+01:26.728	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+01:26.734	ID:3	[INFO: C         ] state: 0
+01:26.738	ID:3	[INFO: C         ] Sent data to B
+01:26.769	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+01:27.218	ID:3	[INFO: C         ] Total power usage C =          9.4080000mAh |
+01:27.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+01:27.700	ID:1	[INFO: A         ] Total power usage A =         11.2079992mAh |
+01:27.703	ID:1	[INFO: A         ] Ratio: 236
+01:27.705	ID:1	[INFO: A         ] $
+01:27.707	ID:1	[INFO: A         ] Sending B
+01:27.712	ID:1	[INFO: A         ] 1111110110111011
+01:27.715	ID:1	[INFO: A         ] TX: 13, RX: 3
+01:27.723	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+01:27.728	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+01:27.760	ID:3	[INFO: C         ] state: 0
+01:27.764	ID:3	[INFO: C         ] Sent data to B
+01:27.809	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+01:28.217	ID:3	[INFO: C         ] Total power usage C =          9.4131002mAh |
+01:28.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+01:28.693	ID:1	[INFO: A         ] Ratio: 236
+01:28.694	ID:1	[INFO: A         ] $
+01:28.696	ID:1	[INFO: A         ] Sending B
+01:28.702	ID:1	[INFO: A         ] 1111110110111011
+01:28.705	ID:1	[INFO: A         ] TX: 13, RX: 3
+01:28.715	ID:1	[INFO: A         ] Total power usage A =         11.2130994mAh |
+01:28.744	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+01:28.750	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+01:28.760	ID:3	[INFO: C         ] state: 0
+01:28.764	ID:3	[INFO: C         ] Sent data to B
+01:28.777	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+01:29.218	ID:3	[INFO: C         ] Total power usage C =          9.4181995mAh |
+01:29.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+01:29.700	ID:1	[INFO: A         ] Total power usage A =         11.2181987mAh |
+01:29.703	ID:1	[INFO: A         ] Ratio: 236
+01:29.705	ID:1	[INFO: A         ] $
+01:29.707	ID:1	[INFO: A         ] Sending B
+01:29.712	ID:1	[INFO: A         ] 1111110110111011
+01:29.715	ID:1	[INFO: A         ] TX: 13, RX: 3
+01:29.723	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+01:29.728	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+01:29.745	ID:3	[INFO: C         ] state: 0
+01:29.748	ID:3	[INFO: C         ] Sent data to B
+01:29.785	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+01:30.217	ID:3	[INFO: C         ] Total power usage C =          9.4232998mAh |
+01:30.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+01:30.693	ID:1	[INFO: A         ] Ratio: 236
+01:30.694	ID:1	[INFO: A         ] $
+01:30.696	ID:1	[INFO: A         ] Sending B
+01:30.702	ID:1	[INFO: A         ] 1111110110111011
+01:30.705	ID:1	[INFO: A         ] TX: 13, RX: 3
+01:30.715	ID:1	[INFO: A         ] Total power usage A =         11.2232990mAh |
+01:30.723	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+01:30.728	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+01:30.737	ID:3	[INFO: C         ] state: 0
+01:30.741	ID:3	[INFO: C         ] Sent data to B
+01:30.762	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+01:31.218	ID:3	[INFO: C         ] Total power usage C =         11.2283992mAh |
+01:31.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+01:31.700	ID:1	[INFO: A         ] Total power usage A =         11.2283992mAh |
+01:31.703	ID:1	[INFO: A         ] Ratio: 236
+01:31.705	ID:1	[INFO: A         ] $
+01:31.707	ID:1	[INFO: A         ] Sending B
+01:31.712	ID:1	[INFO: A         ] 1111110110111011
+01:31.715	ID:1	[INFO: A         ] TX: 13, RX: 3
+01:31.729	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+01:31.734	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+01:31.784	ID:3	[INFO: C         ] state: 0
+01:31.788	ID:3	[INFO: C         ] Sent data to B
+01:31.840	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+01:32.217	ID:3	[INFO: C         ] Total power usage C =         11.2283992mAh |
+01:32.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+01:32.693	ID:1	[INFO: A         ] Ratio: 236
+01:32.694	ID:1	[INFO: A         ] $
+01:32.696	ID:1	[INFO: A         ] Sending B
+01:32.702	ID:1	[INFO: A         ] healthcheck[INFO: A         ] Sending C
+01:32.707	ID:1	[INFO: A         ] 1111101101110111
+01:32.710	ID:1	[INFO: A         ] TX: 13, RX: 3
+01:32.721	ID:1	[INFO: A         ] Total power usage A =         11.2334995mAh |
+01:32.745	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+01:32.750	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+01:32.752	ID:3	[INFO: C         ] Lost packet from A
+01:32.776	ID:3	[INFO: C         ] state: 0
+01:32.780	ID:3	[INFO: C         ] Sent data to B
+01:32.793	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+01:33.218	ID:3	[INFO: C         ] Total power usage C =         11.2334995mAh |
+01:33.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+01:33.700	ID:1	[INFO: A         ] Total power usage A =         13.0385990mAh |
+01:33.703	ID:1	[INFO: A         ] Ratio: 236
+01:33.704	ID:1	[INFO: A         ] $
+01:33.706	ID:1	[INFO: A         ] Sending B
+01:33.712	ID:1	[INFO: A         ] 1111101101110111
+01:33.715	ID:1	[INFO: A         ] TX: 13, RX: 3
+01:33.729	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+01:33.734	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+01:33.776	ID:3	[INFO: C         ] state: 0
+01:33.780	ID:3	[INFO: C         ] Sent data to B
+01:33.809	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+01:34.217	ID:3	[INFO: C         ] Total power usage C =         11.2385988mAh |
+01:34.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+01:34.693	ID:1	[INFO: A         ] Ratio: 236
+01:34.694	ID:1	[INFO: A         ] $
+01:34.696	ID:1	[INFO: A         ] Sending B
+01:34.702	ID:1	[INFO: A         ] 1111101101110111
+01:34.705	ID:1	[INFO: A         ] TX: 13, RX: 3
+01:34.715	ID:1	[INFO: A         ] Total power usage A =         13.0385990mAh |
+01:34.736	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+01:34.741	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+01:34.753	ID:3	[INFO: C         ] state: 0
+01:34.756	ID:3	[INFO: C         ] Sent data to B
+01:34.778	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+01:35.218	ID:3	[INFO: C         ] Total power usage C =         11.2436990mAh |
+01:35.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+01:35.700	ID:1	[INFO: A         ] Total power usage A =         13.0436992mAh |
+01:35.703	ID:1	[INFO: A         ] Ratio: 236
+01:35.704	ID:1	[INFO: A         ] $
+01:35.706	ID:1	[INFO: A         ] Sending B
+01:35.712	ID:1	[INFO: A         ] 1111101101110111
+01:35.715	ID:1	[INFO: A         ] TX: 13, RX: 3
+01:35.744	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+01:35.750	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+01:35.792	ID:3	[INFO: C         ] state: 0
+01:35.795	ID:3	[INFO: C         ] Sent data to B
+01:35.832	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+01:36.217	ID:3	[INFO: C         ] Total power usage C =         11.2487993mAh |
+01:36.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+01:36.693	ID:1	[INFO: A         ] Ratio: 236
+01:36.694	ID:1	[INFO: A         ] $
+01:36.696	ID:1	[INFO: A         ] Sending B
+01:36.702	ID:1	[INFO: A         ] 1111101101110111
+01:36.705	ID:1	[INFO: A         ] TX: 13, RX: 3
+01:36.715	ID:1	[INFO: A         ] Total power usage A =         13.0487995mAh |
+01:36.723	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+01:36.728	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+01:36.737	ID:3	[INFO: C         ] state: 0
+01:36.741	ID:3	[INFO: C         ] Sent data to B
+01:36.785	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+01:37.218	ID:3	[INFO: C         ] Total power usage C =         11.2538995mAh |
+01:37.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+01:37.700	ID:1	[INFO: A         ] Total power usage A =         13.0538997mAh |
+01:37.703	ID:1	[INFO: A         ] Ratio: 236
+01:37.704	ID:1	[INFO: A         ] $
+01:37.706	ID:1	[INFO: A         ] Sending B
+01:37.712	ID:1	[INFO: A         ] 1111101101110111
+01:37.715	ID:1	[INFO: A         ] TX: 13, RX: 3
+01:37.729	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+01:37.734	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+01:37.745	ID:3	[INFO: C         ] state: 0
+01:37.748	ID:3	[INFO: C         ] Sent data to B
+01:37.756	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+01:38.217	ID:3	[INFO: C         ] Total power usage C =         11.2589988mAh |
+01:38.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+01:38.693	ID:1	[INFO: A         ] Ratio: 236
+01:38.694	ID:1	[INFO: A         ] $
+01:38.696	ID:1	[INFO: A         ] Sending B
+01:38.702	ID:1	[INFO: A         ] 1111101101110111
+01:38.705	ID:1	[INFO: A         ] TX: 13, RX: 3
+01:38.715	ID:1	[INFO: A         ] Total power usage A =         13.0589990mAh |
+01:38.736	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+01:38.741	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+01:38.769	ID:3	[INFO: C         ] state: 0
+01:38.772	ID:3	[INFO: C         ] Sent data to B
+01:38.801	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+01:39.218	ID:3	[INFO: C         ] Total power usage C =         11.2640991mAh |
+01:39.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+01:39.700	ID:1	[INFO: A         ] Total power usage A =         13.0640993mAh |
+01:39.703	ID:1	[INFO: A         ] Ratio: 236
+01:39.704	ID:1	[INFO: A         ] $
+01:39.706	ID:1	[INFO: A         ] Sending B
+01:39.712	ID:1	[INFO: A         ] 1111101101110111
+01:39.715	ID:1	[INFO: A         ] TX: 13, RX: 3
+01:39.736	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+01:39.741	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+01:39.748	ID:3	[INFO: C         ] state: 100
+01:39.751	ID:3	[INFO: C         ] Sent data to B
+01:39.769	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+01:40.217	ID:3	[INFO: C         ] Total power usage C =         11.2691993mAh |
+01:40.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+01:40.693	ID:1	[INFO: A         ] Ratio: 236
+01:40.694	ID:1	[INFO: A         ] $
+01:40.696	ID:1	[INFO: A         ] Sending B
+01:40.702	ID:1	[INFO: A         ] 1111101101110111
+01:40.705	ID:1	[INFO: A         ] TX: 13, RX: 3
+01:40.715	ID:1	[INFO: A         ] Total power usage A =         13.0691995mAh |
+01:40.723	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+01:40.728	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+01:40.737	ID:3	[INFO: C         ] state: 100
+01:40.741	ID:3	[INFO: C         ] Sent data to B
+01:40.754	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+01:41.218	ID:3	[INFO: C         ] Total power usage C =         11.2742996mAh |
+01:41.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+01:41.700	ID:1	[INFO: A         ] Total power usage A =         13.0742998mAh |
+01:41.703	ID:1	[INFO: A         ] Ratio: 236
+01:41.704	ID:1	[INFO: A         ] $
+01:41.706	ID:1	[INFO: A         ] Sending B
+01:41.711	ID:1	[INFO: A         ] healthcheck[INFO: A         ] Sending C
+01:41.717	ID:1	[INFO: A         ] 1111011011101111
+01:41.720	ID:1	[INFO: A         ] TX: 13, RX: 3
+01:41.736	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+01:41.741	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+01:41.744	ID:3	[INFO: C         ] Responding with 'ACK'
+01:41.769	ID:3	0101.0100.0174.1200[INFO: C         ] state: 100
+01:41.773	ID:3	[INFO: C         ] Sent data to B
+01:41.800	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+01:41.816	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+01:42.217	ID:3	[INFO: C         ] Total power usage C =         11.2793989mAh |
+01:42.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+01:42.693	ID:1	[INFO: A         ] Ratio: 236
+01:42.694	ID:1	[INFO: A         ] $
+01:42.696	ID:1	[INFO: A         ] Sending B
+01:42.702	ID:1	[INFO: A         ] 1110110111011110
+01:42.705	ID:1	[INFO: A         ] TX: 12, RX: 4
+01:42.715	ID:1	[INFO: A         ] Total power usage A =         13.0793991mAh |
+01:42.723	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+01:42.728	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+01:42.761	ID:3	[INFO: C         ] state: 100
+01:42.764	ID:3	[INFO: C         ] Sent data to B
+01:42.801	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+01:43.218	ID:3	[INFO: C         ] Total power usage C =         11.2844991mAh |
+01:43.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+01:43.700	ID:1	[INFO: A         ] Total power usage A =         13.0844993mAh |
+01:43.703	ID:1	[INFO: A         ] Ratio: 341
+01:43.704	ID:1	[INFO: A         ] $
+01:43.706	ID:1	[INFO: A         ] Sending B
+01:43.712	ID:1	[INFO: A         ] 1110110111011110
+01:43.715	ID:1	[INFO: A         ] TX: 12, RX: 4
+01:43.729	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+01:43.734	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+01:43.776	ID:3	[INFO: C         ] state: 100
+01:43.780	ID:3	[INFO: C         ] Sent data to B
+01:43.788	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+01:44.217	ID:3	[INFO: C         ] Total power usage C =         11.2895994mAh |
+01:44.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+01:44.693	ID:1	[INFO: A         ] Ratio: 341
+01:44.694	ID:1	[INFO: A         ] $
+01:44.696	ID:1	[INFO: A         ] Sending B
+01:44.702	ID:1	[INFO: A         ] 1110110111011110
+01:44.705	ID:1	[INFO: A         ] TX: 12, RX: 4
+01:44.715	ID:1	[INFO: A         ] Total power usage A =         13.0895996mAh |
+01:44.723	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+01:44.728	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+01:44.753	ID:3	[INFO: C         ] state: 100
+01:44.757	ID:3	[INFO: C         ] Sent data to B
+01:44.801	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+01:45.218	ID:3	[INFO: C         ] Total power usage C =         11.2946996mAh |
+01:45.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+01:45.700	ID:1	[INFO: A         ] Total power usage A =         13.0946998mAh |
+01:45.703	ID:1	[INFO: A         ] Ratio: 341
+01:45.704	ID:1	[INFO: A         ] $
+01:45.706	ID:1	[INFO: A         ] Sending B
+01:45.712	ID:1	[INFO: A         ] 1110110111011110
+01:45.715	ID:1	[INFO: A         ] TX: 12, RX: 4
+01:45.744	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+01:45.750	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+01:45.769	ID:3	[INFO: C         ] state: 0
+01:45.772	ID:3	[INFO: C         ] Sent data to B
+01:45.793	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+01:46.217	ID:3	[INFO: C         ] Total power usage C =         13.0997991mAh |
+01:46.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+01:46.693	ID:1	[INFO: A         ] Ratio: 341
+01:46.694	ID:1	[INFO: A         ] $
+01:46.696	ID:1	[INFO: A         ] Sending B
+01:46.702	ID:1	[INFO: A         ] 1110110111011110
+01:46.705	ID:1	[INFO: A         ] TX: 12, RX: 4
+01:46.715	ID:1	[INFO: A         ] Total power usage A =         14.8997993mAh |
+01:46.744	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+01:46.750	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+01:46.756	ID:3	[INFO: C         ] state: 0
+01:46.759	ID:3	[INFO: C         ] Sent data to B
+01:46.801	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+01:47.218	ID:3	[INFO: C         ] Total power usage C =         13.0997991mAh |
+01:47.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+01:47.700	ID:1	[INFO: A         ] Total power usage A =         14.8997993mAh |
+01:47.703	ID:1	[INFO: A         ] Ratio: 341
+01:47.705	ID:1	[INFO: A         ] $
+01:47.707	ID:1	[INFO: A         ] Sending B
+01:47.712	ID:1	[INFO: A         ] 1110110111011110
+01:47.715	ID:1	[INFO: A         ] TX: 12, RX: 4
+01:47.736	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+01:47.741	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+01:47.753	ID:3	[INFO: C         ] state: 0
+01:47.756	ID:3	[INFO: C         ] Sent data to B
+01:47.801	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+01:48.217	ID:3	[INFO: C         ] Total power usage C =         13.1048994mAh |
+01:48.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+01:48.693	ID:1	[INFO: A         ] Ratio: 341
+01:48.694	ID:1	[INFO: A         ] $
+01:48.696	ID:1	[INFO: A         ] Sending B
+01:48.702	ID:1	[INFO: A         ] 1110110111011110
+01:48.705	ID:1	[INFO: A         ] TX: 12, RX: 4
+01:48.715	ID:1	[INFO: A         ] Total power usage A =         14.9048996mAh |
+01:48.736	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+01:48.741	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+01:48.760	ID:3	[INFO: C         ] state: 0
+01:48.764	ID:3	[INFO: C         ] Sent data to B
+01:48.809	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+01:49.218	ID:3	[INFO: C         ] Total power usage C =         13.1099996mAh |
+01:49.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+01:49.700	ID:1	[INFO: A         ] Total power usage A =         14.9099998mAh |
+01:49.703	ID:1	[INFO: A         ] Ratio: 341
+01:49.705	ID:1	[INFO: A         ] $
+01:49.707	ID:1	[INFO: A         ] Sending B
+01:49.712	ID:1	[INFO: A         ] 1110110111011110
+01:49.715	ID:1	[INFO: A         ] TX: 12, RX: 4
+01:49.723	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+01:49.728	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+01:49.734	ID:3	[INFO: C         ] state: 0
+01:49.737	ID:3	[INFO: C         ] Sent data to B
+01:49.785	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+01:50.217	ID:3	[INFO: C         ] Total power usage C =         13.1150989mAh |
+01:50.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+01:50.693	ID:1	[INFO: A         ] Ratio: 341
+01:50.694	ID:1	[INFO: A         ] $
+01:50.696	ID:1	[INFO: A         ] Sending B
+01:50.702	ID:1	[INFO: A         ] healthcheck[INFO: A         ] Sending C
+01:50.707	ID:1	[INFO: A         ] 1101101110111101
+01:50.710	ID:1	[INFO: A         ] TX: 12, RX: 4
+01:50.721	ID:1	[INFO: A         ] Total power usage A =         14.9151001mAh |
+01:50.728	ID:3	[INFO: C         ] Lost packet from A
+01:50.732	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+01:50.737	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+01:50.761	ID:3	[INFO: C         ] state: 0
+01:50.764	ID:3	[INFO: C         ] Sent data to B
+01:50.793	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+01:51.218	ID:3	[INFO: C         ] Total power usage C =         13.1201992mAh |
+01:51.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+01:51.700	ID:1	[INFO: A         ] Total power usage A =         14.9201994mAh |
+01:51.703	ID:1	[INFO: A         ] Ratio: 341
+01:51.705	ID:1	[INFO: A         ] $
+01:51.707	ID:1	[INFO: A         ] Sending B
+01:51.712	ID:1	[INFO: A         ] 1101101110111101
+01:51.715	ID:1	[INFO: A         ] TX: 12, RX: 4
+01:51.723	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+01:51.728	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+01:51.737	ID:3	[INFO: C         ] state: 0
+01:51.741	ID:3	[INFO: C         ] Sent data to B
+01:51.793	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+01:52.217	ID:3	[INFO: C         ] Total power usage C =         13.1252994mAh |
+01:52.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+01:52.693	ID:1	[INFO: A         ] Ratio: 341
+01:52.694	ID:1	[INFO: A         ] $
+01:52.696	ID:1	[INFO: A         ] Sending B
+01:52.702	ID:1	[INFO: A         ] 1101101110111101
+01:52.705	ID:1	[INFO: A         ] TX: 12, RX: 4
+01:52.715	ID:1	[INFO: A         ] Total power usage A =         14.9252996mAh |
+01:52.723	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+01:52.728	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+01:52.745	ID:3	[INFO: C         ] state: 0
+01:52.748	ID:3	[INFO: C         ] Sent data to B
+01:52.756	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+01:53.218	ID:3	[INFO: C         ] Total power usage C =         13.1303997mAh |
+01:53.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+01:53.700	ID:1	[INFO: A         ] Total power usage A =         14.9303999mAh |
+01:53.703	ID:1	[INFO: A         ] Ratio: 341
+01:53.705	ID:1	[INFO: A         ] $
+01:53.707	ID:1	[INFO: A         ] Sending B
+01:53.712	ID:1	[INFO: A         ] 1101101110111101
+01:53.715	ID:1	[INFO: A         ] TX: 12, RX: 4
+01:53.736	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+01:53.741	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+01:53.760	ID:3	[INFO: C         ] state: 0
+01:53.764	ID:3	[INFO: C         ] Sent data to B
+01:53.793	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+01:54.217	ID:3	[INFO: C         ] Total power usage C =         13.1354990mAh |
+01:54.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+01:54.693	ID:1	[INFO: A         ] Ratio: 341
+01:54.694	ID:1	[INFO: A         ] $
+01:54.696	ID:1	[INFO: A         ] Sending B
+01:54.702	ID:1	[INFO: A         ] 1101101110111101
+01:54.705	ID:1	[INFO: A         ] TX: 12, RX: 4
+01:54.715	ID:1	[INFO: A         ] Total power usage A =         14.9354992mAh |
+01:54.723	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+01:54.728	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+01:54.776	ID:3	[INFO: C         ] state: 0
+01:54.780	ID:3	[INFO: C         ] Sent data to B
+01:54.816	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+01:55.218	ID:3	[INFO: C         ] Total power usage C =         13.1405992mAh |
+01:55.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+01:55.700	ID:1	[INFO: A         ] Total power usage A =         14.9405994mAh |
+01:55.703	ID:1	[INFO: A         ] Ratio: 341
+01:55.705	ID:1	[INFO: A         ] $
+01:55.707	ID:1	[INFO: A         ] Sending B
+01:55.712	ID:1	[INFO: A         ] 1101101110111101
+01:55.715	ID:1	[INFO: A         ] TX: 12, RX: 4
+01:55.744	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+01:55.750	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+01:55.756	ID:3	[INFO: C         ] state: 0
+01:55.759	ID:3	[INFO: C         ] Sent data to B
+01:55.785	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+01:56.217	ID:3	[INFO: C         ] Total power usage C =         13.1456995mAh |
+01:56.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+01:56.693	ID:1	[INFO: A         ] Ratio: 341
+01:56.694	ID:1	[INFO: A         ] $
+01:56.696	ID:1	[INFO: A         ] Sending B
+01:56.702	ID:1	[INFO: A         ] 1101101110111101
+01:56.705	ID:1	[INFO: A         ] TX: 12, RX: 4
+01:56.715	ID:1	[INFO: A         ] Total power usage A =         14.9456997mAh |
+01:56.736	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+01:56.741	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+01:56.792	ID:3	[INFO: C         ] state: 0
+01:56.795	ID:3	[INFO: C         ] Sent data to B
+01:56.848	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+01:57.218	ID:3	[INFO: C         ] Total power usage C =         13.1507997mAh |
+01:57.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+01:57.700	ID:1	[INFO: A         ] Total power usage A =         14.9507999mAh |
+01:57.703	ID:1	[INFO: A         ] Ratio: 341
+01:57.705	ID:1	[INFO: A         ] $
+01:57.707	ID:1	[INFO: A         ] Sending B
+01:57.712	ID:1	[INFO: A         ] 1101101110111101
+01:57.715	ID:1	[INFO: A         ] TX: 12, RX: 4
+01:57.752	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+01:57.757	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+01:57.807	ID:3	[INFO: C         ] state: 0
+01:57.811	ID:3	[INFO: C         ] Sent data to B
+01:57.848	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+01:58.217	ID:3	[INFO: C         ] Total power usage C =         13.1558990mAh |
+01:58.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+01:58.693	ID:1	[INFO: A         ] Ratio: 341
+01:58.694	ID:1	[INFO: A         ] $
+01:58.696	ID:1	[INFO: A         ] Sending B
+01:58.702	ID:1	[INFO: A         ] 1101101110111101
+01:58.705	ID:1	[INFO: A         ] TX: 12, RX: 4
+01:58.715	ID:1	[INFO: A         ] Total power usage A =         14.9558992mAh |
+01:58.723	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+01:58.728	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+01:58.769	ID:3	[INFO: C         ] state: 0
+01:58.772	ID:3	[INFO: C         ] Sent data to B
+01:58.780	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+01:59.218	ID:3	[INFO: C         ] Total power usage C =         13.1609993mAh |
+01:59.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+01:59.700	ID:1	[INFO: A         ] Total power usage A =         14.9609995mAh |
+01:59.703	ID:1	[INFO: A         ] Ratio: 341
+01:59.705	ID:1	[INFO: A         ] $
+01:59.707	ID:1	[INFO: A         ] Sending B
+01:59.712	ID:1	[INFO: A         ] healthcheck[INFO: A         ] Sending C
+01:59.717	ID:1	[INFO: A         ] 1011011101111011
+01:59.720	ID:1	[INFO: A         ] TX: 12, RX: 4
+01:59.745	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+01:59.750	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+01:59.760	ID:3	[INFO: C         ] Lost packet from A
+01:59.800	ID:3	[INFO: C         ] state: 0
+01:59.804	ID:3	[INFO: C         ] Sent data to B
+01:59.918	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+02:00.217	ID:3	[INFO: C         ] Total power usage C =         13.1660995mAh |
+02:00.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+02:00.693	ID:1	[INFO: A         ] Ratio: 341
+02:00.694	ID:1	[INFO: A         ] $
+02:00.696	ID:1	[INFO: A         ] Sending B
+02:00.702	ID:1	[INFO: A         ] 1011011101111011
+02:00.705	ID:1	[INFO: A         ] TX: 12, RX: 4
+02:00.715	ID:1	[INFO: A         ] Total power usage A =         16.7609997mAh |
+02:00.729	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+02:00.734	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+02:00.760	ID:3	[INFO: C         ] state: 0
+02:00.764	ID:3	[INFO: C         ] Sent data to B
+02:00.785	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+02:01.218	ID:3	[INFO: C         ] Total power usage C =         14.9712000mAh |
+02:01.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+02:01.700	ID:1	[INFO: A         ] Total power usage A =         16.7660980mAh |
+02:01.703	ID:1	[INFO: A         ] Ratio: 341
+02:01.705	ID:1	[INFO: A         ] $
+02:01.707	ID:1	[INFO: A         ] Sending B
+02:01.712	ID:1	[INFO: A         ] 1011011101111011
+02:01.715	ID:1	[INFO: A         ] TX: 12, RX: 4
+02:01.744	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+02:01.750	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+02:01.776	ID:3	[INFO: C         ] state: 100
+02:01.780	ID:3	[INFO: C         ] Sent data to B
+02:01.788	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+02:02.217	ID:3	[INFO: C         ] Total power usage C =         14.9712000mAh |
+02:02.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+02:02.693	ID:1	[INFO: A         ] Ratio: 341
+02:02.694	ID:1	[INFO: A         ] $
+02:02.696	ID:1	[INFO: A         ] Sending B
+02:02.702	ID:1	[INFO: A         ] 1011011101111011
+02:02.705	ID:1	[INFO: A         ] TX: 12, RX: 4
+02:02.715	ID:1	[INFO: A         ] Total power usage A =         16.7711982mAh |
+02:02.723	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+02:02.728	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+02:02.769	ID:3	[INFO: C         ] state: 100
+02:02.772	ID:3	[INFO: C         ] Sent data to B
+02:02.824	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+02:03.218	ID:3	[INFO: C         ] Total power usage C =         14.9762993mAh |
+02:03.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+02:03.700	ID:1	[INFO: A         ] Total power usage A =         16.7762985mAh |
+02:03.703	ID:1	[INFO: A         ] Ratio: 341
+02:03.705	ID:1	[INFO: A         ] $
+02:03.707	ID:1	[INFO: A         ] Sending B
+02:03.712	ID:1	[INFO: A         ] 1011011101111011
+02:03.715	ID:1	[INFO: A         ] TX: 12, RX: 4
+02:03.744	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+02:03.750	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+02:03.761	ID:3	[INFO: C         ] state: 100
+02:03.764	ID:3	[INFO: C         ] Sent data to B
+02:03.793	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+02:04.217	ID:3	[INFO: C         ] Total power usage C =         14.9813995mAh |
+02:04.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+02:04.693	ID:1	[INFO: A         ] Ratio: 341
+02:04.694	ID:1	[INFO: A         ] $
+02:04.696	ID:1	[INFO: A         ] Sending B
+02:04.702	ID:1	[INFO: A         ] 1011011101111011
+02:04.705	ID:1	[INFO: A         ] TX: 12, RX: 4
+02:04.715	ID:1	[INFO: A         ] Total power usage A =         16.7813987mAh |
+02:04.723	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+02:04.728	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+02:04.769	ID:3	[INFO: C         ] state: 100
+02:04.772	ID:3	[INFO: C         ] Sent data to B
+02:04.793	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+02:05.218	ID:3	[INFO: C         ] Total power usage C =         14.9864998mAh |
+02:05.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+02:05.700	ID:1	[INFO: A         ] Total power usage A =         16.7864990mAh |
+02:05.703	ID:1	[INFO: A         ] Ratio: 341
+02:05.705	ID:1	[INFO: A         ] $
+02:05.707	ID:1	[INFO: A         ] Sending B
+02:05.712	ID:1	[INFO: A         ] 1011011101111011
+02:05.715	ID:1	[INFO: A         ] TX: 12, RX: 4
+02:05.744	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+02:05.750	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+02:05.792	ID:3	[INFO: C         ] state: 100
+02:05.796	ID:3	[INFO: C         ] Sent data to B
+02:05.840	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+02:06.217	ID:3	[INFO: C         ] Total power usage C =         14.9916000mAh |
+02:06.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+02:06.693	ID:1	[INFO: A         ] Ratio: 341
+02:06.694	ID:1	[INFO: A         ] $
+02:06.696	ID:1	[INFO: A         ] Sending B
+02:06.702	ID:1	[INFO: A         ] 1011011101111011
+02:06.705	ID:1	[INFO: A         ] TX: 12, RX: 4
+02:06.715	ID:1	[INFO: A         ] Total power usage A =         16.7915992mAh |
+02:06.736	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+02:06.741	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+02:06.761	ID:3	[INFO: C         ] state: 100
+02:06.764	ID:3	[INFO: C         ] Sent data to B
+02:06.772	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+02:07.218	ID:3	[INFO: C         ] Total power usage C =         14.9966993mAh |
+02:07.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+02:07.700	ID:1	[INFO: A         ] Total power usage A =         16.7966995mAh |
+02:07.703	ID:1	[INFO: A         ] Ratio: 341
+02:07.705	ID:1	[INFO: A         ] $
+02:07.707	ID:1	[INFO: A         ] Sending B
+02:07.712	ID:1	[INFO: A         ] 1011011101111011
+02:07.715	ID:1	[INFO: A         ] TX: 12, RX: 4
+02:07.736	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+02:07.741	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+02:07.748	ID:3	[INFO: C         ] state: 100
+02:07.751	ID:3	[INFO: C         ] Sent data to B
+02:07.778	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+02:08.217	ID:3	[INFO: C         ] Total power usage C =         15.0017995mAh |
+02:08.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+02:08.693	ID:1	[INFO: A         ] Ratio: 341
+02:08.694	ID:1	[INFO: A         ] $
+02:08.696	ID:1	[INFO: A         ] Sending B
+02:08.702	ID:1	[INFO: A         ] healthcheck[INFO: A         ] Sending C
+02:08.707	ID:1	[INFO: A         ] 0110111011110111
+02:08.710	ID:1	[INFO: A         ] TX: 12, RX: 4
+02:08.721	ID:1	[INFO: A         ] Total power usage A =         16.8017997mAh |
+02:08.728	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+02:08.732	ID:3	[INFO: C         ] Responding with 'ACK'
+02:08.733	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+02:08.777	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+02:08.832	ID:3	0101.0100.0174.1200[INFO: C         ] state: 100
+02:08.835	ID:3	[INFO: C         ] Sent data to B
+02:08.887	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+02:09.217	ID:3	[INFO: C         ] Total power usage C =         15.0068998mAh |
+02:09.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+02:09.700	ID:1	[INFO: A         ] Total power usage A =         16.8068981mAh |
+02:09.703	ID:1	[INFO: A         ] Ratio: 341
+02:09.705	ID:1	[INFO: A         ] $
+02:09.707	ID:1	[INFO: A         ] Sending B
+02:09.712	ID:1	[INFO: A         ] 1101110111101110
+02:09.715	ID:1	[INFO: A         ] TX: 12, RX: 4
+02:09.736	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+02:09.741	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+02:09.761	ID:3	[INFO: C         ] state: 100
+02:09.764	ID:3	[INFO: C         ] Sent data to B
+02:09.801	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+02:10.217	ID:3	[INFO: C         ] Total power usage C =         15.0120000mAh |
+02:10.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+02:10.693	ID:1	[INFO: A         ] Ratio: 341
+02:10.694	ID:1	[INFO: A         ] $
+02:10.696	ID:1	[INFO: A         ] Sending B
+02:10.702	ID:1	[INFO: A         ] 1101110111101110
+02:10.705	ID:1	[INFO: A         ] TX: 12, RX: 4
+02:10.716	ID:1	[INFO: A         ] Total power usage A =         16.8119983mAh |
+02:10.723	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+02:10.728	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+02:10.737	ID:3	[INFO: C         ] state: 100
+02:10.741	ID:3	[INFO: C         ] Sent data to B
+02:10.793	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+02:11.218	ID:3	[INFO: C         ] Total power usage C =         15.0170993mAh |
+02:11.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+02:11.700	ID:1	[INFO: A         ] Total power usage A =         16.8170986mAh |
+02:11.703	ID:1	[INFO: A         ] Ratio: 341
+02:11.705	ID:1	[INFO: A         ] $
+02:11.707	ID:1	[INFO: A         ] Sending B
+02:11.712	ID:1	[INFO: A         ] 1101110111101110
+02:11.715	ID:1	[INFO: A         ] TX: 12, RX: 4
+02:11.752	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+02:11.757	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+02:11.792	ID:3	[INFO: C         ] state: 100
+02:11.796	ID:3	[INFO: C         ] Sent data to B
+02:11.803	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+02:12.217	ID:3	[INFO: C         ] Total power usage C =         15.0221996mAh |
+02:12.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+02:12.693	ID:1	[INFO: A         ] Ratio: 341
+02:12.694	ID:1	[INFO: A         ] $
+02:12.696	ID:1	[INFO: A         ] Sending B
+02:12.702	ID:1	[INFO: A         ] 1101110111101110
+02:12.705	ID:1	[INFO: A         ] TX: 12, RX: 4
+02:12.715	ID:1	[INFO: A         ] Total power usage A =         18.6222000mAh |
+02:12.729	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+02:12.734	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+02:12.785	ID:3	[INFO: C         ] state: 100
+02:12.788	ID:3	[INFO: C         ] Sent data to B
+02:12.801	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+02:13.218	ID:3	[INFO: C         ] Total power usage C =         15.0272998mAh |
+02:13.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+02:13.700	ID:1	[INFO: A         ] Total power usage A =         18.6273002mAh |
+02:13.703	ID:1	[INFO: A         ] Ratio: 341
+02:13.705	ID:1	[INFO: A         ] $
+02:13.707	ID:1	[INFO: A         ] Sending B
+02:13.712	ID:1	[INFO: A         ] 1101110111101110
+02:13.715	ID:1	[INFO: A         ] TX: 12, RX: 4
+02:13.744	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+02:13.750	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+02:13.769	ID:3	[INFO: C         ] state: 100
+02:13.772	ID:3	[INFO: C         ] Sent data to B
+02:13.780	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+02:14.217	ID:3	[INFO: C         ] Total power usage C =         15.0324001mAh |
+02:14.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+02:14.693	ID:1	[INFO: A         ] Ratio: 341
+02:14.694	ID:1	[INFO: A         ] $
+02:14.696	ID:1	[INFO: A         ] Sending B
+02:14.702	ID:1	[INFO: A         ] 1101110111101110
+02:14.705	ID:1	[INFO: A         ] TX: 12, RX: 4
+02:14.715	ID:1	[INFO: A         ] Total power usage A =         18.6273002mAh |
+02:14.729	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+02:14.734	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+02:14.761	ID:3	[INFO: C         ] state: 100
+02:14.764	ID:3	[INFO: C         ] Sent data to B
+02:14.816	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+02:15.218	ID:3	[INFO: C         ] Total power usage C =         15.0374994mAh |
+02:15.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+02:15.700	ID:1	[INFO: A         ] Total power usage A =         18.6324005mAh |
+02:15.703	ID:1	[INFO: A         ] Ratio: 341
+02:15.705	ID:1	[INFO: A         ] $
+02:15.707	ID:1	[INFO: A         ] Sending B
+02:15.712	ID:1	[INFO: A         ] 1101110111101110
+02:15.715	ID:1	[INFO: A         ] TX: 12, RX: 4
+02:15.729	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+02:15.734	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+02:15.745	ID:3	[INFO: C         ] state: 100
+02:15.749	ID:3	[INFO: C         ] Sent data to B
+02:15.785	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+02:16.217	ID:3	[INFO: C         ] Total power usage C =         16.8425980mAh |
+02:16.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+02:16.693	ID:1	[INFO: A         ] Ratio: 341
+02:16.694	ID:1	[INFO: A         ] $
+02:16.696	ID:1	[INFO: A         ] Sending B
+02:16.702	ID:1	[INFO: A         ] 1101110111101110
+02:16.705	ID:1	[INFO: A         ] TX: 12, RX: 4
+02:16.715	ID:1	[INFO: A         ] Total power usage A =         18.6375007mAh |
+02:16.723	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+02:16.728	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+02:16.737	ID:3	[INFO: C         ] state: 100
+02:16.741	ID:3	[INFO: C         ] Sent data to B
+02:16.762	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+02:17.218	ID:3	[INFO: C         ] Total power usage C =         16.8425980mAh |
+02:17.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+02:17.700	ID:1	[INFO: A         ] Total power usage A =         18.6425991mAh |
+02:17.703	ID:1	[INFO: A         ] Ratio: 341
+02:17.705	ID:1	[INFO: A         ] $
+02:17.707	ID:1	[INFO: A         ] Sending B
+02:17.712	ID:1	[INFO: A         ] healthcheck[INFO: A         ] Sending C
+02:17.717	ID:1	[INFO: A         ] 1011101111011101
+02:17.720	ID:1	[INFO: A         ] TX: 12, RX: 4
+02:17.728	ID:3	[INFO: C         ] Responding with 'ACK'
+02:17.732	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+02:17.737	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+02:17.745	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+02:17.753	ID:3	0101.0100.0174.1200[INFO: C         ] state: 100
+02:17.757	ID:3	[INFO: C         ] Sent data to B
+02:17.809	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+02:18.217	ID:3	[INFO: C         ] Total power usage C =         16.8476982mAh |
+02:18.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+02:18.693	ID:1	[INFO: A         ] Ratio: 341
+02:18.694	ID:1	[INFO: A         ] $
+02:18.696	ID:1	[INFO: A         ] Sending B
+02:18.702	ID:1	[INFO: A         ] 0111011110111010
+02:18.705	ID:1	[INFO: A         ] TX: 11, RX: 5
+02:18.715	ID:1	[INFO: A         ] Total power usage A =         18.6476993mAh |
+02:18.744	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+02:18.750	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+02:18.792	ID:3	[INFO: C         ] state: 100
+02:18.796	ID:3	[INFO: C         ] Sent data to B
+02:18.824	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+02:19.218	ID:3	[INFO: C         ] Total power usage C =         16.8527985mAh |
+02:19.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+02:19.700	ID:1	[INFO: A         ] Total power usage A =         18.6527996mAh |
+02:19.703	ID:1	[INFO: A         ] Ratio: 465
+02:19.705	ID:1	[INFO: A         ] $
+02:19.707	ID:1	[INFO: A         ] Sending B
+02:19.712	ID:1	[INFO: A         ] 0111011110111010
+02:19.715	ID:1	[INFO: A         ] TX: 11, RX: 5
+02:19.736	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+02:19.741	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+02:19.769	ID:3	[INFO: C         ] state: 100
+02:19.772	ID:3	[INFO: C         ] Sent data to B
+02:19.780	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+02:20.217	ID:3	[INFO: C         ] Total power usage C =         16.8578987mAh |
+02:20.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+02:20.693	ID:1	[INFO: A         ] Ratio: 465
+02:20.694	ID:1	[INFO: A         ] $
+02:20.696	ID:1	[INFO: A         ] Sending B
+02:20.702	ID:1	[INFO: A         ] 0111011110111010
+02:20.705	ID:1	[INFO: A         ] TX: 11, RX: 5
+02:20.715	ID:1	[INFO: A         ] Total power usage A =         18.6578998mAh |
+02:20.736	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+02:20.741	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+02:20.769	ID:3	[INFO: C         ] state: 100
+02:20.772	ID:3	[INFO: C         ] Sent data to B
+02:20.780	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+02:21.218	ID:3	[INFO: C         ] Total power usage C =         16.8629990mAh |
+02:21.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+02:21.700	ID:1	[INFO: A         ] Total power usage A =         18.6630001mAh |
+02:21.703	ID:1	[INFO: A         ] Ratio: 465
+02:21.705	ID:1	[INFO: A         ] $
+02:21.707	ID:1	[INFO: A         ] Sending B
+02:21.712	ID:1	[INFO: A         ] 0111011110111010
+02:21.715	ID:1	[INFO: A         ] TX: 11, RX: 5
+02:21.723	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+02:21.728	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+02:21.734	ID:3	[INFO: C         ] state: 100
+02:21.738	ID:3	[INFO: C         ] Sent data to B
+02:21.754	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+02:22.217	ID:3	[INFO: C         ] Total power usage C =         16.8680992mAh |
+02:22.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+02:22.693	ID:1	[INFO: A         ] Ratio: 465
+02:22.694	ID:1	[INFO: A         ] $
+02:22.696	ID:1	[INFO: A         ] Sending B
+02:22.702	ID:1	[INFO: A         ] 0111011110111010
+02:22.705	ID:1	[INFO: A         ] TX: 11, RX: 5
+02:22.715	ID:1	[INFO: A         ] Total power usage A =         18.6681003mAh |
+02:22.723	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+02:22.728	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+02:22.737	ID:3	[INFO: C         ] state: 100
+02:22.741	ID:3	[INFO: C         ] Sent data to B
+02:22.769	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+02:23.218	ID:3	[INFO: C         ] Total power usage C =         16.8731995mAh |
+02:23.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+02:23.700	ID:1	[INFO: A         ] Total power usage A =         18.6732006mAh |
+02:23.703	ID:1	[INFO: A         ] Ratio: 465
+02:23.705	ID:1	[INFO: A         ] $
+02:23.707	ID:1	[INFO: A         ] Sending B
+02:23.712	ID:1	[INFO: A         ] 0111011110111010
+02:23.715	ID:1	[INFO: A         ] TX: 11, RX: 5
+02:23.752	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+02:23.757	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+02:23.808	ID:3	[INFO: C         ] state: 100
+02:23.811	ID:3	[INFO: C         ] Sent data to B
+02:23.863	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+02:24.217	ID:3	[INFO: C         ] Total power usage C =         16.8782997mAh |
+02:24.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+02:24.693	ID:1	[INFO: A         ] Ratio: 465
+02:24.694	ID:1	[INFO: A         ] $
+02:24.696	ID:1	[INFO: A         ] Sending B
+02:24.702	ID:1	[INFO: A         ] 0111011110111010
+02:24.705	ID:1	[INFO: A         ] TX: 11, RX: 5
+02:24.715	ID:1	[INFO: A         ] Total power usage A =         18.6783008mAh |
+02:24.723	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+02:24.728	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+02:24.745	ID:3	[INFO: C         ] state: 100
+02:24.749	ID:3	[INFO: C         ] Sent data to B
+02:24.778	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+02:25.218	ID:3	[INFO: C         ] Total power usage C =         16.8833981mAh |
+02:25.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+02:25.700	ID:1	[INFO: A         ] Total power usage A =         18.6833992mAh |
+02:25.703	ID:1	[INFO: A         ] Ratio: 465
+02:25.705	ID:1	[INFO: A         ] $
+02:25.707	ID:1	[INFO: A         ] Sending B
+02:25.712	ID:1	[INFO: A         ] 0111011110111010
+02:25.715	ID:1	[INFO: A         ] TX: 11, RX: 5
+02:25.723	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+02:25.728	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+02:25.769	ID:3	[INFO: C         ] state: 0
+02:25.772	ID:3	[INFO: C         ] Sent data to B
+02:25.809	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+02:26.217	ID:3	[INFO: C         ] Total power usage C =         16.8884983mAh |
+02:26.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+02:26.693	ID:1	[INFO: A         ] Ratio: 465
+02:26.694	ID:1	[INFO: A         ] $
+02:26.696	ID:1	[INFO: A         ] Sending B
+02:26.702	ID:1	[INFO: A         ] healthcheck[INFO: A         ] Sending C
+02:26.707	ID:1	[INFO: A         ] 1110111101110101
+02:26.710	ID:1	[INFO: A         ] TX: 12, RX: 4
+02:26.721	ID:1	[INFO: A         ] Total power usage A =         20.4884987mAh |
+02:26.728	ID:3	[INFO: C         ] Responding with 'ACK'
+02:26.744	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+02:26.750	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+02:26.769	ID:3	0101.0100.0174.1200[INFO: C         ] state: 100
+02:26.773	ID:3	[INFO: C         ] Sent data to B
+02:26.780	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+02:26.793	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+02:27.218	ID:3	[INFO: C         ] Total power usage C =         16.8935986mAh |
+02:27.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+02:27.700	ID:1	[INFO: A         ] Total power usage A =         20.4884987mAh |
+02:27.703	ID:1	[INFO: A         ] Ratio: 341
+02:27.705	ID:1	[INFO: A         ] $
+02:27.707	ID:1	[INFO: A         ] Sending B
+02:27.712	ID:1	[INFO: A         ] 1101111011101010
+02:27.715	ID:1	[INFO: A         ] TX: 11, RX: 5
+02:27.729	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+02:27.734	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+02:27.785	ID:3	[INFO: C         ] state: 100
+02:27.788	ID:3	[INFO: C         ] Sent data to B
+02:27.809	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+02:28.217	ID:3	[INFO: C         ] Total power usage C =         16.8986988mAh |
+02:28.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+02:28.693	ID:1	[INFO: A         ] Ratio: 465
+02:28.694	ID:1	[INFO: A         ] $
+02:28.696	ID:1	[INFO: A         ] Sending B
+02:28.702	ID:1	[INFO: A         ] 1101111011101010
+02:28.705	ID:1	[INFO: A         ] TX: 11, RX: 5
+02:28.715	ID:1	[INFO: A         ] Total power usage A =         20.4935989mAh |
+02:28.729	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+02:28.734	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+02:28.761	ID:3	[INFO: C         ] state: 100
+02:28.764	ID:3	[INFO: C         ] Sent data to B
+02:28.793	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+02:29.218	ID:3	[INFO: C         ] Total power usage C =         16.9037991mAh |
+02:29.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+02:29.700	ID:1	[INFO: A         ] Total power usage A =         20.4986992mAh |
+02:29.703	ID:1	[INFO: A         ] Ratio: 465
+02:29.705	ID:1	[INFO: A         ] $
+02:29.707	ID:1	[INFO: A         ] Sending B
+02:29.712	ID:1	[INFO: A         ] 1101111011101010
+02:29.715	ID:1	[INFO: A         ] TX: 11, RX: 5
+02:29.729	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+02:29.734	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+02:29.785	ID:3	[INFO: C         ] state: 100
+02:29.788	ID:3	[INFO: C         ] Sent data to B
+02:29.840	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+02:30.217	ID:3	[INFO: C         ] Total power usage C =         16.9088993mAh |
+02:30.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+02:30.693	ID:1	[INFO: A         ] Ratio: 465
+02:30.694	ID:1	[INFO: A         ] $
+02:30.696	ID:1	[INFO: A         ] Sending B
+02:30.702	ID:1	[INFO: A         ] 1101111011101010
+02:30.705	ID:1	[INFO: A         ] TX: 11, RX: 5
+02:30.716	ID:1	[INFO: A         ] Total power usage A =         20.5037994mAh |
+02:30.723	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+02:30.728	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+02:30.761	ID:3	[INFO: C         ] state: 100
+02:30.764	ID:3	[INFO: C         ] Sent data to B
+02:30.785	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+02:31.218	ID:3	[INFO: C         ] Total power usage C =         18.7140007mAh |
+02:31.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+02:31.700	ID:1	[INFO: A         ] Total power usage A =         20.5088997mAh |
+02:31.703	ID:1	[INFO: A         ] Ratio: 465
+02:31.705	ID:1	[INFO: A         ] $
+02:31.707	ID:1	[INFO: A         ] Sending B
+02:31.712	ID:1	[INFO: A         ] 1101111011101010
+02:31.715	ID:1	[INFO: A         ] TX: 11, RX: 5
+02:31.723	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+02:31.728	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+02:31.769	ID:3	[INFO: C         ] state: 100
+02:31.772	ID:3	[INFO: C         ] Sent data to B
+02:31.801	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+02:32.217	ID:3	[INFO: C         ] Total power usage C =         18.7140007mAh |
+02:32.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+02:32.693	ID:1	[INFO: A         ] Ratio: 465
+02:32.694	ID:1	[INFO: A         ] $
+02:32.696	ID:1	[INFO: A         ] Sending B
+02:32.702	ID:1	[INFO: A         ] 1101111011101010
+02:32.705	ID:1	[INFO: A         ] TX: 11, RX: 5
+02:32.715	ID:1	[INFO: A         ] Total power usage A =         20.5139999mAh |
+02:32.723	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+02:32.728	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+02:32.761	ID:3	[INFO: C         ] state: 100
+02:32.764	ID:3	[INFO: C         ] Sent data to B
+02:32.809	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+02:33.218	ID:3	[INFO: C         ] Total power usage C =         18.7191009mAh |
+02:33.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+02:33.700	ID:1	[INFO: A         ] Total power usage A =         20.5191002mAh |
+02:33.703	ID:1	[INFO: A         ] Ratio: 465
+02:33.705	ID:1	[INFO: A         ] $
+02:33.707	ID:1	[INFO: A         ] Sending B
+02:33.712	ID:1	[INFO: A         ] 1101111011101010
+02:33.715	ID:1	[INFO: A         ] TX: 11, RX: 5
+02:33.760	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+02:33.765	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+02:33.808	ID:3	[INFO: C         ] state: 100
+02:33.811	ID:3	[INFO: C         ] Sent data to B
+02:33.824	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+02:34.217	ID:3	[INFO: C         ] Total power usage C =         18.7241993mAh |
+02:34.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+02:34.693	ID:1	[INFO: A         ] Ratio: 465
+02:34.694	ID:1	[INFO: A         ] $
+02:34.696	ID:1	[INFO: A         ] Sending B
+02:34.702	ID:1	[INFO: A         ] 1101111011101010
+02:34.705	ID:1	[INFO: A         ] TX: 11, RX: 5
+02:34.715	ID:1	[INFO: A         ] Total power usage A =         20.5241985mAh |
+02:34.723	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+02:34.728	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+02:34.745	ID:3	[INFO: C         ] state: 100
+02:34.749	ID:3	[INFO: C         ] Sent data to B
+02:34.757	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+02:35.218	ID:3	[INFO: C         ] Total power usage C =         18.7292995mAh |
+02:35.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+02:35.700	ID:1	[INFO: A         ] Total power usage A =         20.5292988mAh |
+02:35.703	ID:1	[INFO: A         ] Ratio: 465
+02:35.705	ID:1	[INFO: A         ] $
+02:35.707	ID:1	[INFO: A         ] Sending B
+02:35.712	ID:1	[INFO: A         ] healthcheck[INFO: A         ] Sending C
+02:35.717	ID:1	[INFO: A         ] 1011110111010101
+02:35.720	ID:1	[INFO: A         ] TX: 11, RX: 5
+02:35.729	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+02:35.734	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+02:35.741	ID:3	[INFO: C         ] state: 100
+02:35.744	ID:3	[INFO: C         ] Sent data to B
+02:35.754	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+02:35.760	ID:3	[INFO: C         ] Responding with 'ACK'
+02:35.784	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+02:36.217	ID:3	0101.0100.0174.1200[INFO: C         ] Total power usage C =         18.7343998mAh |
+02:36.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+02:36.693	ID:1	[INFO: A         ] Ratio: 465
+02:36.694	ID:1	[INFO: A         ] $
+02:36.696	ID:1	[INFO: A         ] Sending B
+02:36.702	ID:1	[INFO: A         ] 0111101110101010
+02:36.705	ID:1	[INFO: A         ] TX: 10, RX: 6
+02:36.715	ID:1	[INFO: A         ] Total power usage A =         20.5343990mAh |
+02:36.723	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+02:36.728	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+02:36.745	ID:3	[INFO: C         ] state: 100
+02:36.749	ID:3	[INFO: C         ] Sent data to B
+02:36.769	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+02:37.218	ID:3	[INFO: C         ] Total power usage C =         18.7395000mAh |
+02:37.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+02:37.700	ID:1	[INFO: A         ] Total power usage A =         20.5394993mAh |
+02:37.703	ID:1	[INFO: A         ] Ratio: 614
+02:37.705	ID:1	[INFO: A         ] H
+02:37.707	ID:1	[INFO: A         ] Sending C
+02:37.712	ID:1	[INFO: A         ] 1111011101010101
+02:37.715	ID:1	[INFO: A         ] TX: 11, RX: 5
+02:37.735	ID:3	[INFO: C         ] state: 100
+02:37.739	ID:3	[INFO: C         ] Recieved a data request, sending data
+02:37.743	ID:3	[INFO: C         ] Sent data to A
+02:38.217	ID:3	[INFO: C         ] Total power usage C =         18.7446003mAh |
+02:38.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+02:38.693	ID:1	[INFO: A         ] Ratio: 465
+02:38.694	ID:1	[INFO: A         ] $
+02:38.696	ID:1	[INFO: A         ] Sending B
+02:38.702	ID:1	[INFO: A         ] 1110111010101010
+02:38.705	ID:1	[INFO: A         ] TX: 10, RX: 6
+02:38.715	ID:1	[INFO: A         ] Total power usage A =         20.5445995mAh |
+02:38.723	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+02:38.728	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+02:38.735	ID:3	[INFO: C         ] state: 100
+02:38.738	ID:3	[INFO: C         ] Sent data to B
+02:38.754	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+02:39.218	ID:3	[INFO: C         ] Total power usage C =         18.7497005mAh |
+02:39.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+02:39.700	ID:1	[INFO: A         ] Total power usage A =         22.3496990mAh |
+02:39.703	ID:1	[INFO: A         ] Ratio: 614
+02:39.705	ID:1	[INFO: A         ] H
+02:39.707	ID:1	[INFO: A         ] Sending C
+02:39.712	ID:1	[INFO: A         ] 1101110101010101
+02:39.715	ID:1	[INFO: A         ] TX: 10, RX: 6
+02:39.751	ID:3	[INFO: C         ] state: 0
+02:39.753	ID:3	[INFO: C         ] Lost packet from A
+02:40.217	ID:3	[INFO: C         ] Total power usage C =         18.7548008mAh |
+02:40.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+02:40.693	ID:1	[INFO: A         ] Ratio: 614
+02:40.694	ID:1	[INFO: A         ] H
+02:40.696	ID:1	[INFO: A         ] Sending C
+02:40.702	ID:1	[INFO: A         ] 1011101010101011
+02:40.705	ID:1	[INFO: A         ] TX: 10, RX: 6
+02:40.715	ID:1	[INFO: A         ] Total power usage A =         22.3496990mAh |
+02:40.743	ID:3	[INFO: C         ] state: 0
+02:40.746	ID:3	[INFO: C         ] Lost packet from A
+02:41.218	ID:3	[INFO: C         ] Total power usage C =         18.7598991mAh |
+02:41.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+02:41.700	ID:1	[INFO: A         ] Total power usage A =         22.3547992mAh |
+02:41.703	ID:1	[INFO: A         ] Ratio: 614
+02:41.705	ID:1	[INFO: A         ] H
+02:41.707	ID:1	[INFO: A         ] Sending C
+02:41.712	ID:1	[INFO: A         ] 0111010101010111
+02:41.715	ID:1	[INFO: A         ] TX: 10, RX: 6
+02:41.721	ID:3	[INFO: C         ] state: 0
+02:41.724	ID:3	[INFO: C         ] Lost packet from A
+02:42.217	ID:3	[INFO: C         ] Total power usage C =         18.7649994mAh |
+02:42.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+02:42.693	ID:1	[INFO: A         ] Ratio: 614
+02:42.694	ID:1	[INFO: A         ] H
+02:42.696	ID:1	[INFO: A         ] Sending C
+02:42.702	ID:1	[INFO: A         ] 1110101010101111
+02:42.705	ID:1	[INFO: A         ] TX: 11, RX: 5
+02:42.715	ID:1	[INFO: A         ] Total power usage A =         22.3598976mAh |
+02:42.735	ID:3	[INFO: C         ] state: 0
+02:42.738	ID:3	[INFO: C         ] Lost packet from A
+02:43.218	ID:3	[INFO: C         ] Total power usage C =         18.7700996mAh |
+02:43.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+02:43.700	ID:1	[INFO: A         ] Total power usage A =         22.3649978mAh |
+02:43.703	ID:1	[INFO: A         ] Ratio: 465
+02:43.705	ID:1	[INFO: A         ] $
+02:43.707	ID:1	[INFO: A         ] Sending B
+02:43.712	ID:1	[INFO: A         ] 1110101010101111
+02:43.715	ID:1	[INFO: A         ] TX: 11, RX: 5
+02:43.752	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+02:43.757	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+02:43.776	ID:3	[INFO: C         ] state: 0
+02:43.780	ID:3	[INFO: C         ] Sent data to B
+02:43.793	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+02:44.217	ID:3	[INFO: C         ] Total power usage C =         18.7751999mAh |
+02:44.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+02:44.693	ID:1	[INFO: A         ] Ratio: 465
+02:44.694	ID:1	[INFO: A         ] $
+02:44.696	ID:1	[INFO: A         ] Sending B
+02:44.702	ID:1	[INFO: A         ] healthcheck[INFO: A         ] Sending C
+02:44.707	ID:1	[INFO: A         ] 1101010101011111
+02:44.710	ID:1	[INFO: A         ] TX: 11, RX: 5
+02:44.721	ID:1	[INFO: A         ] Total power usage A =         22.3700981mAh |
+02:44.728	ID:3	[INFO: C         ] Lost packet from A
+02:44.744	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+02:44.750	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+02:44.792	ID:3	[INFO: C         ] state: 0
+02:44.795	ID:3	[INFO: C         ] Sent data to B
+02:44.824	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+02:45.218	ID:3	[INFO: C         ] Total power usage C =         18.7803001mAh |
+02:45.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+02:45.700	ID:1	[INFO: A         ] Total power usage A =         22.3751983mAh |
+02:45.703	ID:1	[INFO: A         ] Ratio: 465
+02:45.705	ID:1	[INFO: A         ] $
+02:45.707	ID:1	[INFO: A         ] Sending B
+02:45.712	ID:1	[INFO: A         ] 1101010101011111
+02:45.715	ID:1	[INFO: A         ] TX: 11, RX: 5
+02:45.752	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+02:45.757	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+02:45.807	ID:3	[INFO: C         ] state: 0
+02:45.811	ID:3	[INFO: C         ] Sent data to B
+02:45.848	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+02:46.217	ID:3	[INFO: C         ] Total power usage C =         20.5853996mAh |
+02:46.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+02:46.693	ID:1	[INFO: A         ] Ratio: 465
+02:46.694	ID:1	[INFO: A         ] $
+02:46.696	ID:1	[INFO: A         ] Sending B
+02:46.702	ID:1	[INFO: A         ] 1101010101011111
+02:46.705	ID:1	[INFO: A         ] TX: 11, RX: 5
+02:46.715	ID:1	[INFO: A         ] Total power usage A =         22.3802986mAh |
+02:46.723	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+02:46.728	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+02:46.753	ID:3	[INFO: C         ] state: 0
+02:46.757	ID:3	[INFO: C         ] Sent data to B
+02:46.765	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+02:47.218	ID:3	[INFO: C         ] Total power usage C =         20.5853996mAh |
+02:47.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+02:47.700	ID:1	[INFO: A         ] Total power usage A =         22.3853988mAh |
+02:47.703	ID:1	[INFO: A         ] Ratio: 465
+02:47.705	ID:1	[INFO: A         ] $
+02:47.707	ID:1	[INFO: A         ] Sending B
+02:47.712	ID:1	[INFO: A         ] 1101010101011111
+02:47.715	ID:1	[INFO: A         ] TX: 11, RX: 5
+02:47.744	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+02:47.750	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+02:47.760	ID:3	[INFO: C         ] state: 0
+02:47.764	ID:3	[INFO: C         ] Sent data to B
+02:47.816	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+02:48.217	ID:3	[INFO: C         ] Total power usage C =         20.5904999mAh |
+02:48.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+02:48.693	ID:1	[INFO: A         ] Ratio: 465
+02:48.694	ID:1	[INFO: A         ] $
+02:48.696	ID:1	[INFO: A         ] Sending B
+02:48.702	ID:1	[INFO: A         ] 1101010101011111
+02:48.705	ID:1	[INFO: A         ] TX: 11, RX: 5
+02:48.715	ID:1	[INFO: A         ] Total power usage A =         22.3904991mAh |
+02:48.723	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+02:48.728	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+02:48.769	ID:3	[INFO: C         ] state: 100
+02:48.772	ID:3	[INFO: C         ] Sent data to B
+02:48.785	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+02:49.218	ID:3	[INFO: C         ] Total power usage C =         20.5956001mAh |
+02:49.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+02:49.700	ID:1	[INFO: A         ] Total power usage A =         22.3955993mAh |
+02:49.703	ID:1	[INFO: A         ] Ratio: 465
+02:49.705	ID:1	[INFO: A         ] $
+02:49.707	ID:1	[INFO: A         ] Sending B
+02:49.712	ID:1	[INFO: A         ] 1101010101011111
+02:49.715	ID:1	[INFO: A         ] TX: 11, RX: 5
+02:49.752	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+02:49.757	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+02:49.776	ID:3	[INFO: C         ] state: 100
+02:49.780	ID:3	[INFO: C         ] Sent data to B
+02:49.832	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+02:50.217	ID:3	[INFO: C         ] Total power usage C =         20.6006984mAh |
+02:50.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+02:50.693	ID:1	[INFO: A         ] Ratio: 465
+02:50.694	ID:1	[INFO: A         ] $
+02:50.696	ID:1	[INFO: A         ] Sending B
+02:50.702	ID:1	[INFO: A         ] 1101010101011111
+02:50.705	ID:1	[INFO: A         ] TX: 11, RX: 5
+02:50.716	ID:1	[INFO: A         ] Total power usage A =         22.4006977mAh |
+02:50.723	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+02:50.728	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+02:50.761	ID:3	[INFO: C         ] state: 100
+02:50.764	ID:3	[INFO: C         ] Sent data to B
+02:50.777	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+02:51.218	ID:3	[INFO: C         ] Total power usage C =         20.6057987mAh |
+02:51.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+02:51.700	ID:1	[INFO: A         ] Total power usage A =         22.4057979mAh |
+02:51.703	ID:1	[INFO: A         ] Ratio: 465
+02:51.705	ID:1	[INFO: A         ] $
+02:51.707	ID:1	[INFO: A         ] Sending B
+02:51.712	ID:1	[INFO: A         ] 1101010101011111
+02:51.715	ID:1	[INFO: A         ] TX: 11, RX: 5
+02:51.736	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+02:51.741	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+02:51.785	ID:3	[INFO: C         ] state: 100
+02:51.788	ID:3	[INFO: C         ] Sent data to B
+02:51.832	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+02:52.217	ID:3	[INFO: C         ] Total power usage C =         20.6108989mAh |
+02:52.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+02:52.693	ID:1	[INFO: A         ] Ratio: 465
+02:52.694	ID:1	[INFO: A         ] $
+02:52.696	ID:1	[INFO: A         ] Sending B
+02:52.702	ID:1	[INFO: A         ] 1101010101011111
+02:52.705	ID:1	[INFO: A         ] TX: 11, RX: 5
+02:52.715	ID:1	[INFO: A         ] Total power usage A =         24.2108993mAh |
+02:52.723	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+02:52.728	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+02:52.734	ID:3	[INFO: C         ] state: 100
+02:52.738	ID:3	[INFO: C         ] Sent data to B
+02:52.746	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+02:53.218	ID:3	[INFO: C         ] Total power usage C =         20.6159992mAh |
+02:53.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+02:53.700	ID:1	[INFO: A         ] Total power usage A =         24.2108993mAh |
+02:53.703	ID:1	[INFO: A         ] Ratio: 465
+02:53.705	ID:1	[INFO: A         ] $
+02:53.707	ID:1	[INFO: A         ] Sending B
+02:53.712	ID:1	[INFO: A         ] healthcheck[INFO: A         ] Sending C
+02:53.718	ID:1	[INFO: A         ] 1010101010111111
+02:53.720	ID:1	[INFO: A         ] TX: 11, RX: 5
+02:53.736	ID:3	[INFO: C         ] Lost packet from A
+02:53.752	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+02:53.757	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+02:53.784	ID:3	[INFO: C         ] state: 0
+02:53.788	ID:3	[INFO: C         ] Sent data to B
+02:53.816	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+02:54.217	ID:3	[INFO: C         ] Total power usage C =         20.6210994mAh |
+02:54.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+02:54.693	ID:1	[INFO: A         ] Ratio: 465
+02:54.694	ID:1	[INFO: A         ] $
+02:54.696	ID:1	[INFO: A         ] Sending B
+02:54.702	ID:1	[INFO: A         ] 1010101010111111
+02:54.705	ID:1	[INFO: A         ] TX: 11, RX: 5
+02:54.715	ID:1	[INFO: A         ] Total power usage A =         24.2159996mAh |
+02:54.723	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+02:54.728	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+02:54.769	ID:3	[INFO: C         ] state: 0
+02:54.772	ID:3	[INFO: C         ] Sent data to B
+02:54.809	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+02:55.218	ID:3	[INFO: C         ] Total power usage C =         20.6261997mAh |
+02:55.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+02:55.700	ID:1	[INFO: A         ] Total power usage A =         24.2210998mAh |
+02:55.703	ID:1	[INFO: A         ] Ratio: 465
+02:55.705	ID:1	[INFO: A         ] $
+02:55.707	ID:1	[INFO: A         ] Sending B
+02:55.712	ID:1	[INFO: A         ] 1010101010111111
+02:55.715	ID:1	[INFO: A         ] TX: 11, RX: 5
+02:55.723	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+02:55.728	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+02:55.745	ID:3	[INFO: C         ] state: 0
+02:55.748	ID:3	[INFO: C         ] Sent data to B
+02:55.801	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+02:56.217	ID:3	[INFO: C         ] Total power usage C =         20.6312999mAh |
+02:56.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+02:56.693	ID:1	[INFO: A         ] Ratio: 465
+02:56.694	ID:1	[INFO: A         ] $
+02:56.696	ID:1	[INFO: A         ] Sending B
+02:56.702	ID:1	[INFO: A         ] 1010101010111111
+02:56.705	ID:1	[INFO: A         ] TX: 11, RX: 5
+02:56.715	ID:1	[INFO: A         ] Total power usage A =         24.2262001mAh |
+02:56.729	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+02:56.734	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+02:56.753	ID:3	[INFO: C         ] state: 0
+02:56.757	ID:3	[INFO: C         ] Sent data to B
+02:56.801	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+02:57.218	ID:3	[INFO: C         ] Total power usage C =         20.6363983mAh |
+02:57.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+02:57.700	ID:1	[INFO: A         ] Total power usage A =         24.2313003mAh |
+02:57.703	ID:1	[INFO: A         ] Ratio: 465
+02:57.705	ID:1	[INFO: A         ] $
+02:57.707	ID:1	[INFO: A         ] Sending B
+02:57.712	ID:1	[INFO: A         ] 1010101010111111
+02:57.715	ID:1	[INFO: A         ] TX: 11, RX: 5
+02:57.729	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+02:57.734	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+02:57.745	ID:3	[INFO: C         ] state: 0
+02:57.748	ID:3	[INFO: C         ] Sent data to B
+02:57.756	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+02:58.217	ID:3	[INFO: C         ] Total power usage C =         20.6414985mAh |
+02:58.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+02:58.693	ID:1	[INFO: A         ] Ratio: 465
+02:58.694	ID:1	[INFO: A         ] $
+02:58.696	ID:1	[INFO: A         ] Sending B
+02:58.702	ID:1	[INFO: A         ] 1010101010111111
+02:58.705	ID:1	[INFO: A         ] TX: 11, RX: 5
+02:58.715	ID:1	[INFO: A         ] Total power usage A =         24.2364006mAh |
+02:58.736	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+02:58.741	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+02:58.748	ID:3	[INFO: C         ] state: 0
+02:58.751	ID:3	[INFO: C         ] Sent data to B
+02:58.759	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+02:59.218	ID:3	[INFO: C         ] Total power usage C =         20.6465988mAh |
+02:59.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+02:59.700	ID:1	[INFO: A         ] Total power usage A =         24.2414989mAh |
+02:59.703	ID:1	[INFO: A         ] Ratio: 465
+02:59.705	ID:1	[INFO: A         ] $
+02:59.707	ID:1	[INFO: A         ] Sending B
+02:59.712	ID:1	[INFO: A         ] 1010101010111111
+02:59.715	ID:1	[INFO: A         ] TX: 11, RX: 5
+02:59.729	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+02:59.734	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+02:59.776	ID:3	[INFO: C         ] state: 0
+02:59.780	ID:3	[INFO: C         ] Sent data to B
+02:59.816	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+03:00.217	ID:3	[INFO: C         ] Total power usage C =         20.6516990mAh |
+03:00.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+03:00.693	ID:1	[INFO: A         ] Ratio: 465
+03:00.694	ID:1	[INFO: A         ] $
+03:00.696	ID:1	[INFO: A         ] Sending B
+03:00.702	ID:1	[INFO: A         ] 1010101010111111
+03:00.705	ID:1	[INFO: A         ] TX: 11, RX: 5
+03:00.715	ID:1	[INFO: A         ] Total power usage A =         24.2465992mAh |
+03:00.723	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+03:00.728	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+03:00.776	ID:3	[INFO: C         ] state: 0
+03:00.780	ID:3	[INFO: C         ] Sent data to B
+03:00.832	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+03:01.218	ID:3	[INFO: C         ] Total power usage C =         22.4567985mAh |
+03:01.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+03:01.700	ID:1	[INFO: A         ] Total power usage A =         24.2516994mAh |
+03:01.703	ID:1	[INFO: A         ] Ratio: 465
+03:01.705	ID:1	[INFO: A         ] $
+03:01.707	ID:1	[INFO: A         ] Sending B
+03:01.712	ID:1	[INFO: A         ] 1010101010111111
+03:01.715	ID:1	[INFO: A         ] TX: 11, RX: 5
+03:01.723	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+03:01.728	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+03:01.734	ID:3	[INFO: C         ] state: 0
+03:01.737	ID:3	[INFO: C         ] Sent data to B
+03:01.745	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+03:02.217	ID:3	[INFO: C         ] Total power usage C =         22.4567985mAh |
+03:02.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+03:02.693	ID:1	[INFO: A         ] Ratio: 465
+03:02.694	ID:1	[INFO: A         ] $
+03:02.696	ID:1	[INFO: A         ] Sending B
+03:02.702	ID:1	[INFO: A         ] healthcheck[INFO: A         ] Sending C
+03:02.707	ID:1	[INFO: A         ] 0101010101111111
+03:02.710	ID:1	[INFO: A         ] TX: 11, RX: 5
+03:02.721	ID:1	[INFO: A         ] Total power usage A =         24.2567997mAh |
+03:02.728	ID:3	[INFO: C         ] Responding with 'ACK'
+03:02.732	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+03:02.737	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+03:02.744	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+03:02.785	ID:3	0101.0100.0174.1200[INFO: C         ] state: 100
+03:02.788	ID:3	[INFO: C         ] Sent data to B
+03:02.801	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+03:03.218	ID:3	[INFO: C         ] Total power usage C =         22.4618988mAh |
+03:03.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+03:03.700	ID:1	[INFO: A         ] Total power usage A =         24.2618999mAh |
+03:03.703	ID:1	[INFO: A         ] Ratio: 465
+03:03.705	ID:1	[INFO: A         ] $
+03:03.707	ID:1	[INFO: A         ] Sending B
+03:03.712	ID:1	[INFO: A         ] 1010101011111110
+03:03.715	ID:1	[INFO: A         ] TX: 11, RX: 5
+03:03.723	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+03:03.728	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+03:03.745	ID:3	[INFO: C         ] state: 100
+03:03.749	ID:3	[INFO: C         ] Sent data to B
+03:03.801	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+03:04.217	ID:3	[INFO: C         ] Total power usage C =         22.4669990mAh |
+03:04.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+03:04.693	ID:1	[INFO: A         ] Ratio: 465
+03:04.694	ID:1	[INFO: A         ] $
+03:04.696	ID:1	[INFO: A         ] Sending B
+03:04.702	ID:1	[INFO: A         ] 1010101011111110
+03:04.705	ID:1	[INFO: A         ] TX: 11, RX: 5
+03:04.715	ID:1	[INFO: A         ] Total power usage A =         24.2670002mAh |
+03:04.723	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+03:04.728	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+03:04.737	ID:3	[INFO: C         ] state: 100
+03:04.741	ID:3	[INFO: C         ] Sent data to B
+03:04.769	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+03:05.218	ID:3	[INFO: C         ] Total power usage C =         22.4720993mAh |
+03:05.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+03:05.700	ID:1	[INFO: A         ] Total power usage A =         24.2721004mAh |
+03:05.703	ID:1	[INFO: A         ] Ratio: 465
+03:05.705	ID:1	[INFO: A         ] $
+03:05.707	ID:1	[INFO: A         ] Sending B
+03:05.712	ID:1	[INFO: A         ] 1010101011111110
+03:05.715	ID:1	[INFO: A         ] TX: 11, RX: 5
+03:05.723	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+03:05.728	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+03:05.745	ID:3	[INFO: C         ] state: 100
+03:05.749	ID:3	[INFO: C         ] Sent data to B
+03:05.801	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+03:06.217	ID:3	[INFO: C         ] Total power usage C =         22.4771976mAh |
+03:06.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+03:06.693	ID:1	[INFO: A         ] Ratio: 465
+03:06.694	ID:1	[INFO: A         ] $
+03:06.696	ID:1	[INFO: A         ] Sending B
+03:06.702	ID:1	[INFO: A         ] 1010101011111110
+03:06.705	ID:1	[INFO: A         ] TX: 11, RX: 5
+03:06.715	ID:1	[INFO: A         ] Total power usage A =         26.0771980mAh |
+03:06.723	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+03:06.728	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+03:06.761	ID:3	[INFO: C         ] state: 100
+03:06.764	ID:3	[INFO: C         ] Sent data to B
+03:06.801	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+03:07.218	ID:3	[INFO: C         ] Total power usage C =         22.4822979mAh |
+03:07.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+03:07.700	ID:1	[INFO: A         ] Total power usage A =         26.0771980mAh |
+03:07.703	ID:1	[INFO: A         ] Ratio: 465
+03:07.704	ID:1	[INFO: A         ] $
+03:07.706	ID:1	[INFO: A         ] Sending B
+03:07.712	ID:1	[INFO: A         ] 1010101011111110
+03:07.715	ID:1	[INFO: A         ] TX: 11, RX: 5
+03:07.729	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+03:07.734	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+03:07.776	ID:3	[INFO: C         ] state: 100
+03:07.780	ID:3	[INFO: C         ] Sent data to B
+03:07.793	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+03:08.217	ID:3	[INFO: C         ] Total power usage C =         22.4873981mAh |
+03:08.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+03:08.693	ID:1	[INFO: A         ] Ratio: 465
+03:08.694	ID:1	[INFO: A         ] $
+03:08.696	ID:1	[INFO: A         ] Sending B
+03:08.702	ID:1	[INFO: A         ] 1010101011111110
+03:08.705	ID:1	[INFO: A         ] TX: 11, RX: 5
+03:08.715	ID:1	[INFO: A         ] Total power usage A =         26.0822982mAh |
+03:08.723	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+03:08.728	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+03:08.776	ID:3	[INFO: C         ] state: 100
+03:08.780	ID:3	[INFO: C         ] Sent data to B
+03:08.832	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+03:09.218	ID:3	[INFO: C         ] Total power usage C =         22.4924984mAh |
+03:09.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+03:09.700	ID:1	[INFO: A         ] Total power usage A =         26.0873985mAh |
+03:09.703	ID:1	[INFO: A         ] Ratio: 465
+03:09.704	ID:1	[INFO: A         ] $
+03:09.706	ID:1	[INFO: A         ] Sending B
+03:09.712	ID:1	[INFO: A         ] 1010101011111110
+03:09.715	ID:1	[INFO: A         ] TX: 11, RX: 5
+03:09.723	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+03:09.728	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+03:09.734	ID:3	[INFO: C         ] state: 100
+03:09.737	ID:3	[INFO: C         ] Sent data to B
+03:09.778	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+03:10.217	ID:3	[INFO: C         ] Total power usage C =         22.4975986mAh |
+03:10.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+03:10.693	ID:1	[INFO: A         ] Ratio: 465
+03:10.694	ID:1	[INFO: A         ] $
+03:10.696	ID:1	[INFO: A         ] Sending B
+03:10.702	ID:1	[INFO: A         ] 1010101011111110
+03:10.705	ID:1	[INFO: A         ] TX: 11, RX: 5
+03:10.715	ID:1	[INFO: A         ] Total power usage A =         26.0924987mAh |
+03:10.723	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+03:10.728	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+03:10.737	ID:3	[INFO: C         ] state: 100
+03:10.741	ID:3	[INFO: C         ] Sent data to B
+03:10.762	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+03:11.218	ID:3	[INFO: C         ] Total power usage C =         22.5026989mAh |
+03:11.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+03:11.700	ID:1	[INFO: A         ] Total power usage A =         26.0975990mAh |
+03:11.703	ID:1	[INFO: A         ] Ratio: 465
+03:11.704	ID:1	[INFO: A         ] $
+03:11.706	ID:1	[INFO: A         ] Sending B
+03:11.711	ID:1	[INFO: A         ] healthcheck[INFO: A         ] Sending C
+03:11.717	ID:1	[INFO: A         ] 0101010111111101
+03:11.720	ID:1	[INFO: A         ] TX: 11, RX: 5
+03:11.729	ID:3	[INFO: C         ] Lost packet from A
+03:11.736	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+03:11.741	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+03:11.784	ID:3	[INFO: C         ] state: 0
+03:11.788	ID:3	[INFO: C         ] Sent data to B
+03:11.840	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+03:12.217	ID:3	[INFO: C         ] Total power usage C =         22.5077991mAh |
+03:12.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+03:12.693	ID:1	[INFO: A         ] Ratio: 465
+03:12.694	ID:1	[INFO: A         ] $
+03:12.696	ID:1	[INFO: A         ] Sending B
+03:12.702	ID:1	[INFO: A         ] 0101010111111101
+03:12.705	ID:1	[INFO: A         ] TX: 11, RX: 5
+03:12.715	ID:1	[INFO: A         ] Total power usage A =         26.1026992mAh |
+03:12.723	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+03:12.728	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+03:12.745	ID:3	[INFO: C         ] state: 0
+03:12.748	ID:3	[INFO: C         ] Sent data to B
+03:12.785	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+03:13.218	ID:3	[INFO: C         ] Total power usage C =         22.5128994mAh |
+03:13.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+03:13.700	ID:1	[INFO: A         ] Total power usage A =         26.1077995mAh |
+03:13.703	ID:1	[INFO: A         ] Ratio: 465
+03:13.705	ID:1	[INFO: A         ] $
+03:13.707	ID:1	[INFO: A         ] Sending B
+03:13.712	ID:1	[INFO: A         ] 0101010111111101
+03:13.715	ID:1	[INFO: A         ] TX: 11, RX: 5
+03:13.729	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+03:13.734	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+03:13.760	ID:3	[INFO: C         ] state: 0
+03:13.764	ID:3	[INFO: C         ] Sent data to B
+03:13.809	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+03:14.217	ID:3	[INFO: C         ] Total power usage C =         22.5179977mAh |
+03:14.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+03:14.693	ID:1	[INFO: A         ] Ratio: 465
+03:14.694	ID:1	[INFO: A         ] $
+03:14.696	ID:1	[INFO: A         ] Sending B
+03:14.702	ID:1	[INFO: A         ] 0101010111111101
+03:14.705	ID:1	[INFO: A         ] TX: 11, RX: 5
+03:14.715	ID:1	[INFO: A         ] Total power usage A =         26.1128997mAh |
+03:14.723	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+03:14.728	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+03:14.769	ID:3	[INFO: C         ] state: 0
+03:14.772	ID:3	[INFO: C         ] Sent data to B
+03:14.809	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+03:15.218	ID:3	[INFO: C         ] Total power usage C =         22.5230980mAh |
+03:15.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+03:15.700	ID:1	[INFO: A         ] Total power usage A =         26.1179981mAh |
+03:15.703	ID:1	[INFO: A         ] Ratio: 465
+03:15.705	ID:1	[INFO: A         ] $
+03:15.707	ID:1	[INFO: A         ] Sending B
+03:15.712	ID:1	[INFO: A         ] 0101010111111101
+03:15.715	ID:1	[INFO: A         ] TX: 11, RX: 5
+03:15.752	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+03:15.757	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+03:15.768	ID:3	[INFO: C         ] state: 0
+03:15.772	ID:3	[INFO: C         ] Sent data to B
+03:15.780	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+03:16.217	ID:3	[INFO: C         ] Total power usage C =         24.3281993mAh |
+03:16.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+03:16.693	ID:1	[INFO: A         ] Ratio: 465
+03:16.694	ID:1	[INFO: A         ] $
+03:16.696	ID:1	[INFO: A         ] Sending B
+03:16.702	ID:1	[INFO: A         ] 0101010111111101
+03:16.705	ID:1	[INFO: A         ] TX: 11, RX: 5
+03:16.715	ID:1	[INFO: A         ] Total power usage A =         26.1230983mAh |
+03:16.723	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+03:16.728	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+03:16.769	ID:3	[INFO: C         ] state: 0
+03:16.772	ID:3	[INFO: C         ] Sent data to B
+03:16.824	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+03:17.218	ID:3	[INFO: C         ] Total power usage C =         24.3281993mAh |
+03:17.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+03:17.700	ID:1	[INFO: A         ] Total power usage A =         26.1281986mAh |
+03:17.703	ID:1	[INFO: A         ] Ratio: 465
+03:17.705	ID:1	[INFO: A         ] $
+03:17.707	ID:1	[INFO: A         ] Sending B
+03:17.712	ID:1	[INFO: A         ] 0101010111111101
+03:17.715	ID:1	[INFO: A         ] TX: 11, RX: 5
+03:17.736	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+03:17.741	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+03:17.784	ID:3	[INFO: C         ] state: 0
+03:17.788	ID:3	[INFO: C         ] Sent data to B
+03:17.796	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+03:18.217	ID:3	[INFO: C         ] Total power usage C =         24.3332996mAh |
+03:18.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+03:18.693	ID:1	[INFO: A         ] Ratio: 465
+03:18.694	ID:1	[INFO: A         ] $
+03:18.696	ID:1	[INFO: A         ] Sending B
+03:18.702	ID:1	[INFO: A         ] 0101010111111101
+03:18.705	ID:1	[INFO: A         ] TX: 11, RX: 5
+03:18.715	ID:1	[INFO: A         ] Total power usage A =         26.1332988mAh |
+03:18.744	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+03:18.750	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+03:18.760	ID:3	[INFO: C         ] state: 0
+03:18.764	ID:3	[INFO: C         ] Sent data to B
+03:18.801	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+03:19.218	ID:3	[INFO: C         ] Total power usage C =         24.3383998mAh |
+03:19.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+03:19.700	ID:1	[INFO: A         ] Total power usage A =         27.9384003mAh |
+03:19.703	ID:1	[INFO: A         ] Ratio: 465
+03:19.705	ID:1	[INFO: A         ] $
+03:19.707	ID:1	[INFO: A         ] Sending B
+03:19.712	ID:1	[INFO: A         ] 0101010111111101
+03:19.715	ID:1	[INFO: A         ] TX: 11, RX: 5
+03:19.736	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+03:19.741	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+03:19.760	ID:3	[INFO: C         ] state: 0
+03:19.764	ID:3	[INFO: C         ] Sent data to B
+03:19.777	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+03:20.217	ID:3	[INFO: C         ] Total power usage C =         24.3435001mAh |
+03:20.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+03:20.693	ID:1	[INFO: A         ] Ratio: 465
+03:20.694	ID:1	[INFO: A         ] $
+03:20.696	ID:1	[INFO: A         ] Sending B
+03:20.702	ID:1	[INFO: A         ] healthcheck[INFO: A         ] Sending C
+03:20.707	ID:1	[INFO: A         ] 1010101111111011
+03:20.710	ID:1	[INFO: A         ] TX: 12, RX: 4
+03:20.721	ID:1	[INFO: A         ] Total power usage A =         27.9384003mAh |
+03:20.728	ID:3	[INFO: C         ] Responding with 'ACK'
+03:20.732	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+03:20.737	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+03:20.753	ID:3	0101.0100.0174.1200[INFO: C         ] state: 100
+03:20.757	ID:3	[INFO: C         ] Sent data to B
+03:20.778	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+03:20.785	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+03:21.218	ID:3	[INFO: C         ] Total power usage C =         24.3486004mAh |
+03:21.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+03:21.700	ID:1	[INFO: A         ] Total power usage A =         27.9435005mAh |
+03:21.703	ID:1	[INFO: A         ] Ratio: 341
+03:21.705	ID:1	[INFO: A         ] $
+03:21.707	ID:1	[INFO: A         ] Sending B
+03:21.712	ID:1	[INFO: A         ] 0101011111110110
+03:21.715	ID:1	[INFO: A         ] TX: 11, RX: 5
+03:21.760	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+03:21.765	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+03:21.808	ID:3	[INFO: C         ] state: 100
+03:21.811	ID:3	[INFO: C         ] Sent data to B
+03:21.863	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+03:22.217	ID:3	[INFO: C         ] Total power usage C =         24.3536987mAh |
+03:22.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+03:22.693	ID:1	[INFO: A         ] Ratio: 465
+03:22.694	ID:1	[INFO: A         ] $
+03:22.696	ID:1	[INFO: A         ] Sending B
+03:22.702	ID:1	[INFO: A         ] 0101011111110110
+03:22.705	ID:1	[INFO: A         ] TX: 11, RX: 5
+03:22.715	ID:1	[INFO: A         ] Total power usage A =         27.9486008mAh |
+03:22.723	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+03:22.728	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+03:22.761	ID:3	[INFO: C         ] state: 100
+03:22.764	ID:3	[INFO: C         ] Sent data to B
+03:22.816	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+03:23.218	ID:3	[INFO: C         ] Total power usage C =         24.3587989mAh |
+03:23.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+03:23.700	ID:1	[INFO: A         ] Total power usage A =         27.9536991mAh |
+03:23.703	ID:1	[INFO: A         ] Ratio: 465
+03:23.705	ID:1	[INFO: A         ] $
+03:23.707	ID:1	[INFO: A         ] Sending B
+03:23.712	ID:1	[INFO: A         ] 0101011111110110
+03:23.715	ID:1	[INFO: A         ] TX: 11, RX: 5
+03:23.760	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+03:23.765	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+03:23.816	ID:3	[INFO: C         ] state: 100
+03:23.819	ID:3	[INFO: C         ] Sent data to B
+03:23.827	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+03:24.217	ID:3	[INFO: C         ] Total power usage C =         24.3638992mAh |
+03:24.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+03:24.693	ID:1	[INFO: A         ] Ratio: 465
+03:24.694	ID:1	[INFO: A         ] $
+03:24.696	ID:1	[INFO: A         ] Sending B
+03:24.702	ID:1	[INFO: A         ] 0101011111110110
+03:24.705	ID:1	[INFO: A         ] TX: 11, RX: 5
+03:24.715	ID:1	[INFO: A         ] Total power usage A =         27.9587994mAh |
+03:24.723	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+03:24.728	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+03:24.753	ID:3	[INFO: C         ] state: 100
+03:24.757	ID:3	[INFO: C         ] Sent data to B
+03:24.793	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+03:25.218	ID:3	[INFO: C         ] Total power usage C =         24.3689994mAh |
+03:25.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+03:25.700	ID:1	[INFO: A         ] Total power usage A =         27.9638996mAh |
+03:25.703	ID:1	[INFO: A         ] Ratio: 465
+03:25.705	ID:1	[INFO: A         ] $
+03:25.707	ID:1	[INFO: A         ] Sending B
+03:25.712	ID:1	[INFO: A         ] 0101011111110110
+03:25.715	ID:1	[INFO: A         ] TX: 11, RX: 5
+03:25.752	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+03:25.757	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+03:25.792	ID:3	[INFO: C         ] state: 100
+03:25.796	ID:3	[INFO: C         ] Sent data to B
+03:25.824	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+03:26.217	ID:3	[INFO: C         ] Total power usage C =         24.3740997mAh |
+03:26.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+03:26.693	ID:1	[INFO: A         ] Ratio: 465
+03:26.694	ID:1	[INFO: A         ] $
+03:26.696	ID:1	[INFO: A         ] Sending B
+03:26.702	ID:1	[INFO: A         ] 0101011111110110
+03:26.705	ID:1	[INFO: A         ] TX: 11, RX: 5
+03:26.715	ID:1	[INFO: A         ] Total power usage A =         27.9689999mAh |
+03:26.736	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+03:26.741	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+03:26.776	ID:3	[INFO: C         ] state: 100
+03:26.780	ID:3	[INFO: C         ] Sent data to B
+03:26.801	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+03:27.218	ID:3	[INFO: C         ] Total power usage C =         24.3791999mAh |
+03:27.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+03:27.700	ID:1	[INFO: A         ] Total power usage A =         27.9741001mAh |
+03:27.703	ID:1	[INFO: A         ] Ratio: 465
+03:27.705	ID:1	[INFO: A         ] $
+03:27.707	ID:1	[INFO: A         ] Sending B
+03:27.712	ID:1	[INFO: A         ] 0101011111110110
+03:27.715	ID:1	[INFO: A         ] TX: 11, RX: 5
+03:27.723	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+03:27.728	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+03:27.769	ID:3	[INFO: C         ] state: 100
+03:27.772	ID:3	[INFO: C         ] Sent data to B
+03:27.801	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+03:28.217	ID:3	[INFO: C         ] Total power usage C =         24.3843002mAh |
+03:28.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+03:28.693	ID:1	[INFO: A         ] Ratio: 465
+03:28.694	ID:1	[INFO: A         ] $
+03:28.696	ID:1	[INFO: A         ] Sending B
+03:28.702	ID:1	[INFO: A         ] 0101011111110110
+03:28.705	ID:1	[INFO: A         ] TX: 11, RX: 5
+03:28.715	ID:1	[INFO: A         ] Total power usage A =         27.9792004mAh |
+03:28.736	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+03:28.741	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+03:28.761	ID:3	[INFO: C         ] state: 100
+03:28.764	ID:3	[INFO: C         ] Sent data to B
+03:28.809	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+03:29.218	ID:3	[INFO: C         ] Total power usage C =         24.3894004mAh |
+03:29.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+03:29.700	ID:1	[INFO: A         ] Total power usage A =         27.9843006mAh |
+03:29.703	ID:1	[INFO: A         ] Ratio: 465
+03:29.705	ID:1	[INFO: A         ] $
+03:29.707	ID:1	[INFO: A         ] Sending B
+03:29.712	ID:1	[INFO: A         ] healthcheck[INFO: A         ] Sending C
+03:29.718	ID:1	[INFO: A         ] 1010111111101101
+03:29.720	ID:1	[INFO: A         ] TX: 12, RX: 4
+03:29.729	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+03:29.734	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+03:29.736	ID:3	[INFO: C         ] Responding with 'ACK'
+03:29.753	ID:3	0101.0100.0174.1200[INFO: C         ] state: 100
+03:29.757	ID:3	[INFO: C         ] Sent data to B
+03:29.765	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+03:29.809	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+03:30.217	ID:3	[INFO: C         ] Total power usage C =         24.3944988mAh |
+03:30.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+03:30.693	ID:1	[INFO: A         ] Ratio: 341
+03:30.694	ID:1	[INFO: A         ] $
+03:30.696	ID:1	[INFO: A         ] Sending B
+03:30.702	ID:1	[INFO: A         ] 0101111111011010
+03:30.705	ID:1	[INFO: A         ] TX: 11, RX: 5
+03:30.716	ID:1	[INFO: A         ] Total power usage A =         27.9894009mAh |
+03:30.723	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+03:30.728	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+03:30.769	ID:3	[INFO: C         ] state: 100
+03:30.772	ID:3	[INFO: C         ] Sent data to B
+03:30.780	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+03:31.218	ID:3	[INFO: C         ] Total power usage C =         26.1995983mAh |
+03:31.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+03:31.700	ID:1	[INFO: A         ] Total power usage A =         27.9944992mAh |
+03:31.703	ID:1	[INFO: A         ] Ratio: 465
+03:31.705	ID:1	[INFO: A         ] $
+03:31.707	ID:1	[INFO: A         ] Sending B
+03:31.712	ID:1	[INFO: A         ] 0101111111011010
+03:31.715	ID:1	[INFO: A         ] TX: 11, RX: 5
+03:31.736	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+03:31.741	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+03:31.776	ID:3	[INFO: C         ] state: 100
+03:31.780	ID:3	[INFO: C         ] Sent data to B
+03:31.816	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+03:32.217	ID:3	[INFO: C         ] Total power usage C =         26.1995983mAh |
+03:32.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+03:32.693	ID:1	[INFO: A         ] Ratio: 465
+03:32.694	ID:1	[INFO: A         ] $
+03:32.696	ID:1	[INFO: A         ] Sending B
+03:32.702	ID:1	[INFO: A         ] 0101111111011010
+03:32.705	ID:1	[INFO: A         ] TX: 11, RX: 5
+03:32.715	ID:1	[INFO: A         ] Total power usage A =         29.7995987mAh |
+03:32.723	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+03:32.728	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+03:32.745	ID:3	[INFO: C         ] state: 100
+03:32.749	ID:3	[INFO: C         ] Sent data to B
+03:32.769	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+03:33.218	ID:3	[INFO: C         ] Total power usage C =         26.2046985mAh |
+03:33.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+03:33.700	ID:1	[INFO: A         ] Total power usage A =         29.7995987mAh |
+03:33.703	ID:1	[INFO: A         ] Ratio: 465
+03:33.705	ID:1	[INFO: A         ] $
+03:33.707	ID:1	[INFO: A         ] Sending B
+03:33.712	ID:1	[INFO: A         ] 0101111111011010
+03:33.715	ID:1	[INFO: A         ] TX: 11, RX: 5
+03:33.752	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+03:33.757	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+03:33.785	ID:3	[INFO: C         ] state: 100
+03:33.788	ID:3	[INFO: C         ] Sent data to B
+03:33.796	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+03:34.217	ID:3	[INFO: C         ] Total power usage C =         26.2097988mAh |
+03:34.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+03:34.693	ID:1	[INFO: A         ] Ratio: 465
+03:34.694	ID:1	[INFO: A         ] $
+03:34.696	ID:1	[INFO: A         ] Sending B
+03:34.702	ID:1	[INFO: A         ] 0101111111011010
+03:34.705	ID:1	[INFO: A         ] TX: 11, RX: 5
+03:34.715	ID:1	[INFO: A         ] Total power usage A =         29.8046989mAh |
+03:34.723	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+03:34.728	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+03:34.761	ID:3	[INFO: C         ] state: 100
+03:34.764	ID:3	[INFO: C         ] Sent data to B
+03:34.777	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+03:35.218	ID:3	[INFO: C         ] Total power usage C =         26.2148990mAh |
+03:35.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+03:35.700	ID:1	[INFO: A         ] Total power usage A =         29.8097992mAh |
+03:35.703	ID:1	[INFO: A         ] Ratio: 465
+03:35.705	ID:1	[INFO: A         ] $
+03:35.707	ID:1	[INFO: A         ] Sending B
+03:35.712	ID:1	[INFO: A         ] 0101111111011010
+03:35.715	ID:1	[INFO: A         ] TX: 11, RX: 5
+03:35.723	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+03:35.728	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+03:35.745	ID:3	[INFO: C         ] state: 100
+03:35.749	ID:3	[INFO: C         ] Sent data to B
+03:35.762	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+03:36.217	ID:3	[INFO: C         ] Total power usage C =         26.2199993mAh |
+03:36.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+03:36.693	ID:1	[INFO: A         ] Ratio: 465
+03:36.694	ID:1	[INFO: A         ] $
+03:36.696	ID:1	[INFO: A         ] Sending B
+03:36.702	ID:1	[INFO: A         ] 0101111111011010
+03:36.705	ID:1	[INFO: A         ] TX: 11, RX: 5
+03:36.715	ID:1	[INFO: A         ] Total power usage A =         29.8148994mAh |
+03:36.723	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+03:36.728	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+03:36.734	ID:3	[INFO: C         ] state: 100
+03:36.738	ID:3	[INFO: C         ] Sent data to B
+03:36.785	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+03:37.218	ID:3	[INFO: C         ] Total power usage C =         26.2250995mAh |
+03:37.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+03:37.700	ID:1	[INFO: A         ] Total power usage A =         29.8199997mAh |
+03:37.703	ID:1	[INFO: A         ] Ratio: 465
+03:37.705	ID:1	[INFO: A         ] $
+03:37.707	ID:1	[INFO: A         ] Sending B
+03:37.712	ID:1	[INFO: A         ] 0101111111011010
+03:37.715	ID:1	[INFO: A         ] TX: 11, RX: 5
+03:37.752	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+03:37.757	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+03:37.785	ID:3	[INFO: C         ] state: 100
+03:37.788	ID:3	[INFO: C         ] Sent data to B
+03:37.824	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+03:38.217	ID:3	[INFO: C         ] Total power usage C =         26.2301979mAh |
+03:38.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+03:38.693	ID:1	[INFO: A         ] Ratio: 465
+03:38.694	ID:1	[INFO: A         ] $
+03:38.696	ID:1	[INFO: A         ] Sending B
+03:38.702	ID:1	[INFO: A         ] healthcheck[INFO: A         ] Sending C
+03:38.707	ID:1	[INFO: A         ] 1011111110110101
+03:38.710	ID:1	[INFO: A         ] TX: 12, RX: 4
+03:38.721	ID:1	[INFO: A         ] Total power usage A =         29.8250999mAh |
+03:38.745	ID:3	[INFO: C         ] Responding with 'ACK'
+03:38.749	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+03:38.754	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+03:38.792	ID:3	0101.0100.0174.1200[INFO: C         ] state: 100
+03:38.796	ID:3	[INFO: C         ] Sent data to B
+03:38.803	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+03:38.840	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+03:39.218	ID:3	[INFO: C         ] Total power usage C =         26.2352981mAh |
+03:39.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+03:39.700	ID:1	[INFO: A         ] Total power usage A =         29.8302002mAh |
+03:39.703	ID:1	[INFO: A         ] Ratio: 341
+03:39.705	ID:1	[INFO: A         ] $
+03:39.707	ID:1	[INFO: A         ] Sending B
+03:39.712	ID:1	[INFO: A         ] 0111111101101010
+03:39.715	ID:1	[INFO: A         ] TX: 11, RX: 5
+03:39.723	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+03:39.728	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+03:39.745	ID:3	[INFO: C         ] state: 100
+03:39.749	ID:3	[INFO: C         ] Sent data to B
+03:39.757	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
+03:40.217	ID:3	[INFO: C         ] Total power usage C =         26.2403984mAh |
+03:40.550	ID:2	[INFO: B         ] Total power usage B =          0.0000000mAh |
+03:40.693	ID:1	[INFO: A         ] Ratio: 465
+03:40.694	ID:1	[INFO: A         ] $
+03:40.696	ID:1	[INFO: A         ] Sending B
+03:40.702	ID:1	[INFO: A         ] 0111111101101010
+03:40.705	ID:1	[INFO: A         ] TX: 11, RX: 5
+03:40.715	ID:1	[INFO: A         ] Total power usage A =         29.8352985mAh |
+03:40.723	ID:2	[INFO: B         ] Sending 'dataReq' to Mote C 
+03:40.728	ID:2	[INFO: B         ] dataReq[INFO: B         ] Efter sendto 
+03:40.745	ID:3	[INFO: C         ] state: 100
+03:40.749	ID:3	[INFO: C         ] Sent data to B
+03:40.778	ID:2	[INFO: B         ] Sending 'dataExample' to Mote A 
