@@ -92,8 +92,6 @@ AUTOSTART_PROCESSES(&null_net_server, &null_net_network, &checkTimeout);
 void input_callback(const void *data, uint16_t len,
                     const linkaddr_t *src, const linkaddr_t *dest)
 {
-  //(uip_ipaddr_cmp(sender_addr, &dest_ipaddr_C))
-  // uip_ip6addr(&dest_ipaddr_C, 0xfd00, 0, 0, 0, 0x0212, 0x7403, 0x0003, 0x0303);
   const char *received_message = (const char *)data;
 
   if (linkaddr_cmp(src, &C_addr))
@@ -122,7 +120,6 @@ void input_callback(const void *data, uint16_t len,
     //  Handle unknown messages as needed
   }
 
-  // You can add more checks for different response types as needed.
 }
 
 PROCESS_THREAD(null_net_network, ev, data)
