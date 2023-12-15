@@ -6,6 +6,8 @@
 #include <stdlib.h>
 #include "sys/energest.h"
 #include "sys/log.h"
+#include "cc2420.h"
+
 #define LOG_MODULE "C"
 #define LOG_LEVEL LOG_LEVEL_INFO
 
@@ -53,10 +55,10 @@ float TotalPowerConsumption()
 {
   float power = 0;
   energest_flush(); // Update all energest times. Should always be called before energest times are read.
-  // power += (to_seconds(energest_type_time(ENERGEST_TYPE_CPU)))*CPU_NORMAL;
-  // power += (to_seconds(energest_type_time(ENERGEST_TYPE_LPM)))*CPU_SLEEP;
+  power += (energest_type_time(ENERGEST_TYPE_CPU))*CPU_NORMAL;
+  power += (energest_type_time(ENERGEST_TYPE_LPM))*CPU_SLEEP;
   power += (energest_type_time(ENERGEST_TYPE_TRANSMIT)) * TX;
-  power += (energest_type_time(ENERGEST_TYPE_LISTEN)) * RX;
+  //power += (energest_type_time(ENERGEST_TYPE_LISTEN)) * RX;
   return (power);
 }
 
@@ -157,8 +159,8 @@ void input_callback(const void *data, uint16_t len,
 
 PROCESS_THREAD(null_net_client, ev, data)
 {
+  cc2420_set_txpower(3);
   static int counter = 0;
-  srand(10);
 
   PROCESS_BEGIN();
 
@@ -184,7 +186,7 @@ PROCESS_THREAD(updateState, ev, data)
   while (1)
   {
     state = getState(state);
-    //state = 100; //remove
+    // state = 100; //remove
 
     PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&stateTimer));
     etimer_reset(&stateTimer);

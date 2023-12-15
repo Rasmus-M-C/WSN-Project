@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <string.h>
 #include "sys/energest.h"
+#include "cc2420.h"
 
 // #include "PowerConsumption.h"
 #include "net/netstack.h"
@@ -30,6 +31,10 @@ static linkaddr_t B_addr = {{0x02, 0x02, 0x02, 0x00, 0x02, 0x74, 0x12, 0x00}};
 
 static clock_time_t timeout = 0;
 static int counter = 0;
+static int packageSent = 0;
+static int packageReceived = 0;
+
+#define THRESHOLD(x) (x * 0.125 + 0.0625)
 
 // static struct PowerConsumptionStates states_power;
 #define RX 23.0               // mA
@@ -93,12 +98,16 @@ void input_callback(const void *data, uint16_t len,
                     const linkaddr_t *src, const linkaddr_t *dest)
 {
   const char *received_message = (const char *)data;
-
+  
   if (linkaddr_cmp(src, &C_addr))
   {
     // Add 0 to list
     SETBIT(list, 0);
     timeout = 0;
+  }
+  if (linkaddr_cmp(src, &C_addr) || linkaddr_cmp(src, &B_addr))
+  {
+    packageReceived++;
   }
   // Check the received response from mote C
   if (strncmp(received_message, "ACK", len) == 0)
@@ -119,13 +128,13 @@ void input_callback(const void *data, uint16_t len,
     // LOG_INFO("Received unknown message\n");
     //  Handle unknown messages as needed
   }
-
-  
 }
 
 PROCESS_THREAD(null_net_network, ev, data)
 {
   PROCESS_BEGIN();
+
+  cc2420_set_txpower(3);
   // Start the network
   /* Initialize DAG root */
   NETSTACK_ROUTING.root_start();
@@ -156,6 +165,7 @@ PROCESS_THREAD(null_net_server, ev, data)
       rx_counter += GETBIT(list, i - 1) == 1;
     }
     LOG_INFO("TX: %d, RX: %d\n", tx_counter, rx_counter);
+    LOG_INFO("Sent: %d, Received: %d\n", packageSent, packageReceived);
 
     if (tx_counter != 0)
     {
@@ -166,9 +176,10 @@ PROCESS_THREAD(null_net_server, ev, data)
     // LOG_INFO("Sending message %d\n", counter);
     // Every 15th message, send to B
 
-    if (ratio < (1024 * 0.6))
+    if (ratio < (1024 * THRESHOLD(7)))
     {
       // LOG_INFO("Sending message B\n");
+      packageSent++;
       nullnet_buf = (uint8_t *)msg;
       nullnet_len = strlen(msg);
       // LOG_INFO((char *)msg);
@@ -181,6 +192,7 @@ PROCESS_THREAD(null_net_server, ev, data)
       { // Every 10th message, send healthcheck
         // LOG_INFO("Sending healthcheck message\n");
         //  Send a healthcheck message
+        packageSent++;
         // Add 1 to list
         list = list << 2;
         SETBIT(list, 1);
@@ -198,6 +210,7 @@ PROCESS_THREAD(null_net_server, ev, data)
     {
       // LOG_INFO("Sending dataReq message\n");
       //  Send a dataReq message to Mote C
+      packageSent++;
       // Add 1 to list
       list = list << 2;
       SETBIT(list, 1);
@@ -235,7 +248,11 @@ PROCESS_THREAD(checkTimeout, ev, data)
 
     if (clock_time() > timeout + 5 * CLOCK_SECOND && timeout != 0)
     {
-      // LOG_INFO("Resending package %d\n", counter);
+      packageSent++;
+      // Add 1 to list
+      list = list << 2;
+      SETBIT(list, 1);
+      CLRBIT(list, 0);
       nullnet_buf = (uint8_t *)msg;
       nullnet_len = strlen(msg);
       LOG_INFO((char *)msg);
