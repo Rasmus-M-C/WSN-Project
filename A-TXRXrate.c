@@ -29,7 +29,7 @@ static u_int8_t RX_count = 0;
 static linkaddr_t C_addr = {{0x03, 0x03, 0x03, 0x00, 0x03, 0x74, 0x12, 0x00}};
 static linkaddr_t B_addr = {{0x02, 0x02, 0x02, 0x00, 0x02, 0x74, 0x12, 0x00}};
 
-static clock_time_t timeout = 0;
+static int timeout = -1;
 static int counter = 0;
 static int packageSent = 0;
 static int packageReceived = 0;
@@ -103,7 +103,7 @@ void input_callback(const void *data, uint16_t len,
   {
     // Add 0 to list
     SETBIT(list, 0);
-    timeout = 0;
+    timeout = -1;
   }
   if (linkaddr_cmp(src, &C_addr) || linkaddr_cmp(src, &B_addr))
   {
@@ -176,7 +176,7 @@ PROCESS_THREAD(null_net_server, ev, data)
     // LOG_INFO("Sending message %d\n", counter);
     // Every 15th message, send to B
 
-    if (ratio < (1024 * THRESHOLD(7)))
+    if (ratio < (1024 * THRESHOLD(3)))
     {
       // LOG_INFO("Sending message B\n");
       packageSent++;
@@ -186,7 +186,7 @@ PROCESS_THREAD(null_net_server, ev, data)
       LOG_INFO("%c\n", msg);
       LOG_INFO("Sending B\n");
       NETSTACK_NETWORK.output(&B_addr);
-      timeout = 0;
+      timeout = -1;
 
       if (counter % 10 == 0)
       { // Every 10th message, send healthcheck
@@ -220,11 +220,12 @@ PROCESS_THREAD(null_net_server, ev, data)
       LOG_INFO("%c\n", msg);
       LOG_INFO("Sending C\n");
       NETSTACK_NETWORK.output(&C_addr);
-      timeout = clock_time();
+      timeout = 5;
     }
     counter++;
     // LOG_INFO("TX: %d, RX: %d\n", TX_count, RX_count);
-    LOG_INFO("%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d\n", GETBIT(list, 15), GETBIT(list, 14), GETBIT(list, 13), GETBIT(list, 12), GETBIT(list, 11), GETBIT(list, 10), GETBIT(list, 9), GETBIT(list, 8), GETBIT(list, 7), GETBIT(list, 6), GETBIT(list, 5), GETBIT(list, 4), GETBIT(list, 3), GETBIT(list, 2), GETBIT(list, 1), GETBIT(list, 0));
+    logging(TotalPowerConsumption());
+    //LOG_INFO("%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d\n", GETBIT(list, 15), GETBIT(list, 14), GETBIT(list, 13), GETBIT(list, 12), GETBIT(list, 11), GETBIT(list, 10), GETBIT(list, 9), GETBIT(list, 8), GETBIT(list, 7), GETBIT(list, 6), GETBIT(list, 5), GETBIT(list, 4), GETBIT(list, 3), GETBIT(list, 2), GETBIT(list, 1), GETBIT(list, 0));
     PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&periodic_timer));
     etimer_reset(&periodic_timer);
   }
@@ -237,16 +238,17 @@ PROCESS_THREAD(checkTimeout, ev, data)
   static struct etimer timeoutTimer;
 
   PROCESS_BEGIN();
-  etimer_set(&timeoutTimer, CLOCK_SECOND);
-  // Power Consumption
-  static struct etimer periodic_timer;
-  // struct IntDec int_dec;
-  float states_power = 0.0;
+  etimer_set(&timeoutTimer, CLOCK_SECOND * 0.05);
 
   while (1)
   {
 
-    if (clock_time() > timeout + 5 * CLOCK_SECOND && timeout != 0)
+    
+    if (timeout != -1){
+      timeout--;
+    }
+    LOG_INFO("timeout: %d \n", timeout);
+    if (timeout == 0)
     {
       packageSent++;
       // Add 1 to list
@@ -257,11 +259,12 @@ PROCESS_THREAD(checkTimeout, ev, data)
       nullnet_len = strlen(msg);
       LOG_INFO((char *)msg);
       LOG_INFO("Sending C\n");
+      LOG_INFO("Resend C\n");
       NETSTACK_NETWORK.output(&C_addr);
-      timeout = clock_time();
+      timeout = 5;
     }
 
-    logging(TotalPowerConsumption());
+    
     PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&timeoutTimer));
     etimer_reset(&timeoutTimer);
   }

@@ -77,7 +77,6 @@ AUTOSTART_PROCESSES(&null_net_client, &updateState, &power_log_process);
 static int getState(int currentState)
 {
   int good = 100;
-  int mix = 50;
   int bad = 0;
   int newState = currentState;
 
@@ -178,13 +177,33 @@ PROCESS_THREAD(null_net_client, ev, data)
 PROCESS_THREAD(updateState, ev, data)
 {
   static struct etimer stateTimer;
-
+  
   PROCESS_BEGIN();
   etimer_set(&stateTimer, CLOCK_SECOND);
   srand(3);
+  static int start = 0;
+  start = clock_seconds();
 
   while (1)
   {
+    // state = getState(state);
+    LOG_INFO("time: %d", clock_seconds());
+    if (clock_seconds() < start + 60 * 5)
+    {
+      state = 0;
+    }
+    else if (clock_seconds() < start + 60 * 10)
+    {
+      state = 100;
+    }
+    else if (clock_seconds() < start + 60 * 15)
+    {
+      state = 0;
+    }
+    else
+    {
+      state = 100;
+    }
     state = getState(state);
     // state = 100; //remove
 
