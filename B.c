@@ -95,7 +95,7 @@ void input_callback(const void *data, uint16_t len,
     // Set the linklayer address of Mote A
     static linkaddr_t A_addr = {{0x01, 0x01, 0x01, 0x00, 0x01, 0x74, 0x12, 0x00}};
 
-    static char datamsg[] = "dataExample";
+    static char datamsg[128] = "dataExample";
     nullnet_buf = (uint8_t *)datamsg;
     nullnet_len = strlen(datamsg);
     NETSTACK_NETWORK.output(&A_addr);

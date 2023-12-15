@@ -146,8 +146,6 @@ void input_callback(const void *data, uint16_t len,
     else
     {
       // LOG_INFO("Recieved a data request from B, sending data\n");
-
-      char response[] = "dataExample";
       nullnet_buf = (uint8_t *)response;
       nullnet_len = strlen(response);
       NETSTACK_NETWORK.output(&B_addr);
@@ -186,25 +184,25 @@ PROCESS_THREAD(updateState, ev, data)
 
   while (1)
   {
-    // state = getState(state);
-    LOG_INFO("time: %d", clock_seconds());
-    if (clock_seconds() < start + 60 * 5)
-    {
-      state = 0;
-    }
-    else if (clock_seconds() < start + 60 * 10)
-    {
-      state = 100;
-    }
-    else if (clock_seconds() < start + 60 * 15)
-    {
-      state = 0;
-    }
-    else
-    {
-      state = 100;
-    }
+    // if (clock_seconds() < start + 60 * 5)
+    // {
+    //   state = 0;
+    // }
+    // else if (clock_seconds() < start + 60 * 10)
+    // {
+    //   state = 100;
+    // }
+    // else if (clock_seconds() < start + 60 * 15)
+    // {
+    //   state = 0;
+    // }
+    // else
+    // {
+    //   state = 100;
+    // }
+
     state = getState(state);
+
     // state = 100; //remove
 
     PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&stateTimer));

@@ -176,7 +176,7 @@ PROCESS_THREAD(null_net_server, ev, data)
     // LOG_INFO("Sending message %d\n", counter);
     // Every 15th message, send to B
 
-    if (ratio < (1024 * THRESHOLD(3)))
+    if (ratio < (1024 * THRESHOLD(7)))
     {
       // LOG_INFO("Sending message B\n");
       packageSent++;
@@ -247,7 +247,7 @@ PROCESS_THREAD(checkTimeout, ev, data)
     if (timeout != -1){
       timeout--;
     }
-    LOG_INFO("timeout: %d \n", timeout);
+    //LOG_INFO("timeout: %d \n", timeout);
     if (timeout == 0)
     {
       packageSent++;

@@ -2,6 +2,7 @@
     "files.associations": {
         "new_c": "c",
         "new_a": "c",
-        "string.h": "c"
+        "string.h": "c",
+        "cstdint": "c"
     }
 }
