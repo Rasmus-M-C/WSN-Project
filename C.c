@@ -180,31 +180,21 @@ PROCESS_THREAD(updateState, ev, data)
   PROCESS_BEGIN();
   etimer_set(&stateTimer, CLOCK_SECOND);
   srand(3);
-  static int start = 0;
-  start = clock_seconds();
 
   while (1)
   {
-    // if (clock_seconds() < start + 60 * 5)
-    // {
-    //   state = 0;
-    // }
-    // else if (clock_seconds() < start + 60 * 10)
-    // {
-    //   state = 100;
-    // }
-    // else if (clock_seconds() < start + 60 * 15)
-    // {
-    //   state = 0;
-    // }
-    // else
-    // {
-    //   state = 100;
-    // }
+    if ((clock_seconds()/60) % 2 == 0)
+    {
+      state = 0;
+    }
+    else
+    {
+      state = 100;
+    }
 
-    state = getState(state);
+    //state = getState(state);
 
-    // state = 100; //remove
+    //state = 0;
 
     PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&stateTimer));
     etimer_reset(&stateTimer);
