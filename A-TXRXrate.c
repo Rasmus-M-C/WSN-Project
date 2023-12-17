@@ -39,10 +39,9 @@ static int ackReceived = 0;
 // static struct PowerConsumptionStates states_power;
 #define RX 23.0               // mA
 #define TX 21.0               // mA
-#define Radiooff 0.0051       // mA Not sure if this is correct
+#define Radiooff 2.4      // mA Not sure if this is correct
 #define CPU_NORMAL 1.8        // mA
 #define CPU_SLEEP 0.0051      // mA
-#define CPU_DEEP_SLEEP 0.0051 // mA Not sure if this is correct
 
 static char msg[128] = "packet";
 

@@ -219,7 +219,6 @@ PROCESS_THREAD(power_log_process, ev, data)
   static int counter = 0;
   PROCESS_BEGIN();
   etimer_set(&timeoutTimer, CLOCK_SECOND);
-  float states_power = 0.0;
 
   while (1)
   {
