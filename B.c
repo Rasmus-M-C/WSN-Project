@@ -17,7 +17,8 @@
 #define CPU_SLEEP 0.0051      // mA
 #define CPU_DEEP_SLEEP 0.0051 // mA Not sure if this is correct
 
-static char msg[128] = "dataReq";
+static char msg[128] = "packet";
+static char ack[] = "ACK";
 
 struct IntDec
 {
@@ -77,9 +78,9 @@ void input_callback(const void *data, uint16_t len,
   const char *received_message = (const char *)data;
   // Check the received message type
 
-  if (strncmp(received_message, "dataReq", len) == 0)
+  if (strncmp(received_message, "packet", len) == 0)
   {
-    LOG_INFO("Sending 'dataReq' to Mote C \n");
+    LOG_INFO("Sending packet to Mote C \n");
     // Set the linklayer address of Mote C
     static linkaddr_t C_addr = {{0x03, 0x03, 0x03, 0x00, 0x03, 0x74, 0x12, 0x00}};
 
@@ -91,13 +92,12 @@ void input_callback(const void *data, uint16_t len,
   }
   else
   {
-    LOG_INFO("Sending 'dataExample' to Mote A \n");
+    LOG_INFO("Sending ACK to Mote A \n");
     // Set the linklayer address of Mote A
     static linkaddr_t A_addr = {{0x01, 0x01, 0x01, 0x00, 0x01, 0x74, 0x12, 0x00}};
 
-    static char datamsg[128] = "dataExample";
-    nullnet_buf = (uint8_t *)datamsg;
-    nullnet_len = strlen(datamsg);
+    nullnet_buf = (uint8_t *)ack;
+    nullnet_len = strlen(ack) + 1;
     NETSTACK_NETWORK.output(&A_addr);
   }
 }

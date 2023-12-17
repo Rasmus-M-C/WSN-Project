@@ -32,7 +32,7 @@ static linkaddr_t B_addr = {{0x02, 0x02, 0x02, 0x00, 0x02, 0x74, 0x12, 0x00}};
 static int timeout = -1;
 static int counter = 0;
 static int packageSent = 0;
-static int packageReceived = 0;
+static int ackReceived = 0;
 
 #define THRESHOLD(x) (x * 0.125 + 0.0625)
 
@@ -44,7 +44,7 @@ static int packageReceived = 0;
 #define CPU_SLEEP 0.0051      // mA
 #define CPU_DEEP_SLEEP 0.0051 // mA Not sure if this is correct
 
-static char msg[128] = "dataReq";
+static char msg[128] = "packet";
 
 struct IntDec
 {
@@ -98,36 +98,25 @@ void input_callback(const void *data, uint16_t len,
                     const linkaddr_t *src, const linkaddr_t *dest)
 {
   const char *received_message = (const char *)data;
-  
-  if (linkaddr_cmp(src, &C_addr))
-  {
-    // Add 0 to list
-    SETBIT(list, 0);
-    timeout = -1;
-  }
   if (linkaddr_cmp(src, &C_addr) || linkaddr_cmp(src, &B_addr))
   {
-    packageReceived++;
+    if (strncmp(received_message, "ACK", len) == 0)
+    {
+      LOG_INFO("got ACK\n");
+      ackReceived++;
+    }
+    // if (strncmp(received_message, "ACKHT", len) == 0)
+    // {
+    //   ackReceived--;
+    // }
+    if (linkaddr_cmp(src, &C_addr))
+    {
+      // Add 0 to list
+      SETBIT(list, 0);
+      timeout = -1;
+    }
   }
   // Check the received response from mote C
-  if (strncmp(received_message, "ACK", len) == 0)
-  {
-    // Received an acknowledgment for healthcheck
-    // LOG_INFO("Received acknowledgment for healthcheck\n");
-  }
-  else if (strncmp(received_message, "dataExample", len) == 0)
-  {
-    // Received data response
-    // LOG_INFO("Received data from IPADDR:");
-    // log_6addr(sender_addr);
-    // LOG_INFO("Received data response: '%.*s'\n", datalen, (char *) data);
-    // stop timeout ------------------------------------------------------------
-  }
-  else
-  {
-    // LOG_INFO("Received unknown message\n");
-    //  Handle unknown messages as needed
-  }
 }
 
 PROCESS_THREAD(null_net_network, ev, data)
@@ -165,7 +154,7 @@ PROCESS_THREAD(null_net_server, ev, data)
       rx_counter += GETBIT(list, i - 1) == 1;
     }
     LOG_INFO("TX: %d, RX: %d\n", tx_counter, rx_counter);
-    LOG_INFO("Sent: %d, Received: %d\n", packageSent, packageReceived);
+    LOG_INFO("Sent: %d, Received: %d\n", packageSent, ackReceived);
 
     if (tx_counter != 0)
     {
@@ -176,7 +165,7 @@ PROCESS_THREAD(null_net_server, ev, data)
     // LOG_INFO("Sending message %d\n", counter);
     // Every 15th message, send to B
 
-    if (ratio < (1024 * THRESHOLD(7)))
+    if (ratio < (1024 * THRESHOLD(0)))
     {
       // LOG_INFO("Sending message B\n");
       packageSent++;
@@ -192,7 +181,7 @@ PROCESS_THREAD(null_net_server, ev, data)
       { // Every 10th message, send healthcheck
         // LOG_INFO("Sending healthcheck message\n");
         //  Send a healthcheck message
-        packageSent++;
+        // packageSent++;
         // Add 1 to list
         list = list << 2;
         SETBIT(list, 1);

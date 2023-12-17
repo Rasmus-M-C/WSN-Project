@@ -18,7 +18,8 @@
 #define CPU_SLEEP 0.0051      // mA
 #define CPU_DEEP_SLEEP 0.0051 // mA Not sure if this is correct
 
-static char response[128] = "dataExample";
+static char ack[] = "ACK";
+static char ackHT[] = "ACKHT";
 
 struct IntDec
 {
@@ -109,18 +110,18 @@ void input_callback(const void *data, uint16_t len,
     if (state < 50)
     {
       // lost packet
-      LOG_INFO("Lost packet from A\n");
+      LOG_INFO("Lost HT from A\n");
     }
     else
     {
       LOG_INFO("Responding with 'ACK'\n");
 
       // Set the message in NullNet buffer
-      char ack[] = "ACK";
-      nullnet_buf = (uint8_t *)ack;
-      nullnet_len = strlen(ack);
-      LOG_INFO_LLADDR(src);
-      NETSTACK_NETWORK.output(src);
+      
+      nullnet_buf = (uint8_t *)ackHT;
+      nullnet_len = strlen(ackHT) + 1;
+      //LOG_INFO_LLADDR(src);
+      NETSTACK_NETWORK.output(&A_addr);
     }
   }
   else
@@ -136,20 +137,20 @@ void input_callback(const void *data, uint16_t len,
       }
       else
       {
-        LOG_INFO("Recieved a data request, sending data\n");
-        nullnet_buf = (uint8_t *)response;
-        nullnet_len = strlen(response);
+        LOG_INFO("Recieved a packet, sending ack\n");
+        nullnet_buf = (uint8_t *)ack;
+        nullnet_len = strlen(ack) + 1;
         NETSTACK_NETWORK.output(&A_addr);
-        LOG_INFO("Sent data to A\n");
+        LOG_INFO("Sent ACK to A\n");
       }
     }
     else
     {
       // LOG_INFO("Recieved a data request from B, sending data\n");
-      nullnet_buf = (uint8_t *)response;
-      nullnet_len = strlen(response);
+      nullnet_buf = (uint8_t *)ack;
+      nullnet_len = strlen(ack) + 1;
       NETSTACK_NETWORK.output(&B_addr);
-      LOG_INFO("Sent data to B\n");
+      LOG_INFO("Sent ACK to B\n");
     }
   }
 }
