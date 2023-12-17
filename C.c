@@ -192,7 +192,7 @@ PROCESS_THREAD(updateState, ev, data)
       state = 100;
     }
 
-    //state = getState(state);
+    // state = getState(state);
 
     //state = 0;
 
